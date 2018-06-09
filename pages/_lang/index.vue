@@ -1,16 +1,119 @@
 <template>
-  <div class="Content">
-    <div class="container">
-      <h1 class="Content__Title">{{ $t('home.title') }}</h1>
-      <p>{{ $t('home.introduction') }}</p>
+  <div>
+    <ContentCard
+            title="Are You speaking your <span class='red'>Customer's</span> language"
+            subtitle="Instant multilingual support. Higher customer satisfaction"
+            :buttons="buttons.home1"
+            showContentOnLeft="true"
+            imageUrl="group-31.png"
+            height="550px"
+    >
+    </ContentCard>
+    <ContentCard
+            title="Finally, <span class='red'>Bots for Everyone</span>"
+            subtitle="Build, edit and deploy multilingual bots without coding"
+            :buttons="buttons.home2"
+            showContentOnLeft="false"
+            imageUrl="placeholder.png"
+            height="550px"
+    >
+    </ContentCard>
+    <div class="bot-features-container">
+      <p class="feature-heading">Build & Manage <span class="red">Hybrid Chatbots</span></p>
+      <div class="features-container">
+        <BotFeatureCard
+                width="323px"
+                height="312px"
+                padding="35px"
+                iconUrl="feature1.png"
+                title="Onsite Hosting"
+                subtitle="Satisfy corporate requirements to host locally."
+        >
+        </BotFeatureCard>
+        <BotFeatureCard
+                width="323px"
+                height="312px"
+                padding="35px"
+                iconUrl="feature2.png"
+                title="Human Takeover"
+                subtitle="Takeover complex conversations to achieve customer satisfaction."
+        >
+        </BotFeatureCard>
+        <BotFeatureCard
+                width="323px"
+                height="312px"
+                padding="35px"
+                iconUrl="feature3.png"
+                title="Chat Structuring"
+                subtitle="SiniticAI™ rapidly structures raw chat history to build bots."
+        >
+        </BotFeatureCard>
+      </div>
+      <Button
+              text="See All Features"
+              backgroundColor="#ff003c"
+              color="white">
+      </Button>
     </div>
-  </div>
-</template>
+    <div >
 
+    </div>
+    <Footer>
+
+    </Footer>
+  </div>
+
+
+</template>
 <script>
-export default {
-  head() {
-    return { title: this.$t('home.title') }
-  }
-}
+    import Index from '~/pages/_lang/index'
+    import ContentCard from '~/components/ContentCard'
+    import Button from '~/components/Button'
+    import BotFeatureCard from '~/components/BotFeatureCard'
+    import Footer from '~/components/Footer'
+
+    export default {
+        components: {
+            ContentCard,
+            Index,
+            BotFeatureCard,
+            Button,
+            Footer
+        },
+        data: () => ({
+            buttons: {
+                home1: [
+                    {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
+                    {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
+                    ],
+                home2: [
+                    {text: 'Try it now', backgroundColor: '#ff003c', color: '#ffffff'},
+                    {text: 'Check out the bots', backgroundColor: '#ffffff', color: '#000000'}
+                ]
+            }
+        })
+
+    }
 </script>
+<style>
+  .red{
+    color: #ff003c;
+  }
+  .feature-heading{
+    font-size: 38px;
+    text-align: center;
+  }
+  .features-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 63px;
+    margin-bottom: 63px;
+  }
+  .bot-features-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+
