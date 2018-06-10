@@ -32,25 +32,25 @@
 
 <style scoped>
     h3{
-        font-size: 48px;
+        font-size: 2em;
         color: #1e1e1e;
     }
     p {
-        font-size: 22px;
+        font-size: 1em;
         color: #1e1e1e;
-        margin-top: 21px;
+        margin-top: .5em;
     }
     .button-container{
         display: flex;
         flex-direction: row;
-        margin-top: 32px;
+        margin-top: 1em;
     }
     .buttons{
         display: flex;
         flex-direction: row;
         width: 170px;
         height: 50px;
-        margin-left: 30px;
+        margin-left: 1em;
     }
     .buttons:first-child{
         margin-left: 0;

@@ -30,11 +30,11 @@
 
 <style scoped>
     h3{
-        font-size: 48px;
+        font-size: 2em;
         color: #1e1e1e;
     }
     p {
-        font-size: 22px;
+        font-size: 1em;
         color: #1e1e1e;
         padding: 5px 20px;
     }

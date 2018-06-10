@@ -1,22 +1,40 @@
 <template>
   <div>
     <header class="Header">
-      <div class="container">
-        <h1 class="Header__Title">Nuxt i18n</h1>
-        <nav class="Header__Menu">
-          <nuxt-link class="Header__Link" :to="$i18n.path('')" exact>
-            {{ $t('links.home') }}
+      <div class="flex w100 h100 vCenter">
+        <div class="inlineFlex w50 lf">
+          <nuxt-link class="Header__Logo Header__Link" :to="$i18n.path('')">
+            <div class="logo"></div>
           </nuxt-link>
-          <nuxt-link class="Header__Link" :to="$i18n.path('about')" exact>
-            {{ $t('links.about') }}
+          <nuxt-link class="Header__Link" :to="'/'+$i18n.locale+'/sectors'">
+            Sectors
           </nuxt-link>
-          <nuxt-link class="Header__Link" v-if="$i18n.locale === 'en'" :to="`/fr` + $route.fullPath" active-class="none" exact>
-            {{ $t('links.french') }}
+          <nuxt-link class="Header__Link" :to="'/'+$i18n.locale+'/botic-ai'">
+            BoticAI
           </nuxt-link>
-          <nuxt-link class="Header__Link" v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" active-class="none" exact>
-            {{ $t('links.english') }}
+          <nuxt-link class="Header__Link" :to="'/'+$i18n.locale+'/pricing'">
+            Pricing
           </nuxt-link>
-        </nav>
+          <nuxt-link class="Header__Link" :to="'/'+$i18n.locale+'/partners'">
+            Partners
+          </nuxt-link>
+        </div>
+        <div class="inlineFlex w50 rf">  
+          <nav class="Header__Menu">
+            <nuxt-link class="Header__Button" :to="$i18n.path('')" exact>
+              {{ $t('links.home') }}
+            </nuxt-link>
+            <nuxt-link class="Header__Button" :to="$i18n.path('about')" exact>
+              {{ $t('links.about') }}
+            </nuxt-link>
+            <nuxt-link class="Header__Button" v-if="$i18n.locale === 'en'" :to="`/fr` + $route.fullPath" active-class="none" exact>
+              {{ $t('links.french') }}
+            </nuxt-link>
+            <nuxt-link class="Header__Button" v-else :to="$route.fullPath.replace(/^\/[^\/]+/, '')" active-class="none" exact>
+              {{ $t('links.english') }}
+            </nuxt-link>
+          </nav>
+        </div>
       </div>
     </header>
     <nuxt/>
@@ -53,9 +71,21 @@ html, body {
 }
 .Header {
   color: #fff;
-  height: 80px;
-  line-height: 80px;
-  background-color: #2e2f30;
+  height: 60px;
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.Header__Logo{
+  background-image:url('/static/logo.png');
+  width: 65px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .Header__Title {
   float: left;
@@ -67,6 +97,12 @@ html, body {
 }
 .Header__Link {
   font-size: 16px;
+  color: #1e1e1e;
+  text-decoration: none;
+  margin-left: 20px;
+}
+.Header__Button {
+  font-size: 16px;
   color: #fff;
   border: 1px solid #fff;
   padding: 7px 12px;
@@ -75,7 +111,7 @@ html, body {
   border-radius: 5px;
   margin-left: 10px;
 }
-.Header__Link:hover {
+.Header__Button:hover {
   color: #2e2f30;
   background-color: #fff;
 }
@@ -89,5 +125,33 @@ html, body {
 .Content__Title {
   font-weight: 300;
   padding-bottom: 30px;
+}
+.w100{
+  width:100%;
+}
+.w50{
+  width:50%;
+}
+.flex{
+  display:flex;
+}
+.inlineFlex{
+  display:inline-flex;
+}
+.lf{
+  justify-content:flex-start;
+  padding-left: 3.5%;
+  box-sizing: border-box;
+}
+.rf{
+  justify-content:flex-end;
+  padding-right: 3.5%;
+  box-sizing: border-box;
+}
+.h100{
+  height:100%;
+}
+.vCenter{
+  align-items:center;
 }
 </style>
