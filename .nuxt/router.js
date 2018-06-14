@@ -3,10 +3,12 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _44c8da50 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
-const _6480b515 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
-const _f16707da = () => import('../pages/_lang/index.vue' /* webpackChunkName: "pages/_lang/index" */).then(m => m.default || m)
-const _6794a14e = () => import('../pages/_lang/about.vue' /* webpackChunkName: "pages/_lang/about" */).then(m => m.default || m)
+const _83c26df4 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
+const _e8301ecc = () => import('../pages/botic.vue' /* webpackChunkName: "pages/botic" */).then(m => m.default || m)
+const _4452b86a = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _d8b3eb6e = () => import('../pages/_lang/index.vue' /* webpackChunkName: "pages/_lang/index" */).then(m => m.default || m)
+const _41b75718 = () => import('../pages/_lang/botic.vue' /* webpackChunkName: "pages/_lang/botic" */).then(m => m.default || m)
+const _73ee2f84 = () => import('../pages/_lang/about.vue' /* webpackChunkName: "pages/_lang/about" */).then(m => m.default || m)
 
 
 
@@ -68,22 +70,32 @@ export function createRouter () {
     routes: [
 		{
 			path: "/about",
-			component: _44c8da50,
+			component: _83c26df4,
 			name: "about"
 		},
 		{
+			path: "/botic",
+			component: _e8301ecc,
+			name: "botic"
+		},
+		{
 			path: "/",
-			component: _6480b515,
+			component: _4452b86a,
 			name: "index"
 		},
 		{
 			path: "/:lang",
-			component: _f16707da,
+			component: _d8b3eb6e,
 			name: "lang"
 		},
 		{
+			path: "/:lang/botic",
+			component: _41b75718,
+			name: "lang-botic"
+		},
+		{
 			path: "/:lang/about",
-			component: _6794a14e,
+			component: _73ee2f84,
 			name: "lang-about"
 		}
     ],
