@@ -1,29 +1,31 @@
 <template>
     <div class="card-container">
-        <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" paginationSize=5 easing="linear" speed=300 perPage=1>
-            <slide>
-                <ActionContent
-                    width="50%"
-                    :height="height"
-                    padding="5%"
-                    :title="title"
-                    :subtitle="subtitle"
-                    :buttons="buttons"
-                >
-                </ActionContent>
-            </slide>
-            <slide>
-                <ActionContent
-                    width="50%"
-                    :height="height"
-                    padding="5%"
-                    :title="title"
-                    :subtitle="subtitle"
-                    :buttons="buttons"
-                >
-                </ActionContent>
-            </slide>
-        </carousel>
+        <no-ssr placeholder="Loading...">
+            <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" paginationSize=5 easing="linear" speed=300 perPage=1>
+                <slide>
+                    <ActionContent
+                        width="50%"
+                        :height="height"
+                        padding="5%"
+                        :title="title"
+                        :subtitle="subtitle"
+                        :buttons="buttons"
+                    >
+                    </ActionContent>
+                </slide>
+                <slide>
+                    <ActionContent
+                        width="50%"
+                        :height="height"
+                        padding="5%"
+                        :title="title"
+                        :subtitle="subtitle"
+                        :buttons="buttons"
+                    >
+                    </ActionContent>
+                </slide>
+            </carousel>
+        </no-ssr>
         <img :src="imageUrl" class="image" :style="{'height': height}"/>
     </div>
 </template>
@@ -47,6 +49,8 @@
     h3{
         font-size: 2em;
         color: #1e1e1e;
+        font-weight: bold;
+        line-height: 1.1em;
     }
     p {
         font-size: 1em;
@@ -64,7 +68,7 @@
     }
     .VueCarousel{
         width: 50%;
-        padding: 5%;
+        padding: 5% 10%;
         box-sizing:border-box;
     }
     .content-container{

@@ -1,0 +1,8 @@
+$variable-columns: false;
+
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/bulma";
+
+.align-center{
+	align-items:center;
+}

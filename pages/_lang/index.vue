@@ -5,7 +5,7 @@
             subtitle="Instant multilingual support. Higher customer satisfaction"
             :buttons="buttons.block1"
             showContentOnLeft="true"
-            imageUrl="group-31@3x.png"
+            imageUrl="images/group-31@3x.png"
             height="620px"
     >
     </ContentCard>
@@ -14,7 +14,7 @@
             subtitle="Build, edit and deploy multilingual bots without coding"
             :buttons="buttons.block2"
             showContentOnLeft="false"
-            imageUrl="placeholder@3x.png"
+            imageUrl="images/placeholder@3x.png"
             height="650px"
     >
     </ContentCard>
@@ -22,7 +22,7 @@
             title="60% customer support <span class='red'>Automation</span> with 11% higher Chinese accuracy from SiniticAI"
             subtitle="Build, edit and deploy multilingual bots without coding"
             :buttons="buttons.block2"
-            imageUrl="placeholder@3x.png"
+            imageUrl="images/placeholder@3x.png"
             height="650px"
     >
     </ContentCardCarousel>
@@ -33,7 +33,7 @@
                 width="323px"
                 height="312px"
                 padding="35px"
-                iconUrl="feature1.png"
+                iconUrl="images/feature1.png"
                 title="Onsite Hosting"
                 subtitle="Satisfy corporate requirements to host locally."
         >
@@ -42,7 +42,7 @@
                 width="323px"
                 height="312px"
                 padding="35px"
-                iconUrl="feature2.png"
+                iconUrl="images/feature2.png"
                 title="Human Takeover"
                 subtitle="Takeover complex conversations to achieve customer satisfaction."
         >
@@ -51,7 +51,7 @@
                 width="323px"
                 height="312px"
                 padding="35px"
-                iconUrl="feature3.png"
+                iconUrl="images/feature3.png"
                 title="Chat Structuring"
                 subtitle="SiniticAI™ rapidly structures raw chat history to build bots."
         >
@@ -80,7 +80,8 @@
     import Button from '~/components/Button'
     import BotFeatureCard from '~/components/BotFeatureCard'
     import Footer from '~/components/Footer'
-
+    import stylesDesktop from '~/static/styles/desktop/home.scss'
+    import stylesMobile from '~/static/styles/mobile/home.scss'
     export default {
         components: {
             ContentCard,
@@ -104,30 +105,8 @@
                     {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
                     {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
                 ]
-            }
+            },
         })
-
     }
 </script>
-<style>
-  .red{
-    color: #ff003c;
-  }
-  .feature-heading{
-    font-size: 38px;
-    text-align: center;
-  }
-  .features-container{
-    display: flex;
-    justify-content: center;
-    margin-top: 63px;
-    margin-bottom: 63px;
-  }
-  .bot-features-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-</style>
 

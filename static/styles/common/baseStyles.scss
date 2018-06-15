@@ -1,0 +1,14 @@
+$variable-columns: false;
+
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/bulma";
+
+.align-center{
+	align-items:center;
+}
+.h80{
+	height:80px;
+}
+.mr20{
+	margin-right:20px;
+}

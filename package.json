@@ -1,8 +1,10 @@
 {
   "name": "example-i18n",
   "dependencies": {
+    "bulma": "^0.7.1",
     "nuxt": "latest",
     "vue-carousel": "^0.8.1",
+    "vue-head": "^2.0.12",
     "vue-i18n": "^7.3.2"
   },
   "scripts": {
@@ -10,5 +12,11 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate"
+  },
+  "devDependencies": {
+    "node-sass": "^4.9.0",
+    "nuxt-sass-resources-loader": "^2.0.2",
+    "sass-loader": "^7.0.3",
+    "vue-style-loader": "^4.1.0"
   }
 }

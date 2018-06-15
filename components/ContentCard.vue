@@ -32,6 +32,8 @@
     h3{
         font-size: 2em;
         color: #1e1e1e;
+        font-weight: bold;
+        line-height: 1.1em;
     }
     p {
         font-size: 1em;
@@ -47,5 +49,7 @@
     .image{
         width: 50%;
     }
-
+    .content-container{
+        padding:5% 10% !important;
+    }
 </style>
