@@ -5,7 +5,9 @@
     "nuxt": "latest",
     "vue-carousel": "^0.8.1",
     "vue-head": "^2.0.12",
-    "vue-i18n": "^7.3.2"
+    "vue-i18n": "^7.3.2",
+    "vue-no-ssr": "^0.2.2",
+    "vue-slider-component": "^2.7.1"
   },
   "scripts": {
     "dev": "nuxt",

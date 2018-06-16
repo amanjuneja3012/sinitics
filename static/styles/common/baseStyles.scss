@@ -3,6 +3,9 @@ $variable-columns: false;
 @import "~bulma/sass/utilities/_all.sass";
 @import "~bulma/bulma";
 
+#__layout{
+	background:#fafafa;
+}
 .align-center{
 	align-items:center;
 }
@@ -17,4 +20,55 @@ $variable-columns: false;
 }
 .blackOpaque{
 	background-color:rgba(0,0,0,0.8) !important;
+}
+.row{
+	flex-direction:row;
+}
+.column{
+	flex-direction:column;
+}
+.black{
+	background:black;
+}
+.inline-flex{
+	display:inline-flex;
+}
+.roundedTop{
+	border-radius: 15px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+.white{
+	background:white;
+}
+.colorWhite{
+	color:white;
+}
+.f13{
+	font-size:13px;
+}
+.f12{
+	font-size:12px;
+}
+.f14{
+	font-size:14px;
+}
+.f16{
+	font-size:16px;
+}
+.center{
+	align-items:center;
+	justify-content:center;
+}
+.vTop{
+	vertical-align:top;
+}
+.mr10{
+	margin-right:10px;
+}
+.bold{
+	font-weight:bold;
+}
+.colorDarkBlack{
+	color: #1e1e1e;
 }
