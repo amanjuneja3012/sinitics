@@ -2,7 +2,7 @@
   <div>
     <header class="Header">
       <div class="is-flex-desktop-only w100 h100 vCenter">
-        <nav class="inlineFlex w50 lf navbar h80" role="navigation" aria-label="main navigation">
+        <nav class="inlineFlex w50 lf navbar h60" role="navigation" aria-label="main navigation">
           <div class="navbar-brand align-center">
             <nuxt-link class="Header__Logo Header__Link navbar-item" :to="$i18n.path('')">
               <div class="logo"></div>
@@ -39,7 +39,7 @@
         </nav>
         <div class="inlineFlex w50 rf is-hidden-touch">  
           <nav class="Header__Menu">
-            <div class="button is-small is-rounded is-primary is-inverted is-outlined mr20">
+            <div class="button is-small is-rounded is-primary is-inverted is-outlined mr20 blackOpaque">
               Login Now
             </div>
             <div class="button is-small is-rounded">
@@ -85,7 +85,7 @@ html, body {
 .Header {
   color: #fff;
   height: 60px;
-  background-color: transparent;
+  background-color: rgba(255,255,255,0.95);
   position: fixed;
   top: 0;
   left: 0;
@@ -161,6 +161,9 @@ html, body {
   justify-content:flex-end;
   padding-right: 3.5%;
   box-sizing: border-box;
+  height: 60px;
+  vertical-align: top;
+  align-items: center;
 }
 .h100{
   height:100%;

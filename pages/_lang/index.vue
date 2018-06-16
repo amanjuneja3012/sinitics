@@ -5,7 +5,7 @@
             subtitle="Instant multilingual support. Higher customer satisfaction"
             :buttons="buttons.block1"
             showContentOnLeft="true"
-            imageUrl="images/group-31@3x.png"
+            imageUrl="images/page1@3x.png"
             height="620px"
     >
     </ContentCard>
@@ -14,16 +14,16 @@
             subtitle="Build, edit and deploy multilingual bots without coding"
             :buttons="buttons.block2"
             showContentOnLeft="false"
-            imageUrl="images/placeholder@3x.png"
-            height="650px"
+            imageUrl="images/page2@3x.png"
+            height="610px"
     >
     </ContentCard>
     <ContentCardCarousel
             title="60% customer support <span class='red'>Automation</span> with 11% higher Chinese accuracy from SiniticAI"
             subtitle="Build, edit and deploy multilingual bots without coding"
             :buttons="buttons.block2"
-            imageUrl="images/placeholder@3x.png"
-            height="650px"
+            imageUrl="images/page3@3x.png"
+            height="550px"
     >
     </ContentCardCarousel>
     <div class="bot-features-container">

@@ -12,7 +12,7 @@
 
         >
         </ActionContent>
-        <img :src="imageUrl" class="image" :style="{'height': height}"/>
+        <div class="image" :style="{'height': height,'background-size': 'cover','background-image': 'url('+imageUrl+')'}"></div>
     </div>
 </template>
 

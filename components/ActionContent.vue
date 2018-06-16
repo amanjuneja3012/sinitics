@@ -34,6 +34,8 @@
     h3{
         font-size: 2em;
         color: #1e1e1e;
+        font-weight: bold;
+        line-height: 1.1em;
     }
     p {
         font-size: 1em;
@@ -44,6 +46,7 @@
         display: flex;
         flex-direction: row;
         margin-top: 1em;
+        justify-content: space-between;
     }
     .buttons{
         display: flex;
