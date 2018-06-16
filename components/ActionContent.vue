@@ -3,7 +3,7 @@
     'width': width,
     'height': height,
     'padding': padding
-  }">
+  }" v-if="!rightComponent">
         <h3 v-html="title"></h3>
         <p v-html="subtitle"></p>
         <div class="button-container">
@@ -14,17 +14,22 @@
                         :color="button.color">
                 </Button>
             </div>
-            <component :is="externalComponent"></component>
+            <AppsWidget v-if="externalComponent"></AppsWidget>
         </div>
     </div>
 </template>
 
 <script>
     import Button from '~/components/Button';
+    import AppsWidget from '~/components/AppsWidget'
     export default {
         props: ['title', 'subtitle', 'buttons', 'width', 'height', 'padding', 'externalComponent'],
         components: {
-            Button,externalComponent
+            Button,
+            AppsWidget
+        },
+        data:{
+            externalComponent:'externalComponent'
         }
     }
 

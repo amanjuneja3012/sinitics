@@ -10,19 +10,21 @@
                 :subtitle="subtitle"
                 :buttons="buttons"
                 :externalComponent="externalComponent"
-
         >
         </ActionContent>
-        <div class="image" :style="{'height': height,'background-size': 'cover','background-image': 'url('+imageUrl+')'}"></div>
+        <div v-if="!rightComponent" class="image" :style="{'height': height,'background-size': 'cover','background-image': 'url('+imageUrl+')'}"></div>
+        <BudgetCalculator v-if="rightComponent" />
     </div>
 </template>
 
 <script>
     import ActionContent from '~/components/ActionContent';
+    import BudgetCalculator from '~/components/BudgetCalculator'
     export default {
-        props: ['title', 'subtitle', 'buttons', 'showContentOnLeft', 'imageUrl', 'height', 'externalComponent'],
+        props: ['title', 'subtitle', 'buttons', 'showContentOnLeft', 'imageUrl', 'height', 'externalComponent', 'rightComponent'],
         components: {
-            ActionContent
+            ActionContent,
+            BudgetCalculator
         }
     }
 

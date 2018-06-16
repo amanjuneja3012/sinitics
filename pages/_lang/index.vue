@@ -1,30 +1,50 @@
 <template>
   <div>
     <ContentCard
-            title="Are You speaking your <span class='red'>Customer's</span> language"
-            subtitle="Instant multilingual support. Higher customer satisfaction"
-            :buttons="buttons.block1"
-            showContentOnLeft="true"
-            imageUrl="images/page1@3x.png"
-            height="620px"
+        title="Are You speaking your <span class='red'>Customer's</span> language"
+        subtitle="Instant multilingual support. Higher customer satisfaction"
+        :buttons="buttons.block1"
+        showContentOnLeft="true"
+        imageUrl="images/page1@3x.png"
+        height="620px"
+    >
+    </ContentCard>
+    <ContentCard
+        title="Finally, <span class='red'>Bots for Everyone</span>"
+        subtitle="Build, edit and deploy multilingual bots without coding"
+        :buttons="buttons.block2"
+        showContentOnLeft="false"
+        imageUrl="images/page2@3x.png"
+        height="610px"
+        externalComponent=AppsWidget
     >
     </ContentCard>
     <ContentCardCarousel
-            title="60% customer support <span class='red'>Automation</span> with 11% higher Chinese accuracy from SiniticAI"
-            subtitle="Build, edit and deploy multilingual bots without coding"
-            :buttons="buttons.block2"
-            imageUrl="images/page3@3x.png"
-            height="550px"
+        title="60% customer support <span class='red'>Automation</span> with 11% higher Chinese accuracy from SiniticAI"
+        subtitle="Build, edit and deploy multilingual bots without coding"
+        :buttons="buttons.block2"
+        imageUrl="images/page3@3x.png"
+        height="550px"
     >
     </ContentCardCarousel>
     <ContentCard
-            title="Finally, <span class='red'>Bots for Everyone</span>"
-            subtitle="Build, edit and deploy multilingual bots without coding"
-            :buttons="buttons.block2"
-            showContentOnLeft="false"
-            imageUrl="images/page2@3x.png"
-            height="610px"
-            externalComponent=AppsWidget
+        title="<span class='red'>Omnichannel</span> from the start"
+        subtitle="Reach your customers on all their apps and devices"
+        showContentOnLeft="false"
+        imageUrl="images/page4@3x.png"
+        height="630px"
+        externalComponent=AppsWidget
+    >
+    </ContentCard>
+    <ContentCard
+        title="<span class='red'>Save</span> with automation"
+        subtitle="Reduce your customer support budget without compromising customer satisfaction"
+        :buttons="buttons.block4"
+        showContentOnLeft="true"
+        imageUrl="images/page1@3x.png"
+        height="620px"
+        externalComponent="BudgetCalculator"
+        rightComponent="BudgetCalculator"
     >
     </ContentCard>
     <div class="bot-features-container">
@@ -84,6 +104,7 @@
     import stylesDesktop from '~/static/styles/desktop/home.scss'
     import stylesMobile from '~/static/styles/mobile/home.scss'
     import AppsWidget from '~/components/AppsWidget'
+    import BudgetCalculator from '~/components/BudgetCalculator'
     export default {
         components: {
             ContentCard,
@@ -91,7 +112,9 @@
             BotFeatureCard,
             Button,
             Footer,
-            ContentCardCarousel
+            ContentCardCarousel,
+            BudgetCalculator,
+            AppsWidget
         },
         data: () => ({
             buttons: {
@@ -104,6 +127,10 @@
                     {text: 'Check out the bots', backgroundColor: '#ffffff', color: '#000000'}
                 ],
                 block3: [
+                    {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
+                    {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
+                ],
+                block4: [
                     {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
                     {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
                 ]

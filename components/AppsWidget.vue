@@ -15,6 +15,6 @@
 
 <style scoped>
     .apps-widget{
-        disaply:block;
+        display:block;
     }
 </style>
