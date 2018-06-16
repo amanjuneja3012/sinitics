@@ -3,7 +3,7 @@
     'width': width,
     'height': height,
     'padding': padding
-  }" v-if="!rightComponent">
+  }">
         <h3 v-html="title"></h3>
         <p v-html="subtitle"></p>
         <div class="button-container">
@@ -15,6 +15,8 @@
                 </Button>
             </div>
             <AppsWidget v-if="externalComponent"></AppsWidget>
+            <InputBox v-if="inputBox"></InputBox>
+            <ListTypes v-if="listTypes"></ListTypes>
         </div>
     </div>
 </template>
@@ -22,19 +24,23 @@
 <script>
     import Button from '~/components/Button';
     import AppsWidget from '~/components/AppsWidget'
+    import InputBox from '~/components/InputBox'
+    import ListTypes from '~/components/ListTypes'
     export default {
-        props: ['title', 'subtitle', 'buttons', 'width', 'height', 'padding', 'externalComponent'],
+        props: ['title', 'subtitle', 'buttons', 'width', 'height', 'padding', 'externalComponent', 'inputBox', 'listTypes'],
         components: {
             Button,
-            AppsWidget
+            AppsWidget,
+            InputBox,
+            ListTypes
         },
         data:{
-            externalComponent:'externalComponent'
+            externalComponent:'externalComponent',
+            inputBox:'inputBox',
+            listTypes:'listTypes'
         }
     }
-
 </script>
-
 
 <style scoped>
     h3{

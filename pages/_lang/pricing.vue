@@ -115,7 +115,7 @@
                     backgroundColor="#ff003c"
                     color="white"
                     width="256px"
-                    iconUrl="group-22.png"
+                    iconUrl="images/group-22.png"
                     align="space-between"
             >
             </Button>
