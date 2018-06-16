@@ -9,6 +9,7 @@
                 :title="title"
                 :subtitle="subtitle"
                 :buttons="buttons"
+                :externalComponent="externalComponent"
 
         >
         </ActionContent>
@@ -19,7 +20,7 @@
 <script>
     import ActionContent from '~/components/ActionContent';
     export default {
-        props: ['title', 'subtitle', 'buttons', 'showContentOnLeft', 'imageUrl', 'height'],
+        props: ['title', 'subtitle', 'buttons', 'showContentOnLeft', 'imageUrl', 'height', 'externalComponent'],
         components: {
             ActionContent
         }

@@ -9,15 +9,6 @@
             height="620px"
     >
     </ContentCard>
-    <ContentCard
-            title="Finally, <span class='red'>Bots for Everyone</span>"
-            subtitle="Build, edit and deploy multilingual bots without coding"
-            :buttons="buttons.block2"
-            showContentOnLeft="false"
-            imageUrl="images/page2@3x.png"
-            height="610px"
-    >
-    </ContentCard>
     <ContentCardCarousel
             title="60% customer support <span class='red'>Automation</span> with 11% higher Chinese accuracy from SiniticAI"
             subtitle="Build, edit and deploy multilingual bots without coding"
@@ -26,6 +17,16 @@
             height="550px"
     >
     </ContentCardCarousel>
+    <ContentCard
+            title="Finally, <span class='red'>Bots for Everyone</span>"
+            subtitle="Build, edit and deploy multilingual bots without coding"
+            :buttons="buttons.block2"
+            showContentOnLeft="false"
+            imageUrl="images/page2@3x.png"
+            height="610px"
+            externalComponent=AppsWidget
+    >
+    </ContentCard>
     <div class="bot-features-container">
       <p class="feature-heading">Build & Manage <span class="red">Hybrid Chatbots</span></p>
       <div class="features-container">
@@ -82,6 +83,7 @@
     import Footer from '~/components/Footer'
     import stylesDesktop from '~/static/styles/desktop/home.scss'
     import stylesMobile from '~/static/styles/mobile/home.scss'
+    import AppsWidget from '~/components/AppsWidget'
     export default {
         components: {
             ContentCard,

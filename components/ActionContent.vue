@@ -7,13 +7,14 @@
         <h3 v-html="title"></h3>
         <p v-html="subtitle"></p>
         <div class="button-container">
-            <div class="buttons" v-for="(button, index) in buttons" :key="index">
+            <div v-if="!externalComponent" class="buttons" v-for="(button, index) in buttons" :key="index">
                 <Button
                         :text="button.text"
                         :backgroundColor="button.backgroundColor"
                         :color="button.color">
                 </Button>
             </div>
+            <component :is="externalComponent"></component>
         </div>
     </div>
 </template>
@@ -21,9 +22,9 @@
 <script>
     import Button from '~/components/Button';
     export default {
-        props: ['title', 'subtitle', 'buttons', 'width', 'height', 'padding'],
+        props: ['title', 'subtitle', 'buttons', 'width', 'height', 'padding', 'externalComponent'],
         components: {
-            Button
+            Button,externalComponent
         }
     }
 
