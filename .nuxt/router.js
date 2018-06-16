@@ -3,12 +3,14 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _83c26df4 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
-const _e8301ecc = () => import('../pages/botic.vue' /* webpackChunkName: "pages/botic" */).then(m => m.default || m)
-const _4452b86a = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
-const _d8b3eb6e = () => import('../pages/_lang/index.vue' /* webpackChunkName: "pages/_lang/index" */).then(m => m.default || m)
-const _41b75718 = () => import('../pages/_lang/botic.vue' /* webpackChunkName: "pages/_lang/botic" */).then(m => m.default || m)
-const _73ee2f84 = () => import('../pages/_lang/about.vue' /* webpackChunkName: "pages/_lang/about" */).then(m => m.default || m)
+const _49271b1e = () => import('../pages/pricing.vue' /* webpackChunkName: "pages/pricing" */).then(m => m.default || m)
+const _dd690a0e = () => import('../pages/botic.vue' /* webpackChunkName: "pages/botic" */).then(m => m.default || m)
+const _78fb5936 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
+const _398ba3ac = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _ffabdd30 = () => import('../pages/_lang/index.vue' /* webpackChunkName: "pages/_lang/index" */).then(m => m.default || m)
+const _69ab26dc = () => import('../pages/_lang/pricing.vue' /* webpackChunkName: "pages/_lang/pricing" */).then(m => m.default || m)
+const _2e3b5e37 = () => import('../pages/_lang/botic.vue' /* webpackChunkName: "pages/_lang/botic" */).then(m => m.default || m)
+const _607236a3 = () => import('../pages/_lang/about.vue' /* webpackChunkName: "pages/_lang/about" */).then(m => m.default || m)
 
 
 
@@ -69,33 +71,43 @@ export function createRouter () {
     scrollBehavior,
     routes: [
 		{
-			path: "/about",
-			component: _83c26df4,
-			name: "about"
+			path: "/pricing",
+			component: _49271b1e,
+			name: "pricing"
 		},
 		{
 			path: "/botic",
-			component: _e8301ecc,
+			component: _dd690a0e,
 			name: "botic"
 		},
 		{
+			path: "/about",
+			component: _78fb5936,
+			name: "about"
+		},
+		{
 			path: "/",
-			component: _4452b86a,
+			component: _398ba3ac,
 			name: "index"
 		},
 		{
 			path: "/:lang",
-			component: _d8b3eb6e,
+			component: _ffabdd30,
 			name: "lang"
 		},
 		{
+			path: "/:lang/pricing",
+			component: _69ab26dc,
+			name: "lang-pricing"
+		},
+		{
 			path: "/:lang/botic",
-			component: _41b75718,
+			component: _2e3b5e37,
 			name: "lang-botic"
 		},
 		{
 			path: "/:lang/about",
-			component: _73ee2f84,
+			component: _607236a3,
 			name: "lang-about"
 		}
     ],
