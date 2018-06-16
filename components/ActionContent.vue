@@ -4,7 +4,8 @@
     'height': height,
     'padding': padding
   }">
-        <h3 v-html="title"></h3>
+        <h1 v-if='header' v-html="header"></h1>
+        <h3 v-if='title' v-html="title"></h3>
         <p v-html="subtitle"></p>
         <div class="button-container">
             <div v-if="!externalComponent" class="buttons" v-for="(button, index) in buttons" :key="index">
@@ -27,7 +28,7 @@
     import InputBox from '~/components/InputBox'
     import ListTypes from '~/components/ListTypes'
     export default {
-        props: ['title', 'subtitle', 'buttons', 'width', 'height', 'padding', 'externalComponent', 'inputBox', 'listTypes'],
+        props: ['title', 'header', 'subtitle', 'buttons', 'width', 'height', 'padding', 'externalComponent', 'inputBox', 'listTypes'],
         components: {
             Button,
             AppsWidget,
@@ -43,32 +44,46 @@
 </script>
 
 <style scoped>
+    h1{
+        font-size: 2.7em;
+        color: #1e1e1e;
+        font-weight: bold;
+        line-height: 1.05em;
+        letter-spacing: 1px;
+        margin-bottom: 5%;
+    }
     h3{
         font-size: 2em;
         color: #1e1e1e;
         font-weight: bold;
         line-height: 1.1em;
+        margin-bottom: 5%;
     }
     p {
-        font-size: 1em;
+        font-size: 1.22em;
         color: #1e1e1e;
-        margin-top: .5em;
+        margin-bottom: 7%;
+        line-height: 1.4em;
     }
     .button-container{
         display: flex;
         flex-direction: row;
-        margin-top: 1em;
-        justify-content: space-between;
+        /* margin-top: 1em; */
+        /* justify-content: space-between; */
     }
+
     .buttons{
+        border-radius: 2px;
         display: flex;
         flex-direction: row;
         width: 170px;
         height: 50px;
-        margin-left: 1em;
+        margin-right: 1.6em;
+        border: none;
     }
-    .buttons:first-child{
-        margin-left: 0;
+    .button{
+      border: none;
+      border-radius: 2px;
     }
     .content-container{
         display: flex;

@@ -6,6 +6,7 @@
                 width="50%"
                 :height="height"
                 padding="5%"
+                :header='header'
                 :title="title"
                 :subtitle="subtitle"
                 :buttons="buttons"
@@ -23,7 +24,7 @@
     import ActionContent from '~/components/ActionContent';
     import BudgetCalculator from '~/components/BudgetCalculator'
     export default {
-        props: ['title', 'subtitle', 'buttons', 'showContentOnLeft', 'imageUrl', 'height', 'externalComponent', 'rightComponent', 'inputBox', 'listTypes'],
+        props: ['title', 'header', 'subtitle', 'buttons', 'showContentOnLeft', 'imageUrl', 'height', 'externalComponent', 'rightComponent', 'inputBox', 'listTypes'],
         components: {
             ActionContent,
             BudgetCalculator
@@ -55,6 +56,6 @@
         width: 50%;
     }
     .content-container{
-        padding:5% 10% !important;
+        padding:12% 9.4% !important;
     }
 </style>
