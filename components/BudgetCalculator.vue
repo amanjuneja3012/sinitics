@@ -27,7 +27,7 @@
     var components = {};
     components['no-ssr'] = NoSSR;
     export default {
-        data () {
+        data: function () {
             return {
                 budgetValue: 0,
                 userValue: 0

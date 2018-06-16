@@ -78,10 +78,6 @@ html, body {
   font-family: "Source Sans Pro", Arial, sans-serif;
   height: 100vh;
   margin: 0;
-  /* background-image:url('/static/Grid.png');
-  background-repeat: no-repeat;
-  background-size: 1170px 6111px;
-  background-position: center; */
 }
 .navbar-brand{
   margin-right: 6%;
@@ -98,7 +94,7 @@ html, body {
 .Header {
   color: #fff;
   height: 70px;
-  box-shadow: 0 2px 58px 0 rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 58px 0 rgba(0, 0, 0, 0);
   background-color: rgba(255,255,255,0.97);
   position: fixed;
   top: 0;

@@ -10,13 +10,15 @@
 
 <script>
     export default {
-        data: () => {
-          items:[
-            {name: 'iGaming', icon: 'government.png'},
-            {name: 'Finance', icon: 'government.png'},
-            {name: 'Outsourcing', icon: 'government.png'},
-            {name: 'Government', icon: 'government.png'}
-          ]
+        data: function () {
+          return {
+            items:[
+              {name: 'iGaming', icon: 'government.png'},
+              {name: 'Finance', icon: 'government.png'},
+              {name: 'Outsourcing', icon: 'government.png'},
+              {name: 'Government', icon: 'government.png'}
+            ]
+          }
         }
     }
 </script>
@@ -41,8 +43,18 @@
         border-radius: 2px;
         background-color: #ff003c;
     }
+    /* .items{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    } */
     .icon-container{
-        display: flex;
-        margin-top: 75px;
+      display: block;
+      margin-top: 75px;
+    }
+    .title{
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
     }
 </style>

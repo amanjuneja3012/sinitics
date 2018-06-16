@@ -1,7 +1,7 @@
 <template>
     <div class="card-container carousel-card-container">
         <no-ssr placeholder="Loading...">
-            <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" paginationSize=5 easing="linear" speed=300 perPage=1>
+            <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :perPage=1>
                 <slide>
                     <ActionContent
                         width="50%"

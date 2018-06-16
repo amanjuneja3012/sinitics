@@ -35,10 +35,11 @@
             InputBox,
             ListTypes
         },
-        data:{
-            externalComponent:'externalComponent',
-            inputBox:'inputBox',
-            listTypes:'listTypes'
+        data: function () {
+            return {
+            // externalComponent:'externalComponent',
+            // inputBox:'inputBox'
+            }
         }
     }
 </script>
