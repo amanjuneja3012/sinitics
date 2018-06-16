@@ -3,7 +3,7 @@
     <ContentCard
       title="Chat with your Customers around the <span class='red'> world </span>"
       subtitle="BoticAI is the natural language processing engine with extreme adaptability for new languages"
-      :buttons="buttons.block1"
+      inputBox="true"
       showContentOnLeft="true"
       imageUrl="group-6@3x.png"
       height="620px"
@@ -15,16 +15,10 @@
       subtitle="Power your bot with phrases & metonyms from our priority sectors."
       showContentOnLeft="false"
       imageUrl="group-53@3x.png"
-      width= '545px'
-      height= '416px'
+      height= '530px'
+      listTypes="true"
     >
     </ContentCard>
-    <div class="types">
-      <div v-for="item in items"  class="items">
-          <img :src=item.icon class="icon" />
-          <p class="title">{{ item.name }}</p>
-      </div>
-    </div>
      <!-- <ContentCard
       title="<span class='red'>30,000+</span> Chats"
       subtitle="Power your bot with phrases & metonyms from our priority sectors."
@@ -42,7 +36,7 @@
           <div class='line' />
           <div class='circle'>2</div>
         </div>
-        <div>
+        <div class='workbox-container'>
           <div class='workbox'>
           <div class='w-header'>Judgement</div>
           <div class='w-content'>Use chat history to build chatbot dialogue and conduct initial BoticAI training.</div>
@@ -61,7 +55,7 @@
           <div class='line' />
           <div class='circle'>4</div>
         </div>
-        <div>
+        <div class='workbox-container'>
           <div class='workbox'>
           <div class='w-header'>Judgement</div>
           <div class='w-content'>Use chat history to build chatbot dialogue and conduct initial BoticAI training.</div>
@@ -102,7 +96,7 @@
       showContentOnLeft="false"
       imageUrl="achieving.png"
       width= '545px'
-      height= '416px'
+      height= '500px'
     >
     </ContentCard>
     <ContentCard
@@ -208,7 +202,7 @@
   .divider{
     display: flex;
     align-items: center;
-    max-width: 50%;
+    max-width: 30%;
     margin: 3% auto;
   }
   .circle{
@@ -228,9 +222,13 @@
   }
   .workbox-section{
     margin-bottom: 6%;
+    width: 100%;
   }
   .workbox-container{
-    
+    width: 54%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
   }
   .workbox{
     display: inline-block;
