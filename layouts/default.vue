@@ -2,7 +2,7 @@
   <div>
     <header class="Header">
       <div class="is-flex-desktop-only w100 h100 vCenter">
-        <nav class="inlineFlex w50 lf navbar h60" role="navigation" aria-label="main navigation">
+        <nav class="inlineFlex w50 lf navbar h70" role="navigation" aria-label="main navigation">
           <div class="navbar-brand align-center">
             <nuxt-link class="Header__Logo Header__Link navbar-item" :to="$i18n.path('')">
               <div class="logo"></div>
@@ -39,10 +39,16 @@
         </nav>
         <div class="inlineFlex w50 rf is-hidden-touch">  
           <nav class="Header__Menu">
-            <div class="button is-small is-rounded is-primary is-inverted is-outlined mr20 blackOpaque">
+            <!-- <div class="button is-small is-rounded mr20 blackOpaque">
               Login Now
             </div>
             <div class="button is-small is-rounded">
+              Try it Free
+            </div> -->
+            <div class="button Header__Button">
+              Login Now
+            </div>
+            <div class="button Header__Button Header__Button_2">
               Try it Free
             </div>
           </nav>
@@ -73,6 +79,9 @@ html, body {
   height: 100vh;
   margin: 0;
 }
+.navbar-brand{
+  margin-right: 6%;
+}
 .container {
   width: 75%;
   margin: 0 auto;
@@ -84,8 +93,9 @@ html, body {
 }
 .Header {
   color: #fff;
-  height: 60px;
-  background-color: rgba(255,255,255,0.95);
+  height: 70px;
+  box-shadow: 0 2px 58px 0 rgba(0, 0, 0, 0);
+  background-color: rgba(255,255,255,0.97);
   position: fixed;
   top: 0;
   left: 0;
@@ -95,9 +105,9 @@ html, body {
   z-index:99;
 }
 .Header__Logo{
-  background-image:url('/static/images/logo.png');
-  width: 100px;
-  height: 30px;
+  background-image:url('/static/images/logo@2x.png');
+  width: 123px;
+  height: 35px;
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -113,22 +123,38 @@ html, body {
   font-size: 16px;
   color: #1e1e1e;
   text-decoration: none;
-  margin-left: 20px;
+  /* padding-left: 5%; */
 }
 .Header__Button {
+  box-sizing: border-box;
   font-size: 16px;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 7px 12px;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 5px;
+  color: #1e1e1e;
   margin-left: 10px;
+  width: 145px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 30px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #1e1e1e;
 }
 .Header__Button:hover {
-  color: #2e2f30;
+  color: #ff003c;
   background-color: #fff;
+  border: 1px solid #ff003c;
 }
+.Header__Button_2{
+  color: #fff;
+  border: none;
+  background-color: #ff003c;
+}
+.Header__Button_2:hover{
+  color: #fff;
+  border: none;
+  background-color: #1e1e1e;
+}
+
 .nuxt-link-active {
   color: cyan;
 }
@@ -146,6 +172,9 @@ html, body {
 .w50{
   width:50%;
 }
+.h70{
+  height: 70px;
+}
 .flex{
   display:flex;
 }
@@ -154,14 +183,14 @@ html, body {
 }
 .lf{
   justify-content:flex-start;
-  padding-left: 3.5%;
+  padding-left: 9%;
   box-sizing: border-box;
 }
 .rf{
-  justify-content:flex-end;
   padding-right: 3.5%;
   box-sizing: border-box;
-  height: 60px;
+  height: 70px;
+  padding-left: 19%; 
   vertical-align: top;
   align-items: center;
 }

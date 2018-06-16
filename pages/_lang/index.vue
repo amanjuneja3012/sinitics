@@ -1,12 +1,12 @@
 <template>
   <div>
     <ContentCard
-        title="Are You speaking your <span class='red'>Customer's</span> language"
+        header="Are You speaking your <span class='red'>Customer's</span> language"
         subtitle="Instant multilingual support. Higher customer satisfaction"
         :buttons="buttons.block1"
         showContentOnLeft="true"
         imageUrl="images/page1@3x.png"
-        height="620px"
+        height="730px"
     >
     </ContentCard>
     <ContentCard

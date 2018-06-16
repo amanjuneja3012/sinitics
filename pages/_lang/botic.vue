@@ -107,9 +107,7 @@
       height="620px"
     >
     </ContentCard>
-    <!-- <Footer>
-
-    </Footer> -->
+    <Footer> </Footer>
   </div>
 
 
