@@ -49,7 +49,6 @@
         color: #1e1e1e;
         font-weight: bold;
         line-height: 1.05em;
-        letter-spacing: 1px;
         margin-bottom: 5%;
     }
     h3{
