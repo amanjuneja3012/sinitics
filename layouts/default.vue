@@ -94,7 +94,7 @@ html, body {
 .Header {
   color: #fff;
   height: 70px;
-  box-shadow: 0 2px 58px 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 2px 58px 0 rgba(0, 0, 0, .01);
   background-color: rgba(255,255,255,0.97);
   position: fixed;
   top: 0;
