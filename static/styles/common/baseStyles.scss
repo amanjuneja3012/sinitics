@@ -4,7 +4,7 @@ $variable-columns: false;
 @import "~bulma/bulma";
 
 #__layout{
-	background:#fafafa;
+	background:#fafafa7a;
 }
 .align-center{
 	align-items:center;
@@ -56,6 +56,15 @@ $variable-columns: false;
 .f16{
 	font-size:16px;
 }
+.f18{
+	font-size:18px;
+}
+.mt8{
+	margin-top:8px;
+}
+.mt10{
+	margin-top:10px;
+}
 .center{
 	align-items:center;
 	justify-content:center;
@@ -71,4 +80,35 @@ $variable-columns: false;
 }
 .colorDarkBlack{
 	color: #1e1e1e;
+}
+.vue-slider-component{
+	.vue-slider-dot{
+		background-color: #ff003c;
+		border: solid 2px #ffffff;
+		width: 20px !important;
+		height: 20px !important;
+		top:-8px !important;
+	}
+	.vue-slider-process{
+		background-color: #ff003c;
+	}
+	.vue-slider{
+		height:4px !important;
+	}
+	.vue-slider-tooltip-wrap{
+		display:none !important;
+		opacity:0;
+	}
+}
+.alignRight{
+	justify-content:flex-end;
+}
+.alignLeft{
+	justify-content:flex-start;
+}
+.pr5{
+	padding-right:5px;
+}
+.rel{
+	position:relative;
 }

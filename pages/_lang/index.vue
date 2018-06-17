@@ -43,7 +43,6 @@
         showContentOnLeft="true"
         imageUrl="images/page1@3x.png"
         height="620px"
-        externalComponent="BudgetCalculator"
         rightComponent="BudgetCalculator"
     >
     </ContentCard>
