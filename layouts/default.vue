@@ -39,16 +39,16 @@
         </nav>
         <div class="inlineFlex w50 rf is-hidden-touch">  
           <nav class="Header__Menu">
-            <!-- <div class="button is-small is-rounded mr20 blackOpaque">
+            <!-- <div class=" is-small is-rounded mr20 blackOpaque">
               Login Now
             </div>
-            <div class="button is-small is-rounded">
+            <div class=" is-small is-rounded">
               Try it Free
             </div> -->
-            <div class="button Header__Button">
+            <div class=" Header__Button">
               Login Now
             </div>
-            <div class="button Header__Button Header__Button_2">
+            <div class=" Header__Button Header__Button_2">
               Try it Free
             </div>
           </nav>
@@ -138,6 +138,7 @@ html, body {
   text-decoration: none;
   background-color: #ffffff;
   border: 1px solid #1e1e1e;
+  cursor:pointer;
 }
 .Header__Button:hover {
   color: #ff003c;
