@@ -31,7 +31,10 @@ $variable-columns: false;
 	background:black;
 }
 .inline-flex{
-	display:inline-flex;
+	display:inline-flex !important;
+}
+.inlineFlex{
+	display:inline-flex !important;
 }
 .roundedTop{
 	border-radius: 15px;
