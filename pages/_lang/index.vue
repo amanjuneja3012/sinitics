@@ -15,7 +15,7 @@
         :buttons="buttons.block2"
         showContentOnLeft="false"
         imageUrl="images/page2@3x.png"
-        height="610px"
+        height="680px"
         externalComponent=AppsWidget
     >
     </ContentCard>
