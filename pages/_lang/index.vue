@@ -83,8 +83,30 @@
               color="white">
       </Button>
     </div>
-    <div >
-
+    <div class="enterpriseInfo rel flex center">
+        <div class="infoBack"></div>
+        <div class="row w800 h340 widgetContainer">
+            <div class="column widgetHeader">
+                <div class="text w50 leftAlign inlineFlex wInvert300 f25 bold">Have a <span class="ml5 red"> Client</span>?</div>
+                <div class="tabs rightAlign inlineFlex w300 f13">
+                    <div class="tab w50 active inlineFlex center padding10 borderRight">Agency</div>
+                    <div class="tab w50 inlineFlex center padding10">System Integrator</div>
+                </div>
+            </div>
+            <InfoBlock 
+                buttonText="Enterprise"
+                heading="Agency"
+                text="Botic enterprise & small business bots have what it takes to launch products and brands-scheduling, human takeover, analytics, omnichannel & more"
+                image="images/agency@3x.png"
+                visibility=true
+            />
+            <InfoBlock 
+                buttonText="Enterprise"
+                heading="Agency"
+                text="Botic enterprise & small business bots have what it takes to launch products and brands-scheduling, human takeover, analytics, omnichannel & more"
+                image="images/agency@3x.png"
+            />
+        </div>
     </div>
     <Footer>
 
@@ -104,6 +126,7 @@
     import stylesMobile from '~/static/styles/mobile/home.scss'
     import AppsWidget from '~/components/AppsWidget'
     import BudgetCalculator from '~/components/BudgetCalculator'
+    import InfoBlock from '~/components/InfoBlock'
     export default {
         components: {
             ContentCard,
@@ -113,7 +136,8 @@
             Footer,
             ContentCardCarousel,
             BudgetCalculator,
-            AppsWidget
+            AppsWidget,
+            InfoBlock
         },
         data: () => ({
             buttons: {
