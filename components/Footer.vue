@@ -65,6 +65,7 @@
 
 <style scoped>
     .footer-container{
+        padding-bottom: 100px;
         display: flex;
         width: 100%;
         border-top: 1px solid #f5f5f5;
@@ -72,15 +73,15 @@
         padding-top: 63px;
     }
     .social-container{
-        width: 35%;
-        margin-left: 5%;
+        width: 34.8%;
+        margin-left: 14.2%;
     }
     .newsletter-title{
         font-size: 18px;
         font-weight: bold;
     }
     .menu-container{
-        width: 20%;
+        width: 14%;
     }
     ul{
         list-style: none;
@@ -99,9 +100,10 @@
     .input{
         width: 300px;
         height: 50px;
+        box-shadow: none;
+        line-height: 50px;
         border: solid 1.3px #dee0e6;
         background-color: rgba(255, 255, 255, 0.9);
-        padding-left: 25px;
     }
     .icon-container{
         display: flex;
