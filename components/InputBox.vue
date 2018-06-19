@@ -1,6 +1,6 @@
 <template>
     <div class="email-container">
-      <input class="input" placeholder="Enter your Email Address" >
+      <input class="input" placeholder="Suggest our next Language" >
       <div class="submit">Suggest</div>
     </div>
 </template>
@@ -14,21 +14,31 @@
 
 <style scoped>
     .email-container{
-        margin-top: 25px;
+        /* margin-top: 25px; */
         display: flex;
     }
     .input{
         width: 300px;
         height: 50px;
+        box-shadow: none;
+        line-height: 50px;
         border: solid 1.3px #dee0e6;
         background-color: rgba(255, 255, 255, 0.9);
-        padding-left: 25px;
+    }
+    input::-webkit-input-placeholder {
+        color: #1e1e1e;
+        font-size: 16px;
+        opacity: 0.5;
     }
     .submit{
         height: 50px;
         color: #fff;
+        z-index: 1;
+        font-size: 16px;
+        font-weight: 500;
         line-height: 50px;
         padding: 0px 20px;
+        margin-left: -18px;
         border-radius: 2px;
         background-color: #ff003c;
     }

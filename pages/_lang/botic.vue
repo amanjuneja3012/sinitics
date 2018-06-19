@@ -1,12 +1,12 @@
 <template>
-  <div> 
+  <div class ='botic'> 
     <ContentCard
-      title="Chat with your Customers around the <span class='red'> world </span>"
+      header="Chat with your Customers around the <span class='red'> world </span>"
       subtitle="BoticAI is the natural language processing engine with extreme adaptability for new languages"
       inputBox="true"
       showContentOnLeft="true"
       imageUrl="group-6@3x.png"
-      height="620px"
+      height="780px"
     >
     </ContentCard>
     <ContentCard
@@ -15,7 +15,7 @@
       subtitle="Power your bot with phrases & metonyms from our priority sectors."
       showContentOnLeft="false"
       imageUrl="group-53@3x.png"
-      height= '530px'
+      height= '416px'
       listTypes="true"
     >
     </ContentCard>
@@ -34,15 +34,15 @@
         <div class='divider'>
           <div class='circle'>1</div>
           <div class='line' />
-          <div class='circle'>2</div>
+          <div class='circle red-circle'>2</div>
         </div>
         <div class='workbox-container'>
           <div class='workbox'>
           <div class='w-header'>Judgement</div>
           <div class='w-content'>Use chat history to build chatbot dialogue and conduct initial BoticAI training.</div>
-          <img src='government.png' class='w-icon' />
+          <img src='input@2x.png' class='w-icon' />
           </div>
-          <div class='workbox'>
+          <div class='workbox workbox-hightlight'>
             <div class='w-header'>Judgement</div>
             <div class='w-content'>Use chat history to build chatbot dialogue and conduct initial BoticAI training.</div>
             <img src='government.png' class='w-icon' />
@@ -94,7 +94,7 @@
       title="Achieving higher<span class='red'>Accuracy</span>"
       subtitle="For a client with 90,000 customer support requests per day, SiniticAI™ exhibits up to 11% higher Chinese accuracy than a brand-name NLP engine."
       showContentOnLeft="false"
-      imageUrl="achieving.png"
+      imageUrl="achieving@2x.png"
       width= '545px'
       height= '500px'
     >
@@ -175,16 +175,19 @@
     justify-content: center;
   }
   .items{
-    width: 100px;
+    width: 110px;
     height: 80px;
     padding: 4px;
     font-size: 16px;
     font-weight: 500;
     text-align: center;
   }
-  .items:hover{
-    box-shadow: rgb(230, 230, 230) 0px 2px 17px 5px;
+  .botic .image{
+    margin-left: 7%;
   }
+  /* .items:hover{
+    box-shadow: rgb(230, 230, 230) 0px 2px 17px 5px;
+  } */
   .icons{
     text-align: center;
   }
@@ -193,15 +196,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
   }
   .head-workbox{
     margin-bottom: 40px;
+    font-size: 2em;
+    color: #1e1e1e;
+    font-weight: bold;
+    line-height: 1.1em;
   }
   .divider{
     display: flex;
     align-items: center;
     max-width: 30%;
-    margin: 3% auto;
+    margin: 2% auto;
   }
   .circle{
     color: white;
@@ -212,44 +221,53 @@
     text-align: center;
     line-height: 26px;
   }
+  .red-circle{
+    background-color: #ff003c;
+  }
   .line{
     width: 100%;
     display: inline-block;
     vertical-align: middle;
-    border: solid 1px #bac4cd;
+    border: solid 0.5px #bac4cd;
   }
   .workbox-section{
-    margin-bottom: 6%;
+    margin-bottom: 3%;
     width: 100%;
   }
   .workbox-container{
-    width: 54%;
+    width: 53.6%;
+    height: 180px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
   }
   .workbox{
+    position: relative;
     display: inline-block;
-    padding: 10px 2% 4px;
+    padding: 10px 2% 4px;    
     max-width: 353px;
     max-height: 178px;
     border-radius: 2.6px;
     background-color: rgba(255, 255, 255, 0.9);
     border: solid 1.3px #dee0e6;
   }
-  .workbox:hover{
+  .workbox-hightlight{
     background-color: rgba(255, 52, 77, 0.06);
     border: solid 1.3px #ff344d;
   }
   .w-header{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: 8px;
   }
   .w-content{
      font-size: 18px;
   } 
   .w-icon{
-    float: right;
+    width: 90px;
+    height: 70px;
+    right: 0;
+    bottom: 0;
+    position: absolute;
   }
 </style>

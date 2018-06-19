@@ -13,10 +13,10 @@
         data: function () {
           return {
             items:[
-              {name: 'iGaming', icon: 'government.png'},
-              {name: 'Finance', icon: 'government.png'},
-              {name: 'Outsourcing', icon: 'government.png'},
-              {name: 'Government', icon: 'government.png'}
+              {name: 'iGaming', icon: 'igaming@2x.png'},
+              {name: 'Finance', icon: 'finance@2x.png'},
+              {name: 'Outsourcing', icon: 'outsourcing@2x.png', disable: true},
+              {name: 'Government', icon: 'government@2x.png', disable: true}
             ]
           }
         }
@@ -24,30 +24,14 @@
 </script>
 
 <style scoped>
-    .email-container{
-        margin-top: 25px;
-        display: flex;
-    }
-    .input{
-        width: 300px;
-        height: 50px;
-        border: solid 1.3px #dee0e6;
-        background-color: rgba(255, 255, 255, 0.9);
-        padding-left: 25px;
-    }
-    .submit{
-        height: 50px;
-        color: #fff;
-        line-height: 50px;
-        padding: 0px 20px;
-        border-radius: 2px;
-        background-color: #ff003c;
-    }
     /* .items{
       display: flex;
       align-items: center;
       justify-content: center;
     } */
+    .types{
+      margin-left: -15px;
+    }
     .icon-container{
       display: block;
       margin-top: 75px;
@@ -55,6 +39,14 @@
     .title{
       display: block;
       font-size: 16px;
-      font-weight: 500;
+      font-weight: 600;
+    }
+    .t-disable{
+      opacity: 0.5;
+    }
+    .icon{
+      width: 50px;
+      height: 50px;
+      margin-bottom: 8px;
     }
 </style>
