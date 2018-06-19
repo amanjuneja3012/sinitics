@@ -78,6 +78,10 @@ html, body {
   font-family: "Source Sans Pro", Arial, sans-serif;
   height: 100vh;
   margin: 0;
+  background-image: url('/static/grid.png');
+  background-position: center;
+  background-size: 1170px 9111px;
+  background-repeat: no-repeat;
 }
 .navbar-brand{
   margin-right: 6%;
@@ -137,13 +141,11 @@ html, body {
   text-align: center;
   border-radius: 30px;
   text-decoration: none;
-  background-color: #ffffff;
   border: 1px solid #1e1e1e;
   cursor:pointer;
 }
 .Header__Button:hover {
   color: #ff003c;
-  background-color: #fff;
   border: 1px solid #ff003c;
 }
 .Header__Button_2{

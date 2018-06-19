@@ -91,14 +91,15 @@ $variable-columns: false;
 	.vue-slider-dot{
 		background-color: #ff003c;
 		border: solid 2px #ffffff;
-		width: 20px !important;
-		height: 20px !important;
-		top:-8px !important;
+		width: 25px !important;
+		height: 25px !important;
+		top:-11px !important;
 	}
 	.vue-slider-process{
 		background-color: #ff003c;
 	}
 	.vue-slider{
+		background-color: #dee0e6;
 		height:4px !important;
 	}
 	.vue-slider-tooltip-wrap{
@@ -132,9 +133,6 @@ $variable-columns: false;
 }
 .padding10{
 	padding:10px;
-}
-.zeroPadding{
-	padding:0 !important;
 }
 .borderRight{
 	border-right:1px solid black;

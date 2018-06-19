@@ -1,20 +1,43 @@
 <template>
     <div class="apps-widget">
-        <div class="iconFb"></div>
-        <div class="iconWe"></div>
-        <div class="iconLine"></div>
-        <div class="iconSkype"></div>
-        <div class="iconSms"></div>
+        <img v-for="item in items" v-bind:key=item.icon :src=item.icon class="icon" />
     </div>
 </template>
 
 <script>
-    export default {}
+    export default {
+        data: function () {
+          return {
+            items:[
+              {icon: '/images/messenger.svg'},
+              {icon: '/images/we-chat.svg'},
+              {icon: '/images/line.svg'},
+              {icon: '/images/skype.svg'},
+              {icon: '/images/sms.svg'}
+            ]
+          }
+        }
+    }
 </script>
-
 
 <style scoped>
     .apps-widget{
         display:block;
+        height: 100px;
+    }
+    .icon{
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        margin-right: 20px;
+        display: inline-block;
+        transition: height 0.2s ease-in-out;
+    }
+    .icon{
+        fill: #ff0033 !important;
+    }
+    .icon:hover:after{
+        content: attr('title');
+        position: absolute;
     }
 </style>

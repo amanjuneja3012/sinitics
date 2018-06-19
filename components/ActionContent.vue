@@ -5,8 +5,9 @@
     'padding': padding
   }">
         <h1 v-if='header' v-html="header"></h1>
-        <h3 v-if='title' v-html="title"></h3>
-        <p v-html="subtitle"></p>
+        <h3 v-if='subtitle && title' v-html="title"></h3>
+        <h3 v-if='subtitle === undefined && title' v-html="title" class='head-mar'></h3>
+        <p v-if='subtitle' v-html="subtitle"></p>
         <div class="button-container">
             <div v-if="!externalComponent" class="buttons" v-for="(button, index) in buttons" :key="index">
                 <Button
@@ -53,11 +54,14 @@
         margin-bottom: 5%;
     }
     h3{
-        font-size: 2em;
+        font-size: 2.12em;
         color: #1e1e1e;
         font-weight: bold;
-        line-height: 1.1em;
-        margin-bottom: 5%;
+        line-height: 1.36em;
+        margin-bottom: 2%;
+    }
+    .head-mar{
+        margin-bottom: 7%;
     }
     p {
         font-size: 1.22em;

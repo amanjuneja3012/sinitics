@@ -1,7 +1,7 @@
 
 <template>
     <div class="types">
-      <div v-for="item in items" class="items">
+      <div v-for="item in items" v-bind:key=item.name class="items">
           <img :src=item.icon class="icon" />
           <p class="title">{{ item.name }}</p>
       </div>

@@ -25,18 +25,19 @@
     }
     .VueCarousel{
 		width: 38%;
-		padding: 5% 0%;
+		padding: 2% 0 2% 1.6%;
 		margin-right: 6%;
 		margin-left: 6%;
 		box-sizing: border-box;
         .VueCarousel-pagination{
 			position: absolute;
-			top: 14%;
-			left: -38%;
+			top: 11%;
+			left: -34%;
 			.VueCarousel-dot{
 				.VueCarousel-dot-button{
-			        width: 20px !important;
-			        height: 5px !important;
+			        width: 30px !important;
+					height: 6px !important;
+					border-radius: 4px !important;
 			        background: #d8d8d8 !important;
 			        border-radius: 0;
 			    }
