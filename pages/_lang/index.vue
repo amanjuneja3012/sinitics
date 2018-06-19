@@ -108,6 +108,45 @@
             />
         </div>
     </div>
+    <div class="newsCarouselWidget rel flex center column leftAlign">
+        <div class="heading bold">Don’t miss the latest <span class="red">Botic News</span></div>
+        <div class="leftAbs"></div>
+        <div class="rightAbs"></div>
+        <div class="newsCarousel inlineFlex">
+            <no-ssr placeholder="Loading...">
+                <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :perPage=4>
+                    <slide>
+                        <NewsCard
+                            image="images/news1@3x.png"
+                            content="We can change the way you market you product in market"
+                        >
+                        </NewsCard>
+                    </slide>
+                    <slide>
+                        <NewsCard
+                            image="images/news3@3x.png"
+                            content="We can change the way you market you product in market"
+                        >
+                        </NewsCard>
+                    </slide>
+                    <slide>
+                        <NewsCard
+                            image="images/news4@3x.png"
+                            content="We can change the way you market you product in market"
+                        >
+                        </NewsCard>
+                    </slide>
+                    <slide>
+                        <NewsCard
+                            image="images/news1@3x.png"
+                            content="We can change the way you market you product in market"
+                        >
+                        </NewsCard>
+                    </slide>
+                </carousel>
+            </no-ssr>
+        </div>
+    </div>
     <Footer>
 
     </Footer>
@@ -127,6 +166,8 @@
     import AppsWidget from '~/components/AppsWidget'
     import BudgetCalculator from '~/components/BudgetCalculator'
     import InfoBlock from '~/components/InfoBlock'
+    import { Carousel, Slide } from 'vue-carousel';
+    import NewsCard from '~/components/NewsCard';
     export default {
         components: {
             ContentCard,
@@ -137,7 +178,10 @@
             ContentCardCarousel,
             BudgetCalculator,
             AppsWidget,
-            InfoBlock
+            InfoBlock,
+            Carousel,
+            Slide,
+            NewsCard
         },
         data: () => ({
             buttons: {

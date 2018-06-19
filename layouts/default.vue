@@ -118,6 +118,7 @@ html, body {
 }
 .Header__Menu {
   float: right;
+  display:flex;
 }
 .Header__Link {
   font-size: 16px;
