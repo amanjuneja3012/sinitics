@@ -114,7 +114,7 @@
         <div class="rightAbs"></div>
         <div class="newsCarousel inlineFlex">
             <no-ssr placeholder="Loading...">
-                <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :perPage=4>
+                <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :perPage=5>
                     <slide>
                         <NewsCard
                             image="images/news1@3x.png"
@@ -138,8 +138,22 @@
                     </slide>
                     <slide>
                         <NewsCard
-                            image="images/news1@3x.png"
-                            content="We can change the way you market you product in market"
+                            image="images/page1@3x.png"
+                            content="We can change the way you market you product in market1"
+                        >
+                        </NewsCard>
+                    </slide>
+                    <slide>
+                        <NewsCard
+                            image="images/page2@3x.png"
+                            content="We can change the way you market you product in market2"
+                        >
+                        </NewsCard>
+                    </slide>
+                    <slide>
+                        <NewsCard
+                            image="images/page3@3x.png"
+                            content="We can change the way you market you product in market3"
                         >
                         </NewsCard>
                     </slide>

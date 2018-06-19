@@ -60,14 +60,29 @@
 .newsCarouselWidget{
   .heading{
     font-size: 20px;
+    margin-left: 20%;
+    width: 80%;
+    margin-bottom: 30px;
   }
   .leftAbs{
     position: absolute;
     left: 0;
+    background-image: url('/static/images/leftAbs@3x.png');
+    height: 250px;
+    width: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: -15%;
   }
   .rightAbs{
     position: absolute;
     right: 0;
+    background-image: url('/static/images/rightAbs@3x.png');
+    height: 500px;
+    width: 500px;
+    top: -24%;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .newsCarousel{
     width: 80%;
@@ -89,6 +104,13 @@
       line-height: 1.26;
       text-align: left;
       color: #1e1e1e;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
+}
+.VueCarousel-slide{
+  width: 240px !important;
 }
