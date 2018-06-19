@@ -29,9 +29,6 @@
         border-radius: 3px;
         cursor: pointer;
     }
-    .feature-container:hover{
-        box-shadow: rgb(230, 230, 230) 0px 2px 17px 5px;
-    }
 
     .icon{
         width: 90px;

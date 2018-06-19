@@ -121,7 +121,8 @@
         margin-right: 10px;
         vertical-align: middle;
         display: inline-block;
-        background-image: url('/images/budget.png');
+        background-size: contain;
+        background-image: url('/images/budget@2x.png');
     }
     .user-item-icon{
         width: 45px;
@@ -129,7 +130,8 @@
         margin-right: 10px;
         vertical-align: middle;
         display: inline-block;
-        background-image: url('/images/users.png');
+        background-size: contain;
+        background-image: url('/images/users@2x.png');
     }
     .item-container{
         display: inline-block;
