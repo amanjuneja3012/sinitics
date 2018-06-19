@@ -5,8 +5,14 @@
   color: #ff003c;
 }
 .feature-heading{
-  font-size: 38px;
+  font-size: 2.12em;
+  color: #1e1e1e;
+  font-weight: bold;
+  line-height: 1.36em;
   text-align: center;
+}
+.feature-container:hover{
+  box-shadow: -2px 47px 212px -56px rgba(0,0,0,0.18);
 }
 .features-container{
   display: flex;
@@ -19,6 +25,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 100px;
 }
 .automation-section{
   position: relative;

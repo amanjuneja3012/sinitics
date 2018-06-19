@@ -96,6 +96,7 @@
         color: #1e1e1e;
         margin-bottom: 17px;
         font-size: 18px;
+        cursor: pointer;
     }
     .input{
         width: 300px;

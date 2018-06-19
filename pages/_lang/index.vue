@@ -82,9 +82,9 @@
         </BotFeatureCard>
       </div>
       <Button
-              text="See All Features"
-              backgroundColor="#ff003c"
-              color="white">
+            text="See All Features"
+            backgroundColor="#ff003c"
+            color="white">
       </Button>
     </div>
     <div >
