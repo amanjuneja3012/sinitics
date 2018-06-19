@@ -1,131 +1,128 @@
 <template>
-    <div class="pricing-container">
-        <p class="page-title">Pay as you grow</p>
-        <div class="toggle">
-            <p class="monthly">Bill Monthly</p>
-            <label class="switch">
-                <input type="checkbox" checked>
-                <span class="slider round"></span>
-            </label>
-            <p class="yearly">Bill Yearly</p>
-            <p class="tag">Save 20%</p>
-        </div>
-        <div class="pricing-table">
-            <div class="packages">
-                <div class="package">
-                    <p class="name">Basic</p>
-                    <p class="price">$356</p>
-                    <p class="period">per month</p>
+    <div>
+        <div class="pricing-container">
+            <p class="page-title">Pay as you grow</p>
+            <div class="toggle">
+                <p class="monthly">Bill Monthly</p>
+                <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                </label>
+                <p class="yearly">Bill Yearly</p>
+                <p class="tag">Save 20%</p>
+            </div>
+            <div class="pricing-table">
+                <div class="packages">
+                    <div class="package">
+                        <p class="name">Basic</p>
+                        <p class="price">$356</p>
+                        <p class="period">per month</p>
+                        <Button
+                                text="Try it Free"
+                                backgroundColor="#ff003c"
+                                color="white">
+                        </Button>
+                    </div>
+                    <div class="package">
+                        <p class="name">Enterprise</p>
+                        <p class="price">$546</p>
+                        <p class="period">per month</p>
+                        <Button
+                                text="Book a Demo"
+                                backgroundColor="white"
+                                color="#ff003c"
+                        >
+                        </Button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <th>Features</th>
+                        <th>Basic Package</th>
+                        <th>Enterprise Package</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Users</td>
+                            <td>Upto 500</td>
+                            <td>Unlimited</td>
+                        </tr>
+                        <tr v-for="item in items">
+                            <td>{{ item.name }}</td>
+                            <td>
+                                <img src="confirm.png" v-if="item.basic == 'confirm'"/>
+                                <p class="no-feature" v-if="item.basic == 'no'"></p>
+                            </td>
+                            <td>
+                                <img src="confirm.png" v-if="item.enterprise == 'confirm'"/>
+                                <p class="no-feature" v-if="item.enterprise == 'no'"></p>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="price-actions">
+                <p class="price-action">Action</p>
+                <div class="price-action">
                     <Button
                             text="Try it Free"
                             backgroundColor="#ff003c"
                             color="white">
                     </Button>
                 </div>
-                <div class="package">
-                    <p class="name">Enterprise</p>
-                    <p class="price">$546</p>
-                    <p class="period">per month</p>
+                <div class="price-action">
                     <Button
                             text="Book a Demo"
                             backgroundColor="white"
-                            color="#ff003c"
-                    >
+                            color="1e1e1e">
                     </Button>
                 </div>
             </div>
-            <table>
-                <thead>
-                    <th>Features</th>
-                    <th>Basic Package</th>
-                    <th>Enterprise Package</th>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Users</td>
-                        <td>Upto 500</td>
-                        <td>Unlimited</td>
-                    </tr>
-                    <tr v-for="item in items">
-                        <td>{{ item.name }}</td>
-                        <td>
-                            <img src="confirm.png" v-if="item.basic == 'confirm'"/>
-                            <p class="no-feature" v-if="item.basic == 'no'"></p>
-                        </td>
-                        <td>
-                            <img src="confirm.png" v-if="item.enterprise == 'confirm'"/>
-                            <p class="no-feature" v-if="item.enterprise == 'no'"></p>
-                        </td>
-                    </tr>
-
-                </tbody>
-            </table>
-        </div>
-        <div class="price-actions">
-            <p class="price-action">Action</p>
-            <div class="price-action">
+            <div class="sectors">
+                <p class="page-title sector-title">Sectors We Cover</p>
+                <div class="tabs">
+                    <div class="tab">Basic</div>
+                    <div class="tab">Enterprise</div>
+                </div>
+                <div class="sector-cards">
+                    <CardWithIcon
+                            title="Travel Agency"
+                            subtitle="OrangeCat"
+                            detail="This online travel agency automates 50 trip recommendation each day"
+                            iconUrl="calc.png"
+                            width="270px"
+                    />
+                    <CardWithIcon
+                            title="Salon"
+                            subtitle="WuJia Salon"
+                            detail="This salon chain automates 100 reservation & FAQ requests each day."
+                            iconUrl="bitmap-copy-2@3x.png"
+                            width="270px"
+                    />
+                    <CardWithIcon
+                            title="Classroom"
+                            subtitle="Chinese Teaching"
+                            detail="This teacher delivers 5 minute quizzes to 30 students each day."
+                            iconUrl="bitmap@3x.png"
+                            width="270px"
+                    />
+                </div>
+            </div>
+            <div class="questions">
+                <p class="page-title question-title">Have Questions in Mind?</p>
                 <Button
-                        text="Try it Free"
-                        backgroundColor="#ff003c"
-                        color="white">
+                        text="Start a Conversation"
+                        color="white"
+                        width="256px"
+                        iconUrl="images/group-22.png"
+                        align="space-between"
+                >
                 </Button>
             </div>
-            <div class="price-action">
-                <Button
-                        text="Book a Demo"
-                        backgroundColor="white"
-                        color="#ff003c">
-                </Button>
-            </div>
         </div>
-        <div class="sectors">
-            <p class="page-title sector-title">Sectors We Cover</p>
-            <div class="tabs">
-                <div class="tab">Basic</div>
-                <div class="tab">Enterprise</div>
-            </div>
-            <div class="sector-cards">
-                <CardWithIcon
-                        title="Travel Agency"
-                        subtitle="OrangeCat"
-                        detail="This online travel agency automates 50 trip recommendation each day"
-                        iconUrl="calc.png"
-                        width="270px"
-                />
-                <CardWithIcon
-                        title="Salon"
-                        subtitle="WuJia Salon"
-                        detail="This salon chain automates 100 reservation & FAQ requests each day."
-                        iconUrl="bitmap-copy-2@3x.png"
-                        width="270px"
-                />
-                <CardWithIcon
-                        title="Classroom"
-                        subtitle="Chinese Teaching"
-                        detail="This teacher delivers 5 minute quizzes to 30 students each day."
-                        iconUrl="bitmap@3x.png"
-                        width="270px"
-                />
-            </div>
-        </div>
-        <div class="questions">
-            <p class="page-title question-title">Have Questions in Mind?</p>
-            <Button
-                    text="Start a Conversation"
-                    backgroundColor="#ff003c"
-                    color="white"
-                    width="256px"
-                    iconUrl="images/group-22.png"
-                    align="space-between"
-            >
-            </Button>
-        </div>
-
-        <Footer>
-
-        </Footer>
+        <Footer> </Footer>
     </div>
-
 
 </template>
 <script>
@@ -231,22 +228,25 @@
         height: 60px;
         padding: 0 40px 0 40px;
         border: 1px solid #dee0e6;
-        text-align: center;
         width: 33.33%;
     }
-    th:first-child, td:first-child{
+    tr:first-child{
         text-align: left;
     }
     td img{
         width: 19px;
         height: 12px;
     }
+    tr{
+        line-height: 60px;
+    }
+    table td, table th{
+        vertical-align: middle;
+    }
     .no-feature{
         border-bottom: 2px solid #1e1e1e;
         width: 10px;
         height: 2px;
-        margin-left: auto;
-        margin-right: auto;
     }
     .price-actions{
         display: flex;
