@@ -11,18 +11,16 @@
     </ContentCard>
     <ContentCard
         title="Finally, <span class='red'>Bots for Everyone</span>"
-        subtitle="Build, edit and deploy multilingual bots without coding"
+        subtitle="Build, edit and deploy multilingual bots </br> without coding"
         :buttons="buttons.block2"
         showContentOnLeft="false"
         imageUrl="images/page2@3x.png"
         height="680px"
-        externalComponent=AppsWidget
     >
     </ContentCard>
     <ContentCardCarousel
         title="60% customer support <span class='red'>Automation</span> with 11% higher Chinese accuracy from SiniticAI"
-        subtitle="Build, edit and deploy multilingual bots without coding"
-        :buttons="buttons.block2"
+        :buttons="buttons.block3"
         imageUrl="images/page3@3x.png"
         height="550px"
     >
@@ -32,20 +30,26 @@
         subtitle="Reach your customers on all their apps and devices"
         showContentOnLeft="false"
         imageUrl="images/page4@3x.png"
-        height="630px"
+        height="560px"
         externalComponent=AppsWidget
     >
     </ContentCard>
-    <ContentCard
-        title="<span class='red'>Save</span> with automation"
-        subtitle="Reduce your customer support budget without compromising customer satisfaction"
-        :buttons="buttons.block4"
-        showContentOnLeft="true"
-        imageUrl="images/page1@3x.png"
-        height="620px"
-        rightComponent="BudgetCalculator"
-    >
-    </ContentCard>
+    <div class="automation-section">
+        <ContentCard
+            title="<span class='red'>Save</span> with automation"
+            subtitle="Reduce your customer support budget without compromising customer satisfaction"
+            :buttons="buttons.block4"
+            showContentOnLeft="true"
+            imageUrl="images/page1@3x.png"
+            height="620px"
+            rightComponent="BudgetCalculator"
+        >
+        </ContentCard>
+        <div class="partner-down">
+            <div class="partner-text">Need a partner?</div>
+            <div class="partner-icon"></div>
+        </div>
+    </div>
     <div class="bot-features-container">
       <p class="feature-heading">Build & Manage <span class="red">Hybrid Chatbots</span></p>
       <div class="features-container">
@@ -83,83 +87,8 @@
               color="white">
       </Button>
     </div>
-    <div class="enterpriseInfo rel flex center">
-        <div class="infoBack"></div>
-        <div class="row w800 h340 widgetContainer">
-            <div class="column widgetHeader">
-                <div class="text w50 leftAlign inlineFlex wInvert300 f25 bold">Have a <span class="ml5 red"> Client</span>?</div>
-                <div class="tabs rightAlign inlineFlex w300 f13">
-                    <div class="tab w50 active inlineFlex center padding10 borderRight">Agency</div>
-                    <div class="tab w50 inlineFlex center padding10">System Integrator</div>
-                </div>
-            </div>
-            <InfoBlock 
-                buttonText="Enterprise"
-                heading="Agency"
-                text="Botic enterprise & small business bots have what it takes to launch products and brands-scheduling, human takeover, analytics, omnichannel & more"
-                image="images/agency@3x.png"
-                visibility=true
-            />
-            <InfoBlock 
-                buttonText="Enterprise"
-                heading="Agency"
-                text="Botic enterprise & small business bots have what it takes to launch products and brands-scheduling, human takeover, analytics, omnichannel & more"
-                image="images/agency@3x.png"
-            />
-        </div>
-    </div>
-    <div class="newsCarouselWidget rel flex center column leftAlign">
-        <div class="heading bold">Don’t miss the latest <span class="red">Botic News</span></div>
-        <div class="leftAbs"></div>
-        <div class="rightAbs"></div>
-        <div class="newsCarousel inlineFlex">
-            <no-ssr placeholder="Loading...">
-                <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :perPage=5>
-                    <slide>
-                        <NewsCard
-                            image="images/news1@3x.png"
-                            content="We can change the way you market you product in market"
-                        >
-                        </NewsCard>
-                    </slide>
-                    <slide>
-                        <NewsCard
-                            image="images/news3@3x.png"
-                            content="We can change the way you market you product in market"
-                        >
-                        </NewsCard>
-                    </slide>
-                    <slide>
-                        <NewsCard
-                            image="images/news4@3x.png"
-                            content="We can change the way you market you product in market"
-                        >
-                        </NewsCard>
-                    </slide>
-                    <slide>
-                        <NewsCard
-                            image="images/page1@3x.png"
-                            content="We can change the way you market you product in market1"
-                        >
-                        </NewsCard>
-                    </slide>
-                    <slide>
-                        <NewsCard
-                            image="images/page2@3x.png"
-                            content="We can change the way you market you product in market2"
-                        >
-                        </NewsCard>
-                    </slide>
-                    <slide>
-                        <NewsCard
-                            image="images/page3@3x.png"
-                            content="We can change the way you market you product in market3"
-                        >
-                        </NewsCard>
-                    </slide>
-                </carousel>
-            </no-ssr>
-        </div>
+    <div >
+
     </div>
     <Footer>
 
@@ -179,9 +108,6 @@
     import stylesMobile from '~/static/styles/mobile/home.scss'
     import AppsWidget from '~/components/AppsWidget'
     import BudgetCalculator from '~/components/BudgetCalculator'
-    import InfoBlock from '~/components/InfoBlock'
-    import { Carousel, Slide } from 'vue-carousel';
-    import NewsCard from '~/components/NewsCard';
     export default {
         components: {
             ContentCard,
@@ -191,11 +117,7 @@
             Footer,
             ContentCardCarousel,
             BudgetCalculator,
-            AppsWidget,
-            InfoBlock,
-            Carousel,
-            Slide,
-            NewsCard
+            AppsWidget
         },
         data: () => ({
             buttons: {
@@ -208,8 +130,8 @@
                     {text: 'Check out the bots', backgroundColor: '#ffffff', color: '#000000'}
                 ],
                 block3: [
-                    {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
-                    {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
+                    {text: 'Sintic AI', backgroundColor: '#ff003c', color: '#ffffff'},
+                    {text: 'Outsourcing eBook', backgroundColor: '#ffffff', color: '#000000'}
                 ],
                 block4: [
                     {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},

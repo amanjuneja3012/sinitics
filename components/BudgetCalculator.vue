@@ -2,15 +2,18 @@
     <div class="rel w50">
         <div class="budgetCalculator column">
             <div class="column w100 black roundedTop center">
-                <div class="w50 inline-flex vTop colorWhite f13"><span>Per month Savings with <span class='red'>50%</span> Automation</span></div>
-                <div class="row w50 vTop inline-flex is-paddingless center mt8 alignRight">
+                <div class="w50 inline-flex vTop colorWhite colorWhite-text f13"><span>Per month Savings <br> with <span class='red'>50%</span> Automation</span></div>
+                <div class="row w50 vTop inline-flex is-paddingless center alignRight">
                     <div class="text colorWhite inline-flex vTop f14 mr10">USD</div>
-                    <div class="text inline-flex vTop f18 colorWhite bold">{{userValue*budgetValue}}$</div>
+                    <div class="text inline-flex vTop f18 colorWhite bold currency">{{userValue*budgetValue}}$</div>
                 </div>
             </div>
-                <div class='row w100 white'>
+                <div class='row w100 items white'>
                     <div class='column'>
-                        <div class='text colorDarkBlack inline-flex alignLeft w50 f13 bold pr5'>Budget</div>
+                        <div class='w50 item-container'>
+                            <div class='budget-item-icon'></div>
+                            <div class='text colorDarkBlack inline-flex alignLeft f13 bold pr5'>Budget</div>
+                        </div>
                         <div class='text colorDarkBlack inline-flex alignRight w50 f13 bold pr5'>${{budgetValue}}</div>
                         <no-ssr>
                             <vue-slider 
@@ -21,9 +24,12 @@
                         </no-ssr>
                     </div>
                 </div>
-                <div class="column w100 white is-paddingless">
+                <div class="row w100 white items">
                     <div class="column">
-                        <div class="text colorDarkBlack inline-flex w50 alignLeft f13 bold pr5">Users</div>
+                        <div class='w50 item-container'>
+                            <div class='user-item-icon'></div>
+                            <div class="text colorDarkBlack inline-flex alignLeft f13 bold pr5">Users</div>
+                        </div>
                         <div class="text colorDarkBlack inline-flex w50 alignRight f13 bold pr5">{{userValue}}</div>
                         <no-ssr>
                             <vue-slider ref="slider" v-model="userValue"></vue-slider>
@@ -57,26 +63,75 @@
 
 
 <style scoped>
+    .black{
+        padding: 1.4em;
+    }
+    .colorWhite-text{
+        font-size: 16px;
+    }
+    .currency{
+        font-size: 30px;
+    }
+    .colorWhite-text .red{
+        font-weight: 700;
+    }
     .budgetCalculator{
         display:flex;
-        padding:47% 24% 15% 24%;
+        width: 64%;
+        padding: 0;
+        top: 158px;
+        left: 42px;
+        position: absolute;
+        box-sizing:border-box;
         align-items: center;
         justify-content: center;
-        height: 56%;
-        box-sizing:border-box;
+        box-shadow: -2px 47px 212px -56px rgba(0,0,0,0.18);
         .text{
             font-size:12px;
         }
     }
+    .items{
+        height: 130px;
+        padding: 1.2em 1.4em 1.4em 1.4em;
+    }
+    .items .column{
+        padding: 0px;
+    }
+    .text{
+        font-size: 20px;
+        font-weight: 600;
+    }
     .calcBack{
-        width: 350px;
-        height: 600px;
-        background-image: url(/_nuxt/img/calcBack@3x.bd8e67f.png);
+        width: 490px;
+        height: 428px;
+        background-image: url(/images/calcBack@2x.png);
         background-size: contain;
         position: absolute;
         background-repeat: no-repeat;
-        top: 25%;
+        top: 20%;
         z-index: -1;
-        left: 32%;
+        left: 17%;
+    }
+    .vue-slider-component{
+        margin-top: 20px;
+    }
+    .budget-item-icon{
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+        vertical-align: middle;
+        display: inline-block;
+        background-image: url('/images/budget.png');
+    }
+    .user-item-icon{
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
+        vertical-align: middle;
+        display: inline-block;
+        background-image: url('/images/users.png');
+    }
+    .item-container{
+        display: inline-block;
     }
 </style>

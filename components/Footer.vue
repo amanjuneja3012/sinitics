@@ -10,11 +10,11 @@
                 <img src="images/send.png" class="send-icon" />
             </div>
             <div class="icon-container">
-                <img src="images/google.png" class="social-icon"/>
-                <img src="images/facebook.png" class="social-icon"/>
-                <img src="images/linkedin.png" class="social-icon"/>
-                <img src="images/twitter.png" class="social-icon"/>
-                <img src="images/insta.png" class="social-icon"/>
+                <img src="images/google.svg" class="social-icon"/>
+                <img src="images/facebook.svg" class="social-icon"/>
+                <img src="images/linkedin.svg" class="social-icon"/>
+                <img src="images/twitter.svg" class="social-icon"/>
+                <img src="images/insta.svg" class="social-icon"/>
             </div>
             <p class="copyright-text">© 2018 Sinitic Limited. All Rights Reserved.</p>
         </div>

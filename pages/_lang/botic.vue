@@ -182,9 +182,9 @@
     font-weight: 500;
     text-align: center;
   }
-  .botic .image{
+  /* .botic .image{
     margin-left: 7%;
-  }
+  } */
   /* .items:hover{
     box-shadow: rgb(230, 230, 230) 0px 2px 17px 5px;
   } */
