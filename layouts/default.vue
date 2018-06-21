@@ -78,10 +78,10 @@ html, body {
   font-family: "Source Sans Pro", Arial, sans-serif;
   height: 100vh;
   margin: 0;
-  background-image: url('/static/grid.png');
+  /* background-image: url('/static/grid.png');
   background-position: center;
   background-size: 1170px 9111px;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 .navbar-brand{
   margin-right: 6%;
