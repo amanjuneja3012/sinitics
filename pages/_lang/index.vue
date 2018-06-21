@@ -166,7 +166,6 @@
             },
         }),
         mounted: () => {
-            debugger
         }
     }
 </script>

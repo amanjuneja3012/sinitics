@@ -126,7 +126,9 @@
   }
   .card{
     margin-right:20px;
-    box-shadow: 0 2px 33px 0 rgba(0, 0, 0, 0.08);
+    padding: 0;
+    width: 300px;
+    box-shadow: -2px 47px 212px -56px rgba(0, 0, 0, .18);
     .text{
       padding:5%;
       font-size:14px;
@@ -142,5 +144,5 @@
   }
 }
 .VueCarousel-slide{
-  width: 240px !important;
+  width: 300px !important;
 }
