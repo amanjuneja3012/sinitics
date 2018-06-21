@@ -16,11 +16,13 @@
                         </div>
                         <div class='text colorDarkBlack inline-flex alignRight w50 f13 bold pr5'>${{budgetValue}}</div>
                         <no-ssr>
-                            <vue-slider 
-                                ref='slider'
-                                v-model="budgetValue"
-                            >
-                            </vue-slider>
+                            <div>
+                                <vue-slider 
+                                    ref='slider'
+                                    v-model="budgetValue"
+                                >
+                                </vue-slider>
+                            </div>
                         </no-ssr>
                     </div>
                 </div>
@@ -32,7 +34,9 @@
                         </div>
                         <div class="text colorDarkBlack inline-flex w50 alignRight f13 bold pr5">{{userValue}}</div>
                         <no-ssr>
-                            <vue-slider ref="slider" v-model="userValue"></vue-slider>
+                            <div>
+                                <vue-slider ref="slider" v-model="userValue"></vue-slider>
+                            </div>
                         </no-ssr>
                     </div>
                 </div>

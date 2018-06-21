@@ -48,12 +48,12 @@
  display: inline-block;
  vertical-align: middle;
  background-repeat: no-repeat;
- background-image: url('/images/down.svg');
+ background-image: url('/images/english/down.svg');
 }
 .infoBack{
   width: 600px;
   height: 600px;
-  background-image: url('/static/images/infoBack@3x.png');
+  background-image: url('/static/images/english/infoBack@3x.png');
   background-size: 100% 100%;
   position: absolute;
   background-repeat: no-repeat;
@@ -97,7 +97,7 @@
   .leftAbs{
     position: absolute;
     left: 0;
-    background-image: url('/static/images/leftAbs@3x.png');
+    background-image: url('/static/images/english/leftAbs@3x.png');
     height: 250px;
     width: 150px;
     background-size: contain;
@@ -107,7 +107,7 @@
   .rightAbs{
     position: absolute;
     right: 0;
-    background-image: url('/static/images/rightAbs@3x.png');
+    background-image: url('/static/images/english/rightAbs@3x.png');
     height: 500px;
     width: 500px;
     top: -24%;

@@ -109,7 +109,7 @@ html, body {
   z-index:99;
 }
 .Header__Logo{
-  background-image:url('/static/images/logo@2x.png');
+  background-image:url('/static/images/english/logo@2x.png');
   width: 123px;
   height: 35px;
   background-size: contain;

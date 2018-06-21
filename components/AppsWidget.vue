@@ -9,11 +9,11 @@
         data: function () {
           return {
             items:[
-              {icon: '/images/messenger.svg'},
-              {icon: '/images/we-chat.svg'},
-              {icon: '/images/line.svg'},
-              {icon: '/images/skype.svg'},
-              {icon: '/images/sms.svg'}
+              {icon: '/images/english/messenger.svg'},
+              {icon: '/images/english/we-chat.svg'},
+              {icon: '/images/english/line.svg'},
+              {icon: '/images/english/skype.svg'},
+              {icon: '/images/english/sms.svg'}
             ]
           }
         }

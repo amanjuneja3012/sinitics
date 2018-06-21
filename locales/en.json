@@ -6,8 +6,172 @@
     "french": "French version"
   },
   "home": {
-    "title": "Welcome",
-    "introduction": "This is an introduction in English."
+    "contentCards":{
+      "card1":{
+        "header":"Are You speaking your <span class='red'>Customer's</span> language",
+        "subtitle":"Instant multilingual support. Higher customer satisfaction",
+        "buttons":[
+          {
+            "text": "Enterprise",
+            "backgroundColor": "#ff003c",
+            "color": "#ffffff"
+          },
+          {
+            "text": "Small Business",
+            "backgroundColor": "#ffffff",
+            "color": "#000000"
+          }
+        ],
+        "image":"images/english/page1@3x.png"
+      },
+      "card2":{
+        "header":"Finally, <span class='red'>Bots for Everyone</span>",
+        "subtitle":"Build, edit and deploy multilingual bots </br> without coding",
+        "buttons":[
+          {
+            "text": "Try it now",
+            "backgroundColor": "#ff003c",
+            "color": "#ffffff"
+          },
+          {
+            "text": "Check out the bots",
+            "backgroundColor": "#ffffff",
+            "color": "#000000"
+          }
+        ],
+        "image":"images/english/page2@3x.png"
+      },
+      "card3":{
+        "image":"images/english/page3@3x.png",
+        "slides":[
+          {
+              "title":"60% customer support <span class='red'>Automation</span> with 11% higher Chinese accuracy from SiniticAI",
+              "subtitle":"Build, edit and deploy multilingual bots </br> without coding",
+              "buttons":[
+                {
+                  "text": "Try it now",
+                  "backgroundColor": "#ff003c",
+                  "color": "#ffffff"
+                },
+                {
+                  "text": "Check out the bots",
+                  "backgroundColor": "#ffffff",
+                  "color": "#000000"
+                }
+              ]
+          },
+          {
+              "title":"60% customer support <span class='red'>Automation</span> with 11% higher Chinese accuracy from SiniticAI",
+              "subtitle":"Build, edit and deploy multilingual bots </br> without coding",
+              "buttons":[
+                {
+                  "text": "Try it now",
+                  "backgroundColor": "#ff003c",
+                  "color": "#ffffff"
+                },
+                {
+                  "text": "Check out the bots",
+                  "backgroundColor": "#ffffff",
+                  "color": "#000000"
+                }
+              ]
+          }
+        ]
+      },
+      "card4":{
+        "header":"<span class='red'>Omnichannel</span> from the start",
+        "subtitle":"Reach your customers on all their apps and devices",
+        "buttons":[
+          {
+            "text": "Try it now",
+            "backgroundColor": "#ff003c",
+            "color": "#ffffff"
+          },
+          {
+            "text": "Check out the bots",
+            "backgroundColor": "#ffffff",
+            "color": "#000000"
+          }
+        ],
+        "image":"images/english/page4@3x.png"
+      },
+      "card5":{
+        "header":"<span class='red'>Save</span> with automation",
+        "subtitle":"Reduce your customer support budget without compromising customer satisfaction",
+        "buttons":[
+          {
+            "text": "Try it now",
+            "backgroundColor": "#ff003c",
+            "color": "#ffffff"
+          },
+          {
+            "text": "Check out the bots",
+            "backgroundColor": "#ffffff",
+            "color": "#000000"
+          }
+        ],
+        "image":"images/english/page1@3x.png"
+      },
+      "card6":{
+        "header":"Build & Manage Hybrid Chatbots",
+        "cardsArr":[
+          {
+            "iconUrl" : "images/english/feature1.png",
+            "title" : "Onsite Hosting",
+            "subtitle" : "Satisfy corporate requirements to host locally."
+          },
+          {
+            "iconUrl" : "images/english/feature2.png",
+            "title" : "Human Takeover",
+            "subtitle" : "Takeover complex conversations to achieve customer satisfaction."
+          },
+          {
+            "iconUrl" : "images/english/feature3.png",
+            "title" : "Chat Structuring",
+            "subtitle" : "SiniticAI™ rapidly structures raw chat history to build bots."
+          }
+        ],
+        "buttonText":"See All Features"
+      }
+    },
+    "tabsWidget":{},
+    "newsCarouselWidget":{
+      "header":"Don’t miss the latest <span class='red'>Botic News</span>",
+      "slides":[
+        {
+          "image":"images/english/news1@3x.png",
+          "content":"We can change the way you market you product in market"
+        },
+        {
+          "image":"images/english/news1@3x.png",
+          "content":"We can change the way you market you product in market"
+        },
+        {
+          "image":"images/english/news1@3x.png",
+          "content":"We can change the way you market you product in market"
+        },
+        {
+          "image":"images/english/news1@3x.png",
+          "content":"We can change the way you market you product in market"
+        },
+        {
+          "image":"images/english/news1@3x.png",
+          "content":"We can change the way you market you product in market"
+        },
+        {
+          "image":"images/english/news1@3x.png",
+          "content":"We can change the way you market you product in market"
+        },
+        {
+          "image":"images/english/news1@3x.png",
+          "content":"We can change the way you market you product in market"
+        },
+        {
+          "image":"images/english/news1@3x.png",
+          "content":"We can change the way you market you product in market"
+        }
+      ]
+    }
   },
   "about": {
     "title": "About",
