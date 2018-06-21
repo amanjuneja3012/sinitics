@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="pricing-container">
-            <p class="page-title">Pay as you grow</p>
+            <p class="page-title top-title">Pay as you grow</p>
             <div class="toggle">
                 <p class="monthly">Bill Monthly</p>
                 <label class="switch">
@@ -9,7 +9,7 @@
                     <span class="slider round"></span>
                 </label>
                 <p class="yearly">Bill Yearly</p>
-                <p class="tag">Save 20%</p>
+                <p class="tagss">Save 20%</p>
             </div>
             <div class="pricing-table">
                 <div class="packages">
@@ -112,11 +112,12 @@
             <div class="questions">
                 <p class="page-title question-title">Have Questions in Mind?</p>
                 <Button
-                        text="Start a Conversation"
-                        color="white"
-                        width="256px"
-                        iconUrl="images/group-22.png"
-                        align="space-between"
+                    color="white"
+                    width="230px"
+                    text="Start a Conversation"
+                    iconUrl="bot.svg"
+                    align="space-between"
+                    class="quest_button"
                 >
                 </Button>
             </div>
@@ -177,6 +178,13 @@
         color: #1e1e1e;
         text-align: center;
     }
+    .top-title{
+        font-size: 2.7em;
+        color: #1e1e1e;
+        font-weight: bold;
+        line-height: 1.05em;
+        margin-bottom: 5%;
+    }
     .pricing-table{
         border: 1px solid #dee0e6;
     }
@@ -202,20 +210,21 @@
         border-right: 1px solid #dee0e6;
     }
     .name{
+        font-weight: 600;
         margin-top: 40px;
         font-size: 24px;
         color: #1e1e1e;
     }
     .price{
+        font-weight: 600;
         margin-top: 31px;
         font-size: 56px;
         color: #1e1e1e;
     }
     .period{
-        margin-top: 10px;
-        margin-bottom: 28px;
         font-size: 20px;
         color: #1e1e1e40;
+        margin-bottom: 18px;
     }
     table{
         width: 100%;
@@ -269,17 +278,27 @@
         margin-top: 100px;
     }
     .sector-title{
+        font-size: 2em;
+        color: #1e1e1e;
+        font-weight: bold;
+        margin-top: 150px;
         margin-top: 190px;
+        line-height: 1.1em;
     }
     .question-title{
+        font-size: 2em;
+        color: #1e1e1e;
+        font-weight: bold;
+        margin-top: 150px;
+        line-height: 1.1em;
         margin-bottom: 40px;
-        margin-top: 171px;
     }
     .questions{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-bottom: 30px;
     }
     .tabs{
         width: 320px;
@@ -325,7 +344,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #ccc;
+        background-color: #ff003c;
         -webkit-transition: .4s;
         transition: .4s;
     }
@@ -340,6 +359,9 @@
         background-color: white;
         -webkit-transition: .4s;
         transition: .4s;
+    }
+    input:checked{
+        color: red;
     }
 
     input:checked + .slider {
@@ -379,13 +401,31 @@
         margin-left: 10px;
         font-size: 20px;
     }
-    .tag{
-        color: #151e37;
-        border: 1px solid #151e37;
+    .tagss{
+        margin: 0;
+        height: 2em;
         padding: 3px;
         font-size: 12px;
-        margin-left: 20px;
+        color: #151e37;
+        line-height: 1.5;
+        margin-left: 12px;
+        border-radius: 4px;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        -webkit-box-align: center;
+        border: 1px solid #151e37;
     }
-
-
+    .quest_button{
+        background-color: #ff003c;
+        box-shadow: 2px 70px 133px -89px rgba(255,0,60,1);
+    }
+    /* .quest_button:before{
+        content: '';
+        width: 50px;
+        height: 48px;
+        background-color: #f52842;
+        margin-left: -18px;
+        border-radius: 2px;
+    } */
 </style>

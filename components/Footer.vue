@@ -69,7 +69,7 @@
         display: flex;
         width: 100%;
         border-top: 1px solid #f5f5f5;
-        margin-top: 30px;
+        /* margin-top: 30px; */
         padding-top: 63px;
     }
     .social-container{

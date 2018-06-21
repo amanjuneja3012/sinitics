@@ -23,14 +23,15 @@
         text-align: center;
         display: flex;
         align-items: center;
-        box-shadow: 0 3px 9px 0 #e6e6e6;
+        /* box-shadow: 0 3px 9px 0 #e6e6e6; */
         cursor: pointer;
         font-size: 16px;
         padding: 18px;
+        position: relative;
     }
     .icon{
-        width: 20px;
-        height: 20px;
+        width: 38px;
+        height: 38px;
 
     }
 </style>

@@ -38,14 +38,14 @@
         </div>
         <div class='workbox-container'>
           <div class='workbox'>
-          <div class='w-header'>Judgement</div>
+          <div class='w-header'>Input</div>
           <div class='w-content'>Use chat history to build chatbot dialogue and conduct initial BoticAI training.</div>
           <img src='input@2x.png' class='w-icon' />
           </div>
           <div class='workbox workbox-hightlight'>
-            <div class='w-header'>Judgement</div>
-            <div class='w-content'>Use chat history to build chatbot dialogue and conduct initial BoticAI training.</div>
-            <img src='government.png' class='w-icon' />
+            <div class='w-header'>Prediction</div>
+            <div class='w-content'>BoticAI predicts the correct human intent from multilingual support requests.</div>
+            <img src='prediction@2x.png' class='w-icon' />
           </div>
         </div>
       </div>
@@ -58,13 +58,13 @@
         <div class='workbox-container'>
           <div class='workbox'>
           <div class='w-header'>Judgement</div>
-          <div class='w-content'>Use chat history to build chatbot dialogue and conduct initial BoticAI training.</div>
-          <img src='government.png' class='w-icon' />
+          <div class='w-content'>Our NLP experts set the confidence threshold for intent detection, based on a top-k heuristic.</div>
+          <img src='judgement@2x.png' class='w-icon' />
           </div>
           <div class='workbox'>
-            <div class='w-header'>Judgement</div>
-            <div class='w-content'>Use chat history to build chatbot dialogue and conduct initial BoticAI training.</div>
-            <img src='government.png' class='w-icon' />
+            <div class='w-header'>Action</div>
+            <div class='w-content'>Your chatbot sends correct replies to humans, or passes the conversation to an agent</div>
+            <img src='prediction@2x.png' class='w-icon' />
           </div>
         </div>
       </div>
@@ -76,14 +76,14 @@
         </div>
         <div class='workbox-container'>
           <div class='workbox'>
-          <div class='w-header'>Judgement</div>
-          <div class='w-content'>Use chat history to build chatbot dialogue and conduct initial BoticAI training.</div>
-          <img src='government.png' class='w-icon' />
+          <div class='w-header'>Outcome</div>
+          <div class='w-content'>Substantial customer support automation and increased customer satisfaction</div>
+          <img src='outcome@2x.png' class='w-icon' />
           </div>
           <div class='workbox'>
-            <div class='w-header'>Judgement</div>
-            <div class='w-content'>Use chat history to build chatbot dialogue and conduct initial BoticAI training.</div>
-            <img src='government.png' class='w-icon' />
+            <div class='w-header'>Training</div>
+            <div class='w-content'>BoticAI increases automation by re-training on live chat history.</div>
+            <img src='training@2x.png' class='w-icon' />
           </div>
         </div>
       </div>   
@@ -99,14 +99,18 @@
       height= '500px'
     >
     </ContentCard>
-    <ContentCard
-      title="Ask the Machine-Learning<span class='red'> Experts </span>"
-      subtitle="Our engineers are at forefront of natural language processing research."
-      showContentOnLeft="true"
-      imageUrl="group-6@3x.png"
-      height="620px"
-    >
-    </ContentCard>
+    <div class='bottom_container'>
+      <div class='left_curve'></div>
+      <div class='right_curve'></div>
+      <ContentCard
+        title="Ask the Machine-Learning<span class='red'> Experts </span>"
+        subtitle="Our engineers are at forefront of natural language processing research."
+        showContentOnLeft="true"
+        imageUrl="humans@2x.png"
+        height="473px"
+      >
+      </ContentCard>
+    </div>
     <Footer> </Footer>
   </div>
 
@@ -269,5 +273,38 @@
     right: 0;
     bottom: 0;
     position: absolute;
+  }
+  .bottom_container{
+    position: relative;
+  }
+  .content-container{
+    z-index: 1;
+  }
+  .left_curve{
+    left: 0;
+    z-index: 0;
+    width: 330px;
+    height: 272px;
+    bottom: 0px;
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('/static/left_curve@2x.png')
+  }
+  .right_curve{
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    width: 744px;
+    height: 474px;
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('/static/oval-copy@2x.png')
+  }
+  .footer-container{
+    margin-top: 0px;
   }
 </style>
