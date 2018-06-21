@@ -48,7 +48,13 @@
                             <td>Unlimited</td>
                         </tr>
                         <tr v-for="item in items">
-                            <td>{{ item.name }}</td>
+                            <td class='item-name'>
+                                {{ item.name }}
+                                <div class='tooltip'>
+                                    <div class='tooltip-header'>{{ item.name }}</div>
+                                    <div class='tooltip-text'>{{ item.tooltip }}</div>
+                                </div>
+                            </td>
                             <td>
                                 <img src="confirm.png" v-if="item.basic == 'confirm'"/>
                                 <p class="no-feature" v-if="item.basic == 'no'"></p>
@@ -156,17 +162,17 @@
                 ]
             },
             items:[
-                {name: 'Scheduling', basic: 'confirm', enterprise: 'confirm'},
-                {name: 'Bot Training', basic: 'confirm', enterprise: 'confirm'},
-                {name: 'Unlimited Bots', basic: 'confirm', enterprise: 'confirm'},
-                {name: 'Translation Management', basic: 'confirm', enterprise: 'confirm'},
-                {name: 'Population', basic: 'confirm', enterprise: 'confirm'},
-                {name: 'Scheduling', basic: 'confirm', enterprise: 'confirm'},
-                {name: 'Chat Structuring', basic: 'no', enterprise: 'confirm'},
-                {name: 'Integrations', basic: 'no', enterprise: 'confirm'},
-                {name: 'Teams', basic: 'no', enterprise: 'confirm'},
-                {name: 'Onsite Hosting', basic: 'no', enterprise: 'confirm'},
-                {name: 'Human Takeover', basic: 'no', enterprise: 'confirm'}
+                {name: 'Scheduling', basic: 'confirm', enterprise: 'confirm', tooltip: 'Use schedules to push messages & save reservations.'},
+                {name: 'Bot Training', basic: 'confirm', enterprise: 'confirm', tooltip: 'Teach your bot to improve its dialogue.'},
+                {name: 'Unlimited Bots', basic: 'confirm', enterprise: 'confirm', tooltip: 'Build bots according to need vs. price.'},
+                {name: 'Translation Management', basic: 'confirm', enterprise: 'confirm', tooltip: 'Control multiple languages seamlessly.'},
+                {name: 'Population', basic: 'confirm', enterprise: 'confirm', tooltip: 'Save end users into standard & custom segments.'},
+                {name: 'Scheduling', basic: 'confirm', enterprise: 'confirm', tooltip: 'Add languages beyond Chinese & English.'},
+                {name: 'Chat Structuring', basic: 'no', enterprise: 'confirm', tooltip: 'SiniticAI™ rapidly structures raw chat history to build bots.'},
+                {name: 'Integrations', basic: 'no', enterprise: 'confirm', tooltip: 'Connect your bot to CRMs, databases & more.'},
+                {name: 'Teams', basic: 'no', enterprise: 'confirm', tooltip: 'Control multi-level user permissions.'},
+                {name: 'Onsite Hosting', basic: 'no', enterprise: 'confirm', tooltip: 'Satisfy corporate requirements to host locally.'},
+                {name: 'Human Takeover', basic: 'no', enterprise: 'confirm', tooltip: 'Takeover complex conversations to achieve customer satisfaction.'}
 
             ]
         }),
@@ -428,4 +434,33 @@
         margin-left: -18px;
         border-radius: 2px;
     } */
+    .item-name{
+        position: relative;
+    }
+    .item-name:hover{
+        color: #ff003c;
+    }
+    .item-name:hover .tooltip{
+        visibility: visible;
+    }
+    .tooltip{
+        top: -84px;
+        right: 68px;
+        left: -20px;
+        z-index: 1;
+        color: #fff;
+        padding: 15px;
+        line-height: 22px;
+        border-radius: 6px;
+        position: absolute;
+        visibility: hidden;
+        background-color: black;
+    }
+    .tooltip-header{
+        font-size: 14px;
+        font-weight: 600;
+    }
+    .tooltip-text{
+        font-size: 14px;
+    }
 </style>
