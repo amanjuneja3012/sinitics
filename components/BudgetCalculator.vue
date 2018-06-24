@@ -108,7 +108,7 @@
     .calcBack{
         width: 490px;
         height: 428px;
-        background-image: url(/images/calcBack@2x.png);
+        background-image: url(/images/english/calcBack@2x.png);
         background-size: contain;
         position: absolute;
         background-repeat: no-repeat;
@@ -126,7 +126,7 @@
         vertical-align: middle;
         display: inline-block;
         background-size: contain;
-        background-image: url('/images/budget@2x.png');
+        background-image: url('/images/english/budget@2x.png');
     }
     .user-item-icon{
         width: 45px;
@@ -135,7 +135,7 @@
         vertical-align: middle;
         display: inline-block;
         background-size: contain;
-        background-image: url('/images/users@2x.png');
+        background-image: url('/images/english/users@2x.png');
     }
     .item-container{
         display: inline-block;

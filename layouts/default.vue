@@ -53,6 +53,22 @@
             </div>
           </nav>
         </div>
+        <div class="languageChangeDd rel">
+          <div class="languageChangeDdWidget" v-on:click="languageOverlayVisibility=!languageOverlayVisibility">
+            <div :style="{
+              'background-image':'url('+selectedLanguage.flagUrl+')'
+            }" class="flagImage"></div>
+            <div class="flagText">{{selectedLanguage.language}}</div>
+          </div>
+          <div class="flagOverlay" v-if="languageOverlayVisibility">
+            <nuxt-link v-for="(language,index) in languageOptions" :to="language.languageKey + $route.fullPath" exact v-on:click="selectedLanguage = language" class="languageChangeOption">
+              <div class="flagImage" :style="{
+              'background-image':'url('+language.flagUrl+')'
+            }"></div>
+              <div class="flagText">{{language.language}}</div>
+            </nuxt-link>
+          </div>
+        </div>
       </div>
     </header>
     <nuxt/>
@@ -60,7 +76,43 @@
 </template>
 
 <script>
-export default {}
+export default {
+  data: () => ({
+    languageOptions: [
+      {
+        'language':'English',
+        'languageKey':'en',
+        'flagUrl':'/images/english/uk@3x.png'
+      },
+      {
+        'language':'簡體中文',
+        'languageKey':'ch',
+        'flagUrl':'/images/english/china@3x.png'
+      },
+      {
+        'language':'Filipino',
+        'languageKey':'ph',
+        'flagUrl':'/images/english/philipines@3x.png'
+      },
+      {
+        'language':'Français',
+        'languageKey':'fr',
+        'flagUrl':'/images/english/france@3x.png'
+      },
+      {
+        'language':'日本語',
+        'languageKey':'jp',
+        'flagUrl':'/images/english/japan@3x.png'
+      }
+    ],
+    selectedLanguage: {
+      'language':'English',
+      'languageKey':'en',
+      'flagUrl':'/images/english/uk@3x.png'
+    },
+    languageOverlayVisibility:false
+  })
+}
 
 </script>
 
@@ -203,5 +255,53 @@ html, body {
 }
 .vCenter{
   align-items:center;
+}
+.languageChangeDdWidget{
+  border-radius: 17.5px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.09);
+  width: 160px;
+  height: 40px;
+  position: fixed;
+  top: 45%;
+  display: flex;
+  flex-direction: row;
+  cursor:pointer;
+}
+.languageChangeOption{
+  background-color: #ffffff;
+  width: 160px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+}
+.flagImage{
+  background-image: url(/images/english/uk@3x.png);
+  width: 50px;
+  height: 40px;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display:inline-flex;
+}
+.flagText{
+  color: #1e1e1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  width: calc(100% - 50px);
+  padding-left: 15px;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.flagOverlay{
+  width: 134px;
+  height: 216px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.07);
+  position:absolute;
+  top:0px;
 }
 </style>

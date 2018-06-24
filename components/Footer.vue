@@ -7,14 +7,14 @@
                         class="input"
                         placeholder="Enter your Email Address"
                 >
-                <img src="images/send.png" class="send-icon" />
+                <img src="images/english/send.png" class="send-icon" />
             </div>
             <div class="icon-container">
-                <img src="images/google.svg" class="social-icon"/>
-                <img src="images/facebook.svg" class="social-icon"/>
-                <img src="images/linkedin.svg" class="social-icon"/>
-                <img src="images/twitter.svg" class="social-icon"/>
-                <img src="images/insta.svg" class="social-icon"/>
+                <img src="images/english/google.svg" class="social-icon"/>
+                <img src="images/english/facebook.svg" class="social-icon"/>
+                <img src="images/english/linkedin.svg" class="social-icon"/>
+                <img src="images/english/twitter.svg" class="social-icon"/>
+                <img src="images/english/insta.svg" class="social-icon"/>
             </div>
             <p class="copyright-text">© 2018 Sinitic Limited. All Rights Reserved.</p>
         </div>
