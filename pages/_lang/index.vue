@@ -73,7 +73,7 @@
         <div class="infoBack"></div>
         <div class="row w800 h340 widgetContainer">
             <div class="column widgetHeader">
-                <div class="text w50 leftAlign inlineFlex wInvert300 f25 bold">Have a <span class="ml5 red"> Client</span>?</div>
+                <div class="text head-text w50 leftAlign inlineFlex wInvert300 f25 bold">Have a <span class="ml5 red"> Client</span>?</div>
                 <div class="tabs rightAlign inlineFlex w300 f13">
                     <div class="tab w50 active inlineFlex center padding10 borderRight">Agency</div>
                     <div class="tab w50 inlineFlex center padding10">System Integrator</div>

@@ -61,7 +61,7 @@
             <div class="flagText">{{selectedLanguage.language}}</div>
           </div>
           <div class="flagOverlay" v-if="languageOverlayVisibility">
-            <nuxt-link v-for="(language,index) in languageOptions" :to="language.languageKey + $route.fullPath" exact v-on:click="selectedLanguage = language" class="languageChangeOption">
+            <nuxt-link v-for="(language,index) in languageOptions" :to="language.languageKey + $route.fullPath" exact v-on:click="selectedLanguage = language" class="languageChangeOption" :key="index">
               <div class="flagImage" :style="{
               'background-image':'url('+language.flagUrl+')'
             }"></div>
@@ -276,7 +276,7 @@ html, body {
   flex-direction: row;
 }
 .flagImage{
-  background-image: url(/images/english/uk@3x.png);
+  background-image: url("/images/english/uk@3x.png");
   width: 50px;
   height: 40px;
   background-size: 50%;

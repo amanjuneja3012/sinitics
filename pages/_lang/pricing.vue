@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id='pricing'>
         <div class="pricing-container">
             <p class="page-title top-title">Pay as you grow</p>
             <div class="toggle">
@@ -64,9 +64,36 @@
                                 <p class="no-feature" v-if="item.enterprise == 'no'"></p>
                             </td>
                         </tr>
-
                     </tbody>
                 </table>
+            </div>
+            <div class='modal' v-bind:class="{ 'is-active' : showModal}"  >
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="box">
+                        <div class="modal-head" >Book a Free Demo</div>
+                        <div class="modal-sub-head" >Help us with your information and our executive will get back to you soon</div>
+                        <div>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-small" type="text" placeholder="Full Name">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-small" type="text" placeholder="Company Name">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-small" type="email" placeholder="Email Address">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="modal-button">Submit Details</button>
+                    </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
             </div>
             <div class="price-actions">
                 <p class="price-action">Action</p>
@@ -74,14 +101,16 @@
                     <Button
                             text="Try it Free"
                             backgroundColor="#ff003c"
-                            color="white">
+                            color="white"
+                            v-on:click = "toggleModal" >
                     </Button>
                 </div>
                 <div class="price-action">
                     <Button
                             text="Book a Demo"
                             backgroundColor="white"
-                            color="1e1e1e">
+                            color="1e1e1e" 
+                            v-on:click = "toggleModal" >
                     </Button>
                 </div>
             </div>
@@ -147,6 +176,7 @@
             CardWithIcon
         },
         data: () => ({
+            showModal: false,
             buttons: {
                 block1: [
                     {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
@@ -176,7 +206,14 @@
 
             ]
         }),
+        methods: {
+        toggleModal : function() {
+            console.log('------> here')
+            return this.showModal = !this.showModal
+        }
     }
+}
+
 </script>
 <style>
     .page-title{
@@ -462,5 +499,43 @@
     }
     .tooltip-text{
         font-size: 14px;
+    }
+    .modal .box{
+        padding: 38px;
+        max-width: 430px;
+        max-height: 509px;
+        border-radius: 4px;
+        text-align: center;
+        margin: 0 auto;
+        background-color: #ffffff;
+    }
+    .modal-head{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+    .modal-sub-head{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .modal .input{
+        border: none;
+        box-shadow: none;
+        margin-top: 22px;
+        border-bottom: 1px solid #dee0e6;
+    }
+    .modal .input:focus{
+        border-bottom: 1px solid #ff003c;
+    }
+    .modal-button{
+        width: 350px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        box-shadow: none;
+        margin-top: 30px;
+        border-radius: 2px;
+        background-color: #ff003c;
     }
 </style>
