@@ -59,6 +59,7 @@
               'background-image':'url('+selectedLanguage.flagUrl+')'
             }" class="flagImage"></div>
             <div class="flagText">{{selectedLanguage.language}}</div>
+            <div class="arrow-icon"></div>
           </div>
           <div class="flagOverlay" v-if="languageOverlayVisibility">
             <nuxt-link v-for="(language,index) in languageOptions" :to="language.languageKey + $route.fullPath" exact v-on:click="selectedLanguage = language" class="languageChangeOption" :key="index">
@@ -88,6 +89,11 @@ export default {
         'language':'簡體中文',
         'languageKey':'ch',
         'flagUrl':'/images/english/china@3x.png'
+      },
+      {
+        'language':'繁體中文',
+        'languageKey':'ta',
+        'flagUrl':'/images/english/taiwan@3x.png'
       },
       {
         'language':'Filipino',
@@ -256,24 +262,28 @@ html, body {
 .vCenter{
   align-items:center;
 }
+.languageChangeDd{
+  
+}
 .languageChangeDdWidget{
-  border-radius: 17.5px;
+  left: 3%;
+  bottom: 4%;
+  width: 160px;
+  height: 40px;
+  display: flex;
+  cursor:pointer;
+  position: fixed;
+  flex-direction: row;
+  border-radius: 25px;
   background-color: #ffffff;
   box-shadow: 0 2px 18px 0 rgba(0, 0, 0, 0.09);
-  width: 160px;
-  height: 40px;
-  position: fixed;
-  top: 45%;
-  display: flex;
-  flex-direction: row;
-  cursor:pointer;
 }
 .languageChangeOption{
-  background-color: #ffffff;
   width: 160px;
   height: 40px;
   display: flex;
   flex-direction: row;
+  background-color: #ffffff;
 }
 .flagImage{
   background-image: url("/images/english/uk@3x.png");
@@ -289,19 +299,30 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
+  font-size: 15px;
   width: calc(100% - 50px);
-  padding-left: 15px;
+  padding-left: 2px;
   box-sizing: border-box;
   justify-content: flex-start;
 }
 .flagOverlay{
-  width: 134px;
-  height: 216px;
-  border-radius: 3px;
+  left: 3%;
+  bottom: 10%;
+  width: 160px;
+  border-radius: 12px;
   background-color: #ffffff;
-  box-shadow: 0 2px 25px 0 rgba(0, 0, 0, 0.07);
-  position:absolute;
-  top:0px;
+  box-shadow: 0 22px 22px 0 rgba(0, 0, 0, .07);
+  position:fixed;
+}
+.arrow-icon{
+  top: 16px;
+  right: 17px;
+  width: 10px;
+  height: 6px;  
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url('/static/arrow.svg');
 }
 </style>

@@ -206,12 +206,9 @@
 
             ]
         }),
-        methods: {
-        toggleModal : function() {
-            console.log('------> here')
-            return this.showModal = !this.showModal
+        methods: function(){
+            this.showModal = !this.showModal
         }
-    }
 }
 
 </script>
