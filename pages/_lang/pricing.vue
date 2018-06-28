@@ -1,34 +1,64 @@
 <template>
     <div>
         <div class="pricing-container">
-            <p class="page-title top-title">Pay as you grow</p>
+            <p class="page-title top-title">{{$t('pricing.title')}}</p>
             <div class="toggle">
-                <p class="monthly">Bill Monthly</p>
+                <p class="monthly">{{$t('pricing.checkBoxDetails.leftStr')}}</p>
                 <label class="switch">
                     <input type="checkbox" checked>
                     <span class="slider round"></span>
                 </label>
-                <p class="yearly">Bill Yearly</p>
-                <p class="tagss">Save 20%</p>
+                <p class="yearly">{{$t('pricing.checkBoxDetails.rightStr')}}</p>
+                <p class="tags">{{$t('pricing.checkBoxDetails.tag')}}</p>
             </div>
+            <div class="currencyChange">
+                <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" :class="(selectedCurrency['key']==currency['key'])?'selected':''">
+                    <div>{{currency.symbol}}</div>
+                </div>
+            </div>
+            <no-ssr>
+                <div class="userSlider">
+                    <vue-slider 
+                        v-model = "usersCount"
+                        :value = "1"
+                        :height = "8"
+                        :dotSize = "20"
+                        :min = "0"
+                        :max = "1000"
+                        :interval = "100"
+                        :disabled = "false"
+                        :show = "true"
+                        :speed = "0.3"
+                        :reverse = "false"
+                        :tooltip = "always"
+                        :piecewise = "true"
+                        formatter = "{value} Users"
+                        :tooltipStyle = "{
+                            'backgroundColor': '#1e1e1e',
+                            'borderColor': '#1e1e1e'
+                        }"
+                    >
+                    </vue-slider>
+                </div>
+            </no-ssr>
             <div class="pricing-table">
                 <div class="packages">
                     <div class="package">
-                        <p class="name">Basic</p>
-                        <p class="price">$356</p>
-                        <p class="period">per month</p>
+                        <p class="name">{{$t('pricing.tableData.tableHeader.leftColumn.name')}}</p>
+                        <p class="price">{{selectedCurrency['symbol']+usersCount*15*selectedCurrency['conversionRatio']}}</p>
+                        <p class="period">{{$t('pricing.tableData.tableHeader.leftColumn.period')}}</p>
                         <Button
-                                text="Try it Free"
+                                :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
                                 backgroundColor="#ff003c"
                                 color="white">
                         </Button>
                     </div>
                     <div class="package">
-                        <p class="name">Enterprise</p>
-                        <p class="price">$546</p>
-                        <p class="period">per month</p>
+                        <p class="name">{{$t('pricing.tableData.tableHeader.rightColumn.name')}}</p>
+                        <p class="price">{{selectedCurrency['symbol']+usersCount*30*selectedCurrency['conversionRatio']}}</p>
+                        <p class="period">{{$t('pricing.tableData.tableHeader.rightColumn.period')}}</p>
                         <Button
-                                text="Book a Demo"
+                                :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
                                 backgroundColor="white"
                                 color="#ff003c"
                         >
@@ -37,17 +67,17 @@
                 </div>
                 <table>
                     <thead>
-                        <th>Features</th>
-                        <th>Basic Package</th>
-                        <th>Enterprise Package</th>
+                        <th>{{$t('pricing.tableData.tableMetadata.headingRow[0]')}}</th>
+                        <th>{{$t('pricing.tableData.tableMetadata.headingRow[1]')}}</th>
+                        <th>{{$t('pricing.tableData.tableMetadata.headingRow[2]')}}</th>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Users</td>
-                            <td>Upto 500</td>
-                            <td>Unlimited</td>
+                            <td>{{$t('pricing.tableData.tableMetadata.subHeading[0]')}}</td>
+                            <td>{{$t('pricing.tableData.tableMetadata.subHeading[1]')}}</td>
+                            <td>{{$t('pricing.tableData.tableMetadata.subHeading[2]')}}</td>
                         </tr>
-                        <tr v-for="item in items">
+                        <tr v-for="item in $t('pricing.tableData.tableMetadata.items')">
                             <td class='item-name'>
                                 {{ item.name }}
                                 <div class='tooltip'>
@@ -72,56 +102,44 @@
                 <p class="price-action">Action</p>
                 <div class="price-action">
                     <Button
-                            text="Try it Free"
+                            :text="$t('pricing.tableData.buttons.primary')"
                             backgroundColor="#ff003c"
                             color="white">
                     </Button>
                 </div>
                 <div class="price-action">
                     <Button
-                            text="Book a Demo"
+                            :text="$t('pricing.tableData.buttons.secondary')"
                             backgroundColor="white"
                             color="1e1e1e">
                     </Button>
                 </div>
             </div>
             <div class="sectors">
-                <p class="page-title sector-title">Sectors We Cover</p>
+                <p class="page-title sector-title">{{$t('pricing.tableData.sectorsWidget.title')}}</p>
                 <div class="tabs">
-                    <div class="tab">Basic</div>
-                    <div class="tab">Enterprise</div>
+                    <div class="tab">{{$t('pricing.tableData.sectorsWidget.tabs[0]')}}</div>
+                    <div class="tab">{{$t('pricing.tableData.sectorsWidget.tabs[1]')}}</div>
                 </div>
                 <div class="sector-cards">
-                    <CardWithIcon
-                            title="Travel Agency"
-                            subtitle="OrangeCat"
-                            detail="This online travel agency automates 50 trip recommendation each day"
-                            iconUrl="calc.png"
+                    <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
+                        <CardWithIcon
+                            :title="obj.title"
+                            :subtitle="obj.subtitle"
+                            :detail="obj.detail"
+                            :iconUrl="obj.iconUrl"
                             width="270px"
-                    />
-                    <CardWithIcon
-                            title="Salon"
-                            subtitle="WuJia Salon"
-                            detail="This salon chain automates 100 reservation & FAQ requests each day."
-                            iconUrl="bitmap-copy-2@3x.png"
-                            width="270px"
-                    />
-                    <CardWithIcon
-                            title="Classroom"
-                            subtitle="Chinese Teaching"
-                            detail="This teacher delivers 5 minute quizzes to 30 students each day."
-                            iconUrl="bitmap@3x.png"
-                            width="270px"
-                    />
+                        />
+                    </div>
                 </div>
             </div>
             <div class="questions">
-                <p class="page-title question-title">Have Questions in Mind?</p>
+                <p class="page-title question-title">{{$t('pricing.tableData.questionsWidget.title')}}</p>
                 <Button
                     color="white"
                     width="230px"
-                    text="Start a Conversation"
-                    iconUrl="bot.svg"
+                    :text="$t('pricing.tableData.questionsWidget.buttonText')"
+                    :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
                     align="space-between"
                     class="quest_button"
                 >
@@ -133,49 +151,35 @@
 
 </template>
 <script>
-    import Index from '~/pages/_lang/index'
-    import ContentCard from '~/components/ContentCard'
-    import ContentCardCarousel from '~/components/ContentCardCarousel'
-    import Button from '~/components/Button'
-    import CardWithIcon from '~/components/CardWithIcon'
-    import Footer from '~/components/Footer'
-
+    import Index from '~/pages/_lang/index';
+    import ContentCard from '~/components/ContentCard';
+    import ContentCardCarousel from '~/components/ContentCardCarousel';
+    import Button from '~/components/Button';
+    import CardWithIcon from '~/components/CardWithIcon';
+    import Footer from '~/components/Footer';
+    import NoSSR from 'vue-no-ssr';
+    import currencies from '~/components/currency/data.js';
+    console.log(currencies);
+    var components = {};
+    components['no-ssr'] = NoSSR;
+    if (process.browser) {
+        // in older versions of nuxt, it's process.BROWSER_BUILD
+        let VueSlider = require('vue-slider-component')
+        components['vue-slider'] = VueSlider
+    }
     export default {
-        components: {
+        components: Object.assign(components,{
             Button,
             Footer,
             CardWithIcon
-        },
-        data: () => ({
-            buttons: {
-                block1: [
-                    {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
-                    {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
-                ],
-                block2: [
-                    {text: 'Try it now', backgroundColor: '#ff003c', color: '#ffffff'},
-                    {text: 'Check out the bots', backgroundColor: '#ffffff', color: '#000000'}
-                ],
-                block3: [
-                    {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
-                    {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
-                ]
-            },
-            items:[
-                {name: 'Scheduling', basic: 'confirm', enterprise: 'confirm', tooltip: 'Use schedules to push messages & save reservations.'},
-                {name: 'Bot Training', basic: 'confirm', enterprise: 'confirm', tooltip: 'Teach your bot to improve its dialogue.'},
-                {name: 'Unlimited Bots', basic: 'confirm', enterprise: 'confirm', tooltip: 'Build bots according to need vs. price.'},
-                {name: 'Translation Management', basic: 'confirm', enterprise: 'confirm', tooltip: 'Control multiple languages seamlessly.'},
-                {name: 'Population', basic: 'confirm', enterprise: 'confirm', tooltip: 'Save end users into standard & custom segments.'},
-                {name: 'Scheduling', basic: 'confirm', enterprise: 'confirm', tooltip: 'Add languages beyond Chinese & English.'},
-                {name: 'Chat Structuring', basic: 'no', enterprise: 'confirm', tooltip: 'SiniticAI™ rapidly structures raw chat history to build bots.'},
-                {name: 'Integrations', basic: 'no', enterprise: 'confirm', tooltip: 'Connect your bot to CRMs, databases & more.'},
-                {name: 'Teams', basic: 'no', enterprise: 'confirm', tooltip: 'Control multi-level user permissions.'},
-                {name: 'Onsite Hosting', basic: 'no', enterprise: 'confirm', tooltip: 'Satisfy corporate requirements to host locally.'},
-                {name: 'Human Takeover', basic: 'no', enterprise: 'confirm', tooltip: 'Takeover complex conversations to achieve customer satisfaction.'}
-
-            ]
         }),
+        data: function () {
+            return {
+                usersCount: 0,
+                currenciesArr: currencies,
+                selectedCurrency: currencies[0]
+            }
+        }
     }
 </script>
 <style>
@@ -397,7 +401,30 @@
         justify-content: center;
         align-items: center;
         margin-top: 40px;
-        margin-bottom: 120px;
+        margin-bottom: 80px;
+    }
+    .currencyChange{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10%;
+    }
+    .currencyChange .icon{
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    .currencyChange .icon:hover,.currencyChange .icon.selected{
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        margin: 0 10px;
+        background:black;
+        color:white;
     }
     .monthly{
         margin-right: 10px;
@@ -462,5 +489,32 @@
     }
     .tooltip-text{
         font-size: 14px;
+    }
+    .userSlider .vue-slider-component{
+        width: auto  !important;
+        padding: 0px  !important;
+        margin-bottom: 80px !important;
+    }
+    .userSlider .vue-slider-piecewise-item{
+        width: 1px !important;
+        height: 8px !important;
+        top: -0px !important;
+    }
+    .userSlider .vue-slider-piecewise-item .vue-slider-piecewise-dot{
+        border-radius:0 !important;
+    }
+    .userSlider .vue-slider-dot{
+        top:-9px !important;
+    }
+    .userSlider .vue-slider-process{
+        background-color: #ff003c;
+    }
+    .userSlider .vue-slider{
+        background-color: #dee0e6;
+        height:8px !important;
+    }
+    .userSlider .vue-slider-tooltip-wrap{
+        display:block !important;
+        opacity:1 !important;
     }
 </style>

@@ -10,7 +10,7 @@
     >
     </ContentCard>
     <ContentCard
-        :header = "$t('home.contentCards.card2.header')"
+        :title = "$t('home.contentCards.card2.header')"
         :subtitle = "$t('home.contentCards.card2.subtitle')"
         :buttons = "$t('home.contentCards.card2.buttons')"
         showContentOnLeft = "false"
@@ -25,7 +25,7 @@
     >
     </ContentCardCarousel>
     <ContentCard
-        :header="$t('home.contentCards.card4.header')"
+        :title="$t('home.contentCards.card4.header')"
         :subtitle = "$t('home.contentCards.card4.subtitle')"
         showContentOnLeft="false"
         :imageUrl="$t('home.contentCards.card4.image')"
@@ -35,7 +35,7 @@
     </ContentCard>
     <div class="automation-section">
         <ContentCard
-            :header = "$t('home.contentCards.card2.header')"
+            :title = "$t('home.contentCards.card2.header')"
             :subtitle = "$t('home.contentCards.card2.subtitle')"
             :buttons = "$t('home.contentCards.card2.buttons')"
             showContentOnLeft = "true"

@@ -1,10 +1,22 @@
 {
-  "links": {
-    "home": "Home",
-    "about": "About",
-    "english": "English version",
-    "french": "French version"
-  },
+  "links": [
+    {
+      "title":"Sectors",
+      "link":"/"
+    },
+    {
+      "title":"BoticAI",
+      "link":"/botic"
+    },
+    {
+      "title":"Pricing",
+      "link":"/pricing"
+    },
+    {
+      "title":"Partners",
+      "link":"/partners"
+    }
+  ],
   "home": {
     "contentCards":{
       "card1":{
@@ -173,8 +185,157 @@
       ]
     }
   },
-  "about": {
-    "title": "About",
-    "introduction": "This page is made to give you more informations."
+  "botic": {
+    "contentCards":{
+      "card1" : {
+        "header":"Chat with your Customers around the <span class='red'> world </span>",
+        "subtitle":"BoticAI is the natural language processing engine with extreme adaptability for new languages",
+        "image":"images/english/group-6@3x.png"
+      },
+      "card2" : {
+        "header":"<span class='red'>30,000+</span> Chats",
+        "subtitle":"Power your bot with phrases & metonyms from our priority sectors.",
+        "image":"images/english/group-53@3x.png"
+      },
+      "card3" : {
+        "header":"Achieving higher<span class='red'>Accuracy</span>",
+        "subtitle":"For a client with 90,000 customer support requests per day, SiniticAI™ exhibits up to 11% higher Chinese accuracy than a brand-name NLP engine.",
+        "image":"images/english/achieving@2x.png"
+      },
+      "card4" : {
+        "header":"Ask the Machine-Learning<span class='red'> Experts </span>",
+        "subtitle":"Our engineers are at forefront of natural language processing research.",
+        "image":"images/english/humans@2x.png"
+      }
+    },
+    "processDetailsWidget" : {
+      "heading":"Automation isn’t magic. Here’s <span class='red'>how it works </span>",
+      "step1":{
+        "leftCard":{
+          "index":"1",
+          "heading":"Input",
+          "content":"Use chat history to build chatbot dialogue and conduct initial BoticAI training.",
+          "image":"input@2x.png"
+        },
+        "rightCard":{
+          "index":"2",
+          "heading":"Prediction",
+          "content":"BoticAI predicts the correct human intent from multilingual support requests.",
+          "image":"prediction@2x.png"
+        }
+      },
+      "step2":{
+        "leftCard":{
+          "index":"3",
+          "heading":"Judgement",
+          "content":">Our NLP experts set the confidence threshold for intent detection, based on a top-k heuristic.",
+          "image":"judgement@2x.png"
+        },
+        "rightCard":{
+          "index":"4",
+          "heading":"Action",
+          "content":"Your chatbot sends correct replies to humans, or passes the conversation to an agent",
+          "image":"prediction@2x.png"
+        }
+      },
+      "step3":{
+        "leftCard":{
+          "index":"5",
+          "heading":"Outcome",
+          "content":"Substantial customer support automation and increased customer satisfaction",
+          "image":"outcome@2x.png"
+        },
+        "rightCard":{
+          "index":"6",
+          "heading":"Training",
+          "content":"BoticAI increases automation by re-training on live chat history.",
+          "image":"training@2x.png"
+        }
+      }
+    }
+  },
+  "pricing":{
+    "title":"Pay as you grow",
+    "checkBoxDetails":{
+      "leftStr":"Bill Monthly",
+      "rightStr":"Bill Yearly",
+      "tag":"Save 20%"
+    },
+    "tableData":{
+      "tableHeader":{
+        "leftColumn":{
+          "name":"Basic",
+          "price":"$356",
+          "period":"per month",
+          "buttonText":"Try it Free"
+        },
+        "rightColumn":{
+          "name":"Enterprise",
+          "price":"$546",
+          "period":"per month",
+          "buttonText":"Book a Demo"
+        }
+      },
+      "tableMetadata":{
+        "headingRow":[
+          "Features",
+          "Basic Package",
+          "Enterprise Package"
+        ],
+        "subHeading":[
+          "Users",
+          "Upto 500",
+          "Unlimited"
+        ],
+        "items":[
+            {"name": "Scheduling", "basic": "confirm", "enterprise": "confirm", "tooltip": "Use schedules to push messages & save reservations."},
+            {"name": "Bot Training", "basic": "confirm", "enterprise": "confirm", "tooltip": "Teach your bot to improve its dialogue."},
+            {"name": "Unlimited Bots", "basic": "confirm", "enterprise": "confirm", "tooltip": "Build bots according to need vs. price."},
+            {"name": "Translation Management", "basic": "confirm", "enterprise": "confirm", "tooltip": "Control multiple languages seamlessly."},
+            {"name": "Population", "basic": "confirm", "enterprise": "confirm", "tooltip": "Save end users into standard & custom segments."},
+            {"name": "Scheduling", "basic": "confirm", "enterprise": "confirm", "tooltip": "Add languages beyond Chinese & English."},
+            {"name": "Chat Structuring", "basic": "no", "enterprise": "confirm", "tooltip": "SiniticAI™ rapidly structures raw chat history to build bots."},
+            {"name": "Integrations", "basic": "no", "enterprise": "confirm", "tooltip": "Connect your bot to CRMs, databases & more."},
+            {"name": "Teams", "basic": "no", "enterprise": "confirm", "tooltip": "Control multi-level user permissions."},
+            {"name": "Onsite Hosting", "basic": "no", "enterprise": "confirm", "tooltip": "Satisfy corporate requirements to host locally."},
+            {"name": "Human Takeover", "basic": "no", "enterprise": "confirm", "tooltip": "Takeover complex conversations to achieve customer satisfaction."}
+        ]
+      },
+      "buttons":{
+        "primary":"Try it Free",
+        "secondary":"Book a Demo"
+      },
+      "sectorsWidget":{
+        "title":"Sectors We Cover",
+        "tabs":[
+          "Basic","Enterprise"
+        ],
+        "Basic":[
+          {
+            "title":"Travel Agency",
+            "subtitle":"OrangeCat",
+            "detail":"This online travel agency automates 50 trip recommendation each day",
+            "iconUrl":"calc.png"
+          },
+          {
+            "title":"Salon",
+            "subtitle":"WuJia Salon",
+            "detail":"This salon chain automates 100 reservation & FAQ requests each day.",
+            "iconUrl":"bitmap-copy-2@3x.png"
+          },
+          {
+            "title":"Classroom",
+            "subtitle":"Chinese Teaching",
+            "detail":"This teacher delivers 5 minute quizzes to 30 students each day.",
+            "iconUrl":"bitmap@3x.png"
+          }
+        ]
+      },
+      "questionsWidget":{
+        "title":"Have Questions in Mind?",
+        "buttonText":"Start a Conversation",
+        "buttonIcon":"bot.svg"
+      }
+    }
   }
 }

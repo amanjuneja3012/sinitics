@@ -1,8 +1,8 @@
 <template>
   <div class ='botic'> 
     <ContentCard
-      header="Chat with your Customers around the <span class='red'> world </span>"
-      subtitle="BoticAI is the natural language processing engine with extreme adaptability for new languages"
+      :header="$t('botic.contentCards.card1.header')"
+      :subtitle="$t('botic.contentCards.card1.subtitle')"
       inputBox="true"
       showContentOnLeft="true"
       imageUrl="group-6@3x.png"
@@ -11,88 +11,34 @@
     </ContentCard>
     <ContentCard
       class="types-container"
-      title="<span class='red'>30,000+</span> Chats"
-      subtitle="Power your bot with phrases & metonyms from our priority sectors."
+      :title="$t('botic.contentCards.card2.header')"
+      :subtitle="$t('botic.contentCards.card2.subtitle')"
       showContentOnLeft="false"
       imageUrl="group-53@3x.png"
       height= '416px'
       listTypes="true"
     >
     </ContentCard>
-     <!-- <ContentCard
-      title="<span class='red'>30,000+</span> Chats"
-      subtitle="Power your bot with phrases & metonyms from our priority sectors."
-      :buttons="buttons.block2"
-      showContentOnLeft="false"
-      imageUrl="group-53@3x.png"
-      height="650px"
-    >
-    </ContentCard> -->
+     
     <div class="bot-features-container">
-      <p class="feature-heading head-workbox">Automation isn’t magic. Here’s <span class="red">how it works </span></p>
-      <div class='workbox-section'>
-        <div class='divider'>
-          <div class='circle'>1</div>
-          <div class='line' />
-          <div class='circle red-circle'>2</div>
-        </div>
-        <div class='workbox-container'>
-          <div class='workbox'>
-          <div class='w-header'>Input</div>
-          <div class='w-content'>Use chat history to build chatbot dialogue and conduct initial BoticAI training.</div>
-          <img src='input@2x.png' class='w-icon' />
-          </div>
-          <div class='workbox workbox-hightlight'>
-            <div class='w-header'>Prediction</div>
-            <div class='w-content'>BoticAI predicts the correct human intent from multilingual support requests.</div>
-            <img src='prediction@2x.png' class='w-icon' />
-          </div>
-        </div>
-      </div>
-      <div class='workbox-section'>
-        <div class='divider'>
-          <div class='circle'>3</div>
-          <div class='line' />
-          <div class='circle'>4</div>
-        </div>
-        <div class='workbox-container'>
-          <div class='workbox'>
-          <div class='w-header'>Judgement</div>
-          <div class='w-content'>Our NLP experts set the confidence threshold for intent detection, based on a top-k heuristic.</div>
-          <img src='judgement@2x.png' class='w-icon' />
-          </div>
-          <div class='workbox'>
-            <div class='w-header'>Action</div>
-            <div class='w-content'>Your chatbot sends correct replies to humans, or passes the conversation to an agent</div>
-            <img src='prediction@2x.png' class='w-icon' />
-          </div>
-        </div>
-      </div>
-      <div class='workbox-section'>
-        <div class='divider'>
-          <div class='circle'>5</div>
-          <div class='line' />
-          <div class='circle'>6</div>
-        </div>
-        <div class='workbox-container'>
-          <div class='workbox'>
-          <div class='w-header'>Outcome</div>
-          <div class='w-content'>Substantial customer support automation and increased customer satisfaction</div>
-          <img src='outcome@2x.png' class='w-icon' />
-          </div>
-          <div class='workbox'>
-            <div class='w-header'>Training</div>
-            <div class='w-content'>BoticAI increases automation by re-training on live chat history.</div>
-            <img src='training@2x.png' class='w-icon' />
-          </div>
-        </div>
-      </div>   
-      <!-- <div class="features-container"></div> -->
+      <p class="feature-heading head-workbox" v-html="$t('botic.processDetailsWidget.heading')"></p>
+      <WorkBoxSection 
+        :leftCard="$t('botic.processDetailsWidget.step1.leftCard')"
+        :rightCard="$t('botic.processDetailsWidget.step1.rightCard')"
+      />
+      <WorkBoxSection 
+        :leftCard="$t('botic.processDetailsWidget.step2.leftCard')"
+        :rightCard="$t('botic.processDetailsWidget.step2.rightCard')"
+      />
+      <WorkBoxSection 
+        :leftCard="$t('botic.processDetailsWidget.step3.leftCard')"
+        :rightCard="$t('botic.processDetailsWidget.step3.rightCard')"
+      />
     </div>
     <ContentCard
       class="types-container"
-      title="Achieving higher<span class='red'>Accuracy</span>"
-      subtitle="For a client with 90,000 customer support requests per day, SiniticAI™ exhibits up to 11% higher Chinese accuracy than a brand-name NLP engine."
+      :title="$t('botic.contentCards.card3.header')"
+      :subtitle="$t('botic.contentCards.card3.subtitle')"
       showContentOnLeft="false"
       imageUrl="achieving@2x.png"
       width= '545px'
@@ -103,8 +49,8 @@
       <div class='left_curve'></div>
       <div class='right_curve'></div>
       <ContentCard
-        title="Ask the Machine-Learning<span class='red'> Experts </span>"
-        subtitle="Our engineers are at forefront of natural language processing research."
+        :title="$t('botic.contentCards.card4.header')"
+        :subtitle="$t('botic.contentCards.card4.subtitle')"
         showContentOnLeft="true"
         imageUrl="humans@2x.png"
         height="473px"
@@ -123,6 +69,7 @@
     import Button from '~/components/Button'
     import BotFeatureCard from '~/components/BotFeatureCard'
     import Footer from '~/components/Footer'
+    import WorkBoxSection from '~/components/workBoxSection'
 
     export default {
         components: {
@@ -131,7 +78,8 @@
             BotFeatureCard,
             Button,
             Footer,
-            ContentCardCarousel
+            ContentCardCarousel,
+            WorkBoxSection
         },
         data: () => ({
             buttons: {
