@@ -21,5 +21,8 @@
     "nuxt-sass-resources-loader": "^2.0.2",
     "sass-loader": "^7.0.3",
     "vue-style-loader": "^4.1.0"
+  },
+  "engines": {
+    "node": "10.4.1"
   }
 }
