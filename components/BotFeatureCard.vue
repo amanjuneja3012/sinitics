@@ -39,8 +39,11 @@
         font-weight: bold;
         color: #1e1e1e;
         margin-top: 50px;
+        margin-bottom: 30px;
     }
     .subtitle{
+        text-align: center;
+        line-height: 24px;
         font-size: 16px;
         color: #1e1e1e;
         margin-top: 10px;

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id='pricing'>
         <div class="pricing-container">
             <p class="page-title top-title">{{$t('pricing.title')}}</p>
             <div class="toggle">
@@ -94,9 +94,36 @@
                                 <p class="no-feature" v-if="item.enterprise == 'no'"></p>
                             </td>
                         </tr>
-
                     </tbody>
                 </table>
+            </div>
+            <div class='modal' v-bind:class="{ 'is-active' : showModal}"  >
+                <div class="modal-background"></div>
+                <div class="modal-content">
+                    <div class="box">
+                        <div class="modal-head" >Book a Free Demo</div>
+                        <div class="modal-sub-head" >Help us with your information and our executive will get back to you soon</div>
+                        <div>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-small" type="text" placeholder="Full Name">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-small" type="text" placeholder="Company Name">
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input class="input is-small" type="email" placeholder="Email Address">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="modal-button">Submit Details</button>
+                    </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
             </div>
             <div class="price-actions">
                 <p class="price-action">Action</p>
@@ -104,14 +131,16 @@
                     <Button
                             :text="$t('pricing.tableData.buttons.primary')"
                             backgroundColor="#ff003c"
-                            color="white">
+                            color="white"
+                            v-on:click = "toggleModal" >
                     </Button>
                 </div>
                 <div class="price-action">
                     <Button
                             :text="$t('pricing.tableData.buttons.secondary')"
                             backgroundColor="white"
-                            color="1e1e1e">
+                            color="1e1e1e" 
+                            v-on:click = "toggleModal" >
                     </Button>
                 </div>
             </div>
@@ -172,15 +201,46 @@
             Button,
             Footer,
             CardWithIcon
+        },
+        data: () => ({
+            showModal: false,
+            buttons: {
+                block1: [
+                    {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
+                    {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
+                ],
+                block2: [
+                    {text: 'Try it now', backgroundColor: '#ff003c', color: '#ffffff'},
+                    {text: 'Check out the bots', backgroundColor: '#ffffff', color: '#000000'}
+                ],
+                block3: [
+                    {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
+                    {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
+                ]
+            },
+            items:[
+                {name: 'Scheduling', basic: 'confirm', enterprise: 'confirm', tooltip: 'Use schedules to push messages & save reservations.'},
+                {name: 'Bot Training', basic: 'confirm', enterprise: 'confirm', tooltip: 'Teach your bot to improve its dialogue.'},
+                {name: 'Unlimited Bots', basic: 'confirm', enterprise: 'confirm', tooltip: 'Build bots according to need vs. price.'},
+                {name: 'Translation Management', basic: 'confirm', enterprise: 'confirm', tooltip: 'Control multiple languages seamlessly.'},
+                {name: 'Population', basic: 'confirm', enterprise: 'confirm', tooltip: 'Save end users into standard & custom segments.'},
+                {name: 'Scheduling', basic: 'confirm', enterprise: 'confirm', tooltip: 'Add languages beyond Chinese & English.'},
+                {name: 'Chat Structuring', basic: 'no', enterprise: 'confirm', tooltip: 'SiniticAI™ rapidly structures raw chat history to build bots.'},
+                {name: 'Integrations', basic: 'no', enterprise: 'confirm', tooltip: 'Connect your bot to CRMs, databases & more.'},
+                {name: 'Teams', basic: 'no', enterprise: 'confirm', tooltip: 'Control multi-level user permissions.'},
+                {name: 'Onsite Hosting', basic: 'no', enterprise: 'confirm', tooltip: 'Satisfy corporate requirements to host locally.'},
+                {name: 'Human Takeover', basic: 'no', enterprise: 'confirm', tooltip: 'Takeover complex conversations to achieve customer satisfaction.'}
+
+            ],
+            usersCount: 0,
+            currenciesArr: currencies,
+            selectedCurrency: currencies[0]
         }),
-        data: function () {
-            return {
-                usersCount: 0,
-                currenciesArr: currencies,
-                selectedCurrency: currencies[0]
-            }
+        methods: function(){
+            this.showModal = !this.showModal
         }
-    }
+}
+
 </script>
 <style>
     .page-title{
@@ -516,5 +576,43 @@
     .userSlider .vue-slider-tooltip-wrap{
         display:block !important;
         opacity:1 !important;
+    }
+    .modal .box{
+        padding: 38px;
+        max-width: 430px;
+        max-height: 509px;
+        border-radius: 4px;
+        text-align: center;
+        margin: 0 auto;
+        background-color: #ffffff;
+    }
+    .modal-head{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 16px;
+    }
+    .modal-sub-head{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    .modal .input{
+        border: none;
+        box-shadow: none;
+        margin-top: 22px;
+        border-bottom: 1px solid #dee0e6;
+    }
+    .modal .input:focus{
+        border-bottom: 1px solid #ff003c;
+    }
+    .modal-button{
+        width: 350px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        box-shadow: none;
+        margin-top: 30px;
+        border-radius: 2px;
+        background-color: #ff003c;
     }
 </style>
