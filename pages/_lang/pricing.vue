@@ -201,7 +201,7 @@
             Button,
             Footer,
             CardWithIcon
-        },
+        }),
         data: () => ({
             showModal: false,
             buttons: {
@@ -236,8 +236,10 @@
             currenciesArr: currencies,
             selectedCurrency: currencies[0]
         }),
-        methods: function(){
-            this.showModal = !this.showModal
+        methods: {
+            "toggleModal":function(){
+                this.showModal = !this.showModal
+            }
         }
 }
 
