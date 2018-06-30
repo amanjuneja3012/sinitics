@@ -8,9 +8,9 @@
               <div class="logo"></div>
             </nuxt-link>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-              <nuxt-link class="Header__Link navbar-item navbar-link" :to="'/'+$i18n.locale+'/sectors'">
+              <!-- <nuxt-link class="Header__Link navbar-item navbar-link" :to="'/'+$i18n.locale+'/sectors'">
                 Sectors
-              </nuxt-link>
+              </nuxt-link> -->
               <nuxt-link class="Header__Link navbar-item navbar-link" :to="'/'+$i18n.locale+'/botic-ai'">
                 BoticAI
               </nuxt-link>
@@ -23,16 +23,16 @@
             </a>
           </div>
           <div class="navbar-menu">
-            <nuxt-link class="Header__Link navbar-item" :to="'/'+$i18n.locale+'/sectors'">
+            <!-- <nuxt-link class="Header__Link navbar-item" :to="'/'+$i18n.locale+'/sectors'">
               Sectors
-            </nuxt-link>
-            <nuxt-link class="Header__Link navbar-item" :to="'/'+$i18n.locale+'/botic-ai'">
+            </nuxt-link> -->
+            <nuxt-link class="Header__Link navbar-item" :to="'/botic'">
               BoticAI
             </nuxt-link>
-            <nuxt-link class="Header__Link navbar-item" :to="'/'+$i18n.locale+'/pricing'">
+            <nuxt-link class="Header__Link navbar-item" :to="'/pricing'">
               Pricing
             </nuxt-link>
-            <nuxt-link class="Header__Link navbar-item" :to="'/'+$i18n.locale+'/partners'">
+            <nuxt-link class="Header__Link navbar-item" :to="'/partners'">
               Partners
             </nuxt-link>
           </div>
@@ -218,7 +218,7 @@ html, body {
 }
 
 .nuxt-link-active {
-  color: cyan;
+  color: #ff003c;
 }
 .Content {
   padding: 50px 0;

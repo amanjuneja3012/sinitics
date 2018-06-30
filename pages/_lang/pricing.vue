@@ -30,7 +30,7 @@
                         :show = "true"
                         :speed = "0.3"
                         :reverse = "false"
-                        :tooltip = "always"
+                        tooltip = "always"
                         :piecewise = "true"
                         formatter = "{value} Users"
                         :tooltipStyle = "{
@@ -196,7 +196,7 @@
         let VueSlider = require('vue-slider-component')
         components['vue-slider'] = VueSlider
     }
-    export default {
+    export default  {
         components: Object.assign(components,{
             Button,
             Footer,
