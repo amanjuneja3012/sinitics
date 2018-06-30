@@ -31,8 +31,8 @@
     }
 
     .icon{
-        width: 90px;
-        height: 69px;
+        width: 80px;
+        height: 80px;
     }
     .title{
         font-size: 18px;

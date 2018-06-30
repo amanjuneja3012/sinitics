@@ -188,7 +188,6 @@
     import Footer from '~/components/Footer';
     import NoSSR from 'vue-no-ssr';
     import currencies from '~/components/currency/data.js';
-    console.log(currencies);
     var components = {};
     components['no-ssr'] = NoSSR;
     if (process.browser) {

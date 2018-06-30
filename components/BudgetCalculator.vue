@@ -4,8 +4,13 @@
             <div class="column w100 black roundedTop center">
                 <div class="w50 inline-flex vTop colorWhite colorWhite-text f13"><span>Per month Savings <br> with <span class='red'>50%</span> Automation</span></div>
                 <div class="row w50 vTop inline-flex is-paddingless center alignRight">
-                    <div class="text colorWhite inline-flex vTop f14 mr10">USD</div>
-                    <div class="text inline-flex vTop f18 colorWhite bold currency">{{userValue*budgetValue}}$</div>
+                    <div class="currencyChange">
+                        <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" :class="(selectedCurrency['key']==currency['key'])?'selected':''">
+                            <div>{{currency.symbol}}</div>
+                        </div>
+                    </div>
+                    <!-- <div class="text colorWhite inline-flex vTop f14 mr10">USD</div> -->
+                    <div class="text inline-flex vTop f18 colorWhite bold currency">{{userValue*budgetValue*selectedCurrency['conversionRatio']+selectedCurrency['symbol']}}</div>
                 </div>
             </div>
                 <div class='row w100 items white'>
@@ -14,12 +19,15 @@
                             <div class='budget-item-icon'></div>
                             <div class='text colorDarkBlack inline-flex alignLeft f13 bold pr5'>Budget</div>
                         </div>
-                        <div class='text colorDarkBlack inline-flex alignRight w50 f13 bold pr5'>${{budgetValue}}</div>
+                        <div class='text colorDarkBlack inline-flex alignRight w50 f13 bold pr5'>{{selectedCurrency['symbol']+budgetValue*selectedCurrency['conversionRatio']}}</div>
                         <no-ssr>
                             <div>
                                 <vue-slider 
                                     ref='slider'
                                     v-model="budgetValue"
+                                    :min = "0"
+                                    :max = "1000"
+                                    :interval = "100"
                                 >
                                 </vue-slider>
                             </div>
@@ -47,6 +55,7 @@
 
 <script>
     import NoSSR from 'vue-no-ssr';
+    import currencies from '~/components/currency/data.js';
     var components = {};
     components['no-ssr'] = NoSSR;
     if (process.browser) {
@@ -58,7 +67,9 @@
         data: function () {
             return {
                 budgetValue: 0,
-                userValue: 0
+                userValue: 0,
+                currenciesArr: currencies,
+                selectedCurrency: currencies[0]
             }
         },
         components: components
@@ -139,5 +150,24 @@
     }
     .item-container{
         display: inline-block;
+    }
+    .currencyChange{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .currencyChange .icon{
+        border: 1px solid black;
+        border-radius: 50%;
+        background:white;
+        color:black;
+        width: 30px;
+        height: 30px;
+        margin: 0 4px;
+        cursor: pointer;
+    }
+    .currencyChange .icon:hover,.currencyChange .icon.selected{
+        background:white;
+        color:red;
     }
 </style>
