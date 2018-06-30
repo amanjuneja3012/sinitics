@@ -115,6 +115,8 @@
     .text{
         font-size: 20px;
         font-weight: 600;
+        min-width: 100px;
+        justify-content: flex-end;
     }
     .calcBack{
         width: 490px;

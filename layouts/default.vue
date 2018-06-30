@@ -32,9 +32,12 @@
             <nuxt-link class="Header__Link navbar-item" :to="'/pricing'">
               Pricing
             </nuxt-link>
-            <nuxt-link class="Header__Link navbar-item" :to="'/partners'">
+            <!-- <nuxt-link class="Header__Link navbar-item" :to="''">
               Partners
-            </nuxt-link>
+            </nuxt-link> -->
+            <!-- <span class="Header__Link navbar-item" v-on:click="scrollTo" >
+              Partners
+            </span> -->
           </div>
         </nav>
         <div class="inlineFlex w50 rf is-hidden-touch">  
@@ -117,7 +120,22 @@ export default {
       'flagUrl':'/images/english/uk@3x.png'
     },
     languageOverlayVisibility:false
-  })
+  }),
+  methods: {
+    scrollTo: (event) => {
+      window.scrollTo(0, 1000)
+      // `this` inside methods points to the Vue instance
+      // let myFirstPromise = new Promise((resolve, reject) => {
+      //   window.location.href ='/'
+      //   resolve()
+      // })
+      // myFirstPromise.then(() => {
+      //   setTimeout(() => {
+      //     window.scrollTo(0, 1000)
+      //   }, 3000)
+      // })
+    }
+  }
 }
 
 </script>
@@ -141,6 +159,11 @@ html, body {
   background-size: 1170px 9111px;
   background-repeat: no-repeat; */
 }
+body{
+  overflow-x: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .navbar-brand{
   margin-right: 6%;
 }
@@ -160,11 +183,11 @@ html, body {
   background-color: rgba(255,255,255,0.97);
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   align-items: center;
   z-index:99;
+  max-width: 1440px;
 }
 .Header__Logo{
   background-image:url('/static/images/english/logo@2x.png');
