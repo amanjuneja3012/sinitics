@@ -67,7 +67,8 @@
   height: 700px;
   display: flex;
   align-items: center;
-  margin-top: 200px;
+  margin-top: 60px;
+  margin-bottom: 140px;
   .head-text{
     font-size: 2.12em;
     color: #1e1e1e;
@@ -93,16 +94,37 @@
   }
   .widgetHeader{
     box-sizing: border-box;
-    padding: 1% 0% 2% 0%;
+    padding: 1% 0% 4% 0%;
   }
   .wInvert300{
     width: calc(100% - 300px);
   }
   .widgetContainer{
-    width: 100%;
+    width: 1030px;
     top: 12%;
-    padding: 0 9.4%;
+    // padding: 0 9.4%;
     position: absolute;
+    .infoBlock{
+      height: 450px;
+      justify-content: center;
+      box-shadow: -2px 47px 212px -56px rgba(0, 0, 0, .18);
+    }
+    .leftImage{
+      margin-right: 30px;
+    }
+    h3{
+      font-size: 2.12em;
+      color: #1e1e1e;
+      font-weight: bold;
+      line-height: 1.36em;
+      vertical-align: middle;
+    }
+    p{
+      font-size: 1.22em;
+      color: #1e1e1e;
+      margin-bottom: 1%;
+      line-height: 1.4em;
+    }
   }
 }
 .newsCarouselWidget{
@@ -115,7 +137,7 @@
     color: #1e1e1e;
     font-weight: bold;
     line-height: 1.36em;
-    margin-bottom: 2%;
+    margin-bottom: 3%;
   }
   .leftAbs{
     position: absolute;
@@ -180,10 +202,10 @@
     left: 1%;
   }
   .VueCarousel-navigation-button.VueCarousel-navigation-next{
-    left: 50%;
+    left: 46%;
   }
   .VueCarousel-inner{
-    flex-basis: 300px !important;
+    flex-basis: 270px !important;
   }
 }
 .VueCarousel-slide{

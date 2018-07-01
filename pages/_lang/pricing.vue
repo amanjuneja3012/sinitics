@@ -9,7 +9,7 @@
                     <span class="slider round"></span>
                 </label>
                 <p class="yearly">{{$t('pricing.checkBoxDetails.rightStr')}}</p>
-                <p class="tags">{{$t('pricing.checkBoxDetails.tag')}}</p>
+                <p class="tagss">{{$t('pricing.checkBoxDetails.tag')}}</p>
             </div>
             <div class="currencyChange">
                 <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" :class="(selectedCurrency['key']==currency['key'])?'selected':''">
@@ -462,13 +462,13 @@
         justify-content: center;
         align-items: center;
         margin-top: 40px;
-        margin-bottom: 80px;
+        margin-bottom: 4%;
     }
     .currencyChange{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 10%;
+        margin-bottom: 4%;
     }
     .currencyChange .icon{
         border: 1px solid black;
@@ -493,26 +493,27 @@
     }
     .yearly{
         margin-left: 10px;
+        margin-right: 10px;
         font-size: 20px;
     }
     .tagss{
         margin: 0;
         height: 2em;
         padding: 3px;
-        font-size: 12px;
+        font-size: 14px;
         color: #151e37;
         line-height: 1.5;
-        margin-left: 12px;
         border-radius: 4px;
+        font-weight: 600px;
         align-items: center;
         justify-content: center;
         background-color: white;
         -webkit-box-align: center;
-        border: 1px solid #151e37;
+        border: 1.2px solid #151e37;
     }
     .quest_button{
         background-color: #ff003c;
-        box-shadow: 2px 70px 133px -89px rgba(255,0,60,1);
+        /* box-shadow: 2px 70px 133px -89px rgba(255,0,60,1); */
     }
     /* .quest_button:before{
         content: '';

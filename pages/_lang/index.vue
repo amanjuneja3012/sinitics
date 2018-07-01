@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="homepage">
     <ContentCard
         :header="$t('home.contentCards.card1.header')"
         :subtitle="$t('home.contentCards.card1.subtitle')"

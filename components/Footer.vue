@@ -21,11 +21,18 @@
         <div class="menu-container">
             <p class="menu-title">Botic AI</p>
             <ul>
-                <li>Sectors</li>
-                <li>BoticAI</li>
-                <li>Pricing</li>
-                <li>Partners</li>
-
+                <li>
+                    <nuxt-link class="links" :to="'/botic'">
+                        Botic
+                    </nuxt-link>
+                </li>
+                <li>
+                    <nuxt-link class="links" :to="'/pricing'">
+                        Pricing
+                    </nuxt-link>
+                </li>
+                <li class="opacity-3">Partners</li>
+                <li class="opacity-3">Sectors</li>
             </ul>
         </div>
         <div class="menu-container">
@@ -91,6 +98,9 @@
         color: #1e1e1e;
         margin-bottom: 21px;
         font-size: 18px;
+    }
+    .links{
+        color: #1e1e1e;
     }
     li{
         color: #1e1e1e;
