@@ -1,5 +1,19 @@
 <template>
-  <div class ='botic'> 
+  <div class ='botic'>
+    <div class="tabs-container">
+      <h3>Pushing the limits of Natural Language Processing</h3>
+      <div class="tabs">
+        <ul>
+          <li class="is-active">
+            <div>
+              
+            </div>
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
     <ContentCard
       :header="$t('botic.contentCards.card1.header')"
       :subtitle="$t('botic.contentCards.card1.subtitle')"
@@ -300,5 +314,11 @@
     }
     .quest_button{
       background-color: #ff003c;
+    }
+    .tabs-container{
+
+    }
+    .tabs{
+      background-color: #1e1e1e;
     }
 </style>
