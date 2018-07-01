@@ -32,9 +32,9 @@
             <nuxt-link class="Header__Link navbar-item" :to="'/pricing'">
               Pricing
             </nuxt-link>
-            <!-- <nuxt-link class="Header__Link navbar-item" :to="''">
+            <nuxt-link class="Header__Link navbar-item" :to="''">
               Partners
-            </nuxt-link> -->
+            </nuxt-link>
             <!-- <span class="Header__Link navbar-item" v-on:click="scrollTo" >
               Partners
             </span> -->

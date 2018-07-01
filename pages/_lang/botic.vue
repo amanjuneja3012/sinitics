@@ -45,7 +45,7 @@
       height= '500px'
     >
     </ContentCard>
-    <div class='bottom_container'>
+    <!-- <div class='bottom_container'>
       <div class='left_curve'></div>
       <div class='right_curve'></div>
       <ContentCard
@@ -56,6 +56,19 @@
         height="473px"
       >
       </ContentCard>
+    </div> -->
+    <div class="questions">
+        <p class="page-title question-title">{{$t('pricing.tableData.questionsWidget.title')}}</p>
+        <Button
+            color="white"
+            width="230px"
+            :text="$t('pricing.tableData.questionsWidget.buttonText')"
+            :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
+            align="space-between"
+            class="quest_button"
+        >
+        </Button>
+        <div class="side-image" ></div>
     </div>
     <Footer> </Footer>
   </div>
@@ -106,6 +119,9 @@
     }
 </script>
 <style>
+  .botic{
+    position: relative;
+  }
   .red{
     color: #ff003c;
   }
@@ -255,4 +271,34 @@
   .footer-container{
     margin-top: 0px;
   }
+  .question-title{
+        font-size: 2em;
+        color: #1e1e1e;
+        font-weight: bold;
+        margin-top: 150px;
+        line-height: 1.1em;
+        margin-bottom: 40px;
+    }
+    .questions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 7%;
+    }
+    .side-image{
+        left: 0;
+        z-index: 0;
+        width: 330px;
+        height: 272px;
+        bottom: 432px;
+        position: absolute;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('/static/left_curve@2x.png');
+    }
+    .quest_button{
+      background-color: #ff003c;
+    }
 </style>
