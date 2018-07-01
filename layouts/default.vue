@@ -147,7 +147,7 @@ export default {
   box-sizing: border-box;
 }
 html, body {
-  background-color: #fff;
+  /* background-color: #f6f6f6; */
   color: #2e2f30;
   letter-spacing: 0.5px;
   font-size: 18px;

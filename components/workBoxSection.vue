@@ -11,7 +11,7 @@
         <div class='w-content'>{{leftCard.content}}</div>
         <img :src="leftCard.image" class='w-icon' />
       </div>
-      <div class='workbox workbox-hightlight'>
+      <div class='workbox'>
         <div class='w-header'>{{rightCard.heading}}</div>
         <div class='w-content'>{{rightCard.content}}</div>
         <img :src="rightCard.image" class='w-icon' />

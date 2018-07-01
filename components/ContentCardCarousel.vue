@@ -15,7 +15,7 @@
                 </slide>
             </carousel>
         </no-ssr>
-        <div v-if="!rightComponent" class="image" :style="{'height': height,'background-size': 'contain', 'background-position': 'center', 'background-repeat': 'no-repeat', 'background-image': 'url('+image+')'}"></div>
+        <div class="image" :style="{'height': height,'background-size': 'contain', 'background-position': 'center', 'background-repeat': 'no-repeat', 'background-image': 'url('+image+')'}"></div>
         <!-- <img :src="image" class="image" :style="{'height': height}"/> -->
     </div>
 </template>
