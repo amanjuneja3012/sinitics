@@ -173,6 +173,7 @@
                     class="quest_button"
                 >
                 </Button>
+                <div class="side-image" ></div>
             </div>
         </div>
         <Footer> </Footer>
@@ -244,6 +245,9 @@
 
 </script>
 <style>
+    #pricing{
+        position: relative;
+    }
     .page-title{
         font-size: 48px;
         color: #1e1e1e;
@@ -268,13 +272,14 @@
     }
     .packages{
         display: flex;
+        margin-bottom: 4px;
     }
     .package{
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        height: 310px;
+        height: 350px;
         width: 50%;
     }
     .package:first-child{
@@ -369,7 +374,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 12%;
     }
     .tabs{
         width: 320px;
@@ -456,6 +461,18 @@
 
     .slider.round:before {
         border-radius: 50%;
+    }
+    .side-image{
+        left: 0;
+        z-index: 0;
+        width: 330px;
+        height: 272px;
+        bottom: 432px;
+        position: absolute;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('/static/left_curve@2x.png');
     }
     .toggle{
         display: flex;

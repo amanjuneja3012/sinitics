@@ -1,7 +1,7 @@
 
 <template>
     <div class="types">
-      <div v-for="item in items" v-bind:key=item.name class="items">
+      <div v-for="item in items" v-bind:key=item.name v-bind:class="{ disable: item.disable }" class="items">
           <img :src=item.icon class="icon" />
           <p class="title">{{ item.name }}</p>
       </div>
@@ -41,7 +41,7 @@
       font-size: 16px;
       font-weight: 600;
     }
-    .t-disable{
+    .disable{
       opacity: 0.5;
     }
     .icon{
