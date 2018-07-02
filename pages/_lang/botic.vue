@@ -1,19 +1,5 @@
 <template>
   <div class ='botic'>
-    <div class="tabs-container">
-      <h3>Pushing the limits of Natural Language Processing</h3>
-      <div class="tabs">
-        <ul>
-          <li class="is-active">
-            <div>
-              
-            </div>
-          </li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    </div>
     <ContentCard
       :header="$t('botic.contentCards.card1.header')"
       :subtitle="$t('botic.contentCards.card1.subtitle')"
@@ -33,6 +19,31 @@
       listTypes="true"
     >
     </ContentCard>
+    <div class="tabs-container">
+      <h3>Pushing the limits of <span classs=red>Natural Language Processing</span></h3>
+      <div class="tabs is-centered is-toggle">
+        <ul>
+          <li class="is-active">
+            <a>
+              <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+              <span>Pictures</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
+              <span>Music</span>
+            </a>
+          </li>
+          <li>
+            <a>
+              <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
+              <span>Videos</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
      
     <div class="bot-features-container">
       <p class="feature-heading head-workbox" v-html="$t('botic.processDetailsWidget.heading')"></p>
@@ -315,10 +326,41 @@
     .quest_button{
       background-color: #ff003c;
     }
+    .h3{
+      font-size: 2.12em;
+      color: #1e1e1e;
+      font-weight: bold;
+      line-height: 1.36em;
+      margin-bottom: 2%;
+    }
     .tabs-container{
 
     }
     .tabs{
-      background-color: #1e1e1e;
+      /* height: 533px;
+      background-color: #dbdbdb; */
+    }
+    /* .tabs ul{
+      display: flex;
+      justify-content: center;
+    }
+    .tabs li{
+      display: inline-block;
+      align-self: flex-end;
+    } */
+    .tab-image{
+      width: 358px;
+      height: 350px;
+      display: inline-block;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .tab-image-1{
+      margin-right: 10%;
+      background-image: url('/static/phone@2x.png');
+    }
+    .tab-image-2{
+      background-image: url('/static/phone_white@2x.png');
     }
 </style>

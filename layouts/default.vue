@@ -17,7 +17,7 @@
               <nuxt-link class="Header__Link navbar-item navbar-link" :to="'/'+$i18n.locale+'/pricing'">
                 Pricing
               </nuxt-link>
-              <nuxt-link class="Header__Link navbar-item navbar-link" :to="'/'+$i18n.locale+'/partners'">
+              <nuxt-link class="Header__Link navbar-item navbar-link" :to="'/#partners'">
                 Partners
               </nuxt-link>
             </a>
@@ -32,9 +32,12 @@
             <nuxt-link class="Header__Link navbar-item" :to="'/pricing'">
               Pricing
             </nuxt-link>
-            <nuxt-link class="Header__Link navbar-item" :to="''">
+            <a class="Header__Link navbar-item" href='/#partners'>
               Partners
-            </nuxt-link>
+            </a>
+            <!-- <nuxt-link class="Header__Link navbar-item" :to="'/#partners'">
+              Partners
+            </nuxt-link> -->
             <!-- <span class="Header__Link navbar-item" v-on:click="scrollTo" >
               Partners
             </span> -->

@@ -45,7 +45,7 @@
         >
         </ContentCard>
         <div class="partner-down">
-            <div class="partner-text" v-on:click="scrollTo">Need a partner?</div>
+            <div class="partner-text">Need a partner?</div>
             <div class="partner-icon"></div>
         </div>
     </div>
@@ -63,13 +63,15 @@
         >
         </BotFeatureCard>
       </div>
-      <Button
-            :text="$t('home.contentCards.card6.buttonText')"
-            backgroundColor="#ff003c"
-            color="white">
-      </Button>
+      <a href='/pricing/#pricing-feature'>
+        <Button
+                :text="$t('home.contentCards.card6.buttonText')"
+                backgroundColor="#ff003c"
+                color="white">
+        </Button>
+      </a>
     </div>
-    <div class="enterpriseInfo rel flex center">
+    <div class="enterpriseInfo rel flex center" id="partners">
         <div class="infoBack"></div>
         <div class="row w800 h340 widgetContainer">
             <div class="column widgetHeader">

@@ -65,7 +65,7 @@
                         </Button>
                     </div>
                 </div>
-                <table>
+                <table id='pricing-feature'>
                     <thead>
                         <th>{{$t('pricing.tableData.tableMetadata.headingRow[0]')}}</th>
                         <th>{{$t('pricing.tableData.tableMetadata.headingRow[1]')}}</th>
