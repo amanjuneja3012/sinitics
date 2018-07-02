@@ -20,12 +20,13 @@
                 <div class="userSlider">
                     <vue-slider 
                         v-model = "usersCount"
-                        :value = "1"
                         :height = "8"
                         :dotSize = "20"
                         :min = "0"
-                        :max = "1000"
-                        :interval = "100"
+                        :max = "50000"
+                        :value= "100"
+                        :data= "[100, 500, 1000, 2000, 3000, 4000, 5000, 10000, 20000, 30000, 40000, 50000]"
+                        :interval = "500"
                         :disabled = "false"
                         :show = "true"
                         :speed = "0.3"

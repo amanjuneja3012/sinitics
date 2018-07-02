@@ -20,16 +20,16 @@
   "home": {
     "contentCards":{
       "card1":{
-        "header":"Are You speaking your <span class='red'>Customer's</span> language",
+        "header":"Are You speaking your <span class='red'>Customer's language</span>",
         "subtitle":"Instant multilingual support. Higher customer satisfaction",
         "buttons":[
           {
-            "text": "Enterprise",
+            "text": "Try it Free",
             "backgroundColor": "#ff003c",
             "color": "#ffffff"
           },
           {
-            "text": "Small Business",
+            "text": "Book a Demo",
             "backgroundColor": "#ffffff",
             "color": "#000000"
           }
@@ -37,8 +37,8 @@
         "image":"images/english/page1@3x.png"
       },
       "card2":{
-        "header":"Finally, <span class='red'>Bots for Everyone</span>",
-        "subtitle":"Build, edit and deploy multilingual bots </br> without coding",
+        "header":"<span class='red'>Save</span> with Automation",
+        "subtitle":"Reduce your customer support budget without compromising customer satisfaction",
         "buttons":[
           {
             "text": "Sinitic AI",
