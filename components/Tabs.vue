@@ -1,13 +1,29 @@
 <template lang="html">
-    <div :class="['tabs', parentClass]">
-        <ul>
-            <li v-for="element in tabs" :id="element.id" :class="{'is-active' : value == element.id}">
-                <a @click.prevent="onClick(element.id, element.target)">
-                    <span class="icon is-small" v-if="element.icon"><i :class="['fa', element.icon ]"></i></span>
-                    {{ element.name }}
-                </a>
-            </li>
-        </ul>
+    <div class="enterpriseInfo rel flex center" id="partners">
+        <div class="infoBack"></div>
+        <div class="row w800 h340 widgetContainer">
+            <div class="column widgetHeader">
+                <h3 class="text head-text w50 leftAlign inlineFlex wInvert300 f25 bold">Have a <span class="ml5 red"> Client</span>?</h3>
+                <div class="tabs rightAlign inlineFlex w300 f13">
+                    <div class="tab tab-left-button w50 inlineFlex center padding10 borderRight" v-bind:class="{ active: isActiveFirst }" v-on:click="ActivateFirst" >Agency</div>
+                    <div class="tab tab-right-button w50 inlineFlex center padding10" v-bind:class="{ active: isActiveSecond }" v-on:click="ActivateSecond" >System Integrator</div>
+                </div>
+            </div>
+            <InfoBlock 
+                buttonText="Enterprise"
+                heading="Agency"
+                text="Botic enterprise & small business bots have what it takes to launch products and brands-scheduling, human takeover, analytics, omnichannel & more"
+                image="/images/english/agency@3x.png"
+                :visibility='isActiveFirst'
+            />
+            <InfoBlock
+                buttonText="Book a Demo"
+                heading="System Integrator"
+                text="Botic enterprise & small business bots have what it takes to launch products and brands: scheduling, human takeover, analytics, omnichannel & more"
+                image="images/english/integrator@3x.png"
+                :visibility='isActiveSecond'
+            />
+        </div>
     </div>
 </template>
 

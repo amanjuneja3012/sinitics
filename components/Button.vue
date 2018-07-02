@@ -27,6 +27,7 @@
         cursor: pointer;
         font-size: 16px;
         padding: 18px;
+        border: none;
         position: relative;
     }
     .icon{
