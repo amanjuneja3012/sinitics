@@ -27,12 +27,12 @@
             </div>
             <div class='tab-content-container tab-content-container-2'>
                 <div class='tab-content-text tab-content-text-left'>
-                    <div>Problem</div>
-                    <div>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                    <div class='tab-content-text-head'>Problem</div>
+                    <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
                 </div>
                 <div class='tab-content-text'>
-                    <div>Solution</div>
-                    <div>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+                    <div class='tab-content-text-head'>Solution</div>
+                    <div class='tab-content-text-content'>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
                 </div>
             </div>
         </div>
@@ -47,12 +47,12 @@
             </div>
             <div class='tab-content-container tab-content-container-2'>
                 <div class='tab-content-text tab-content-text-left'>
-                    <div>Problem</div>
-                    <div>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                    <div class='tab-content-text-head'>Problem</div>
+                    <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
                 </div>
                 <div class='tab-content-text'>
-                    <div>Solution</div>
-                    <div>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+                    <div class='tab-content-text-head'>Solution</div>
+                    <div class='tab-content-text-content'>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
                 </div>
             </div>
         </div>
@@ -67,12 +67,12 @@
             </div>
             <div class='tab-content-container tab-content-container-2'>
                 <div class='tab-content-text tab-content-text-left'>
-                    <div>Problem</div>
-                    <div>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                    <div class='tab-content-text-head'>Problem</div>
+                    <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
                 </div>
                 <div class='tab-content-text'>
-                    <div>Solution</div>
-                    <div>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+                    <div class='tab-content-text-head'>Solution</div>
+                    <div class='tab-content-text-content'>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
                 </div>
             </div>
         </div>
@@ -200,6 +200,13 @@
     }
     .active-content{
         display: block;
+    }
+    .tab-content-text-head{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .tab-content-text-content{
+        font-size: 18px;
     }
     .prob-sol{
       bottom: 0;
