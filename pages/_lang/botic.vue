@@ -45,7 +45,7 @@
       </div>
     </div>
      
-    <div class="bot-features-container">
+    <div class="bots-features-container">
       <p class="feature-heading head-workbox" v-html="$t('botic.processDetailsWidget.heading')"></p>
       <WorkBoxSection 
         :leftCard="$t('botic.processDetailsWidget.step1.leftCard')"
@@ -184,7 +184,7 @@
   .icons{
     text-align: center;
   }
-  .bot-features-container{
+  .bots-features-container{
     display: flex;
     flex-direction: column;
     justify-content: center;

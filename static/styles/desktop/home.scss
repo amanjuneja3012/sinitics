@@ -16,15 +16,16 @@
 }
 .features-container{
   display: flex;
+  flex-direction: row;
   justify-content: center;
   margin-top: 63px;
   margin-bottom: 63px;
 }
 .bot-features-container{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
   margin-top: 100px;
 }
 .automation-section{

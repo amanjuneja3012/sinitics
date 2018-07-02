@@ -13,7 +13,7 @@
                     <div class="text inline-flex vTop f18 colorWhite bold currency">{{userValue*budgetValue*selectedCurrency['conversionRatio']+selectedCurrency['symbol']}}</div>
                 </div>
             </div>
-                <div class='row w100 items white'>
+                <div class='row w100 white'>
                     <div class='column'>
                         <div class='w50 item-container'>
                             <div class='budget-item-icon'></div>
@@ -34,7 +34,7 @@
                         </no-ssr>
                     </div>
                 </div>
-                <div class="row w100 white items">
+                <div class="row w100 white">
                     <div class="column">
                         <div class='w50 item-container'>
                             <div class='user-item-icon'></div>
