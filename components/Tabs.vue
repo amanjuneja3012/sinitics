@@ -138,7 +138,7 @@
       cursor: pointer;
       align-items: center;
       justify-content: center;
-      background-color: #1e1e1e; 
+      background-color: #f6f6f6; 
     }
     .tab-content-container{
         display: flex;
