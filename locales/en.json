@@ -230,7 +230,7 @@
         "leftCard":{
           "index":"3",
           "heading":"Judgement",
-          "content":">Our NLP experts set the confidence threshold for intent detection, based on a top-k heuristic.",
+          "content":"Our NLP experts set the confidence threshold for intent detection, based on a top-k heuristic.",
           "image":"judgement@2x.png"
         },
         "rightCard":{

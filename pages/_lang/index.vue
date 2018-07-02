@@ -63,13 +63,13 @@
         >
         </BotFeatureCard>
       </div>
-      <a href='/pricing/#pricing-feature'>
         <Button
                 :text="$t('home.contentCards.card6.buttonText')"
                 backgroundColor="#ff003c"
-                color="white">
+                color="white"
+                to="/pricing/#pricing-feature"
+                >
         </Button>
-      </a>
     </div>
     <div class="enterpriseInfo rel flex center" id="partners">
         <div class="infoBack"></div>
@@ -91,7 +91,7 @@
             <InfoBlock
                 buttonText="Book a Demo"
                 heading="System Integrator"
-                text="Botic enterprise & small business bots have what it takes to launch products and brands: scheduling, human takeover, analytics, omnichannel & more"
+                text="Sinitic enterprise bots have the features needs for complex solutions: NLP, human takeover, bot training, local hosting, integrations & more"
                 image="images/english/integrator@3x.png"
                 :visibility='isActiveSecond'
             />

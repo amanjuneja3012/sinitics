@@ -19,32 +19,6 @@
       listTypes="true"
     >
     </ContentCard>
-    <div class="tabs-container">
-      <h3>Pushing the limits of <span classs=red>Natural Language Processing</span></h3>
-      <div class="tabs is-centered is-toggle">
-        <ul>
-          <li class="is-active">
-            <a>
-              <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
-              <span>Pictures</span>
-            </a>
-          </li>
-          <li>
-            <a>
-              <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
-              <span>Music</span>
-            </a>
-          </li>
-          <li>
-            <a>
-              <span class="icon is-small"><i class="fas fa-film" aria-hidden="true"></i></span>
-              <span>Videos</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-     
     <div class="bots-features-container">
       <p class="feature-heading head-workbox" v-html="$t('botic.processDetailsWidget.heading')"></p>
       <WorkBoxSection 
@@ -59,6 +33,10 @@
         :leftCard="$t('botic.processDetailsWidget.step3.leftCard')"
         :rightCard="$t('botic.processDetailsWidget.step3.rightCard')"
       />
+    </div>
+    <div class="tabs-container">
+      <h3 class='tabs-header' >Pushing the limits of <br> <span class=red>Natural Language Processing</span></h3>
+      <Tabs />
     </div>
     <ContentCard
       class="types-container"
@@ -108,6 +86,7 @@
     import BotFeatureCard from '~/components/BotFeatureCard'
     import Footer from '~/components/Footer'
     import WorkBoxSection from '~/components/workBoxSection'
+    import Tabs from '~/components/Tabs'
 
     export default {
         components: {
@@ -117,7 +96,8 @@
             Button,
             Footer,
             ContentCardCarousel,
-            WorkBoxSection
+            WorkBoxSection,
+            Tabs
         },
         data: () => ({
             buttons: {
@@ -323,41 +303,15 @@
         background-repeat: no-repeat;
         background-image: url('/static/left_curve@2x.png');
     }
-    .h3{
+    .tabs-container{
+      margin-bottom: 8%;
+    }
+    .tabs-header{
       font-size: 2.12em;
       color: #1e1e1e;
       font-weight: bold;
       line-height: 1.36em;
-      margin-bottom: 2%;
-    }
-    .tabs-container{
-
-    }
-    .tabs{
-      /* height: 533px;
-      background-color: #dbdbdb; */
-    }
-    /* .tabs ul{
-      display: flex;
-      justify-content: center;
-    }
-    .tabs li{
-      display: inline-block;
-      align-self: flex-end;
-    } */
-    .tab-image{
-      width: 358px;
-      height: 350px;
-      display: inline-block;
-      background-size: contain;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-    .tab-image-1{
-      margin-right: 10%;
-      background-image: url('/static/phone@2x.png');
-    }
-    .tab-image-2{
-      background-image: url('/static/phone_white@2x.png');
+      margin-bottom: 4%;
+      text-align: center;
     }
 </style>

@@ -55,7 +55,11 @@
         <div class="menu-container">
             <p class="menu-title">More Stuff</p>
             <ul>
-                <li>Careers</li>
+                <li>
+                    <a class="links" target="_blank" href='https://sinitic.bamboohr.com/jobs'>
+                        Careers
+                    </a>
+                </li>
                 <li>System Status</li>
                 <li>Press Kit</li>
                 <li>Terms & Conditions</li>
