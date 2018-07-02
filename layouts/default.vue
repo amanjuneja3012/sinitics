@@ -156,7 +156,7 @@ html, body {
   font-size: 18px;
   font-family: "Source Sans Pro", Arial, sans-serif;
   height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   /* background-image: url('/static/grid.png');
   background-position: center;
   background-size: 1170px 9111px;
