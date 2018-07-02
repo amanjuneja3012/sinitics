@@ -31,7 +31,11 @@
                         Pricing
                     </nuxt-link>
                 </li>
-                <li class="opacity-3">Partners</li>
+                <li>
+                    <a class="links" href='/#partners'>
+                        Partners
+                    </a>
+                </li>
                 <li class="opacity-3">Sectors</li>
             </ul>
         </div>
