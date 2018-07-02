@@ -43,12 +43,14 @@
           {
             "text": "Sinitic AI",
             "backgroundColor": "#ff003c",
-            "color": "#ffffff"
+            "color": "#ffffff",
+            "to": "/botic"
           },
           {
             "text": "Check out the bots",
             "backgroundColor": "#ffffff",
-            "color": "#000000"
+            "color": "#000000",
+            "to": "/pricing#sectors"
           }
         ],
         "image":"images/english/page2@3x.png"

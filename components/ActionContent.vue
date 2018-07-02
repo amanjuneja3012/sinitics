@@ -12,6 +12,7 @@
             <div v-if="!externalComponent" class="buttons" v-for="(button, index) in buttons" :key="index">
                 <Button
                         :text="button.text"
+                        :to="button.to"
                         :backgroundColor="button.backgroundColor"
                         :color="button.color">
                 </Button>

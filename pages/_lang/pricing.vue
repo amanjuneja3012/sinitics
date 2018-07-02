@@ -145,7 +145,7 @@
                     </Button>
                 </div>
             </div>
-            <div class="sectors">
+            <div class="sectors" id='sectors'>
                 <p class="page-title sector-title">{{$t('pricing.tableData.sectorsWidget.title')}}</p>
                 <div class="tabs">
                     <div class="tab">{{$t('pricing.tableData.sectorsWidget.tabs[0]')}}</div>
@@ -168,10 +168,10 @@
                 <Button
                     color="white"
                     width="230px"
+                    backgroundColor="#ff003c"
                     :text="$t('pricing.tableData.questionsWidget.buttonText')"
                     :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
                     align="space-between"
-                    class="quest_button"
                 >
                 </Button>
                 <div class="side-image" ></div>
@@ -438,7 +438,7 @@
         transition: .4s;
     }
     input:checked{
-        color: red;
+        color: #ff003c;
     }
 
     input:checked + .slider {
@@ -528,10 +528,6 @@
         background-color: white;
         -webkit-box-align: center;
         border: 1.2px solid #151e37;
-    }
-    .quest_button{
-        background-color: #ff003c;
-        /* box-shadow: 2px 70px 133px -89px rgba(255,0,60,1); */
     }
     /* .quest_button:before{
         content: '';

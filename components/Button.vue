@@ -1,17 +1,17 @@
 <template>
-    <div  class="button" :style="{
+    <a v-bind:href="to"><div  class="button" :style="{
         'background-color': backgroundColor,
         'width': width?width:'170px',
         'color': color,
         'justify-content': align?align:'center'}">
         <img :src="iconUrl" v-if="iconUrl !== undefined" class="icon"/>
         {{text}}
-    </div>
+    </div></a>
 </template>
 
 <script>
     export default {
-        props: ['text', 'backgroundColor', 'color', 'width', 'iconUrl', 'showIcon', 'align']
+        props: ['text', 'backgroundColor', 'color', 'width', 'iconUrl', 'showIcon', 'align', 'to']
     }
 
 </script>

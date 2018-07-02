@@ -90,7 +90,7 @@
             :text="$t('pricing.tableData.questionsWidget.buttonText')"
             :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
             align="space-between"
-            class="quest_button"
+            backgroundColor="#ff003c"
         >
         </Button>
         <div class="side-image" ></div>
@@ -322,9 +322,6 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-image: url('/static/left_curve@2x.png');
-    }
-    .quest_button{
-      background-color: #ff003c;
     }
     .h3{
       font-size: 2.12em;
