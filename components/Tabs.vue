@@ -138,7 +138,7 @@
       cursor: pointer;
       align-items: center;
       justify-content: center;
-      background-color: #f6f6f6; 
+      background-color: #1e1e1e; 
     }
     .tab-content-container{
         display: flex;
@@ -147,7 +147,7 @@
     }
     .tab-contents{
       height: 533px;
-      background-color: #dbdbdb;
+      background-color: #f6f6f6;
     }
     .icon{
         background-size: contain;
