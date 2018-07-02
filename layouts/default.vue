@@ -214,6 +214,9 @@ body{
   text-decoration: none;
   /* padding-left: 5%; */
 }
+a.navbar-item:hover {
+  color: #ff003c;
+}
 .Header__Button {
   box-sizing: border-box;
   font-size: 16px;
