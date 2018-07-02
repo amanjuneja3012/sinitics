@@ -81,9 +81,7 @@
 <script>
     import Index from '~/pages/_lang/index'
     import ContentCard from '~/components/ContentCard'
-    import ContentCardCarousel from '~/components/ContentCardCarousel'
     import Button from '~/components/Button'
-    import BotFeatureCard from '~/components/BotFeatureCard'
     import Footer from '~/components/Footer'
     import WorkBoxSection from '~/components/workBoxSection'
     import Tabs from '~/components/Tabs'
@@ -92,10 +90,8 @@
         components: {
             ContentCard,
             Index,
-            BotFeatureCard,
             Button,
             Footer,
-            ContentCardCarousel,
             WorkBoxSection,
             Tabs
         },

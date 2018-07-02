@@ -1,12 +1,14 @@
 <template>
     <div class="email-container">
-      <input class="input" placeholder="Suggest our next Language" >
-      <div class="submit">Suggest</div>
+      <input class="input" v-if=placeHolder :placeholder="placeHolder">
+      <input class="input" v-else placeholder="Suggest our next Language">
+      <div class="submit">{{sendText ? sendText : 'Suggest'}}</div>
     </div>
 </template>
 
 <script>
     export default {
+        props: ['sendText', 'placeHolder'],
         components: {
         }
     }

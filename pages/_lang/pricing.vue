@@ -184,7 +184,6 @@
 <script>
     import Index from '~/pages/_lang/index';
     import ContentCard from '~/components/ContentCard';
-    import ContentCardCarousel from '~/components/ContentCardCarousel';
     import Button from '~/components/Button';
     import CardWithIcon from '~/components/CardWithIcon';
     import Footer from '~/components/Footer';

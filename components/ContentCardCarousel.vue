@@ -8,8 +8,9 @@
                         :height="height"
                         padding="5%"
                         :title="slideObj.title"
-                        :subtitle="slideObj.subtitle"
-                        :buttons="slideObj.buttons"
+                        inputBox="true"
+                        sendText="Get Case Study"
+                        placeHolder="Enter email Address"
                     >
                     </ActionContent>
                 </slide>

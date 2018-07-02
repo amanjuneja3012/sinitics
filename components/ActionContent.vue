@@ -18,7 +18,7 @@
                 </Button>
             </div>
             <AppsWidget v-if="externalComponent"></AppsWidget>
-            <InputBox v-if="inputBox"></InputBox>
+            <InputBox v-if="inputBox" :sendText="sendText" :placeHolder="placeHolder" ></InputBox>
             <ListTypes v-if="listTypes"></ListTypes>
         </div>
     </div>
@@ -30,7 +30,7 @@
     import InputBox from '~/components/InputBox'
     import ListTypes from '~/components/ListTypes'
     export default {
-        props: ['title', 'header', 'subtitle', 'buttons', 'width', 'height', 'padding', 'externalComponent', 'inputBox', 'listTypes'],
+        props: ['title', 'header', 'subtitle', 'buttons', 'width', 'height', 'padding', 'externalComponent', 'inputBox', 'listTypes', 'sendText', 'placeHolder' ],
         components: {
             Button,
             AppsWidget,
