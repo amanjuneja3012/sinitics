@@ -77,8 +77,8 @@
             <div class="column widgetHeader">
                 <h3 class="text head-text w50 leftAlign inlineFlex wInvert300 f25 bold">Have a <span class="ml5 red"> Client</span>?</h3>
                 <div class="tabs rightAlign inlineFlex w300 f13">
-                    <div class="tab tab-left-button w50 inlineFlex center padding10 borderRight" v-bind:class="{ active: !isActive }" v-on:click="toggleSection" >Agency</div>
-                    <div class="tab tab-right-button w50 inlineFlex center padding10" v-bind:class="{ active: isActive }" v-on:click="toggleSection" >System Integrator</div>
+                    <div class="tab tab-left-button w50 inlineFlex center padding10 borderRight" v-bind:class="{ active: isActiveFirst }" v-on:click="ActivateFirst" >Agency</div>
+                    <div class="tab tab-right-button w50 inlineFlex center padding10" v-bind:class="{ active: isActiveSecond }" v-on:click="ActivateSecond" >System Integrator</div>
                 </div>
             </div>
             <InfoBlock 
@@ -86,13 +86,14 @@
                 heading="Agency"
                 text="Botic enterprise & small business bots have what it takes to launch products and brands-scheduling, human takeover, analytics, omnichannel & more"
                 image="/images/english/agency@3x.png"
-                visibility=true
+                :visibility='isActiveFirst'
             />
-            <InfoBlock 
-                buttonText="Enterprise"
-                heading="New Agency"
-                text="Botic enterprise & small business bots have what it takes to launch products and brands-scheduling, human takeover, analytics, omnichannel & more"
-                image="images/english/agency@3x.png"
+            <InfoBlock
+                buttonText="Book a Demo"
+                heading="System Integrator"
+                text="Botic enterprise & small business bots have what it takes to launch products and brands: scheduling, human takeover, analytics, omnichannel & more"
+                image="images/english/integrator@3x.png"
+                :visibility='isActiveSecond'
             />
         </div>
     </div>
@@ -166,11 +167,17 @@
                     {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
                 ]
             },
-            isActive: false
+            isActiveFirst: true,
+            isActiveSecond: false
         }),
         methods: {
-            toggleSection: function (event){
-                this.isActive= !this.isActive
+            ActivateFirst: function (event){
+                this.isActiveSecond = false
+                this.isActiveFirst= true
+            },
+            ActivateSecond: function (event){
+                this.isActiveFirst= false
+                this.isActiveSecond = true
             }
         },
         mounted: () => {
