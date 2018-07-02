@@ -127,14 +127,15 @@
 
 <style scoped>
     .tabs{
-        margin-bottom: -35px;
+      margin-bottom: -35px;
     }
     .tab-head{
-      cursor: pointer;
+      z-index: 1;
       width: 323px;
       height: 70px;
       display: flex;
       color: white;
+      cursor: pointer;
       align-items: center;
       justify-content: center;
       background-color: #1e1e1e; 
