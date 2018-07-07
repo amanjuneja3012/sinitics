@@ -148,10 +148,21 @@
             <div class="sectors" id='sectors'>
                 <p class="page-title sector-title">{{$t('pricing.tableData.sectorsWidget.title')}}</p>
                 <div class="tabs">
-                    <div class="tab">{{$t('pricing.tableData.sectorsWidget.tabs[0]')}}</div>
-                    <div class="tab">{{$t('pricing.tableData.sectorsWidget.tabs[1]')}}</div>
+                    <div class="tab" v-bind:class="{ active: isActiveFirst }" v-on:click="ActivateFirst">{{$t('pricing.tableData.sectorsWidget.tabs[0]')}}</div>
+                    <div class="tab" v-bind:class="{ active: isActiveSecond }" v-on:click="ActivateSecond">{{$t('pricing.tableData.sectorsWidget.tabs[1]')}}</div>
                 </div>
-                <div class="sector-cards">
+                <div class="sector-cards" v-bind:class="{ active: isActiveFirst }">
+                    <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
+                        <CardWithIcon
+                            :title="obj.title"
+                            :subtitle="obj.subtitle"
+                            :detail="obj.detail"
+                            :iconUrl="obj.iconUrl"
+                            width="270px"
+                        />
+                    </div>
+                </div>
+                <div class="sector-cards" v-bind:class="{ active: isActiveSecond }">
                     <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
                         <CardWithIcon
                             :title="obj.title"
@@ -234,11 +245,21 @@
             ],
             usersCount: 0,
             currenciesArr: currencies,
-            selectedCurrency: currencies[0]
+            selectedCurrency: currencies[0],
+            isActiveFirst: true,
+            isActiveSecond: false
         }),
         methods: {
             "toggleModal":function(){
                 this.showModal = !this.showModal
+            },
+            ActivateFirst: function (event){
+                this.isActiveSecond = false
+                this.isActiveFirst= true
+            },
+            ActivateSecond: function (event){
+                this.isActiveFirst= false
+                this.isActiveSecond = true
             }
         }
 }
@@ -351,7 +372,11 @@
     }
     .sector-cards{
         display: flex;
+        display: none;
         margin-top: 100px;
+    }
+    .sector-cards.active{
+        display: block;
     }
     .sector-title{
         font-size: 2em;
@@ -386,23 +411,25 @@
     .tab{
         width: 50%;
         height: 50px;
-        font-size: 16px;
         display: flex;
+        font-size: 16px;
+        color: #1e1e1e;
         justify-content: center;
         align-items: center;
+        background-color: white;
+        border: 1px solid #1e1e1e;
     }
     .tab:first-child{
-        background-color: #1e1e1e;
-        color: white;
         border-bottom-left-radius: 50px;
         border-top-left-radius: 50px;
     }
     .tab:last-child{
-        color: #1e1e1e;
-        background-color: white;
         border-bottom-right-radius: 50px;
         border-top-right-radius: 50px;
-        border: 1px solid #1e1e1e;
+    }
+    .tab.active{
+        color: white;
+        background-color: #1e1e1e;
     }
     .switch {
         position: relative;
