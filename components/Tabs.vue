@@ -1,4 +1,4 @@
-<template lang="html">
+<template>
     <div>
         <div class="tabs is-centered is-toggle">
             <ul>
@@ -127,6 +127,7 @@
 
 <style scoped>
     .tabs{
+      width: 100%;
       margin-bottom: -35px;
     }
     .tab-head{
