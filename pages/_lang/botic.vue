@@ -131,11 +131,6 @@
     max-width: 438px;
     text-align: center;
   }
-  .features-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
   .types-container{
     position: relative;
   }
