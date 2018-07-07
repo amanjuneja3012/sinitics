@@ -378,6 +378,9 @@
     .sector-cards.active{
         display: block;
     }
+    .feature-container .detail{
+        min-height: 170px;
+    }
     .sector-title{
         font-size: 2em;
         color: #1e1e1e;
@@ -412,6 +415,7 @@
         width: 50%;
         height: 50px;
         display: flex;
+        cursor: pointer;
         font-size: 16px;
         color: #1e1e1e;
         justify-content: center;
