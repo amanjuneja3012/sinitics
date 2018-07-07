@@ -24,6 +24,7 @@
       <WorkBoxSection 
         :leftCard="$t('botic.processDetailsWidget.step1.leftCard')"
         :rightCard="$t('botic.processDetailsWidget.step1.rightCard')"
+        :rightCardHighlight=true
       />
       <WorkBoxSection 
         :leftCard="$t('botic.processDetailsWidget.step2.leftCard')"
@@ -109,13 +110,7 @@
                     {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
                     {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
                 ]
-            },
-            items:[
-              {name: 'iGaming', icon: 'government.png'},
-              {name: 'Finance', icon: 'government.png'},
-              {name: 'Outsourcing', icon: 'government.png'},
-              {name: 'Government', icon: 'government.png'}
-            ]
+            }
         }),
     }
 </script>

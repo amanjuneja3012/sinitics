@@ -15,8 +15,8 @@
             items:[
               {name: 'iGaming', icon: 'igaming@2x.png'},
               {name: 'Finance', icon: 'finance@2x.png'},
-              {name: 'Outsourcing', icon: 'outsourcing@2x.png', disable: true},
-              {name: 'Government', icon: 'government@2x.png', disable: true}
+              {name: 'Outsourcing', icon: 'outsourcing@2x.png', disable: true}
+              // {name: 'Government', icon: 'government@2x.png', disable: true}
             ]
           }
         }
