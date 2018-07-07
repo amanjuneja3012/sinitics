@@ -7,11 +7,11 @@
             <nuxt-link class="Header__Logo Header__Link navbar-item" :to="$i18n.path('')">
               <div class="logo"></div>
             </nuxt-link>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <!-- <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"> -->
               <!-- <nuxt-link class="Header__Link navbar-item navbar-link" :to="'/'+$i18n.locale+'/sectors'">
                 Sectors
               </nuxt-link> -->
-              <nuxt-link class="Header__Link navbar-item navbar-link" :to="'/'+$i18n.locale+'/botic-ai'">
+              <!-- <nuxt-link class="Header__Link navbar-item navbar-link" :to="'/'+$i18n.locale+'/botic-ai'">
                 BoticAI
               </nuxt-link>
               <nuxt-link class="Header__Link navbar-item navbar-link" :to="'/'+$i18n.locale+'/pricing'">
@@ -20,7 +20,7 @@
               <nuxt-link class="Header__Link navbar-item navbar-link" :to="'/#partners'">
                 Partners
               </nuxt-link>
-            </a>
+            </a> -->
           </div>
           <div class="navbar-menu">
             <!-- <nuxt-link class="Header__Link navbar-item" :to="'/'+$i18n.locale+'/sectors'">
@@ -168,6 +168,7 @@ body{
   margin: 0 auto;
 }
 .navbar-brand{
+  align-items: center;
   margin-right: 6%;
 }
 .container {
