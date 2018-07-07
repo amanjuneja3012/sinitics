@@ -51,7 +51,9 @@
                         <Button
                                 :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
                                 backgroundColor="#ff003c"
-                                color="white">
+                                color="white"
+                                :onClick = "toggleModal"
+                                >
                         </Button>
                     </div>
                     <div class="package">
@@ -62,6 +64,7 @@
                                 :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
                                 backgroundColor="white"
                                 color="#ff003c"
+                                :onClick = "toggleModal"
                         >
                         </Button>
                     </div>
@@ -98,33 +101,8 @@
                     </tbody>
                 </table>
             </div>
-            <div class='modal' v-bind:class="{ 'is-active' : showModal}"  >
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <div class="box">
-                        <div class="modal-head" >Book a Free Demo</div>
-                        <div class="modal-sub-head" >Help us with your information and our executive will get back to you soon</div>
-                        <div>
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input is-small" type="text" placeholder="Full Name">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input is-small" type="text" placeholder="Company Name">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input is-small" type="email" placeholder="Email Address">
-                                </div>
-                            </div>
-                        </div>
-                        <button class="modal-button">Submit Details</button>
-                    </div>
-                </div>
-                <button class="modal-close is-large" aria-label="close"></button>
+            <div>
+                <Modal :showModal='showModal' :close = "toggleModal" />
             </div>
             <div class="price-actions">
                 <p class="price-action">Action</p>
@@ -133,7 +111,7 @@
                             :text="$t('pricing.tableData.buttons.primary')"
                             backgroundColor="#ff003c"
                             color="white"
-                            v-on:click = "toggleModal" >
+                            :onClick = "toggleModal" >
                     </Button>
                 </div>
                 <div class="price-action">
@@ -141,7 +119,7 @@
                             :text="$t('pricing.tableData.buttons.secondary')"
                             backgroundColor="white"
                             color="1e1e1e" 
-                            v-on:click = "toggleModal" >
+                            :onClick = "toggleModal" >
                     </Button>
                 </div>
             </div>
@@ -198,6 +176,7 @@
     import Button from '~/components/Button';
     import CardWithIcon from '~/components/CardWithIcon';
     import Footer from '~/components/Footer';
+    import Modal from '~/components/Modal';
     import NoSSR from 'vue-no-ssr';
     import currencies from '~/components/currency/data.js';
     var components = {};
@@ -211,6 +190,7 @@
         components: Object.assign(components,{
             Button,
             Footer,
+            Modal,
             CardWithIcon
         }),
         data: () => ({
@@ -622,43 +602,5 @@
     .userSlider .vue-slider-tooltip-wrap{
         display:block !important;
         opacity:1 !important;
-    }
-    .modal .box{
-        padding: 38px;
-        max-width: 430px;
-        max-height: 509px;
-        border-radius: 4px;
-        text-align: center;
-        margin: 0 auto;
-        background-color: #ffffff;
-    }
-    .modal-head{
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 16px;
-    }
-    .modal-sub-head{
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-    .modal .input{
-        border: none;
-        box-shadow: none;
-        margin-top: 22px;
-        border-bottom: 1px solid #dee0e6;
-    }
-    .modal .input:focus{
-        border-bottom: 1px solid #ff003c;
-    }
-    .modal-button{
-        width: 350px;
-        height: 50px;
-        font-size: 16px;
-        font-weight: 500;
-        color: white;
-        box-shadow: none;
-        margin-top: 30px;
-        border-radius: 2px;
-        background-color: #ff003c;
     }
 </style>

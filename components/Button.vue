@@ -3,7 +3,7 @@
         'background-color': backgroundColor,
         'width': width?width:'170px',
         'color': color,
-        'justify-content': align?align:'center'}">
+        'justify-content': align?align:'center'}" v-on:click='onClick' >
         <img :src="iconUrl" v-if="iconUrl !== undefined" class="icon"/>
         {{text}}
     </div></a>
@@ -11,7 +11,7 @@
 
 <script>
     export default {
-        props: ['text', 'backgroundColor', 'color', 'width', 'iconUrl', 'showIcon', 'align', 'to']
+        props: ['text', 'backgroundColor', 'color', 'width', 'iconUrl', 'showIcon', 'align', 'to', 'onClick']
     }
 
 </script>
