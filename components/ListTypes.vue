@@ -1,7 +1,7 @@
 
 <template>
     <div class="types">
-      <div v-for="item in items" v-bind:key=item.name class="items">
+      <div v-for="item in items" v-bind:key=item.name v-bind:class="{ disable: item.disable }" class="items">
           <img :src=item.icon class="icon" />
           <p class="title">{{ item.name }}</p>
       </div>
@@ -15,8 +15,8 @@
             items:[
               {name: 'iGaming', icon: 'igaming@2x.png'},
               {name: 'Finance', icon: 'finance@2x.png'},
-              {name: 'Outsourcing', icon: 'outsourcing@2x.png', disable: true},
-              {name: 'Government', icon: 'government@2x.png', disable: true}
+              {name: 'Outsourcing', icon: 'outsourcing@2x.png', disable: true}
+              // {name: 'Government', icon: 'government@2x.png', disable: true}
             ]
           }
         }
@@ -41,7 +41,7 @@
       font-size: 16px;
       font-weight: 600;
     }
-    .t-disable{
+    .disable{
       opacity: 0.5;
     }
     .icon{

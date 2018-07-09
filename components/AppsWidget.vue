@@ -1,6 +1,11 @@
 <template>
     <div class="apps-widget">
-        <img v-for="item in items" v-bind:key=item.icon :src=item.icon class="icon" />
+        <span v-for="item in items" class="icon-container">
+            <div class='tooltip'>
+                <div class='tooltip-header'>{{ item.name }}</div>
+            </div>
+            <img v-bind:key=item.icon :src=item.icon class="icon" />
+        </span>
     </div>
 </template>
 
@@ -9,11 +14,11 @@
         data: function () {
           return {
             items:[
-              {icon: '/images/english/messenger.svg'},
-              {icon: '/images/english/we-chat.svg'},
-              {icon: '/images/english/line.svg'},
-              {icon: '/images/english/skype.svg'},
-              {icon: '/images/english/sms.svg'}
+              {icon: '/images/english/messenger.svg', name: 'messenger'},
+              {icon: '/images/english/we-chat.svg', name: 'we-chat'},
+              {icon: '/images/english/line.svg', name: 'line'},
+              {icon: '/images/english/skype.svg', name: 'skype'},
+              {icon: '/images/english/sms.svg', name: 'sms'}
             ]
           }
         }
@@ -24,6 +29,9 @@
     .apps-widget{
         display:block;
         height: 100px;
+    }
+    .icon-container{
+        position: relative;
     }
     .icon{
         width: 60px;
@@ -36,8 +44,29 @@
     .icon{
         fill: #ff0033 !important;
     }
-    .icon:hover:after{
+    /* .icon:hover:after{
         content: attr('title');
         position: absolute;
+    } */
+    .icon-container:hover .tooltip{
+        visibility: visible;
+    }
+    .tooltip{
+        width: 70px;
+        left: -5px;
+        top: -70px;
+        z-index: 1;
+        color: #fff;
+        padding: 4px;
+        line-height: 12px;
+        border-radius: 2px;
+        position: absolute;
+        visibility: hidden;
+        text-align: center;
+        background-color: black;
+    }
+    .tooltip-header{
+        font-size: 10px;
+        font-weight: 400;
     }
 </style>

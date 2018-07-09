@@ -21,11 +21,22 @@
         <div class="menu-container">
             <p class="menu-title">Botic AI</p>
             <ul>
-                <li>Sectors</li>
-                <li>BoticAI</li>
-                <li>Pricing</li>
-                <li>Partners</li>
-
+                <li>
+                    <nuxt-link class="links" :to="'/botic'">
+                        Botic
+                    </nuxt-link>
+                </li>
+                <li>
+                    <nuxt-link class="links" :to="'/pricing'">
+                        Pricing
+                    </nuxt-link>
+                </li>
+                <li>
+                    <a class="links" href='/#partners'>
+                        Partners
+                    </a>
+                </li>
+                <li class="opacity-3">Sectors</li>
             </ul>
         </div>
         <div class="menu-container">
@@ -44,7 +55,11 @@
         <div class="menu-container">
             <p class="menu-title">More Stuff</p>
             <ul>
-                <li>Careers</li>
+                <li>
+                    <a class="links" target="_blank" href='https://sinitic.bamboohr.com/jobs'>
+                        Careers
+                    </a>
+                </li>
                 <li>System Status</li>
                 <li>Press Kit</li>
                 <li>Terms & Conditions</li>
@@ -91,6 +106,9 @@
         color: #1e1e1e;
         margin-bottom: 21px;
         font-size: 18px;
+    }
+    .links{
+        color: #1e1e1e;
     }
     li{
         color: #1e1e1e;

@@ -4,8 +4,8 @@
             'background-image':'url('+image+')'
         }"></div>
         <div class="column inlineFlex w60 vTop">
-            <div class="bold inline-flex f25">{{heading}}</div>
-            <div class="text inline-flex f14 mt10">{{text}}</div>
+            <h3 class="bold inline-flex f25">{{heading}}</h3>
+            <p class="text inline-flex f14 mt10">{{text}}</p>
             <div class="mt10">                
                 <Button
                     :text="buttonText"

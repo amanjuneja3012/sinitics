@@ -1,5 +1,5 @@
 <template>
-  <div class='workbox-section'>
+  <div class='workbox-section' >
     <div class='divider'>
       <div class='circle'>{{leftCard.index}}</div>
       <div class='line' />
@@ -11,7 +11,7 @@
         <div class='w-content'>{{leftCard.content}}</div>
         <img :src="leftCard.image" class='w-icon' />
       </div>
-      <div class='workbox workbox-hightlight'>
+      <div class='workbox' v-bind:class="{ 'workbox-hightlight': rightCardHighlight }">
         <div class='w-header'>{{rightCard.heading}}</div>
         <div class='w-content'>{{rightCard.content}}</div>
         <img :src="rightCard.image" class='w-icon' />
@@ -22,6 +22,6 @@
 
 <script>
     export default {
-      props: ['leftCard', 'rightCard']
+      props: ['leftCard', 'rightCard', 'rightCardHighlight']
     }
 </script>

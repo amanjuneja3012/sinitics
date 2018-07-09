@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="homepage">
     <ContentCard
         :header="$t('home.contentCards.card1.header')"
         :subtitle="$t('home.contentCards.card1.subtitle')"
@@ -63,44 +63,47 @@
         >
         </BotFeatureCard>
       </div>
-      <Button
-            :text="$t('home.contentCards.card6.buttonText')"
-            backgroundColor="#ff003c"
-            color="white">
-      </Button>
+        <Button
+                :text="$t('home.contentCards.card6.buttonText')"
+                backgroundColor="#ff003c"
+                color="white"
+                to="/pricing/#pricing-feature"
+                >
+        </Button>
     </div>
-    <div class="enterpriseInfo rel flex center">
+    <div class="enterpriseInfo rel flex center" id="partners">
         <div class="infoBack"></div>
         <div class="row w800 h340 widgetContainer">
             <div class="column widgetHeader">
-                <div class="text head-text w50 leftAlign inlineFlex wInvert300 f25 bold">Have a <span class="ml5 red"> Client</span>?</div>
+                <h3 class="text head-text w50 leftAlign inlineFlex wInvert300 f25 bold">Have a <span class="ml5 red"> Client</span>?</h3>
                 <div class="tabs rightAlign inlineFlex w300 f13">
-                    <div class="tab w50 active inlineFlex center padding10 borderRight">Agency</div>
-                    <div class="tab w50 inlineFlex center padding10">System Integrator</div>
+                    <div class="tab tab-left-button w50 inlineFlex center padding10 borderRight" v-bind:class="{ active: isActiveFirst }" v-on:click="ActivateFirst" >Agency</div>
+                    <div class="tab tab-right-button w50 inlineFlex center padding10" v-bind:class="{ active: isActiveSecond }" v-on:click="ActivateSecond" >System Integrator</div>
                 </div>
             </div>
             <InfoBlock 
                 buttonText="Enterprise"
                 heading="Agency"
                 text="Botic enterprise & small business bots have what it takes to launch products and brands-scheduling, human takeover, analytics, omnichannel & more"
-                image="images/agency@3x.png"
-                visibility=true
+                image="/images/english/agency@3x.png"
+                :visibility='isActiveFirst'
             />
-            <InfoBlock 
-                buttonText="Enterprise"
-                heading="Agency"
-                text="Botic enterprise & small business bots have what it takes to launch products and brands-scheduling, human takeover, analytics, omnichannel & more"
-                image="images/agency@3x.png"
+            <InfoBlock
+                buttonText="Book a Demo"
+                heading="System Integrator"
+                text="Sinitic enterprise bots have the features needs for complex solutions: NLP, human takeover, bot training, local hosting, integrations & more"
+                image="images/english/integrator@3x.png"
+                :visibility='isActiveSecond'
             />
         </div>
     </div>
-    <div class="newsCarouselWidget rel flex center column leftAlign">
-        <div class="heading bold">Don’t miss the latest <span class="red">Botic News</span></div>
+    <div class="newsCarouselWidget">
+        <h3 class="news-heading">Don’t miss the latest <span class="red">Botic News</span></h3>
         <div class="leftAbs"></div>
         <div class="rightAbs"></div>
         <div class="newsCarousel inlineFlex">
             <no-ssr placeholder="Loading...">
-                <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :perPage=5 >
+                <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :paginationEnabled=false :perPage=5 :navigationEnabled="true">
                     <slide v-for="(slideObj,index) in $t('home.newsCarouselWidget.slides')" :key="index">
                         <NewsCard
                             :image="slideObj.image"
@@ -164,7 +167,19 @@
                     {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
                 ]
             },
+            isActiveFirst: true,
+            isActiveSecond: false
         }),
+        methods: {
+            ActivateFirst: function (event){
+                this.isActiveSecond = false
+                this.isActiveFirst= true
+            },
+            ActivateSecond: function (event){
+                this.isActiveFirst= false
+                this.isActiveSecond = true
+            }
+        },
         mounted: () => {
         }
     }

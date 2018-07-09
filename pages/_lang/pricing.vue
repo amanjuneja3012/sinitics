@@ -9,7 +9,7 @@
                     <span class="slider round"></span>
                 </label>
                 <p class="yearly">{{$t('pricing.checkBoxDetails.rightStr')}}</p>
-                <p class="tags">{{$t('pricing.checkBoxDetails.tag')}}</p>
+                <p class="tagss">{{$t('pricing.checkBoxDetails.tag')}}</p>
             </div>
             <div class="currencyChange">
                 <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" :class="(selectedCurrency['key']==currency['key'])?'selected':''">
@@ -20,17 +20,18 @@
                 <div class="userSlider">
                     <vue-slider 
                         v-model = "usersCount"
-                        :value = "1"
                         :height = "8"
                         :dotSize = "20"
                         :min = "0"
-                        :max = "1000"
-                        :interval = "100"
+                        :max = "50000"
+                        :value= "100"
+                        :data= "[100, 500, 1000, 2000, 3000, 4000, 5000, 10000, 20000, 30000, 40000, 50000]"
+                        :interval = "500"
                         :disabled = "false"
                         :show = "true"
                         :speed = "0.3"
                         :reverse = "false"
-                        :tooltip = "always"
+                        tooltip = "always"
                         :piecewise = "true"
                         formatter = "{value} Users"
                         :tooltipStyle = "{
@@ -50,7 +51,9 @@
                         <Button
                                 :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
                                 backgroundColor="#ff003c"
-                                color="white">
+                                color="white"
+                                :onClick = "toggleModal"
+                                >
                         </Button>
                     </div>
                     <div class="package">
@@ -61,11 +64,12 @@
                                 :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
                                 backgroundColor="white"
                                 color="#ff003c"
+                                :onClick = "toggleModal"
                         >
                         </Button>
                     </div>
                 </div>
-                <table>
+                <table id='pricing-feature'>
                     <thead>
                         <th>{{$t('pricing.tableData.tableMetadata.headingRow[0]')}}</th>
                         <th>{{$t('pricing.tableData.tableMetadata.headingRow[1]')}}</th>
@@ -97,33 +101,8 @@
                     </tbody>
                 </table>
             </div>
-            <div class='modal' v-bind:class="{ 'is-active' : showModal}"  >
-                <div class="modal-background"></div>
-                <div class="modal-content">
-                    <div class="box">
-                        <div class="modal-head" >Book a Free Demo</div>
-                        <div class="modal-sub-head" >Help us with your information and our executive will get back to you soon</div>
-                        <div>
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input is-small" type="text" placeholder="Full Name">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input is-small" type="text" placeholder="Company Name">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="control">
-                                    <input class="input is-small" type="email" placeholder="Email Address">
-                                </div>
-                            </div>
-                        </div>
-                        <button class="modal-button">Submit Details</button>
-                    </div>
-                </div>
-                <button class="modal-close is-large" aria-label="close"></button>
+            <div>
+                <Modal :showModal='showModal' :close = "toggleModal" />
             </div>
             <div class="price-actions">
                 <p class="price-action">Action</p>
@@ -132,7 +111,7 @@
                             :text="$t('pricing.tableData.buttons.primary')"
                             backgroundColor="#ff003c"
                             color="white"
-                            v-on:click = "toggleModal" >
+                            :onClick = "toggleModal" >
                     </Button>
                 </div>
                 <div class="price-action">
@@ -140,17 +119,28 @@
                             :text="$t('pricing.tableData.buttons.secondary')"
                             backgroundColor="white"
                             color="1e1e1e" 
-                            v-on:click = "toggleModal" >
+                            :onClick = "toggleModal" >
                     </Button>
                 </div>
             </div>
-            <div class="sectors">
+            <div class="sectors" id='sectors'>
                 <p class="page-title sector-title">{{$t('pricing.tableData.sectorsWidget.title')}}</p>
                 <div class="tabs">
-                    <div class="tab">{{$t('pricing.tableData.sectorsWidget.tabs[0]')}}</div>
-                    <div class="tab">{{$t('pricing.tableData.sectorsWidget.tabs[1]')}}</div>
+                    <div class="tab" v-bind:class="{ active: isActiveFirst }" v-on:click="ActivateFirst">{{$t('pricing.tableData.sectorsWidget.tabs[0]')}}</div>
+                    <div class="tab" v-bind:class="{ active: isActiveSecond }" v-on:click="ActivateSecond">{{$t('pricing.tableData.sectorsWidget.tabs[1]')}}</div>
                 </div>
-                <div class="sector-cards">
+                <div class="sector-cards" v-bind:class="{ active: isActiveFirst }">
+                    <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
+                        <CardWithIcon
+                            :title="obj.title"
+                            :subtitle="obj.subtitle"
+                            :detail="obj.detail"
+                            :iconUrl="obj.iconUrl"
+                            width="270px"
+                        />
+                    </div>
+                </div>
+                <div class="sector-cards" v-bind:class="{ active: isActiveSecond }">
                     <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
                         <CardWithIcon
                             :title="obj.title"
@@ -167,12 +157,13 @@
                 <Button
                     color="white"
                     width="230px"
+                    backgroundColor="#ff003c"
                     :text="$t('pricing.tableData.questionsWidget.buttonText')"
                     :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
                     align="space-between"
-                    class="quest_button"
                 >
                 </Button>
+                <div class="side-image" ></div>
             </div>
         </div>
         <Footer> </Footer>
@@ -182,13 +173,12 @@
 <script>
     import Index from '~/pages/_lang/index';
     import ContentCard from '~/components/ContentCard';
-    import ContentCardCarousel from '~/components/ContentCardCarousel';
     import Button from '~/components/Button';
     import CardWithIcon from '~/components/CardWithIcon';
     import Footer from '~/components/Footer';
+    import Modal from '~/components/Modal';
     import NoSSR from 'vue-no-ssr';
     import currencies from '~/components/currency/data.js';
-    console.log(currencies);
     var components = {};
     components['no-ssr'] = NoSSR;
     if (process.browser) {
@@ -196,10 +186,11 @@
         let VueSlider = require('vue-slider-component')
         components['vue-slider'] = VueSlider
     }
-    export default {
+    export default  {
         components: Object.assign(components,{
             Button,
             Footer,
+            Modal,
             CardWithIcon
         }),
         data: () => ({
@@ -234,17 +225,30 @@
             ],
             usersCount: 0,
             currenciesArr: currencies,
-            selectedCurrency: currencies[0]
+            selectedCurrency: currencies[0],
+            isActiveFirst: true,
+            isActiveSecond: false
         }),
         methods: {
             "toggleModal":function(){
                 this.showModal = !this.showModal
+            },
+            ActivateFirst: function (event){
+                this.isActiveSecond = false
+                this.isActiveFirst= true
+            },
+            ActivateSecond: function (event){
+                this.isActiveFirst= false
+                this.isActiveSecond = true
             }
         }
 }
 
 </script>
 <style>
+    #pricing{
+        position: relative;
+    }
     .page-title{
         font-size: 48px;
         color: #1e1e1e;
@@ -269,13 +273,14 @@
     }
     .packages{
         display: flex;
+        margin-bottom: 4px;
     }
     .package{
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        height: 310px;
+        height: 350px;
         width: 50%;
     }
     .package:first-child{
@@ -347,7 +352,14 @@
     }
     .sector-cards{
         display: flex;
+        display: none;
         margin-top: 100px;
+    }
+    .sector-cards.active{
+        display: block;
+    }
+    .feature-container .detail{
+        min-height: 170px;
     }
     .sector-title{
         font-size: 2em;
@@ -370,7 +382,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-bottom: 30px;
+        margin-bottom: 12%;
     }
     .tabs{
         width: 320px;
@@ -382,23 +394,26 @@
     .tab{
         width: 50%;
         height: 50px;
-        font-size: 16px;
         display: flex;
+        cursor: pointer;
+        font-size: 16px;
+        color: #1e1e1e;
         justify-content: center;
         align-items: center;
+        background-color: white;
+        border: 1px solid #1e1e1e;
     }
     .tab:first-child{
-        background-color: #1e1e1e;
-        color: white;
         border-bottom-left-radius: 50px;
         border-top-left-radius: 50px;
     }
     .tab:last-child{
-        color: #1e1e1e;
-        background-color: white;
         border-bottom-right-radius: 50px;
         border-top-right-radius: 50px;
-        border: 1px solid #1e1e1e;
+    }
+    .tab.active{
+        color: white;
+        background-color: #1e1e1e;
     }
     .switch {
         position: relative;
@@ -433,7 +448,7 @@
         transition: .4s;
     }
     input:checked{
-        color: red;
+        color: #ff003c;
     }
 
     input:checked + .slider {
@@ -458,18 +473,30 @@
     .slider.round:before {
         border-radius: 50%;
     }
+    .side-image{
+        left: 0;
+        z-index: 0;
+        width: 330px;
+        height: 272px;
+        bottom: 432px;
+        position: absolute;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('/static/left_curve@2x.png');
+    }
     .toggle{
         display: flex;
         justify-content: center;
         align-items: center;
         margin-top: 40px;
-        margin-bottom: 80px;
+        margin-bottom: 4%;
     }
     .currencyChange{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 10%;
+        margin-bottom: 4%;
     }
     .currencyChange .icon{
         border: 1px solid black;
@@ -494,26 +521,23 @@
     }
     .yearly{
         margin-left: 10px;
+        margin-right: 10px;
         font-size: 20px;
     }
     .tagss{
         margin: 0;
         height: 2em;
         padding: 3px;
-        font-size: 12px;
+        font-size: 14px;
         color: #151e37;
         line-height: 1.5;
-        margin-left: 12px;
         border-radius: 4px;
+        font-weight: 600px;
         align-items: center;
         justify-content: center;
         background-color: white;
         -webkit-box-align: center;
-        border: 1px solid #151e37;
-    }
-    .quest_button{
-        background-color: #ff003c;
-        box-shadow: 2px 70px 133px -89px rgba(255,0,60,1);
+        border: 1.2px solid #151e37;
     }
     /* .quest_button:before{
         content: '';
@@ -578,43 +602,5 @@
     .userSlider .vue-slider-tooltip-wrap{
         display:block !important;
         opacity:1 !important;
-    }
-    .modal .box{
-        padding: 38px;
-        max-width: 430px;
-        max-height: 509px;
-        border-radius: 4px;
-        text-align: center;
-        margin: 0 auto;
-        background-color: #ffffff;
-    }
-    .modal-head{
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 16px;
-    }
-    .modal-sub-head{
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-    .modal .input{
-        border: none;
-        box-shadow: none;
-        margin-top: 22px;
-        border-bottom: 1px solid #dee0e6;
-    }
-    .modal .input:focus{
-        border-bottom: 1px solid #ff003c;
-    }
-    .modal-button{
-        width: 350px;
-        height: 50px;
-        font-size: 16px;
-        font-weight: 500;
-        color: white;
-        box-shadow: none;
-        margin-top: 30px;
-        border-radius: 2px;
-        background-color: #ff003c;
     }
 </style>

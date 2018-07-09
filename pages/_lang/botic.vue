@@ -1,5 +1,5 @@
 <template>
-  <div class ='botic'> 
+  <div class ='botic'>
     <ContentCard
       :header="$t('botic.contentCards.card1.header')"
       :subtitle="$t('botic.contentCards.card1.subtitle')"
@@ -19,12 +19,12 @@
       listTypes="true"
     >
     </ContentCard>
-     
-    <div class="bot-features-container">
+    <div class="bots-features-container">
       <p class="feature-heading head-workbox" v-html="$t('botic.processDetailsWidget.heading')"></p>
       <WorkBoxSection 
         :leftCard="$t('botic.processDetailsWidget.step1.leftCard')"
         :rightCard="$t('botic.processDetailsWidget.step1.rightCard')"
+        :rightCardHighlight=true
       />
       <WorkBoxSection 
         :leftCard="$t('botic.processDetailsWidget.step2.leftCard')"
@@ -34,6 +34,10 @@
         :leftCard="$t('botic.processDetailsWidget.step3.leftCard')"
         :rightCard="$t('botic.processDetailsWidget.step3.rightCard')"
       />
+    </div>
+    <div class="tabs-container">
+      <h3 class='tabs-header' >Pushing the limits of <br> <span class=red>Natural Language Processing</span></h3>
+      <Tabs />
     </div>
     <ContentCard
       class="types-container"
@@ -45,7 +49,7 @@
       height= '500px'
     >
     </ContentCard>
-    <div class='bottom_container'>
+    <!-- <div class='bottom_container'>
       <div class='left_curve'></div>
       <div class='right_curve'></div>
       <ContentCard
@@ -56,6 +60,19 @@
         height="473px"
       >
       </ContentCard>
+    </div> -->
+    <div class="questions">
+        <p class="page-title question-title">{{$t('pricing.tableData.questionsWidget.title')}}</p>
+        <Button
+            color="white"
+            width="230px"
+            :text="$t('pricing.tableData.questionsWidget.buttonText')"
+            :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
+            align="space-between"
+            backgroundColor="#ff003c"
+        >
+        </Button>
+        <div class="side-image" ></div>
     </div>
     <Footer> </Footer>
   </div>
@@ -65,21 +82,19 @@
 <script>
     import Index from '~/pages/_lang/index'
     import ContentCard from '~/components/ContentCard'
-    import ContentCardCarousel from '~/components/ContentCardCarousel'
     import Button from '~/components/Button'
-    import BotFeatureCard from '~/components/BotFeatureCard'
     import Footer from '~/components/Footer'
     import WorkBoxSection from '~/components/workBoxSection'
+    import Tabs from '~/components/Tabs'
 
     export default {
         components: {
             ContentCard,
             Index,
-            BotFeatureCard,
             Button,
             Footer,
-            ContentCardCarousel,
-            WorkBoxSection
+            WorkBoxSection,
+            Tabs
         },
         data: () => ({
             buttons: {
@@ -95,17 +110,14 @@
                     {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
                     {text: 'Small Business', backgroundColor: '#ffffff', color: '#000000'}
                 ]
-            },
-            items:[
-              {name: 'iGaming', icon: 'government.png'},
-              {name: 'Finance', icon: 'government.png'},
-              {name: 'Outsourcing', icon: 'government.png'},
-              {name: 'Government', icon: 'government.png'}
-            ]
+            }
         }),
     }
 </script>
 <style>
+  .botic{
+    position: relative;
+  }
   .red{
     color: #ff003c;
   }
@@ -113,11 +125,6 @@
     font-size: 38px;
     max-width: 438px;
     text-align: center;
-  }
-  .features-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
   .types-container{
     position: relative;
@@ -143,7 +150,7 @@
   .icons{
     text-align: center;
   }
-  .bot-features-container{
+  .bots-features-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -255,4 +262,42 @@
   .footer-container{
     margin-top: 0px;
   }
+  .question-title{
+        font-size: 2em;
+        color: #1e1e1e;
+        font-weight: bold;
+        margin-top: 150px;
+        line-height: 1.1em;
+        margin-bottom: 40px;
+    }
+    .questions{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 7%;
+    }
+    .side-image{
+        left: 0;
+        z-index: 0;
+        width: 330px;
+        height: 272px;
+        bottom: 432px;
+        position: absolute;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url('/static/left_curve@2x.png');
+    }
+    .tabs-container{
+      margin-bottom: 8%;
+    }
+    .tabs-header{
+      font-size: 2.12em;
+      color: #1e1e1e;
+      font-weight: bold;
+      line-height: 1.36em;
+      margin-bottom: 4%;
+      text-align: center;
+    }
 </style>

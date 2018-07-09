@@ -20,7 +20,7 @@
               <nuxt-link class="Header__Link navbar-item navbar-link" :to="($i18n.locale=='en')?'/partners':('/'+$i18n.locale+'/partners')">
                 Partners
               </nuxt-link>
-            </a>
+            </a> -->
           </div>
           <div class="navbar-menu">
             <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/sectors':('/'+$i18n.locale+'/sectors')">
@@ -34,7 +34,13 @@
             </nuxt-link>
             <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/partners':('/'+$i18n.locale+'/partners')">
               Partners
-            </nuxt-link>
+            </a>
+            <!-- <nuxt-link class="Header__Link navbar-item" :to="'/#partners'">
+              Partners
+            </nuxt-link> -->
+            <!-- <span class="Header__Link navbar-item" v-on:click="scrollTo" >
+              Partners
+            </span> -->
           </div>
         </nav>
         <div class="inlineFlex w50 rf is-hidden-touch">  
@@ -117,7 +123,22 @@ export default {
       'flagUrl':'/images/english/uk@3x.png'
     },
     languageOverlayVisibility:false
-  })
+  }),
+  methods: {
+    scrollTo: (event) => {
+      window.scrollTo(0, 1000)
+      // `this` inside methods points to the Vue instance
+      // let myFirstPromise = new Promise((resolve, reject) => {
+      //   window.location.href ='/'
+      //   resolve()
+      // })
+      // myFirstPromise.then(() => {
+      //   setTimeout(() => {
+      //     window.scrollTo(0, 1000)
+      //   }, 3000)
+      // })
+    }
+  }
 }
 
 </script>
@@ -129,19 +150,25 @@ export default {
   box-sizing: border-box;
 }
 html, body {
-  background-color: #fff;
+  /* background-color: #f6f6f6; */
   color: #2e2f30;
   letter-spacing: 0.5px;
   font-size: 18px;
   font-family: "Source Sans Pro", Arial, sans-serif;
   height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   /* background-image: url('/static/grid.png');
   background-position: center;
   background-size: 1170px 9111px;
   background-repeat: no-repeat; */
 }
+body{
+  overflow-x: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .navbar-brand{
+  align-items: center;
   margin-right: 6%;
 }
 .container {
@@ -160,11 +187,11 @@ html, body {
   background-color: rgba(255,255,255,0.97);
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   align-items: center;
   z-index:99;
+  max-width: 1440px;
 }
 .Header__Logo{
   background-image:url('/static/images/english/logo@2x.png');
@@ -187,6 +214,9 @@ html, body {
   color: #1e1e1e;
   text-decoration: none;
   /* padding-left: 5%; */
+}
+a.navbar-item:hover {
+  color: #ff003c;
 }
 .Header__Button {
   box-sizing: border-box;
@@ -218,7 +248,7 @@ html, body {
 }
 
 .nuxt-link-active {
-  color: cyan;
+  color: #ff003c;
 }
 .Content {
   padding: 50px 0;

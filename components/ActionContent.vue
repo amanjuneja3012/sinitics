@@ -12,12 +12,13 @@
             <div v-if="!externalComponent" class="buttons" v-for="(button, index) in buttons" :key="index">
                 <Button
                         :text="button.text"
+                        :to="button.to"
                         :backgroundColor="button.backgroundColor"
                         :color="button.color">
                 </Button>
             </div>
             <AppsWidget v-if="externalComponent"></AppsWidget>
-            <InputBox v-if="inputBox"></InputBox>
+            <InputBox v-if="inputBox" :sendText="sendText" :placeHolder="placeHolder" ></InputBox>
             <ListTypes v-if="listTypes"></ListTypes>
         </div>
     </div>
@@ -29,7 +30,7 @@
     import InputBox from '~/components/InputBox'
     import ListTypes from '~/components/ListTypes'
     export default {
-        props: ['title', 'header', 'subtitle', 'buttons', 'width', 'height', 'padding', 'externalComponent', 'inputBox', 'listTypes'],
+        props: ['title', 'header', 'subtitle', 'buttons', 'width', 'height', 'padding', 'externalComponent', 'inputBox', 'listTypes', 'sendText', 'placeHolder' ],
         components: {
             Button,
             AppsWidget,
