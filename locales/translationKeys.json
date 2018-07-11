@@ -1,0 +1,365 @@
+{
+  "links": [
+    {
+      "title":"header:link1_title",
+      "link":"header:link1_link"
+    },
+    {
+      "title":"header:link2_title",
+      "link":"header:link2_link"
+    },
+    {
+      "title":"header:link3_title",
+      "link":"header:link3_link"
+    },
+    {
+      "title":"header:link4_title",
+      "link":"header:link4_link"
+    }
+  ],
+  "home": {
+    "contentCards":{
+      "card1":{
+        "header":"home:card1_header",
+        "subtitle":"home:card1_subtitle",
+        "buttons":[
+          {
+            "text": "home:card1_button1_text",
+            "backgroundColor": "home:card1_button1_backgroundColor",
+            "color": "home:card1_button1_color",
+            "to": "home:card1_button1_to"
+          },
+          {
+            "text": "home:card1_button2_text",
+            "backgroundColor": "home:card1_button2_backgroundColor",
+            "color": "home:card1_button2_color",
+            "to": "home:card1_button2_to"
+          }
+        ],
+        "image":"home:card1_image"
+      },
+      "card2":{
+        "header":"home:card2_header",
+        "subtitle":"home:card2_subtitle",
+        "buttons":"home:card2_buttons",
+        "image":"home:card2_image"
+      },
+      "card3":{
+        "image":"home:card3_image",
+        "slides":[
+          {
+            "title":"home:card3_slide1_title",
+            "subtitle":"home:card3_slide1_subtitle",
+            "buttons":[
+              {
+                "text": "home:card3_slide1_button1_text",
+                "backgroundColor": "home:card3_slide1_button1_backgroundColor",
+                "color": "home:card3_slide1_button1_color"
+              },
+              {
+                "text": "home:card3_slide1_button2_text",
+                "backgroundColor": "home:card3_slide1_button2_backgroundColor",
+                "color": "home:card3_slide1_button2_color"
+              }
+            ]
+          },
+          {
+            "title":"home:card3_slide2_title",
+            "subtitle":"home:card3_slide2_subtitle",
+            "buttons":[
+              {
+                "text": "home:card3_slide2_button1_text",
+                "backgroundColor": "home:card3_slide2_button1_backgroundColor",
+                "color": "home:card3_slide2_button1_color"
+              },
+              {
+                "text": "home:card3_slide2_button2_text",
+                "backgroundColor": "home:card3_slide2_button2_backgroundColor",
+                "color": "home:card3_slide2_button2_color"
+              }
+            ]
+          }
+        ]
+      },
+      "card4":{
+        "header":"home:card4_header",
+        "subtitle":"home:card4_subtitle",
+        "buttons":[
+          {
+            "text": "home:card4_button1_text",
+            "backgroundColor": "home:card4_button1_backgroundColor",
+            "color": "home:card4_button1_color"
+          },
+          {
+            "text": "home:card4_button2_text",
+            "backgroundColor": "home:card4_button2_backgroundColor",
+            "color": "home:card4_button2_color"
+          }
+        ],
+        "image":"home:card4_image"
+      },
+      "card5":{
+        "header":"home:card5_header",
+        "subtitle":"home:card5_subtitle",
+        "buttons":[
+          {
+            "text": "home:card5_button1_text",
+            "backgroundColor": "home:card5_button1_backgroundColor",
+            "color": "home:card5_button1_color"
+          },
+          {
+            "text": "   ",
+            "backgroundColor": "home:card5_button2_backgroundColor",
+            "color": "home:card5_button2_color"
+          }
+        ],
+        "image":"home:card5_image"
+      },
+      "card6":{
+        "header":"home:card6_header",
+        "cardsArr":[
+          {
+            "iconUrl" : "home:card6_subcard1_iconUrl",
+            "title" : "home:card6_subcard1_title",
+            "subtitle" : "home:card6_subcard1_subtitle"
+          },
+          {
+            "iconUrl" : "home:card6_subcard2_iconUrl",
+            "title" : "home:card6_subcard2_title",
+            "subtitle" : "home:card6_subcard2_subtitle"
+          },
+          {
+            "iconUrl" : "home:card6_subcard3_iconUrl",
+            "title" : "home:card6_subcard3_title",
+            "subtitle" : "home:card6_subcard3_subtitle"
+          }
+        ],
+        "buttonText":"home:card6_buttonText"
+      }
+    },
+    "newsCarouselWidget":{
+      "header":"home:newsCarouselWidget_header",
+      "slides":[
+        {
+          "image":"home:newsCarouselWidget_slide1_image",
+          "content":"home:newsCarouselWidget_slide1_content"
+        },
+        {
+          "image":"home:newsCarouselWidget_slide2_image",
+          "content":"home:newsCarouselWidget_slide2_content"
+        },
+        {
+          "image":"home:newsCarouselWidget_slide3_image",
+          "content":"home:newsCarouselWidget_slide3_content"
+        },
+        {
+          "image":"home:newsCarouselWidget_slide4_image",
+          "content":"home:newsCarouselWidget_slide4_content"
+        },
+        {
+          "image":"home:newsCarouselWidget_slide5_image",
+          "content":"home:newsCarouselWidget_slide5_content"
+        },
+        {
+          "image":"home:newsCarouselWidget_slide6_image",
+          "content":"home:newsCarouselWidget_slide6_content"
+        },
+        {
+          "image":"home:newsCarouselWidget_slide7_image",
+          "content":"home:newsCarouselWidget_slide7_content"
+        },
+        {
+          "image":"home:newsCarouselWidget_slide8_image",
+          "content":"home:newsCarouselWidget_slide8_content"
+        }
+      ]
+    }
+  },
+  "botic": {
+    "contentCards":{
+      "card1" : {
+        "header":"botic:contentCards_card1_header",
+        "subtitle":"botic:contentCards_card1_subtitle",
+        "image":"botic:contentCards_card1_image"
+      },
+      "card2" : {
+        "header":"botic:contentCards_card2_header",
+        "subtitle":"botic:contentCards_card2_subtitle",
+        "image":"botic:contentCards_card2_image"
+      },
+      "card3" : {
+        "header":"botic:contentCards_card3_header",
+        "subtitle":"botic:contentCards_card3_subtitle",
+        "image":"botic:contentCards_card3_image"
+      },
+      "card4" : {
+        "header":"botic:contentCards_card4_header",
+        "subtitle":"botic:contentCards_card4_subtitle",
+        "image":"botic:contentCards_card4_image"
+      }
+    },
+    "processDetailsWidget" : {
+      "heading":"botic:processDetailsWidget_heading",
+      "step1":{
+        "leftCard":{
+          "index":"botic:processDetailsWidget_step1_leftCard_index",
+          "heading":"botic:processDetailsWidget_step1_leftCard_heading",
+          "content":"botic:processDetailsWidget_step1_leftCard_content",
+          "image":"botic:processDetailsWidget_step1_leftCard_image"
+        },
+        "rightCard":{
+          "index":"botic:processDetailsWidget_step1_rightCard_index",
+          "heading":"botic:processDetailsWidget_step1_rightCard_heading",
+          "content":"botic:processDetailsWidget_step1_rightCard_content",
+          "image":"botic:processDetailsWidget_step1_rightCard_image"
+        }
+      },
+      "step2":{
+        "leftCard":{
+          "index":"botic:processDetailsWidget_step2_leftCard_index",
+          "heading":"botic:processDetailsWidget_step2_leftCard_heading",
+          "content":"botic:processDetailsWidget_step2_leftCard_content",
+          "image":"botic:processDetailsWidget_step2_leftCard_image"
+        },
+        "rightCard":{
+          "index":"botic:processDetailsWidget_step2_rightCard_index",
+          "heading":"botic:processDetailsWidget_step2_rightCard_heading",
+          "content":"botic:processDetailsWidget_step2_rightCard_content",
+          "image":"botic:processDetailsWidget_step2_rightCard_image"
+        }
+      },
+      "step3":{
+        "leftCard":{
+          "index":"botic:processDetailsWidget_step3_leftCard_index",
+          "heading":"botic:processDetailsWidget_step3_leftCard_heading",
+          "content":"botic:processDetailsWidget_step3_leftCard_content",
+          "image":"botic:processDetailsWidget_step3_leftCard_image"
+        },
+        "rightCard":{
+          "index":"botic:processDetailsWidget_step3_rightCard_index",
+          "heading":"botic:processDetailsWidget_step3_rightCard_heading",
+          "content":"botic:processDetailsWidget_step3_rightCard_content",
+          "image":"botic:processDetailsWidget_step3_rightCard_image"
+        }
+      }
+    }
+  },
+  "pricing":{
+    "title":"pricing:title",
+    "checkBoxDetails":{
+      "leftStr":"pricing:checkBoxDetails_leftStr",
+      "rightStr":"pricing:checkBoxDetails_rightStr",
+      "tag":"pricing:checkBoxDetails_tag"
+    },
+    "tableData":{
+      "tableHeader":{
+        "leftColumn":{
+          "name":"pricing:tableData_tableHeader_leftColumn_name",
+          "price":"pricing:tableData_tableHeader_leftColumn_price",
+          "period":"pricing:tableData_tableHeader_leftColumn_period",
+          "buttonText":"pricing:tableData_tableHeader_leftColumn_buttonText"
+        },
+        "rightColumn":{
+          "name":"pricing:tableData_tableHeader_rightColumn_name",
+          "price":"pricing:tableData_tableHeader_rightColumn_price",
+          "period":"pricing:tableData_tableHeader_rightColumn_period",
+          "buttonText":"pricing:tableData_tableHeader_rightColumn_buttonText"
+        }
+      },
+      "tableMetadata":{
+      "headingRow":[
+        "pricing:tableData_tableMetadata_headingRow_1",
+        "pricing:tableData_tableMetadata_headingRow_2",
+        "pricing:tableData_tableMetadata_headingRow_3"
+      ],
+      "subHeading":[
+        "pricing:tableData_tableMetadata_subHeading_1",
+        "pricing:tableData_tableMetadata_subHeading_2",
+        "pricing:tableData_tableMetadata_subHeading_3"
+      ],
+      "items":[
+          "pricing:tableData_tableMetadata_items_1_name",
+          "pricing:tableData_tableMetadata_items_1_basic",
+          "pricing:tableData_tableMetadata_items_1_enterprise",
+          "pricing:tableData_tableMetadata_items_1_tooltip",
+          "pricing:tableData_tableMetadata_items_2_name",
+          "pricing:tableData_tableMetadata_items_2_basic",
+          "pricing:tableData_tableMetadata_items_2_enterprise",
+          "pricing:tableData_tableMetadata_items_2_tooltip",
+          "pricing:tableData_tableMetadata_items_3_name",
+          "pricing:tableData_tableMetadata_items_3_basic",
+          "pricing:tableData_tableMetadata_items_3_enterprise",
+          "pricing:tableData_tableMetadata_items_3_tooltip",
+          "pricing:tableData_tableMetadata_items_4_name",
+          "pricing:tableData_tableMetadata_items_4_basic",
+          "pricing:tableData_tableMetadata_items_4_enterprise",
+          "pricing:tableData_tableMetadata_items_4_tooltip",
+          "pricing:tableData_tableMetadata_items_5_name",
+          "pricing:tableData_tableMetadata_items_5_basic",
+          "pricing:tableData_tableMetadata_items_5_enterprise",
+          "pricing:tableData_tableMetadata_items_5_tooltip",
+          "pricing:tableData_tableMetadata_items_6_name",
+          "pricing:tableData_tableMetadata_items_6_basic",
+          "pricing:tableData_tableMetadata_items_6_enterprise",
+          "pricing:tableData_tableMetadata_items_6_tooltip",
+          "pricing:tableData_tableMetadata_items_7_name",
+          "pricing:tableData_tableMetadata_items_7_basic",
+          "pricing:tableData_tableMetadata_items_7_enterprise",
+          "pricing:tableData_tableMetadata_items_7_tooltip",
+          "pricing:tableData_tableMetadata_items_8_name",
+          "pricing:tableData_tableMetadata_items_8_basic",
+          "pricing:tableData_tableMetadata_items_8_enterprise",
+          "pricing:tableData_tableMetadata_items_8_tooltip",
+          "pricing:tableData_tableMetadata_items_9_name",
+          "pricing:tableData_tableMetadata_items_9_basic",
+          "pricing:tableData_tableMetadata_items_9_enterprise",
+          "pricing:tableData_tableMetadata_items_9_tooltip",
+          "pricing:tableData_tableMetadata_items_10_name",
+          "pricing:tableData_tableMetadata_items_10_basic",
+          "pricing:tableData_tableMetadata_items_10_enterprise",
+          "pricing:tableData_tableMetadata_items_10_tooltip",
+          "pricing:tableData_tableMetadata_items_11_name",
+          "pricing:tableData_tableMetadata_items_11_basic",
+          "pricing:tableData_tableMetadata_items_11_enterprise",
+          "pricing:tableData_tableMetadata_items_11_tooltip"
+        ]
+      },
+      "buttons":{
+        "primary":"pricing:tableData_buttons_primary",
+        "secondary":"pricing:tableData_buttons_secondary"
+      },
+      "sectorsWidget":{
+        "title":"pricing:tableData_sectorsWidget_title",
+        "tabs":[
+          "pricing:tableData_sectorsWidget_tabs_1",
+          "pricing:tableData_sectorsWidget_tabs_2"
+        ],
+        "Basic":[
+            {
+              "title":"pricing:tableData_sectorsWidget_basic_1_title",
+              "subtitle":"pricing:tableData_sectorsWidget_basic_1_subtitle",
+              "detail":"pricing:tableData_sectorsWidget_basic_1_detail",
+              "iconUrl":"pricing:tableData_sectorsWidget_basic_1_iconUrl"
+            },
+            {
+              "title":"pricing:tableData_sectorsWidget_basic_2_title",
+              "subtitle":"pricing:tableData_sectorsWidget_basic_2_subtitle",
+              "detail":"pricing:tableData_sectorsWidget_basic_2_detail",
+              "iconUrl":"pricing:tableData_sectorsWidget_basic_2_iconUrl"
+            },
+            {
+              "title":"pricing:tableData_sectorsWidget_basic_3_title",
+              "subtitle":"pricing:tableData_sectorsWidget_basic_3_title",
+              "detail":"pricing:tableData_sectorsWidget_basic_3_detail",
+              "iconUrl":"pricing:tableData_sectorsWidget_basic_3_iconUrl"
+            }
+          ]
+        },
+      "questionsWidget":{
+        "title":"pricing:tableData_questionsWidget_title",
+        "buttonText":"pricing:tableData_questionsWidget_buttonText",
+        "buttonIcon":"pricing:tableData_questionsWidget_buttonIcon"
+      }
+    }
+  }
+}
