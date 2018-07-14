@@ -41,15 +41,10 @@
             </ul>
         </div>
         <div class="menu-container">
-            <p class="menu-title">Solutions</p>
+            <p class="menu-title">Case Study</p>
             <ul>
-                <li>Outsourcing</li>
-                <li>
-                    <p class="soon">Coming soon</p>
-                </li>
-                <li class="opacity-3">Governmenmt</li>
-                <li class="opacity-3">Finance</li>
-                <li class="opacity-3">IGaming</li>
+                <li>iGaming</li>
+                <li>Regtech</li>
 
             </ul>
         </div>
