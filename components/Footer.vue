@@ -15,6 +15,7 @@
                 <img src="images/english/linkedin.svg" class="social-icon"/>
                 <img src="images/english/twitter.svg" class="social-icon"/>
                 <img src="images/english/insta.svg" class="social-icon"/>
+                <img src="images/english/medium.svg" class="social-icon"/>
             </div>
             <p class="copyright-text">© 2018 Sinitic Limited. All Rights Reserved.</p>
         </div>

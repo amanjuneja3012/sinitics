@@ -18,7 +18,8 @@
               {icon: '/images/english/we-chat.svg', name: 'we-chat'},
               {icon: '/images/english/line.svg', name: 'line'},
               {icon: '/images/english/skype.svg', name: 'skype'},
-              {icon: '/images/english/sms.svg', name: 'sms'}
+              {icon: '/images/english/sms.svg', name: 'sms'},
+              {icon: '/images/english/messenger.svg', name: 'messenger'}
             ]
           }
         }

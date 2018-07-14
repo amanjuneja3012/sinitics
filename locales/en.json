@@ -21,7 +21,7 @@
     "contentCards":{
       "card1":{
         "header":"Are You speaking your <span class='red'>Customer's language</span>",
-        "subtitle":"Instant multilingual support. Higher customer satisfaction",
+        "subtitle":"Better multilingual chatbots. Higher customer satisfaction.",
         "buttons":[
           {
             "text": "Try it Free",
@@ -37,7 +37,7 @@
         "image":"images/english/page1@3x.png"
       },
       "card2":{
-        "header":"<span class='red'>Save</span> with Automation",
+        "header":"Finally, Smarter <span class='red'>Bots for Everyone</span>",
         "subtitle":"Reduce your customer support budget without compromising customer satisfaction",
         "buttons":[
           {

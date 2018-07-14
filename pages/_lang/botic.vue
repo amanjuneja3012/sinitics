@@ -33,6 +33,7 @@
       <WorkBoxSection 
         :leftCard="$t('botic.processDetailsWidget.step3.leftCard')"
         :rightCard="$t('botic.processDetailsWidget.step3.rightCard')"
+        :rightCardHighlight=true
       />
     </div>
     <div class="tabs-container">
