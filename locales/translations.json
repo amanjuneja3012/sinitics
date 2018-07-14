@@ -121,7 +121,7 @@
 		"botic:processDetailsWidget_step2_rightCard_index":"4",
 		"botic:processDetailsWidget_step2_rightCard_heading":"Action",
 		"botic:processDetailsWidget_step2_rightCard_content":"Your chatbot sends correct replies to humans, or passes the conversation to an agent",
-		"botic:processDetailsWidget_step2_rightCard_image":"prediction@2x.png",
+		"botic:processDetailsWidget_step2_rightCard_image":"action@2x.png",
 		"botic:processDetailsWidget_step3_leftCard_index":"5",
 		"botic:processDetailsWidget_step3_leftCard_heading":"Outcome",
 		"botic:processDetailsWidget_step3_leftCard_content":"Substantial customer support automation and increased customer satisfaction",
