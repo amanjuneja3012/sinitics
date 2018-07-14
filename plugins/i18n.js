@@ -19,7 +19,7 @@ export default ({ app, store }) => {
     fallbackLocale: 'en',
     messages: {
       'en': extractLocaleJson('en'),
-      'fr': extractLocaleJson('en')
+      'fr': extractLocaleJson('fr')
     }
   })
 

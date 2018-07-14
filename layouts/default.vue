@@ -4,35 +4,31 @@
       <div class="is-flex-desktop-only w100 h100 vCenter">
         <nav class="inlineFlex w50 lf navbar h70" role="navigation" aria-label="main navigation">
           <div class="navbar-brand align-center">
-            <nuxt-link class="Header__Logo Header__Link navbar-item" :to="$i18n.path('')">
+            <nuxt-link class="Header__Logo Header__Link navbar-item" :to="($i18n.locale=='en')?'/':('/'+$i18n.locale+'/')">
               <div class="logo"></div>
             </nuxt-link>
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-              <nuxt-link class="Header__Link navbar-item navbar-link" :to="($i18n.locale=='en')?'/sectors':('/'+$i18n.locale+'/sectors')">
-                Sectors
-              </nuxt-link>
+              
               <nuxt-link class="Header__Link navbar-item navbar-link" :to="($i18n.locale=='en')?'/botic':('/'+$i18n.locale+'/botic')">
                 BoticAI
               </nuxt-link>
               <nuxt-link class="Header__Link navbar-item navbar-link" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
                 Pricing
               </nuxt-link>
-              <nuxt-link class="Header__Link navbar-item navbar-link" :to="($i18n.locale=='en')?'/partners':('/'+$i18n.locale+'/partners')">
+              <nuxt-link class="Header__Link navbar-item navbar-link" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')">
                 Partners
               </nuxt-link>
             </a>
           </div>
           <div class="navbar-menu">
-            <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/sectors':('/'+$i18n.locale+'/sectors')">
-              Sectors
-            </nuxt-link>
+            
             <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/botic':('/'+$i18n.locale+'/botic')">
               BoticAI
             </nuxt-link>
             <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
               Pricing
             </nuxt-link>
-            <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/partners':('/'+$i18n.locale+'/partners')">
+            <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
               Partners
             </nuxt-link>
             <!-- <nuxt-link class="Header__Link navbar-item" :to="'/#partners'">
@@ -68,7 +64,7 @@
             <div class="arrow-icon"></div>
           </div>
           <div class="flagOverlay" v-if="languageOverlayVisibility">
-            <nuxt-link v-for="(language,index) in languageOptions" :to="language.languageKey + $route.fullPath" exact v-on:click="selectedLanguage = language" class="languageChangeOption" :key="index">
+            <nuxt-link v-for="(language,index) in languageOptions" :to="'/'+language.languageKey" exact v-on:click="selectedLanguage = language" class="languageChangeOption" :key="index">
               <div class="flagImage" :style="{
               'background-image':'url('+language.flagUrl+')'
             }"></div>

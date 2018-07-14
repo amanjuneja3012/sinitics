@@ -41,7 +41,20 @@
       "card2":{
         "header":"home:card2_header",
         "subtitle":"home:card2_subtitle",
-        "buttons":"home:card2_buttons",
+        "buttons":[
+          {
+            "text": "home:card2_button1_text",
+            "backgroundColor": "home:card2_button1_backgroundColor",
+            "color": "home:card2_button1_color",
+            "to": "home:card2_button1_to"
+          },
+          {
+            "text": "home:card2_button2_text",
+            "backgroundColor": "home:card2_button2_backgroundColor",
+            "color": "home:card2_button2_color",
+            "to": "home:card2_button2_to"
+          }
+        ],
         "image":"home:card2_image"
       },
       "card3":{
