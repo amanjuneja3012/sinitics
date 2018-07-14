@@ -15,6 +15,7 @@
                         :to="button.to"
                         :backgroundColor="button.backgroundColor"
                         :color="button.color">
+                        :onClick="function(){}"
                 </Button>
             </div>
             <AppsWidget v-if="externalComponent"></AppsWidget>

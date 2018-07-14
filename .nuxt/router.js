@@ -14,7 +14,7 @@ const _6794a14e = () => import('../pages/_lang/about.vue' /* webpackChunkName: "
 
 
 
-const scrollBehavior = function (to, from, savedPosition) {
+const scrollBehavior = function(to, from, savedPosition) {
       if (to.hash) {
           return {selector: to.hash}
       } else {

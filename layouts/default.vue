@@ -20,7 +20,7 @@
               <nuxt-link class="Header__Link navbar-item navbar-link" :to="($i18n.locale=='en')?'/partners':('/'+$i18n.locale+'/partners')">
                 Partners
               </nuxt-link>
-            </a> -->
+            </a>
           </div>
           <div class="navbar-menu">
             <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/sectors':('/'+$i18n.locale+'/sectors')">
@@ -35,6 +35,7 @@
             <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/partners':('/'+$i18n.locale+'/partners')">
               Partners
             </a>
+            </nuxt-link>
             <!-- <nuxt-link class="Header__Link navbar-item" :to="'/#partners'">
               Partners
             </nuxt-link> -->
