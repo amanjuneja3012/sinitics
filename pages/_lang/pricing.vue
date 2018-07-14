@@ -248,15 +248,15 @@
                 instance.defaults.headers.common['X-PW-AccessToken'] = '5e952377dd5291aa014db0158a3fa0c1'
                 instance.defaults.headers.common['X-PW-Application'] = 'developer_api'
                 instance.defaults.headers.common['X-PW-UserEmail'] = 'curtis@sinitic.ai'
-                instance.post('/user', {
+                instance.post('/leads', JSON.stringify({
                     "name": name,
                     "email": {
                         "email": email,
                         "category":"work"
                     },
                     "company_name": company
-                }).then(function (response) {
-                    console.log(response);
+                })).then(function (response) {
+                    this.toggleModal()
                 })
             }
         }
