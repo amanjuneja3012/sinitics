@@ -22,17 +22,17 @@
                       </div>
                   </div>
               </div>
-              <button class="modal-button" v-bind:class="{ active: !isButtonDisabled }" v-bind:disabled="isButtonDisabled" >Submit Details</button>
+              <button class="modal-button" v-bind:class="{ active: !isButtonDisabled }" v-bind:disabled="isButtonDisabled" v-on:click='sendData' >Submit Details</button>
           </div>
       </div>
-      <button class="modal-close is-large" aria-label="close" v-on:click='close' ></button>
+      <button class="modal-close is-large" aria-label="close" v-on:click='close'  ></button>
   </div>
 </template>
 
 <script>
     import Button from '~/components/Button';
     export default {
-      props: ["showModal", "close"],
+      props: ["showModal", "onSend", "close"],
         components:{
             Button
         },
@@ -43,14 +43,16 @@
                 isButtonDisabled: true
               }),
         methods: {
-            "activateButton":function(){
-              debugger
+            activateButton:function(){
               console.log(this.name)
                 if(this.name !== '' && this.company !== '' && this.email !== '' ) {
                   this.isButtonDisabled = false
                 }else {
                   this.isButtonDisabled = true
                 }
+            },
+            sendData:function(){
+                this.onSend(this.name, this.company , this.email)
             }
         }
     }
@@ -92,6 +94,7 @@
         color: white;
         box-shadow: none;
         margin-top: 30px;
+        cursor: pointer;
         border-radius: 2px;
         background-color: grey;
     }

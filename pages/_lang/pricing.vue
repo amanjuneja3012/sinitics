@@ -102,7 +102,7 @@
                 </table>
             </div>
             <div>
-                <Modal :showModal='showModal' :close = "toggleModal" />
+              <Modal :showModal='showModal' :onSend= 'onSend' :close='toggleModal' />
             </div>
             <div class="price-actions">
                 <p class="price-action">Action</p>
@@ -178,6 +178,7 @@
     import Footer from '~/components/Footer';
     import Modal from '~/components/Modal';
     import NoSSR from 'vue-no-ssr';
+    import axios from 'axios';
     import currencies from '~/components/currency/data.js';
     var components = {};
     components['no-ssr'] = NoSSR;
@@ -230,7 +231,7 @@
             isActiveSecond: false
         }),
         methods: {
-            "toggleModal":function(){
+            toggleModal:function(){
                 this.showModal = !this.showModal
             },
             ActivateFirst: function (event){
@@ -240,6 +241,23 @@
             ActivateSecond: function (event){
                 this.isActiveFirst= false
                 this.isActiveSecond = true
+            },
+            onSend: function (name, company, email){
+                const instance = axios.create({ baseURL: 'https://api.prosperworks.com/developer_api/v1/leads' })
+                instance.defaults.headers.common['Content-Type'] = 'application/json'
+                instance.defaults.headers.common['X-PW-AccessToken'] = '5e952377dd5291aa014db0158a3fa0c1'
+                instance.defaults.headers.common['X-PW-Application'] = 'developer_api'
+                instance.defaults.headers.common['X-PW-UserEmail'] = 'curtis@sinitic.ai'
+                instance.post('/user', {
+                    "name": name,
+                    "email": {
+                        "email": email,
+                        "category":"work"
+                    },
+                    "company_name": company
+                }).then(function (response) {
+                    console.log(response);
+                })
             }
         }
 }
