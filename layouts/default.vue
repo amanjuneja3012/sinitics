@@ -34,7 +34,6 @@
             </nuxt-link>
             <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/partners':('/'+$i18n.locale+'/partners')">
               Partners
-            </a>
             </nuxt-link>
             <!-- <nuxt-link class="Header__Link navbar-item" :to="'/#partners'">
               Partners
