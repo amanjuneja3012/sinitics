@@ -8,7 +8,7 @@
 		"header:link3_link":"/pricing",
 		"header:link4_title":"Partners",
 		"header:link4_link":"/partners",
-	  	"home:card1_header":"english Are You speaking your <span class='red'>Customer's language</span>",
+	  	"home:card1_header":"Are You speaking your <span class='red'>Customer's language</span>",
 	  	"home:card1_subtitle":"Better multilingual chatbots. Higher customer satisfaction.",
 	  	"home:card1_button1_text": "Try it Free",
 		"home:card1_button1_backgroundColor": "#ff003c",
