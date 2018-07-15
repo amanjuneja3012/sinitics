@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header class="Header">
+    <header class="Header is-hidden-touch">
       <div class="is-flex-desktop-only w100 h100 vCenter">
         <nav class="inlineFlex w50 lf navbar h70" role="navigation" aria-label="main navigation">
           <div class="navbar-brand align-center">

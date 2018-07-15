@@ -1,26 +1,52 @@
 <template>
-    <div class="content-container" :style="{
-    'width': width,
-    'height': height,
-    'padding': padding
-  }">
-        <h1 v-if='header' v-html="header"></h1>
-        <h3 v-if='subtitle && title' v-html="title"></h3>
-        <h3 v-if='subtitle === undefined && title' v-html="title" class='head-mar'></h3>
-        <p v-if='subtitle' v-html="subtitle"></p>
-        <div class="button-container">
-            <div v-if="!externalComponent" class="buttons" v-for="(button, index) in buttons" :key="index">
-                <Button
-                        :text="button.text"
-                        :to="button.to"
-                        :backgroundColor="button.backgroundColor"
-                        :color="button.color">
-                        :onClick="function(){}"
-                </Button>
+    <div>
+        <div class="content-container is-hidden-touch" :style="{
+        'width': width,
+        'height': height,
+        'padding': padding
+      }">
+            <h1 v-if='header' v-html="header"></h1>
+            <h3 v-if='subtitle && title' v-html="title"></h3>
+            <h3 v-if='subtitle === undefined && title' v-html="title" class='head-mar'></h3>
+            <p v-if='subtitle' v-html="subtitle"></p>
+            <div class="button-container">
+                <div v-if="!externalComponent" class="buttons" v-for="(button, index) in buttons" :key="index">
+                    <Button
+                            :text="button.text"
+                            :to="button.to"
+                            :backgroundColor="button.backgroundColor"
+                            :color="button.color">
+                            :onClick="function(){}"
+                    </Button>
+                </div>
+                <AppsWidget v-if="externalComponent"></AppsWidget>
+                <InputBox v-if="inputBox" :sendText="sendText" :placeHolder="placeHolder" ></InputBox>
+                <ListTypes v-if="listTypes"></ListTypes>
             </div>
-            <AppsWidget v-if="externalComponent"></AppsWidget>
-            <InputBox v-if="inputBox" :sendText="sendText" :placeHolder="placeHolder" ></InputBox>
-            <ListTypes v-if="listTypes"></ListTypes>
+        </div>
+        <div class="content-container is-hidden-desktop mobileContentCard" :style="{
+        'width': width,
+        'height': 'auto',
+        'padding': padding
+      }">
+            <h1 v-if='header' v-html="header"></h1>
+            <h3 v-if='subtitle && title' v-html="title"></h3>
+            <h3 v-if='subtitle === undefined && title' v-html="title" class='head-mar'></h3>
+            <p v-if='subtitle' v-html="subtitle"></p>
+            <div class="button-container">
+                <div v-if="!externalComponent" class="buttons" v-for="(button, index) in buttons" :key="index">
+                    <Button
+                            :text="button.text"
+                            :to="button.to"
+                            :backgroundColor="button.backgroundColor"
+                            :color="button.color">
+                            :onClick="function(){}"
+                    </Button>
+                </div>
+                <AppsWidget v-if="externalComponent"></AppsWidget>
+                <InputBox v-if="inputBox" :sendText="sendText" :placeHolder="placeHolder" ></InputBox>
+                <ListTypes v-if="listTypes"></ListTypes>
+            </div>
         </div>
     </div>
 </template>
@@ -96,5 +122,21 @@
         flex-direction: column;
         justify-content: center;
         align-items: left;
+    }
+    .mobileContentCard.content-container{
+        height: auto;
+        text-align: center;
+        padding: 5%;
+        box-sizing: border-box;
+    }
+    .mobileContentCard.content-container h1,.mobileContentCard.content-container h3{
+        font-size: 1.8em;
+        color: #1e1e1e;
+        font-weight: bold;
+        line-height: 1.2em;
+        margin-bottom: 5%;
+    }
+    .mobileContentCard.content-container p{
+        font-size: 1em;
     }
 </style>

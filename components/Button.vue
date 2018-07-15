@@ -1,12 +1,22 @@
 <template>
-    <a v-bind:href="to"><div  class="button" :style="{
-        'background-color': backgroundColor,
-        'width': width?width:'170px',
-        'color': color,
-        'justify-content': align?align:'center'}" v-on:click='(onClick)?onClick:function(){}' >
-        <img :src="iconUrl" v-if="iconUrl !== undefined" class="icon"/>
-        {{text}}
-    </div></a>
+    <a v-bind:href="to">
+        <div  class="button is-hidden-touch" :style="{
+            'background-color': backgroundColor,
+            'width': width?width:'170px',
+            'color': color,
+            'justify-content': align?align:'center'}" v-on:click='(onClick)?onClick:function(){}' >
+            <img :src="iconUrl" v-if="iconUrl !== undefined" class="icon"/>
+            {{text}}
+        </div>
+        <div  class="button is-hidden-desktop" :style="{
+            'background-color': backgroundColor,
+            'width': width?width:'145px',
+            'color': color,
+            'justify-content': align?align:'center'}" v-on:click='(onClick)?onClick:function(){}' >
+            <img :src="iconUrl" v-if="iconUrl !== undefined" class="icon"/>
+            {{text}}
+        </div>
+    </a>
 </template>
 
 <script>

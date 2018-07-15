@@ -16,7 +16,7 @@ module.exports = {
   },
   modules: [
 	  // provide path to the file with resources
-	  ['nuxt-sass-resources-loader', './static/styles/desktop/home.scss']
+	  ['nuxt-sass-resources-loader', './static/styles/desktop/home.scss','nuxt-device-detect']
 	],
 	head: {
 	    link: [

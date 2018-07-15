@@ -1,5 +1,6 @@
 <template>
-    <div class="card-container" :style="{
+    <div>
+    <div class="card-container is-hidden-touch" :style="{
     'flex-direction': showContentOnLeft === 'true'?'row':'row-reverse'
   }">
         <ActionContent
@@ -31,6 +32,40 @@
         </ActionContent>
         <div v-if="!rightComponent" class="image" :style="{'height': height,'background-size': 'contain', 'background-position': 'center', 'background-repeat': 'no-repeat', 'background-image': 'url('+imageUrl+')'}"></div>
         <BudgetCalculator v-if="rightComponent" />
+    </div>
+    <div class="card-container is-hidden-desktop mobileContentCard" :style="{
+    'flex-direction': showContentOnLeft === 'true'?'column-reverse':'column-reverse'
+  }">
+        <ActionContent
+            v-if="showContentOnLeft === 'true'"
+            width="100%"
+            :height="height"
+            :header='header'
+            :title="title"
+            :subtitle="subtitle"
+            :buttons="buttons"
+            :externalComponent="externalComponent"
+            :inputBox='inputBox'
+            :listTypes='listTypes'
+        >
+        </ActionContent>
+        <ActionContent
+                v-else
+                width="100%"
+                padding="4% 9.4% 6% 5.7%"
+                :height="height"
+                :header='header'
+                :title="title"
+                :subtitle="subtitle"
+                :buttons="buttons"
+                :externalComponent="externalComponent"
+                :inputBox='inputBox'
+                :listTypes='listTypes'
+        >
+        </ActionContent>
+        <div v-if="!rightComponent" class="image" :style="{'height': '300px','background-size': 'contain', 'background-position': (showContentOnLeft === 'true')?'right':'left', 'background-repeat': 'no-repeat', 'background-image': 'url('+imageUrl+')'}"></div>
+        <BudgetCalculator v-if="rightComponent" />
+    </div>
     </div>
 </template>
 
@@ -72,5 +107,8 @@
     }
     .content-container{
         padding: 12% 6.4% 12% 9.4%;
+    }
+    .mobileContentCard .image{
+        width:100%;
     }
 </style>
