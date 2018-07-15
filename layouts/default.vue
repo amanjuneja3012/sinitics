@@ -255,7 +255,7 @@ a.navbar-item:hover {
   padding-bottom: 30px;
 }
 .w100{
-  width:100%;
+  width:100% !important;
 }
 .w50{
   width:50%;

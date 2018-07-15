@@ -31,6 +31,12 @@
 .automation-section{
   position: relative;
 }
+.mobileContentCard.automation-section{
+  position: relative;
+  .image{
+    display:none;
+  }
+}
 .partner-down{
   left: 9.4%;
   bottom: 120px;

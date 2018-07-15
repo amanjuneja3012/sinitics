@@ -1,8 +1,15 @@
 <template>
-    <div class="email-container">
-      <input class="input" v-if=placeHolder :placeholder="placeHolder">
-      <input class="input" v-else placeholder="Suggest our next Language">
-      <div class="submit">{{sendText ? sendText : 'Suggest'}}</div>
+    <div>
+        <div class="email-container is-hidden-touch">
+          <input class="input" v-if=placeHolder :placeholder="placeHolder">
+          <input class="input" v-else placeholder="Suggest our next Language">
+          <div class="submit">{{sendText ? sendText : 'Suggest'}}</div>
+        </div>
+        <div class="email-container is-hidden-desktop mobileContentCard">
+          <input class="input" v-if=placeHolder :placeholder="placeHolder">
+          <input class="input" v-else placeholder="Suggest our next Language">
+          <div class="submit">{{sendText ? sendText : 'Suggest'}}</div>
+        </div>
     </div>
 </template>
 
@@ -26,6 +33,9 @@
         line-height: 50px;
         border: solid 1.3px #dee0e6;
         background-color: rgba(255, 255, 255, 0.9);
+    }
+    .mobileContentCard .input{
+        width: 200px;
     }
     input::-webkit-input-placeholder {
         color: #1e1e1e;

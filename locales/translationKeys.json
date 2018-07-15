@@ -121,7 +121,7 @@
             "color": "home:card5_button1_color"
           },
           {
-            "text": "   ",
+            "text": "home:card5_button2_text",
             "backgroundColor": "home:card5_button2_backgroundColor",
             "color": "home:card5_button2_color"
           }

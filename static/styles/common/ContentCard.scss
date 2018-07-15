@@ -54,3 +54,12 @@
         padding: auto !important;
     }
 }
+.carousel-card-container.mobileContentCard{
+	.VueCarousel{
+        .VueCarousel-pagination{
+			position: absolute;
+			top: -10%;
+			left: 0%;
+	    }
+    }
+}

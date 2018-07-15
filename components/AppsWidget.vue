@@ -42,6 +42,12 @@
         display: inline-block;
         transition: height 0.2s ease-in-out;
     }
+    .mobileContentCard .icon{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
     .icon{
         fill: #ff0033 !important;
     }

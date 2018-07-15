@@ -1,6 +1,6 @@
 <template>
-    <div class="rel w50">
-        <div class="budgetCalculator column">
+    <div :class="($device.isDesktop)?'rel w50':'w100'">
+        <div :class="($device.isDesktop)?'budgetCalculator column':'budgetCalculator column relImp w100'">
             <div class="column w100 black roundedTop center">
                 <div class="w50 inline-flex vTop colorWhite colorWhite-text f13"><span>Per month Savings <br> with <span class='red'>50%</span> Automation</span></div>
                 <div class="row w50 vTop inline-flex is-paddingless center alignRight">
@@ -125,6 +125,14 @@
         .text{
             font-size:12px;
         }
+    }
+    .mobileContentCard .budgetCalculator{
+        display:flex;
+        width: 100%;
+        padding: 0;
+        top: 0px;
+        left: 0px;
+        padding:2%;
     }
     .items{
         height: 130px;

@@ -33,13 +33,13 @@
         externalComponent=AppsWidget
     >
     </ContentCard>
-    <div class="automation-section">
+    <div class="automation-section is-hidden-touch">
         <ContentCard
-            :title = "$t('home.contentCards.card2.header')"
-            :subtitle = "$t('home.contentCards.card2.subtitle')"
-            :buttons = "$t('home.contentCards.card2.buttons')"
+            :title = "$t('home.contentCards.card5.header')"
+            :subtitle = "$t('home.contentCards.card5.subtitle')"
+            :buttons = "$t('home.contentCards.card5.buttons')"
             showContentOnLeft = "true"
-            :imageUrl = "$t('home.contentCards.card2.image')"
+            :imageUrl = "$t('home.contentCards.card5.image')"
             height = "620px"
             rightComponent="BudgetCalculator"
         >
@@ -48,6 +48,21 @@
             <div class="partner-text">Need a partner?</div>
             <div class="partner-icon"></div>
         </div>
+    </div>
+    <div class="automation-section is-hidden-desktop mobileContentCard">
+        <ContentCard
+            :title = "$t('home.contentCards.card5.header')"
+            :subtitle = "$t('home.contentCards.card5.subtitle')"
+            :buttons = "$t('home.contentCards.card5.buttons')"
+            showContentOnLeft = "true"
+            height = "auto"
+        >
+        </ContentCard>
+        <div class="partner-down">
+            <div class="partner-text">Need a partner?</div>
+            <div class="partner-icon"></div>
+        </div>
+        <BudgetCalculator />
     </div>
     <div class="bot-features-container">
       <p class="feature-heading">{{$t('home.contentCards.card6.header')}}</p>

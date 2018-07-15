@@ -3,7 +3,7 @@ module.exports = {
   router: {
     middleware: 'i18n',
     scrollBehavior: function(to, from, savedPosition) {
-      if (to.hash && to.hash === '#partners') {
+      if (to.hash) {
           return {selector: to.hash}
       } else {
           return { x: 0, y: 0 }
@@ -16,7 +16,8 @@ module.exports = {
   },
   modules: [
 	  // provide path to the file with resources
-	  ['nuxt-sass-resources-loader', './static/styles/desktop/home.scss','nuxt-device-detect']
+	  ['nuxt-sass-resources-loader', './static/styles/desktop/home.scss'],
+    ['nuxt-device-detect']
 	],
 	head: {
 	    link: [

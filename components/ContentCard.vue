@@ -1,6 +1,5 @@
 <template>
-    <div>
-    <div class="card-container is-hidden-touch" :style="{
+    <div class="card-container is-hidden-touch" v-if="$device.isDesktop" :style="{
     'flex-direction': showContentOnLeft === 'true'?'row':'row-reverse'
   }">
         <ActionContent
@@ -33,7 +32,7 @@
         <div v-if="!rightComponent" class="image" :style="{'height': height, 'background-image': 'url('+imageUrl+')'}"></div>
         <BudgetCalculator v-if="rightComponent" />
     </div>
-    <div class="card-container is-hidden-desktop mobileContentCard" :style="{
+    <div v-else-if="$device.isMobile" class="card-container is-hidden-desktop mobileContentCard" :style="{
     'flex-direction': showContentOnLeft === 'true'?'column-reverse':'column-reverse'
   }">
         <ActionContent
@@ -65,7 +64,6 @@
         </ActionContent>
         <div v-if="!rightComponent" class="image" :style="{'height': '300px','background-size': 'contain', 'background-position': (showContentOnLeft === 'true')?'right':'left', 'background-repeat': 'no-repeat', 'background-image': 'url('+imageUrl+')'}"></div>
         <BudgetCalculator v-if="rightComponent" />
-    </div>
     </div>
 </template>
 
