@@ -29,7 +29,7 @@
                 :listTypes='listTypes'
         >
         </ActionContent>
-        <div v-if="!rightComponent" class="image" :style="{'height': height,'background-size': 'contain', 'background-position': 'center', 'background-repeat': 'no-repeat', 'background-image': 'url('+imageUrl+')'}"></div>
+        <div v-if="!rightComponent" class="image" :style="{'height': height, 'background-image': 'url('+imageUrl+')'}"></div>
         <BudgetCalculator v-if="rightComponent" />
     </div>
 </template>
@@ -42,6 +42,9 @@
         components: {
             ActionContent,
             BudgetCalculator
+        },
+        created: function () {
+            console.log(this.showContentOnLeft)
         }
     }
 
@@ -69,8 +72,30 @@
     }
     .image{
         width: 50%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     .content-container{
         padding: 12% 6.4% 12% 9.4%;
+    }
+    @media only screen and (max-width: 768px){
+        .card-container{
+            flex-direction: column-reverse !important;
+        }
+        .card-container .image{
+            /* background-position: right; */
+            width: 100% !important;
+            height: 340px !important;
+        }
+        .card-container .left-image{
+            background-position: left !important;
+        }
+        .card-container .content-container{
+            padding: 4% !important;
+            width: 100% !important;
+            height: auto !important;
+            text-align: center !important;
+        }
     }
 </style>

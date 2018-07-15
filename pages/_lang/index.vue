@@ -68,6 +68,7 @@
                 backgroundColor="#ff003c"
                 color="white"
                 to="/pricing/#pricing-feature"
+                :onClick="function(){}"
                 >
         </Button>
     </div>

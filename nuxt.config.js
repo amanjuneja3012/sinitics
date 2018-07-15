@@ -3,7 +3,7 @@ module.exports = {
   router: {
     middleware: 'i18n',
     scrollBehavior: function(to, from, savedPosition) {
-      if (to.hash) {
+      if (to.hash && to.hash === '#partners') {
           return {selector: to.hash}
       } else {
           return { x: 0, y: 0 }

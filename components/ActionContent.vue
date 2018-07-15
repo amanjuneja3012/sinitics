@@ -14,8 +14,9 @@
                         :text="button.text"
                         :to="button.to"
                         :backgroundColor="button.backgroundColor"
-                        :color="button.color">
+                        :color="button.color"
                         :onClick="function(){}"
+                >
                 </Button>
             </div>
             <AppsWidget v-if="externalComponent"></AppsWidget>
@@ -96,5 +97,22 @@
         flex-direction: column;
         justify-content: center;
         align-items: left;
+    }
+    @media only screen and (max-width: 768px){
+        h1{
+            font-size: 1.8em !important;
+        }
+        h3{
+            font-size: 1.3em !important;
+        }
+        p{
+            font-size: 1em !important;
+        }
+        .buttons{
+            width: 140px !important;
+        }
+        .buttons.button{
+            width: 140px !important;
+        }
     }
 </style>
