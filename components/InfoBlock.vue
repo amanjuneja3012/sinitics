@@ -10,6 +10,7 @@
                 <Button
                     :text="buttonText"
                     backgroundColor="#ff003c"
+                    :onClick="function(){}"
                     color="white">
                 </Button>
             </div>

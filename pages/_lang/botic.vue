@@ -1,5 +1,5 @@
 <template>
-  <div class ='botic'>
+  <div class ='botic botic-mobile'>
     <ContentCard
       :header="$t('botic.contentCards.card1.header')"
       :subtitle="$t('botic.contentCards.card1.subtitle')"
@@ -71,6 +71,7 @@
             :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
             align="space-between"
             backgroundColor="#ff003c"
+            :onClick="function(){}"
         >
         </Button>
         <div class="side-image" ></div>
@@ -300,5 +301,8 @@
       line-height: 1.36em;
       margin-bottom: 4%;
       text-align: center;
+    }
+    .botic-mobile{
+      
     }
 </style>

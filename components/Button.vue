@@ -4,7 +4,7 @@
             'background-color': backgroundColor,
             'width': width?width:'170px',
             'color': color,
-            'justify-content': align?align:'center'}" v-on:click='(onClick)?onClick:function(){}' >
+            'justify-content': align?align:'center'}" v-on:click='onClick' >
             <img :src="iconUrl" v-if="iconUrl !== undefined" class="icon"/>
             {{text}}
         </div>
@@ -12,7 +12,7 @@
             'background-color': backgroundColor,
             'width': width?width:'145px',
             'color': color,
-            'justify-content': align?align:'center'}" v-on:click='(onClick)?onClick:function(){}' >
+            'justify-content': align?align:'center'}" v-on:click='onClick' >
             <img :src="iconUrl" v-if="iconUrl !== undefined" class="icon"/>
             {{text}}
         </div>
@@ -23,9 +23,7 @@
     export default {
         props: ['text', 'backgroundColor', 'color', 'width', 'iconUrl', 'showIcon', 'align', 'to', 'onClick']
     }
-
 </script>
-
 
 <style scoped>
     .button {

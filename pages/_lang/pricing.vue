@@ -49,22 +49,22 @@
                         <p class="price">{{selectedCurrency['symbol']+usersCount*15*selectedCurrency['conversionRatio']}}</p>
                         <p class="period">{{$t('pricing.tableData.tableHeader.leftColumn.period')}}</p>
                         <Button
-                                :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
-                                backgroundColor="#ff003c"
-                                color="white"
-                                :onClick = "toggleModal"
-                                >
+                            :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
+                            backgroundColor="#ff003c"
+                            color="white"
+                            :onClick='toggleModal'
+                        >
                         </Button>
                     </div>
                     <div class="package">
                         <p class="name">{{$t('pricing.tableData.tableHeader.rightColumn.name')}}</p>
                         <p class="price">{{selectedCurrency['symbol']+usersCount*30*selectedCurrency['conversionRatio']}}</p>
                         <p class="period">{{$t('pricing.tableData.tableHeader.rightColumn.period')}}</p>
-                        <Button
-                                :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
-                                backgroundColor="white"
-                                color="#ff003c"
-                                :onClick = "toggleModal"
+                    <Button
+                            :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
+                            backgroundColor="white"
+                            color="#ff003c"
+                            :onClick='toggleModal'
                         >
                         </Button>
                     </div>
@@ -108,18 +108,20 @@
                 <p class="price-action">Action</p>
                 <div class="price-action">
                     <Button
-                            :text="$t('pricing.tableData.buttons.primary')"
-                            backgroundColor="#ff003c"
-                            color="white"
-                            :onClick = "toggleModal" >
+                        :text="$t('pricing.tableData.buttons.primary')"
+                        backgroundColor="#ff003c"
+                        color="white"
+                        :onClick='toggleModal'
+                    >
                     </Button>
                 </div>
                 <div class="price-action">
                     <Button
-                            :text="$t('pricing.tableData.buttons.secondary')"
-                            backgroundColor="white"
-                            color="1e1e1e" 
-                            :onClick = "toggleModal" >
+                        :text="$t('pricing.tableData.buttons.secondary')"
+                        backgroundColor="white"
+                        color="1e1e1e" 
+                        :onClick='toggleModal' 
+                    >
                     </Button>
                 </div>
             </div>
@@ -161,6 +163,7 @@
                     :text="$t('pricing.tableData.questionsWidget.buttonText')"
                     :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
                     align="space-between"
+                    :onClick="function(){}"
                 >
                 </Button>
                 <div class="side-image" ></div>
@@ -248,6 +251,7 @@
                 instance.defaults.headers.common['X-PW-AccessToken'] = '5e952377dd5291aa014db0158a3fa0c1'
                 instance.defaults.headers.common['X-PW-Application'] = 'developer_api'
                 instance.defaults.headers.common['X-PW-UserEmail'] = 'curtis@sinitic.ai'
+                instance.defaults.headers.common['crossDomain'] = 'true' 
                 instance.post('/leads', JSON.stringify({
                     "name": name,
                     "email": {
@@ -257,6 +261,8 @@
                     "company_name": company
                 })).then(function (response) {
                     this.toggleModal()
+                }).catch((err) => {
+                    console.log(err)
                 })
             }
         }

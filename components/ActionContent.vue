@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div>
         <div class="content-container is-hidden-touch" :style="{
         'width': width,
