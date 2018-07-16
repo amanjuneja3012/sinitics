@@ -655,9 +655,11 @@
         padding: 0;
         height: 60px;
         font-size: 16px;
-        display: inline-block;
-        line-height: inherit;
+        display: inline-flex;
+        line-height: 15px;;
         text-align: center;
+        align-items: center;
+        justify-content: center;
     }
     .pricing-mobile td{
         display: inline-block;
