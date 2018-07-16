@@ -89,7 +89,8 @@
         </Button>
         <div class="side-image is-hidden-touch" v-if="$device.isDesktop" ></div>
     </div>
-    <Footer> </Footer>
+    <Footer v-if="$device.isDesktop"> </Footer>
+    <FooterMobile v-if="$device.isMobile"> </FooterMobile>
   </div>
 
 
@@ -99,6 +100,7 @@
     import ContentCard from '~/components/ContentCard'
     import Button from '~/components/Button'
     import Footer from '~/components/Footer'
+    import FooterMobile from '~/components/FooterMobile'
     import WorkBoxSection from '~/components/workBoxSection'
     import Tabs from '~/components/Tabs'
 
@@ -109,7 +111,8 @@
             Button,
             Footer,
             WorkBoxSection,
-            Tabs
+            Tabs,
+            FooterMobile
         },
         data: () => ({
             buttons: {

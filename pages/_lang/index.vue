@@ -168,9 +168,8 @@
             </no-ssr>
         </div>
     </div>
-    <Footer>
-
-    </Footer>
+    <Footer v-if="$device.isDesktop"> </Footer>
+    <FooterMobile v-if="$device.isMobile"> </FooterMobile>
   </div>
 
 
@@ -182,6 +181,7 @@
     import Button from '~/components/Button'
     import BotFeatureCard from '~/components/BotFeatureCard'
     import Footer from '~/components/Footer'
+    import FooterMobile from '~/components/FooterMobile'
     import stylesDesktop from '~/static/styles/desktop/home.scss'
     import stylesMobile from '~/static/styles/mobile/home.scss'
     import AppsWidget from '~/components/AppsWidget'
@@ -199,7 +199,8 @@
             BudgetCalculator,
             AppsWidget,
             InfoBlock,
-            NewsCard
+            NewsCard,
+            FooterMobile
         },
         data: () => ({
             buttons: {

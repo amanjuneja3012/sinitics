@@ -100,6 +100,7 @@
         </div>
       </div>
     </header>
+    <div class="headerPadder"></div>
     <nuxt/>
   </div>
 </template>
@@ -431,5 +432,9 @@ a.navbar-item:hover {
   display:inline-flex;
   align-items: center;
   justify-content: center;
+}
+.headerPadder{
+  height:70px;
+  width:100%;
 }
 </style>

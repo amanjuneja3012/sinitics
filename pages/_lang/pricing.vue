@@ -169,7 +169,8 @@
                 <div class="side-image" v-if="$device.isDesktop" ></div>
             </div>
         </div>
-        <Footer> </Footer>
+        <Footer v-if="$device.isDesktop"> </Footer>
+        <FooterMobile v-if="$device.isMobile"> </FooterMobile>
     </div>
 
 </template>
@@ -179,6 +180,7 @@
     import Button from '~/components/Button';
     import CardWithIcon from '~/components/CardWithIcon';
     import Footer from '~/components/Footer';
+    import FooterMobile from '~/components/FooterMobile';
     import Modal from '~/components/Modal';
     import NoSSR from 'vue-no-ssr';
     import axios from 'axios';
@@ -195,7 +197,8 @@
             Button,
             Footer,
             Modal,
-            CardWithIcon
+            CardWithIcon,
+            FooterMobile
         }),
         data: () => ({
             showModal: false,
