@@ -1,7 +1,7 @@
 <template>
   <div>
-    <header class="Header is-hidden-touch">
-      <div class="is-flex-desktop-only w100 h100 vCenter">
+    <header class="Header is-flex-desktop-only">
+      <div class="w100 h100 vCenter" v-if="$device.isDesktop">
         <nav class="inlineFlex w50 lf navbar h70" role="navigation" aria-label="main navigation">
           <div class="navbar-brand align-center">
             <nuxt-link class="Header__Logo Header__Link navbar-item" :to="($i18n.locale=='en')?'/':('/'+$i18n.locale+'/')">
@@ -39,7 +39,7 @@
             </span> -->
           </div>
         </nav>
-        <div class="inlineFlex w50 rf is-hidden-touch">  
+        <div class="inlineFlex w50 rf">  
           <nav class="Header__Menu">
             <!-- <div class=" is-small is-rounded mr20 blackOpaque">
               Login Now
@@ -70,6 +70,32 @@
             }"></div>
               <div class="flagText">{{language.language}}</div>
             </nuxt-link>
+          </div>
+        </div>
+      </div>
+      <div class="mobileHeader" v-else-if="$device.isMobile">
+        <div class="logo"></div>
+        <div class="hamburger">
+          <div v-if="!visibility" class="hamburgerMenuIcon" v-on:click="visibility=true">
+          </div>
+          <div v-if="visibility" class="hamburgerMenuCloseIcon" v-on:click="visibility=false">X
+          </div>
+        </div>
+        <div class="fullscreenDropdown row" v-if="visibility">
+          <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/botic':('/'+$i18n.locale+'/botic')">
+            BoticAI
+          </nuxt-link>
+          <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
+                Pricing
+          </nuxt-link>
+          <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')">
+            Partners
+          </nuxt-link>
+          <div class="item">
+            <div class="Header__Button">Login Now</div>
+          </div>
+          <div class="item">
+            <div class="Header__Button Header__Button_2">Try it Free</div>
           </div>
         </div>
       </div>
@@ -118,7 +144,8 @@ export default {
       'languageKey':'en',
       'flagUrl':'/images/english/uk@3x.png'
     },
-    languageOverlayVisibility:false
+    languageOverlayVisibility:false,
+    visibility:false
   }),
   methods: {
     scrollTo: (event) => {
@@ -184,7 +211,6 @@ body{
   position: fixed;
   top: 0;
   width: 100%;
-  display: flex;
   align-items: center;
   z-index:99;
   max-width: 1440px;
@@ -350,5 +376,60 @@ a.navbar-item:hover {
   background-position: center;
   background-size: contain;
   background-image: url('/static/arrow.svg');
+}
+.mobileHeader{
+  height:70px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.mobileHeader .logo{
+  background-image:url('/static/images/english/logo@2x.png');
+  width: 123px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.mobileHeader .hamburger{
+  position:relative;
+}
+.mobileHeader .hamburger .hamburgerMenuIcon{
+  background-image:url('/static/images/english/hamburgerIcon@3x.png');
+  width: 35px;
+  height: 35px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor:pointer;
+}
+.mobileHeader .hamburger .hamburgerMenuCloseIcon{
+  color: black;
+  font-size: 35px;
+  cursor:pointer;
+}
+.mobileHeader .fullscreenDropdown{
+  position: fixed;
+  top: 70px;
+  width: 100%;
+  background: white;
+  height: 100vh;
+  min-height: 300px;
+  left: 0px;
+  padding-top: 20px;
+}
+.mobileHeader .fullscreenDropdown .item{
+  align-items:center;
+  padding:12px 10px;
+  color:#1e1e1e;
+  justify-content:center;
+  text-align:center;
+  display:block;
+}
+
+.mobileHeader .Header__Button{
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
