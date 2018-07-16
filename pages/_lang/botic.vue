@@ -19,22 +19,34 @@
       listTypes="true"
     >
     </ContentCard>
-    <div class="bots-features-container">
+    <div class="bots-features-container is-flex-mobile">
       <p class="feature-heading head-workbox" v-html="$t('botic.processDetailsWidget.heading')"></p>
-      <WorkBoxSection 
-        :leftCard="$t('botic.processDetailsWidget.step1.leftCard')"
-        :rightCard="$t('botic.processDetailsWidget.step1.rightCard')"
-        :rightCardHighlight=true
-      />
-      <WorkBoxSection 
-        :leftCard="$t('botic.processDetailsWidget.step2.leftCard')"
-        :rightCard="$t('botic.processDetailsWidget.step2.rightCard')"
-      />
-      <WorkBoxSection 
-        :leftCard="$t('botic.processDetailsWidget.step3.leftCard')"
-        :rightCard="$t('botic.processDetailsWidget.step3.rightCard')"
-        :rightCardHighlight=true
-      />
+      <div class='is-hidden-touch'>
+        <WorkBoxSection 
+          :leftCard="$t('botic.processDetailsWidget.step1.leftCard')"
+          :rightCard="$t('botic.processDetailsWidget.step1.rightCard')"
+          :rightCardHighlight=true
+        />
+        <WorkBoxSection 
+          :leftCard="$t('botic.processDetailsWidget.step2.leftCard')"
+          :rightCard="$t('botic.processDetailsWidget.step2.rightCard')"
+        />
+        <WorkBoxSection 
+          :leftCard="$t('botic.processDetailsWidget.step3.leftCard')"
+          :rightCard="$t('botic.processDetailsWidget.step3.rightCard')"
+          :rightCardHighlight=true
+        />
+      </div>
+      <div class='is-hidden-desktop'>
+        <WorkBoxSection 
+          :card1="$t('botic.processDetailsWidget.step1.leftCard')"
+          :card2="$t('botic.processDetailsWidget.step1.rightCard')"
+          :card3="$t('botic.processDetailsWidget.step2.leftCard')"
+          :card4="$t('botic.processDetailsWidget.step2.rightCard')"
+          :card5="$t('botic.processDetailsWidget.step3.leftCard')"
+          :card6="$t('botic.processDetailsWidget.step3.rightCard')"
+        />
+      </div>
     </div>
     <div class="tabs-container">
       <h3 class='tabs-header' >Pushing the limits of <br> <span class=red>Natural Language Processing</span></h3>
@@ -63,7 +75,8 @@
       </ContentCard>
     </div> -->
     <div class="questions">
-        <p class="page-title question-title">{{$t('pricing.tableData.questionsWidget.title')}}</p>
+        <p class="page-title is-hidden-touch question-title">{{$t('pricing.tableData.questionsWidget.title')}}</p>
+        <p class="page-title is-hidden-desktop ">{{$t('pricing.tableData.questionsWidget.title')}}</p>
         <Button
             color="white"
             width="230px"
@@ -74,7 +87,7 @@
             :onClick="function(){}"
         >
         </Button>
-        <div class="side-image" ></div>
+        <div class="side-image is-hidden-touch" ></div>
     </div>
     <Footer> </Footer>
   </div>
@@ -159,6 +172,9 @@
     align-items: center;
     margin-top: 150px;
     margin-bottom: 150px;
+  }
+  .is-flex-mobile{
+    margin-top: 0px;
   }
   .head-workbox{
     margin-bottom: 40px;
@@ -264,13 +280,15 @@
   .footer-container{
     margin-top: 0px;
   }
-  .question-title{
+  .page-title{
         font-size: 2em;
         color: #1e1e1e;
         font-weight: bold;
-        margin-top: 150px;
         line-height: 1.1em;
         margin-bottom: 40px;
+    }
+    .question-title {
+      margin-top: 150px;
     }
     .questions{
         display: flex;
@@ -302,7 +320,7 @@
       margin-bottom: 4%;
       text-align: center;
     }
-    .botic-mobile{
+    .questions{
       
     }
 </style>

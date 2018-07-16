@@ -44,7 +44,7 @@
                     </Button>
                 </div>
                 <AppsWidget v-if="externalComponent"></AppsWidget>
-                <InputBox v-if="inputBox" :sendText="sendText" :placeHolder="placeHolder" ></InputBox>
+                <InputBox class="input-cont" v-if="inputBox" :sendText="sendText" :placeHolder="placeHolder" ></InputBox>
                 <ListTypes v-if="listTypes"></ListTypes>
             </div>
         </div>
@@ -127,6 +127,7 @@
         height: auto;
         text-align: center;
         padding: 5%;
+        margin-bottom: 100px;
         box-sizing: border-box;
     }
     .mobileContentCard.content-container h1,.mobileContentCard.content-container h3{
@@ -138,5 +139,12 @@
     }
     .mobileContentCard.content-container p{
         font-size: 1em;
+    }
+    .mobileContentCard .button-container{
+        margin: 0 auto;
+    }
+    .mobileContentCard.content-container .input-cont{
+        margin: 0 auto;
+        width: 350px;
     }
 </style>
