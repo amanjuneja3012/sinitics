@@ -689,4 +689,30 @@
     .pricing-mobile .sector-cards {
         text-align: center;
     }
+    .pricing-mobile .package{
+        height: 220px;
+    }
+    .pricing-mobile .package .name{
+        margin-top: 20px;
+    }
+    .pricing-mobile .package .price{
+        margin-top: 10px;
+    }
+    .pricing-mobile .package .period{
+        margin-bottom: 10px;
+    }
+    .pricing-mobile .item-name{
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 15px;
+    }
+    .pricing-mobile .price-action{
+        width: 27%;
+        margin: 5%;
+    }
+    .pricing-mobile .feature-container{
+        margin-left: 0px !important;
+    }
 </style>
