@@ -1,9 +1,8 @@
 <template>
-    
-        <div v-if="$device.isDesktop" class="content-container is-hidden-touch" :style="{
-        'width': width,
-        'height': height,
-        'padding': padding
+    <div v-if="$device.isDesktop" class="content-container is-hidden-touch" :style="{
+    'width': width,
+    'height': height,
+    'padding': padding
       }">
             <h1 v-if='header' v-html="header"></h1>
             <h3 v-if='subtitle && title' v-html="title"></h3>
@@ -12,11 +11,12 @@
             <div class="button-container">
                 <div v-if="!externalComponent" class="buttons" v-for="(button, index) in buttons" :key="index">
                     <Button
-                            :text="button.text"
-                            :to="button.to"
-                            :backgroundColor="button.backgroundColor"
-                            :color="button.color">
-                            :onClick="function(){}"
+                        :text="button.text"
+                        :to="button.to"
+                        :backgroundColor="button.backgroundColor"
+                        :color="button.color"
+                        :onClick="function(){}"
+                        >
                     </Button>
                 </div>
                 <AppsWidget v-if="externalComponent"></AppsWidget>
@@ -39,8 +39,9 @@
                             :text="button.text"
                             :to="button.to"
                             :backgroundColor="button.backgroundColor"
-                            :color="button.color">
+                            :color="button.color"
                             :onClick="function(){}"
+                    >
                     </Button>
                 </div>
                 <AppsWidget v-if="externalComponent"></AppsWidget>

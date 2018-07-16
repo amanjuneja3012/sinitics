@@ -21,7 +21,7 @@
     </ContentCard>
     <div class="bots-features-container is-flex-mobile">
       <p class="feature-heading head-workbox" v-html="$t('botic.processDetailsWidget.heading')"></p>
-      <div class='is-hidden-touch'>
+      <div class='workbox-desktop' v-if="$device.isDesktop">
         <WorkBoxSection 
           :leftCard="$t('botic.processDetailsWidget.step1.leftCard')"
           :rightCard="$t('botic.processDetailsWidget.step1.rightCard')"
@@ -37,7 +37,7 @@
           :rightCardHighlight=true
         />
       </div>
-      <div class='is-hidden-desktop'>
+      <div class='workbox-mobile' v-else-if="$device.isMobile">
         <WorkBoxSection 
           :card1="$t('botic.processDetailsWidget.step1.leftCard')"
           :card2="$t('botic.processDetailsWidget.step1.rightCard')"
@@ -192,11 +192,11 @@
   .circle{
     color: white;
     width: 30px;
-    height: 26px;
+    height: 30px;
     border-radius: 50%;
     background-color: #bac4cd;
     text-align: center;
-    line-height: 26px;
+    line-height: 30px;
   }
   .red-circle{
     background-color: #ff003c;
@@ -206,6 +206,9 @@
     display: inline-block;
     vertical-align: middle;
     border: solid 0.5px #bac4cd;
+  }
+  .workbox-desktop{
+    width: 100%;
   }
   .workbox-section{
     margin-bottom: 3%;
@@ -221,7 +224,7 @@
   .workbox{
     position: relative;
     display: inline-block;
-    padding: 10px 2% 4px;    
+    padding: 10px 2% 4px;
     max-width: 353px;
     max-height: 178px;
     border-radius: 2.6px;
@@ -231,6 +234,32 @@
   .workbox-hightlight{
     background-color: rgba(255, 52, 77, 0.06);
     border: solid 1.3px #ff344d;
+  }
+  .workbox-mobile{
+    width: 100%;
+  }
+  .workbox-mobile .workbox-container{
+    display: block;
+    width: 100%;
+    padding: 0 6%;
+    white-space: nowrap;
+    overflow: auto;
+  }
+  .workbox-mobile .workbox-section{
+    margin-bottom: 0px;
+
+  }
+  .workbox-mobile .workbox{
+    width: 314px;
+    height: 180px;
+    vertical-align: top;
+    white-space: normal;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  .workbox-mobile .circle{
+    right: 4px;
+    position: absolute;
   }
   .w-header{
     font-size: 20px;

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class='is-hidden-touch'>
+    <div v-if="$device.isDesktop" class='is-hidden-touch'>
       <div class='workbox-section' >
         <div class='divider'>
           <div class='circle'>{{leftCard.index}}</div>
@@ -21,7 +21,7 @@
         </div>
       </div>
   </div>
-    <div class='workbox-section is-hidden-desktop' >
+    <div v-else-if="$device.isMobile" class='workbox-section is-hidden-desktop' >
       <div class='workbox-container'>
         <div class='workbox'>
           <div class='circle'>{{card1.index}}</div>
@@ -53,7 +53,7 @@
           <div class='w-content'>{{card5.content}}</div>
           <img :src="card5.image" class='w-icon' />
         </div>
-        <div class='workbox'>
+        <div class='workbox workbox-hightlight'>
           <div class='circle'>{{card6.index}}</div>
           <div class='w-header'>{{card6.heading}}</div>
           <div class='w-content'>{{card6.content}}</div>
