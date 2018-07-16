@@ -3,19 +3,19 @@
         <div class="email-container is-hidden-touch" v-if="$device.isDesktop" >
           <input class="input" v-if=placeHolder :placeholder="placeHolder">
           <input class="input" v-else placeholder="Suggest our next Language">
-          <div class="submit">{{sendText ? sendText : 'Suggest'}}</div>
+          <div class="submit" v-bind:click='onSubmit'>{{sendText ? sendText : 'Suggest'}}</div>
         </div>
         <div class="email-container is-hidden-desktop mobileContentCard" v-else-if="$device.isMobile" >
           <input class="input" v-if=placeHolder :placeholder="placeHolder">
           <input class="input" v-else placeholder="Suggest our next Language">
-          <div class="submit">{{sendText ? sendText : 'Suggest'}}</div>
+          <div class="submit" v-bind:click='onSubmit'>{{sendText ? sendText : 'Suggest'}}</div>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['sendText', 'placeHolder'],
+        props: ['sendText', 'placeHolder', 'onSubmit'],
         components: {
         }
     }
@@ -57,5 +57,8 @@
     .icon-container{
         display: flex;
         margin-top: 75px;
+    }
+    .is-hidden-desktop .submit{
+        font-size: 13px;
     }
 </style>
