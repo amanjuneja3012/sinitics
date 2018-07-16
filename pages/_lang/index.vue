@@ -28,6 +28,7 @@
         :title="$t('home.contentCards.card4.header')"
         :subtitle = "$t('home.contentCards.card4.subtitle')"
         showContentOnLeft="false"
+        imageCenter="true"
         :imageUrl="$t('home.contentCards.card4.image')"
         height="560px"
         externalComponent=AppsWidget
@@ -64,7 +65,7 @@
         </div>
         <BudgetCalculator />
     </div>
-    <div class="bot-features-container">
+    <div :class="($device.isDesktop)?'desktop bot-features-container':'bot-features-container mobile'">
       <p class="feature-heading">{{$t('home.contentCards.card6.header')}}</p>
       <div class="features-container">
         <BotFeatureCard
@@ -87,7 +88,7 @@
                 >
         </Button>
     </div>
-    <div class="enterpriseInfo rel flex center" id="partners">
+    <div class="enterpriseInfo rel flex center" id="partners" v-if="$device.isDesktop">
         <div class="infoBack"></div>
         <div class="row w800 h340 widgetContainer">
             <div class="column widgetHeader">
@@ -113,13 +114,49 @@
             />
         </div>
     </div>
+    <div class="enterpriseInfo rel flex center column hAuto mobile" id="partners" v-if="$device.isMobile">
+        <div class="column widgetHeader w100">
+            <h3 class="text head-text bold">Have a <span class="ml5 red"> Client</span>?</h3>
+            <div class="tabs f13">
+                <div class="tab tab-left-button w50 inlineFlex center padding10 borderRight" v-bind:class="{ active: isActiveFirst }" v-on:click="ActivateFirst" >Agency</div>
+                <div class="tab tab-right-button w50 inlineFlex center padding10" v-bind:class="{ active: isActiveSecond }" v-on:click="ActivateSecond" >System Integrator</div>
+            </div>
+        </div>
+        <InfoBlock 
+            buttonText="Enterprise"
+            heading="Agency"
+            text="Botic enterprise & small business bots have what it takes to launch products and brands-scheduling, human takeover, analytics, omnichannel & more"
+            image="/images/english/agency@3x.png"
+            :visibility='isActiveFirst'
+        />
+        <InfoBlock
+            buttonText="Book a Demo"
+            heading="System Integrator"
+            text="Sinitic enterprise bots have the features needs for complex solutions: NLP, human takeover, bot training, local hosting, integrations & more"
+            image="images/english/integrator@3x.png"
+            :visibility='isActiveSecond'
+        />
+    </div>
     <div class="newsCarouselWidget">
         <h3 class="news-heading">Don’t miss the latest <span class="red">Botic News</span></h3>
         <div class="leftAbs"></div>
         <div class="rightAbs"></div>
-        <div class="newsCarousel inlineFlex">
+        <div class="newsCarousel inlineFlex" v-if="$device.isDesktop">
             <no-ssr placeholder="Loading...">
                 <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :paginationEnabled=false :perPage=5 :navigationEnabled="true">
+                    <slide v-for="(slideObj,index) in $t('home.newsCarouselWidget.slides')" :key="index">
+                        <NewsCard
+                            :image="slideObj.image"
+                            :content="slideObj.content"
+                        >
+                        </NewsCard>
+                    </slide>
+                </carousel>
+            </no-ssr>
+        </div>
+        <div class="newsCarousel inlineFlex" v-if="$device.isMobile">
+            <no-ssr placeholder="Loading...">
+                <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :paginationEnabled=false :perPage=1 :navigationEnabled="true">
                     <slide v-for="(slideObj,index) in $t('home.newsCarouselWidget.slides')" :key="index">
                         <NewsCard
                             :image="slideObj.image"

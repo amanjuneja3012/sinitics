@@ -219,4 +219,10 @@
         border: solid 1px #3a3a3a;
         color: white;
     }
+    .mobileContentCard .calcBack{
+        width: 100%;
+        height: 500px;
+        top: 40%;
+        left: 0%;
+    }
 </style>

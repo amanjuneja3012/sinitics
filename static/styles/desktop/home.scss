@@ -28,6 +28,15 @@
   align-items: center;
   margin-top: 100px;
 }
+.bot-features-container.mobile{
+  .features-container{
+    flex-direction: column;
+    .feature-container{
+      margin-left:0px;
+      margin-bottom:20px;
+    }
+  }
+}
 .automation-section{
   position: relative;
 }
@@ -69,6 +78,30 @@
   left: 0%;
   padding: 5%;
   box-sizing: border-box;
+}
+.infoBlock.mobile{
+  .leftImage{
+    height:200px;
+  }
+  .column{
+    text-align:center;
+  }
+}
+.enterpriseInfo.mobile{
+  padding:20px;
+  .head-text{
+    margin-bottom:20px;
+    font-size:1.6em;
+  }
+  .tabs{
+    .tab{
+      font-size:1.2em;
+    }
+  }
+  .widgetHeader{
+    padding: 1% 0% 20% 0%;
+    text-align: center;
+  }
 }
 .enterpriseInfo{
   height: 700px;
