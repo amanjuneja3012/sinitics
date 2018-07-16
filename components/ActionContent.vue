@@ -85,7 +85,7 @@
                         "category": this.sendText
                     },
                 })).then(function (response) {
-                    this.toggleModal()
+                    this.sendText = submitted
                 }).catch((err) => {
                     console.log(err)
                 })
