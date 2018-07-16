@@ -1,9 +1,8 @@
 <template>
-    
-        <div v-if="$device.isDesktop" class="content-container is-hidden-touch" :style="{
-        'width': width,
-        'height': height,
-        'padding': padding
+    <div v-if="$device.isDesktop" class="content-container is-hidden-touch" :style="{
+    'width': width,
+    'height': height,
+    'padding': padding
       }">
             <h1 v-if='header' v-html="header"></h1>
             <h3 v-if='subtitle && title' v-html="title"></h3>
@@ -12,11 +11,12 @@
             <div class="button-container">
                 <div v-if="!externalComponent" class="buttons" v-for="(button, index) in buttons" :key="index">
                     <Button
-                            :text="button.text"
-                            :to="button.to"
-                            :backgroundColor="button.backgroundColor"
-                            :color="button.color">
-                            :onClick="function(){}"
+                        :text="button.text"
+                        :to="button.to"
+                        :backgroundColor="button.backgroundColor"
+                        :color="button.color"
+                        :onClick="function(){}"
+                        >
                     </Button>
                 </div>
                 <AppsWidget v-if="externalComponent"></AppsWidget>
@@ -39,8 +39,9 @@
                             :text="button.text"
                             :to="button.to"
                             :backgroundColor="button.backgroundColor"
-                            :color="button.color">
+                            :color="button.color"
                             :onClick="function(){}"
+                    >
                     </Button>
                 </div>
                 <AppsWidget v-if="externalComponent"></AppsWidget>
@@ -127,6 +128,7 @@
         height: auto;
         text-align: center;
         padding: 5%;
+        margin-bottom: 100px;
         box-sizing: border-box;
     }
     .mobileContentCard.content-container h1,.mobileContentCard.content-container h3{
@@ -138,5 +140,12 @@
     }
     .mobileContentCard.content-container p{
         font-size: 1em;
+    }
+    .mobileContentCard .button-container{
+        margin: 0 auto;
+    }
+    .mobileContentCard.content-container .input-cont{
+        margin: 0 auto;
+        width: 350px;
     }
 </style>

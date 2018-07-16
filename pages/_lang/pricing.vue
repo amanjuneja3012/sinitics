@@ -1,5 +1,5 @@
 <template>
-    <div id='pricing'>
+    <div id='pricing' :class="($device.isDesktop)?'pricing-desktop':'pricing-mobile'">
         <div class="pricing-container">
             <p class="page-title top-title">{{$t('pricing.title')}}</p>
             <div class="toggle">
@@ -9,7 +9,7 @@
                     <span class="slider round"></span>
                 </label>
                 <p class="yearly">{{$t('pricing.checkBoxDetails.rightStr')}}</p>
-                <p class="tagss">{{$t('pricing.checkBoxDetails.tag')}}</p>
+                <p class="tagss" v-if=$device.isDesktop >{{$t('pricing.checkBoxDetails.tag')}}</p>
             </div>
             <div class="currencyChange">
                 <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" :class="(selectedCurrency['key']==currency['key'])?'selected':''">
@@ -42,7 +42,7 @@
                     </vue-slider>
                 </div>
             </no-ssr>
-            <div class="pricing-table">
+            <div class="pricing-table" >
                 <div class="packages">
                     <div class="package">
                         <p class="name">{{$t('pricing.tableData.tableHeader.leftColumn.name')}}</p>
@@ -166,7 +166,7 @@
                     :onClick="function(){}"
                 >
                 </Button>
-                <div class="side-image" ></div>
+                <div class="side-image" v-if="$device.isDesktop" ></div>
             </div>
         </div>
         <Footer> </Footer>
@@ -336,6 +336,7 @@
     }
     th, td {
         height: 60px;
+        line-height: 60px;
         padding: 0 40px 0 40px;
         border: 1px solid #dee0e6;
         width: 33.33%;
@@ -626,5 +627,63 @@
     .userSlider .vue-slider-tooltip-wrap{
         display:block !important;
         opacity:1 !important;
+    }
+    .pricing-mobile .pricing-container{
+        width: 84%;
+    }
+    .pricing-mobile .top-title{
+        font-size: 1.8em;
+    }
+    .pricing-mobile .monthly, .pricing-mobile .yearly {
+        font-size: 18px;
+    }
+    .pricing-mobile .vue-slider-tooltip{
+        font-size: 8px;
+    }
+    .pricing-mobile .price{
+        font-size: 24px;
+    }
+    .pricing-mobile thead, .pricing-mobile tr{
+        display: inline-block;
+        padding: 0;
+        text-align: center;
+    }
+    .pricing-mobile th{
+        padding: 0;
+        height: 60px;
+        font-size: 16px;
+        display: inline-block;
+        line-height: inherit;
+        text-align: center;
+    }
+    .pricing-mobile td{
+        display: inline-block;
+        line-height: inherit;
+        font-size: 14px;
+        padding: 0;
+        line-height: 36px;
+        height: 64px;
+        text-align: center;
+    }
+    .pricing-mobile tr {
+        width: 100%;
+    }
+    .pricing-mobile thead{
+        width: 100%;
+    }
+    .pricing-mobile .no-feature{
+        text-align: center;
+        margin: 0 auto;
+        line-height: 60px;
+        margin-top: 30px;
+    }
+    .pricing-mobile .price-action{
+        margin-left: 0px;
+    }
+    .pricing-mobile .feature-container{
+        margin: 0 auto;
+    }
+    .pricing-mobile .sector-cards {
+        text-align: center;
     }
 </style>

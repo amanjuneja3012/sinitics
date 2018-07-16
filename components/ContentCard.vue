@@ -62,7 +62,7 @@
                 :listTypes='listTypes'
         >
         </ActionContent>
-        <div v-if="!rightComponent" class="image" :style="{'height': '300px','background-size': 'contain', 'background-position': (showContentOnLeft === 'true')?'right':'left', 'background-repeat': 'no-repeat', 'background-image': 'url('+imageUrl+')'}"></div>
+        <div v-if="!rightComponent" class="image" :style="{'height': '340px','background-size': 'contain', 'background-position': (showContentOnLeft === 'true')?'right':'left', 'background-repeat': 'no-repeat', 'background-image': 'url('+imageUrl+')'}"></div>
         <BudgetCalculator v-if="rightComponent" />
     </div>
 </template>
