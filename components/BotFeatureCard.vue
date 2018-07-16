@@ -48,4 +48,14 @@
         color: #1e1e1e;
         margin-top: 10px;
     }
+    .mobile .feature-container .title{
+        font-size:22px;
+    }
+    .mobile .feature-container .subTitle{
+        font-size:18px;
+    }
+    .mobile .feature-container .icon{
+        width: 100px;
+        height: 100px;
+    }
 </style>

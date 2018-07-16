@@ -71,7 +71,7 @@
     import ActionContent from '~/components/ActionContent';
     import BudgetCalculator from '~/components/BudgetCalculator'
     export default {
-        props: ['padding', 'title', 'header', 'subtitle', 'buttons', 'showContentOnLeft', 'imageUrl', 'height', 'externalComponent', 'rightComponent', 'inputBox', 'listTypes'],
+        props: ['padding', 'title', 'header', 'subtitle', 'buttons', 'showContentOnLeft', 'imageUrl', 'height', 'externalComponent', 'rightComponent', 'inputBox', 'listTypes', 'imageCenter'],
         components: {
             ActionContent,
             BudgetCalculator
@@ -102,6 +102,9 @@
         width: 100%;
         justify-content: center;
         align-content: center;
+    }
+    .mobileContentCard.card-container{
+        margin-bottom:50px;
     }
     .image{
         width: 50%;

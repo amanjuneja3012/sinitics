@@ -64,6 +64,7 @@
         justify-content: center;
         align-content: center;
         flex-direction:column-reverse;
+        margin-bottom:50px;
     }
     .mobileContentCard .image{
         width:100%;

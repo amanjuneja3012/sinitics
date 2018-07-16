@@ -12,6 +12,7 @@
             'background-color': backgroundColor,
             'width': width?width:'145px',
             'color': color,
+            'display': 'inline-flex',
             'justify-content': align?align:'center'}" v-on:click='onClick' >
             <img :src="iconUrl" v-if="iconUrl !== undefined" class="icon"/>
             {{text}}
