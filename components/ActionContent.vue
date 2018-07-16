@@ -45,7 +45,7 @@
                     </Button>
                 </div>
                 <AppsWidget v-if="externalComponent"></AppsWidget>
-                <InputBox class="input-cont" v-if="inputBox" :sendText="sendText" :placeHolder="placeHolder" ></InputBox>
+                <InputBox v-if="inputBox" :sendText="sendText" :placeHolder="placeHolder" ></InputBox>
                 <ListTypes v-if="listTypes"></ListTypes>
             </div>
         </div>

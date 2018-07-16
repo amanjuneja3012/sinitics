@@ -166,7 +166,7 @@
                     :onClick="function(){}"
                 >
                 </Button>
-                <div class="side-image" ></div>
+                <div class="side-image" v-if="$device.isDesktop" ></div>
             </div>
         </div>
         <Footer> </Footer>

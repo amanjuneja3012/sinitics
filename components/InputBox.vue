@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div class="email-container is-hidden-touch">
+        <div class="email-container is-hidden-touch" v-if="$device.isDesktop" >
           <input class="input" v-if=placeHolder :placeholder="placeHolder">
           <input class="input" v-else placeholder="Suggest our next Language">
           <div class="submit">{{sendText ? sendText : 'Suggest'}}</div>
         </div>
-        <div class="email-container is-hidden-desktop mobileContentCard">
+        <div class="email-container is-hidden-desktop mobileContentCard" v-else-if="$device.isMobile" >
           <input class="input" v-if=placeHolder :placeholder="placeHolder">
           <input class="input" v-else placeholder="Suggest our next Language">
           <div class="submit">{{sendText ? sendText : 'Suggest'}}</div>

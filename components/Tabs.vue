@@ -1,78 +1,154 @@
 <template>
     <div>
-        <div class="tabs is-centered is-toggle">
-            <ul>
-                <li class='tab-head has-border' v-bind:class="{ 'is-active': isActiveFirst }" v-on:click="ActivateFirst" >
-                    <span class="icon icon-1 is-small"></span>
-                    <span>Multilingual</span>
-                </li>
-                <li class='tab-head has-border' v-bind:class="{ 'is-active': isActiveSecond }" v-on:click="ActivateSecond" >
-                    <span class="icon icon-2 is-small"></span>
-                    <span>Multitask</span>
-                </li>
-                <li class='tab-head' v-bind:class="{ 'is-active': isActiveThird }" v-on:click="ActivateThird" >
-                    <span class="icon icon-3 is-small"></span>
-                    <span>Multiturn</span>
-                </li>
-            </ul>
+        <div v-if="$device.isDesktop">
+            <div class="tabs is-centered is-toggle">
+                <ul>
+                    <li class='tab-head has-border' v-bind:class="{ 'is-active': isActiveFirst }" v-on:click="ActivateFirst" >
+                        <span class="icon icon-1 is-small"></span>
+                        <span>Multilingual</span>
+                    </li>
+                    <li class='tab-head has-border' v-bind:class="{ 'is-active': isActiveSecond }" v-on:click="ActivateSecond" >
+                        <span class="icon icon-2 is-small"></span>
+                        <span>Multitask</span>
+                    </li>
+                    <li class='tab-head' v-bind:class="{ 'is-active': isActiveThird }" v-on:click="ActivateThird" >
+                        <span class="icon icon-3 is-small"></span>
+                        <span>Multiturn</span>
+                    </li>
+                </ul>
+            </div>
+            <div class='content' v-bind:class="{ 'active-content': isActiveFirst }">
+                <div class='tab-content-container tab-contents'>
+                    <div class='tab-image tab-image-1'>
+                        <div class='prob-sol problem-image-1'></div>
+                    </div>
+                    <div class='tab-image tab-image-2'>
+                        <div class='prob-sol solution-image-1'></div>
+                    </div>
+                </div>
+                <div class='tab-content-container tab-content-container-2'>
+                    <div class='tab-content-text tab-content-text-left'>
+                        <div class='tab-content-text-head'>Problem</div>
+                        <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                    </div>
+                    <div class='tab-content-text'>
+                        <div class='tab-content-text-head'>Solution</div>
+                        <div class='tab-content-text-content'>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+                    </div>
+                </div>
+            </div>
+            <div class='content' v-bind:class="{ 'active-content': isActiveSecond }" >
+                <div class='tab-content-container tab-contents'>
+                    <div class='tab-image tab-image-1'>
+                        <div class='prob-sol problem-image-2'></div>
+                    </div>
+                    <div class='tab-image tab-image-2'>
+                        <div class='prob-sol solution-image-2'></div>
+                    </div>
+                </div>
+                <div class='tab-content-container tab-content-container-2'>
+                    <div class='tab-content-text tab-content-text-left'>
+                        <div class='tab-content-text-head'>Problem</div>
+                        <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                    </div>
+                    <div class='tab-content-text'>
+                        <div class='tab-content-text-head'>Solution</div>
+                        <div class='tab-content-text-content'>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+                    </div>
+                </div>
+            </div>
+            <div class='content' v-bind:class="{ 'active-content': isActiveThird }">
+                <div class='tab-content-container tab-contents'>
+                    <div class='tab-image tab-image-1'>
+                        <div class='prob-sol problem-image-3'></div>
+                    </div>
+                    <div class='tab-image tab-image-2'>
+                        <div class='prob-sol solution-image-3'></div>
+                    </div>
+                </div>
+                <div class='tab-content-container tab-content-container-2'>
+                    <div class='tab-content-text tab-content-text-left'>
+                        <div class='tab-content-text-head'>Problem</div>
+                        <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                    </div>
+                    <div class='tab-content-text'>
+                        <div class='tab-content-text-head'>Solution</div>
+                        <div class='tab-content-text-content'>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class='content' v-bind:class="{ 'active-content': isActiveFirst }">
-            <div class='tab-content-container tab-contents'>
-                <div class='tab-image tab-image-1'>
-                    <div class='prob-sol problem-image-1'></div>
+        <div v-else-if="$device.isMobile" class='mobile-tabs' >
+            <li class='tab-head has-border'>
+                <span class="icon icon-1 is-small"></span>
+                <span>Multilingual</span>
+            </li>
+            <div class='content active-content'>
+                <div class='tab-content-container tab-contents'>
+                    <div class='tab-image tab-image-1'>
+                        <div class='prob-sol problem-image-1'></div>
+                    </div>
+                    <div class='tab-image tab-image-2'>
+                        <div class='prob-sol solution-image-1'></div>
+                    </div>
                 </div>
-                <div class='tab-image tab-image-2'>
-                    <div class='prob-sol solution-image-1'></div>
-                </div>
-            </div>
-            <div class='tab-content-container tab-content-container-2'>
-                <div class='tab-content-text tab-content-text-left'>
-                    <div class='tab-content-text-head'>Problem</div>
-                    <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
-                </div>
-                <div class='tab-content-text'>
-                    <div class='tab-content-text-head'>Solution</div>
-                    <div class='tab-content-text-content'>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
-                </div>
-            </div>
-        </div>
-        <div class='content' v-bind:class="{ 'active-content': isActiveSecond }" >
-            <div class='tab-content-container tab-contents'>
-                <div class='tab-image tab-image-1'>
-                    <div class='prob-sol problem-image-2'></div>
-                </div>
-                <div class='tab-image tab-image-2'>
-                    <div class='prob-sol solution-image-2'></div>
+                <div class='tab-content-container tab-content-container-2'>
+                    <div class='tab-content-text tab-content-text-left'>
+                        <div class='tab-content-text-head'>Problem</div>
+                        <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                    </div>
+                    <div class='tab-content-text'>
+                        <div class='tab-content-text-head'>Solution</div>
+                        <div class='tab-content-text-content'>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+                    </div>
                 </div>
             </div>
-            <div class='tab-content-container tab-content-container-2'>
-                <div class='tab-content-text tab-content-text-left'>
-                    <div class='tab-content-text-head'>Problem</div>
-                    <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+            <li class='tab-head has-border'>
+                <span class="icon icon-2 is-small"></span>
+                <span>Multitask</span>
+            </li>
+            <div class='content active-content'>
+                <div class='tab-content-container tab-contents'>
+                    <div class='tab-image tab-image-1'>
+                        <div class='prob-sol problem-image-2'></div>
+                    </div>
+                    <div class='tab-image tab-image-2'>
+                        <div class='prob-sol solution-image-2'></div>
+                    </div>
                 </div>
-                <div class='tab-content-text'>
-                    <div class='tab-content-text-head'>Solution</div>
-                    <div class='tab-content-text-content'>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+                <div class='tab-content-container tab-content-container-2'>
+                    <div class='tab-content-text tab-content-text-left'>
+                        <div class='tab-content-text-head'>Problem</div>
+                        <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                    </div>
+                    <div class='tab-content-text'>
+                        <div class='tab-content-text-head'>Solution</div>
+                        <div class='tab-content-text-content'>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class='content' v-bind:class="{ 'active-content': isActiveThird }">
-            <div class='tab-content-container tab-contents'>
-                <div class='tab-image tab-image-1'>
-                    <div class='prob-sol problem-image-3'></div>
+            <li class='tab-head' >
+                <span class="icon icon-3 is-small"></span>
+                <span>Multiturn</span>
+            </li>
+            <div class='content active-content'>
+                <div class='tab-content-container tab-contents'>
+                    <div class='tab-image tab-image-1'>
+                        <div class='prob-sol problem-image-3'></div>
+                    </div>
+                    <div class='tab-image tab-image-2'>
+                        <div class='prob-sol solution-image-3'></div>
+                    </div>
                 </div>
-                <div class='tab-image tab-image-2'>
-                    <div class='prob-sol solution-image-3'></div>
-                </div>
-            </div>
-            <div class='tab-content-container tab-content-container-2'>
-                <div class='tab-content-text tab-content-text-left'>
-                    <div class='tab-content-text-head'>Problem</div>
-                    <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
-                </div>
-                <div class='tab-content-text'>
-                    <div class='tab-content-text-head'>Solution</div>
-                    <div class='tab-content-text-content'>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+                <div class='tab-content-container tab-content-container-2'>
+                    <div class='tab-content-text tab-content-text-left'>
+                        <div class='tab-content-text-head'>Problem</div>
+                        <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                    </div>
+                    <div class='tab-content-text'>
+                        <div class='tab-content-text-head'>Solution</div>
+                        <div class='tab-content-text-content'>SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -236,5 +312,30 @@
     }
     .solution-image-3{
         background-image: url('/static/s-3@2x.png');
+    }
+    .mobile-tabs .tab-head{
+        margin: 0 auto;
+    }
+    .mobile-tabs .tab-contents{
+        height: 330px;
+    }
+    .mobile-tabs .tab-content-container{
+        display: block;
+        overflow: scroll;
+        padding: 20px 20px 0;
+        white-space: nowrap;
+    }
+    .mobile-tabs .tab-image{
+        width: 264px;
+        height: 310px;
+    }
+    .mobile-tabs .prob-sol{
+        left: 12px;
+        width: 240px;
+        height: 240px;
+    }
+    .mobile-tabs .tab-content-text{
+        white-space: normal;
+        display: inline-block;
     }
 </style>

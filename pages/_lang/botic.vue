@@ -87,7 +87,7 @@
             :onClick="function(){}"
         >
         </Button>
-        <div class="side-image is-hidden-touch" ></div>
+        <div class="side-image is-hidden-touch" v-if="$device.isDesktop" ></div>
     </div>
     <Footer> </Footer>
   </div>
@@ -258,7 +258,7 @@
     display: inline-block;
   }
   .workbox-mobile .circle{
-    right: 4px;
+    right: 8px;
     position: absolute;
   }
   .w-header{
@@ -310,11 +310,11 @@
     margin-top: 0px;
   }
   .page-title{
-        font-size: 2em;
-        color: #1e1e1e;
-        font-weight: bold;
-        line-height: 1.1em;
-        margin-bottom: 40px;
+      font-size: 2em;
+      color: #1e1e1e;
+      font-weight: bold;
+      line-height: 1.1em;
+      margin-bottom: 40px;
     }
     .question-title {
       margin-top: 150px;
@@ -350,6 +350,6 @@
       text-align: center;
     }
     .questions{
-      
+      text-align: center;
     }
 </style>
