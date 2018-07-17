@@ -21,7 +21,7 @@
                     </Button>
                 </div>
                 <AppsWidget v-if="externalComponent"></AppsWidget>
-                <InputBox v-if="inputBox" :sendText="sendText" :placeHolder="placeHolder" ></InputBox>
+                <InputBox v-if="inputBox" :onSubmit=onSend :sendText="sendText" :placeHolder="placeHolder" ></InputBox>
                 <ListTypes v-if="listTypes"></ListTypes>
             </div>
         </div>
@@ -67,7 +67,27 @@
             // externalComponent:'externalComponent',
             // inputBox:'inputBox'
             }
-        }
+        },
+        method: {
+            onSend: function (name, company, email){
+                const instance = axios.create({ baseURL: 'https://api.prosperworks.com/developer_api/v1/leads' })
+                instance.defaults.headers.common['Content-Type'] = 'application/json'
+                instance.defaults.headers.common['X-PW-AccessToken'] = '5e952377dd5291aa014db0158a3fa0c1'
+                instance.defaults.headers.common['X-PW-Application'] = 'developer_api'
+                instance.defaults.headers.common['X-PW-UserEmail'] = 'curtis@sinitic.ai'
+                instance.defaults.headers.common['crossDomain'] = 'true' 
+                instance.post('/leads', JSON.stringify({
+                    "email": {
+                        "email": email,
+                        "category": this.sendText
+                    },
+                })).then(function (response) {
+                    this.sendText = submitted
+                }).catch((err) => {
+                    console.log(err)
+                })
+            }
+        } 
     }
 </script>
 
