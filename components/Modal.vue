@@ -59,8 +59,10 @@
 </script>
 
 <style scoped>
+    .modal {
+      z-index: 100;
+    }
     .modal .box{
-        z-index: 100;
         padding: 38px;
         max-width: 430px;
         max-height: 509px;
