@@ -9,6 +9,8 @@
                             <div class="dropdown-trigger">
                                 <button class="button dropdown-content-selected" aria-haspopup="true" aria-controls="dropdown-menu">
                                 <span >{{selectedCurrency.key}}</span>
+                                <span class='drop-down-icon'></span>
+                                
                                 </button>
                             </div>
                             <div class="dropdown-menu" id="dropdown-menu" role="menu">
@@ -113,6 +115,14 @@
     }
     .colorWhite-text .red{
         font-weight: 700;
+    }
+    .drop-down-icon{
+        width: 6.5px;
+        height: 3.9px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url(/images/triangle.svg)
     }
     .budgetCalculator{
         display:flex;

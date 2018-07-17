@@ -15,14 +15,14 @@
                 <p class="menu-title">Botic AI</p>
                 <ul>
                     <li>
-                        <nuxt-link class="links" :to="'/botic'">
+                        <a class="links" :to="'/botic'">
                             Botic
-                        </nuxt-link>
+                        </a>
                     </li>
                     <li>
-                        <nuxt-link class="links" :to="'/pricing'">
+                        <a class="links" :to="'/pricing'">
                             Pricing
-                        </nuxt-link>
+                        </a>
                     </li>
                     <li>
                         <a class="links" href='/#partners'>
@@ -155,6 +155,7 @@
         opacity: 0.3;
     }
     .send-icon{
+        cursor: pointer;
         width: 50px;
         height: 50px;
         padding: 17px;
