@@ -434,19 +434,22 @@
               "title":"pricing:tableData_sectorsWidget_basic_1_title",
               "subtitle":"pricing:tableData_sectorsWidget_basic_1_subtitle",
               "detail":"pricing:tableData_sectorsWidget_basic_1_detail",
-              "iconUrl":"pricing:tableData_sectorsWidget_basic_1_iconUrl"
+              "iconUrl":"pricing:tableData_sectorsWidget_basic_1_iconUrl",
+              "imageUrl":"pricing:tableData_sectorsWidget_basic_1_imageUrl"
             },
             {
               "title":"pricing:tableData_sectorsWidget_basic_2_title",
               "subtitle":"pricing:tableData_sectorsWidget_basic_2_subtitle",
               "detail":"pricing:tableData_sectorsWidget_basic_2_detail",
-              "iconUrl":"pricing:tableData_sectorsWidget_basic_2_iconUrl"
+              "iconUrl":"pricing:tableData_sectorsWidget_basic_2_iconUrl",
+              "imageUrl":"pricing:tableData_sectorsWidget_basic_2_imageUrl"
             },
             {
               "title":"pricing:tableData_sectorsWidget_basic_3_title",
               "subtitle":"pricing:tableData_sectorsWidget_basic_3_title",
               "detail":"pricing:tableData_sectorsWidget_basic_3_detail",
-              "iconUrl":"pricing:tableData_sectorsWidget_basic_3_iconUrl"
+              "iconUrl":"pricing:tableData_sectorsWidget_basic_3_iconUrl",
+              "imageUrl":"pricing:tableData_sectorsWidget_basic_3_imageUrl"
             }
           ]
         },

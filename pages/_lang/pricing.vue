@@ -117,6 +117,7 @@
                             :subtitle="obj.subtitle"
                             :detail="obj.detail"
                             :iconUrl="obj.iconUrl"
+                            :hoverImage="obj.imageUrl"
                             width="270px"
                         />
                     </div>
@@ -128,6 +129,7 @@
                             :subtitle="obj.subtitle"
                             :detail="obj.detail"
                             :iconUrl="obj.iconUrl"
+                            :hoverImage="obj.imageUrl"
                             width="270px"
                         />
                     </div>
