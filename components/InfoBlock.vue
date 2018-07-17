@@ -6,7 +6,7 @@
         <div class="column inlineFlex w60 vTop">
             <h3 class="bold inline-flex f25">{{heading}}</h3>
             <p class="text inline-flex f14 mt10">{{text}}</p>
-            <div class="mt10">                
+            <div class="mt10">
                 <Button
                     :text="buttonText"
                     backgroundColor="#ff003c"
@@ -23,7 +23,7 @@
         <div class="column">
             <h3 class="bold inline-flex f25">{{heading}}</h3>
             <p class="text inline-flex f18 mt10">{{text}}</p>
-            <div class="mt10 center">                
+            <div class="mt10 center">
                 <Button
                     :text="buttonText"
                     backgroundColor="#ff003c"

@@ -3,11 +3,8 @@
         <div class="social-container inlineFlex">
             <p class="newsletter-title">Subscribe to our Newsletter</p>
             <div class="email-container">
-                <input
-                        class="input"
-                        placeholder="Enter your Email Address"
-                >
-                <img src="images/english/send.png" class="send-icon" />
+                <input class="input" placeholder="Enter your Email Address" v-model="email" v-on:click="onSend" >
+                <img src="images/english/send.png" class="send-icon" v-on:click="onSend"  />
             </div>
         </div>
         <div class="inlineFlex p20">
@@ -69,6 +66,29 @@
 <script>
     export default {
         components: {
+        },
+        data: () => ({
+            email: ''
+        }),
+        method: {
+            onSend: function (){
+                const instance = axios.create({ baseURL: 'https://api.prosperworks.com/developer_api/v1/leads' })
+                instance.defaults.headers.common['Content-Type'] = 'application/json'
+                instance.defaults.headers.common['X-PW-AccessToken'] = '5e952377dd5291aa014db0158a3fa0c1'
+                instance.defaults.headers.common['X-PW-Application'] = 'developer_api'
+                instance.defaults.headers.common['X-PW-UserEmail'] = 'curtis@sinitic.ai'
+                instance.defaults.headers.common['crossDomain'] = 'true' 
+                instance.post('/leads', JSON.stringify({
+                    "email": {
+                        "email": this.email,
+                        "category": this.sendText
+                    },
+                })).then(function (response) {
+                    this.sendText = submitted
+                }).catch((err) => {
+                    console.log(err)
+                })
+            }
         }
     }
 
