@@ -34,6 +34,7 @@
     .feature-container{
       margin-left:0px;
       margin-bottom:20px;
+      box-shadow: -2px 47px 212px -56px rgba(0,0,0,0.18);
     }
   }
 }
@@ -80,6 +81,7 @@
   box-sizing: border-box;
 }
 .infoBlock.mobile{
+  box-shadow: -2px 47px 212px -56px rgba(0,0,0,0.18);
   .leftImage{
     height:200px;
   }

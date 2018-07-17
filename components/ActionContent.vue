@@ -30,8 +30,8 @@
             <h3 v-if='subtitle && title' v-html="title"></h3>
             <h3 v-if='subtitle === undefined && title' v-html="title" class='head-mar'></h3>
             <p v-if='subtitle' v-html="subtitle"></p>
-            <div class="button-container">
-                <div v-if="!externalComponent" class="buttons" v-for="(button, index) in buttons" :key="index">
+            <div class="button-container is-mobile-button">
+                <div v-if="!externalComponent" v-for="(button, index) in buttons" :key="index">
                     <Button
                             :text="button.text"
                             :to="button.to"
@@ -126,7 +126,7 @@
         border-radius: 2px;
         display: flex;
         flex-direction: row;
-        width: 170px;
+        /* width: 170px; */
         height: 50px;
         margin-right: 1.6em;
         border: none;
@@ -135,11 +135,18 @@
       border: none;
       border-radius: 2px;
     }
+    .button-container.is-mobile-button{
+        display: flex;
+        justify-content: center;
+    }
     .content-container{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: left;
+    }
+    .mobileContentCard{
+        text-align: center;
     }
     .mobileContentCard.content-container{
         height: auto;

@@ -10,7 +10,7 @@
         </div>
         <div  class="button is-mobile" v-else-if="$device.isMobile" :style="{
             'background-color': backgroundColor,
-            'width': width?width:'105px',
+            'width': width?width:'140px',
             'color': color,
             'display': 'inline-flex',
             'justify-content': align?align:'center'}" v-on:click='onClick' >
@@ -44,6 +44,7 @@
         height: 38px;
     }
     .is-mobile{
+        margin: 0 8px;
         font-size: 14px;
     }
 </style>
