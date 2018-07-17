@@ -623,6 +623,7 @@
     }
     .pricing-mobile .pricing-container{
         width: 84%;
+        margin-top: 0px;
     }
     .pricing-mobile .top-title{
         font-size: 1.8em;
