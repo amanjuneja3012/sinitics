@@ -104,27 +104,6 @@
             <div>
               <Modal :showModal='showModal' :onSend= 'onSend' :close='toggleModal' />
             </div>
-            <div class="price-actions">
-                <p class="price-action">Action</p>
-                <div class="price-action">
-                    <Button
-                        :text="$t('pricing.tableData.buttons.primary')"
-                        backgroundColor="#ff003c"
-                        color="white"
-                        :onClick='toggleModal'
-                    >
-                    </Button>
-                </div>
-                <div class="price-action">
-                    <Button
-                        :text="$t('pricing.tableData.buttons.secondary')"
-                        backgroundColor="white"
-                        color="1e1e1e" 
-                        :onClick='toggleModal' 
-                    >
-                    </Button>
-                </div>
-            </div>
             <div class="sectors" id='sectors'>
                 <p class="page-title sector-title">{{$t('pricing.tableData.sectorsWidget.title')}}</p>
                 <div class="tabs">

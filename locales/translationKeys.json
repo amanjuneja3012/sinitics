@@ -356,6 +356,66 @@
             "basic":"pricing:tableData_tableMetadata_items_11_basic",
             "enterprise":"pricing:tableData_tableMetadata_items_11_enterprise",
             "tooltip":"pricing:tableData_tableMetadata_items_11_tooltip"
+          },
+          {
+            "name":"pricing:tableData_tableMetadata_items_12_name",
+            "basic":"pricing:tableData_tableMetadata_items_12_basic",
+            "enterprise":"pricing:tableData_tableMetadata_items_12_enterprise",
+            "tooltip":"pricing:tableData_tableMetadata_items_12_tooltip"
+          },
+          {
+            "name":"pricing:tableData_tableMetadata_items_13_name",
+            "basic":"pricing:tableData_tableMetadata_items_13_basic",
+            "enterprise":"pricing:tableData_tableMetadata_items_13_enterprise",
+            "tooltip":"pricing:tableData_tableMetadata_items_13_tooltip"
+          },
+          {
+            "name":"pricing:tableData_tableMetadata_items_14_name",
+            "basic":"pricing:tableData_tableMetadata_items_14_basic",
+            "enterprise":"pricing:tableData_tableMetadata_items_14_enterprise",
+            "tooltip":"pricing:tableData_tableMetadata_items_14_tooltip"
+          },
+          {
+            "name":"pricing:tableData_tableMetadata_items_15_name",
+            "basic":"pricing:tableData_tableMetadata_items_15_basic",
+            "enterprise":"pricing:tableData_tableMetadata_items_15_enterprise",
+            "tooltip":"pricing:tableData_tableMetadata_items_15_tooltip"
+          },
+          {
+            "name":"pricing:tableData_tableMetadata_items_16_name",
+            "basic":"pricing:tableData_tableMetadata_items_16_basic",
+            "enterprise":"pricing:tableData_tableMetadata_items_16_enterprise",
+            "tooltip":"pricing:tableData_tableMetadata_items_16_tooltip"
+          },
+          {
+            "name":"pricing:tableData_tableMetadata_items_17_name",
+            "basic":"pricing:tableData_tableMetadata_items_17_basic",
+            "enterprise":"pricing:tableData_tableMetadata_items_17_enterprise",
+            "tooltip":"pricing:tableData_tableMetadata_items_17_tooltip"
+          },
+          {
+            "name":"pricing:tableData_tableMetadata_items_18_name",
+            "basic":"pricing:tableData_tableMetadata_items_18_basic",
+            "enterprise":"pricing:tableData_tableMetadata_items_18_enterprise",
+            "tooltip":"pricing:tableData_tableMetadata_items_18_tooltip"
+          },
+          {
+            "name":"pricing:tableData_tableMetadata_items_19_name",
+            "basic":"pricing:tableData_tableMetadata_items_19_basic",
+            "enterprise":"pricing:tableData_tableMetadata_items_19_enterprise",
+            "tooltip":"pricing:tableData_tableMetadata_items_19_tooltip"
+          },
+          {
+            "name":"pricing:tableData_tableMetadata_items_20_name",
+            "basic":"pricing:tableData_tableMetadata_items_20_basic",
+            "enterprise":"pricing:tableData_tableMetadata_items_20_enterprise",
+            "tooltip":"pricing:tableData_tableMetadata_items_20_tooltip"
+          },
+          {
+            "name":"pricing:tableData_tableMetadata_items_21_name",
+            "basic":"pricing:tableData_tableMetadata_items_21_basic",
+            "enterprise":"pricing:tableData_tableMetadata_items_21_enterprise",
+            "tooltip":"pricing:tableData_tableMetadata_items_21_tooltip"
           }
         ]
       },
