@@ -60,6 +60,7 @@
 
 <style scoped>
     .modal .box{
+        z-index: 100;
         padding: 38px;
         max-width: 430px;
         max-height: 509px;
@@ -102,6 +103,7 @@
       background-color: #ff003c;
     }
     .modal-close {
+      z-index: 101px;
       position: absolute;
       top: 70px;
     }

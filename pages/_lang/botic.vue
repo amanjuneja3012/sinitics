@@ -19,7 +19,7 @@
       listTypes="true"
     >
     </ContentCard>
-    <div class="bots-features-container is-flex-mobile">
+    <div :class="($device.isDesktop)?'bots-features-container':'bots-features-container is-flex-mobile'"  >
       <p class="feature-heading head-workbox" v-html="$t('botic.processDetailsWidget.heading')"></p>
       <div class='workbox-desktop' v-if="$device.isDesktop">
         <WorkBoxSection 

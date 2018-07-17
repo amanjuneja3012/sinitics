@@ -48,8 +48,6 @@
                             Careers
                         </a>
                     </li>
-                    <li>System Status</li>
-                    <li>Press Kit</li>
                     <li>Terms & Conditions</li>
                     <li>Privacy Policy</li>
                 </ul>
