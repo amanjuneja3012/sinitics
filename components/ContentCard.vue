@@ -1,24 +1,11 @@
 <template>
-    <div class="card-container is-hidden-touch" v-if="$device.isDesktop" :style="{
-    'flex-direction': showContentOnLeft === 'true'?'row':'row-reverse'
-  }">
-        <ActionContent
-            v-if="showContentOnLeft === 'true'"
-            width="50%"
-            :height="height"
-            :header='header'
-            :title="title"
-            :subtitle="subtitle"
-            :buttons="buttons"
-            :externalComponent="externalComponent"
-            :inputBox='inputBox'
-            :listTypes='listTypes'
-        >
-        </ActionContent>
-        <ActionContent
-                v-else
+    <div class="card-container">
+        <div class="is-hidden-touch w100 flex" :style="{
+        'flex-direction': showContentOnLeft === 'true'?'row':'row-reverse'
+      }">
+            <ActionContent
+                v-if="showContentOnLeft === 'true'"
                 width="50%"
-                padding="4% 9.4% 6% 5.7%"
                 :height="height"
                 :header='header'
                 :title="title"
@@ -27,31 +14,31 @@
                 :externalComponent="externalComponent"
                 :inputBox='inputBox'
                 :listTypes='listTypes'
-        >
-        </ActionContent>
-        <div v-if="!rightComponent" class="image" :style="{'height': height, 'background-image': 'url('+imageUrl+')'}"></div>
-        <BudgetCalculator v-if="rightComponent" />
-    </div>
-    <div v-else-if="$device.isMobile" class="card-container is-hidden-desktop mobileContentCard" :style="{
-    'flex-direction': showContentOnLeft === 'true'?'column-reverse':'column-reverse'
-  }">
-        <ActionContent
-            v-if="showContentOnLeft === 'true'"
-            width="100%"
-            :height="height"
-            :header='header'
-            :title="title"
-            :subtitle="subtitle"
-            :buttons="buttons"
-            :externalComponent="externalComponent"
-            :inputBox='inputBox'
-            :listTypes='listTypes'
-        >
-        </ActionContent>
-        <ActionContent
-                v-else
+            >
+            </ActionContent>
+            <ActionContent
+                    v-else
+                    width="50%"
+                    padding="4% 9.4% 6% 5.7%"
+                    :height="height"
+                    :header='header'
+                    :title="title"
+                    :subtitle="subtitle"
+                    :buttons="buttons"
+                    :externalComponent="externalComponent"
+                    :inputBox='inputBox'
+                    :listTypes='listTypes'
+            >
+            </ActionContent>
+            <div v-if="!rightComponent" class="image" :style="{'height': height, 'background-image': 'url('+imageUrl+')'}"></div>
+            <BudgetCalculator v-if="rightComponent" />
+        </div>
+        <div class="is-hidden-desktop mobileContentCard w100 flex" :style="{
+        'flex-direction': showContentOnLeft === 'true'?'column-reverse':'column-reverse'
+      }">
+            <ActionContent
+                v-if="showContentOnLeft === 'true'"
                 width="100%"
-                padding="4% 9.4% 6% 5.7%"
                 :height="height"
                 :header='header'
                 :title="title"
@@ -60,10 +47,25 @@
                 :externalComponent="externalComponent"
                 :inputBox='inputBox'
                 :listTypes='listTypes'
-        >
-        </ActionContent>
-        <div v-if="!rightComponent" class="image" :style="{'height': '340px','background-size': 'contain', 'background-position': (imageCenter === 'true')?'center':((showContentOnLeft === 'true')?'right':'left'), 'background-repeat': 'no-repeat', 'background-image': 'url('+imageUrl+')'}"></div>
-        <BudgetCalculator v-if="rightComponent" />
+            >
+            </ActionContent>
+            <ActionContent
+                    v-else
+                    width="100%"
+                    padding="4% 9.4% 6% 5.7%"
+                    :height="height"
+                    :header='header'
+                    :title="title"
+                    :subtitle="subtitle"
+                    :buttons="buttons"
+                    :externalComponent="externalComponent"
+                    :inputBox='inputBox'
+                    :listTypes='listTypes'
+            >
+            </ActionContent>
+            <div v-if="!rightComponent" class="image" :style="{'height': '340px','background-size': 'contain', 'background-position': (imageCenter === 'true')?'center':((showContentOnLeft === 'true')?'right':'left'), 'background-repeat': 'no-repeat', 'background-image': 'url('+imageUrl+')'}"></div>
+            <BudgetCalculator v-if="rightComponent" />
+        </div>
     </div>
 </template>
 

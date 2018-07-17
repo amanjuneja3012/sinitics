@@ -65,7 +65,7 @@
         </div>
         <BudgetCalculator />
     </div>
-    <div :class="($device.isDesktop)?'desktop bot-features-container':'bot-features-container mobile'">
+    <div class='desktop bot-features-container is-hidden-touch'>
       <p class="feature-heading">{{$t('home.contentCards.card6.header')}}</p>
       <div class="features-container">
         <BotFeatureCard
@@ -88,7 +88,30 @@
                 >
         </Button>
     </div>
-    <div class="enterpriseInfo rel flex center" id="partners" v-if="$device.isDesktop">
+    <div class='mobile bot-features-container is-hidden-desktop'>
+      <p class="feature-heading">{{$t('home.contentCards.card6.header')}}</p>
+      <div class="features-container">
+        <BotFeatureCard
+                width="323px"
+                height="312px"
+                padding="35px"
+                :iconUrl="cardObj.iconUrl"
+                :title="cardObj.title"
+                :subtitle="cardObj.subtitle"
+                v-for="(cardObj,index) in $t('home.contentCards.card6.cardsArr')" :key="index"
+        >
+        </BotFeatureCard>
+      </div>
+        <Button
+                :text="$t('home.contentCards.card6.buttonText')"
+                backgroundColor="#ff003c"
+                color="white"
+                to="/pricing/#pricing-feature"
+                :onClick="function(){}"
+                >
+        </Button>
+    </div>
+    <div class="enterpriseInfo rel flex center is-hidden-touch" id="partners">
         <div class="infoBack"></div>
         <div class="row w800 h340 widgetContainer">
             <div class="column widgetHeader">
@@ -114,7 +137,7 @@
             />
         </div>
     </div>
-    <div class="enterpriseInfo rel flex center column hAuto mobile" id="partners" v-if="$device.isMobile">
+    <div class="enterpriseInfo rel flex center column hAuto mobile is-hidden-desktop" id="partners">
         <div class="column widgetHeader w100">
             <h3 class="text head-text bold">Have a <span class="ml5 red"> Client</span>?</h3>
             <div class="tabs f13">
@@ -141,7 +164,7 @@
         <h3 class="news-heading">Don’t miss the latest <span class="red">Botic News</span></h3>
         <div class="leftAbs"></div>
         <div class="rightAbs"></div>
-        <div class="newsCarousel inlineFlex" v-if="$device.isDesktop">
+        <div class="newsCarousel is-hidden-touch">
             <no-ssr placeholder="Loading...">
                 <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :paginationEnabled=false :perPage=5 :navigationEnabled="true">
                     <slide v-for="(slideObj,index) in $t('home.newsCarouselWidget.slides')" :key="index">
@@ -154,7 +177,7 @@
                 </carousel>
             </no-ssr>
         </div>
-        <div class="newsCarousel inlineFlex" v-if="$device.isMobile">
+        <div class="newsCarousel is-hidden-desktop">
             <no-ssr placeholder="Loading...">
                 <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :paginationEnabled=false :perPage=1 :navigationEnabled="true">
                     <slide v-for="(slideObj,index) in $t('home.newsCarouselWidget.slides')" :key="index">
@@ -168,8 +191,8 @@
             </no-ssr>
         </div>
     </div>
-    <Footer v-if="$device.isDesktop"> </Footer>
-    <FooterMobile v-if="$device.isMobile"> </FooterMobile>
+    <Footer class="is-hidden-touch"> </Footer>
+    <FooterMobile class="is-hidden-desktop"> </FooterMobile>
   </div>
 
 

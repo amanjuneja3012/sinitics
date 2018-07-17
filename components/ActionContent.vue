@@ -1,9 +1,10 @@
 <template>
-    <div v-if="$device.isDesktop" class="content-container is-hidden-touch" :style="{
+    <div class="content-container" :style="{
     'width': width,
-    'height': height,
+    'height': (($device.isMobile)?'auto':height),
     'padding': padding
       }">
+    <div class="is-hidden-touch">
             <h1 v-if='header' v-html="header"></h1>
             <h3 v-if='subtitle && title' v-html="title"></h3>
             <h3 v-if='subtitle === undefined && title' v-html="title" class='head-mar'></h3>
@@ -24,11 +25,7 @@
                 <ListTypes v-if="listTypes"></ListTypes>
             </div>
         </div>
-        <div class="content-container is-hidden-desktop mobileContentCard" :style="{
-        'width': width,
-        'height': 'auto',
-        'padding': padding
-      }" v-else-if="$device.isMobile">
+        <div class="mobileContentCard is-hidden-desktop">
             <h1 v-if='header' v-html="header"></h1>
             <h3 v-if='subtitle && title' v-html="title"></h3>
             <h3 v-if='subtitle === undefined && title' v-html="title" class='head-mar'></h3>
@@ -49,7 +46,7 @@
                 <ListTypes v-if="listTypes"></ListTypes>
             </div>
         </div>
-    
+    </div>
 </template>
 
 <script>

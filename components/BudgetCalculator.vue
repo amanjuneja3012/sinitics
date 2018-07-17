@@ -1,5 +1,5 @@
 <template>
-    <div :class="($device.isDesktop)?'rel w50':'w100'">
+    <div :class="($device.isDesktop)?'rel w50':'w100'" style="{'position':'relative'}">
         <div :class="($device.isDesktop)?'budgetCalculator column':'budgetCalculator column relImp w100'">
             <div class="column w100 black roundedTop center">
                 <div class="w50 inline-flex vTop colorWhite colorWhite-text f13"><span>Per month Savings <br> with <span class='red'>50%</span> Automation</span></div>

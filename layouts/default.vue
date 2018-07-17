@@ -1,24 +1,12 @@
 <template>
   <div>
     <header class="Header is-flex-desktop-only">
-      <div class="w100 h100 vCenter" v-if="$device.isDesktop">
+      <div class="w100 h100 vCenter is-hidden-touch">
         <nav class="inlineFlex w50 lf navbar h70" role="navigation" aria-label="main navigation">
           <div class="navbar-brand align-center">
             <nuxt-link class="Header__Logo Header__Link navbar-item" :to="($i18n.locale=='en')?'/':('/'+$i18n.locale+'/')">
               <div class="logo"></div>
             </nuxt-link>
-            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-              
-              <nuxt-link class="Header__Link navbar-item navbar-link" :to="($i18n.locale=='en')?'/botic':('/'+$i18n.locale+'/botic')">
-                BoticAI
-              </nuxt-link>
-              <nuxt-link class="Header__Link navbar-item navbar-link" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
-                Pricing
-              </nuxt-link>
-              <nuxt-link class="Header__Link navbar-item navbar-link" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')">
-                Partners
-              </nuxt-link>
-            </a>
           </div>
           <div class="navbar-menu">
             
@@ -73,7 +61,7 @@
           </div>
         </div>
       </div>
-      <div class="mobileHeader" v-else-if="$device.isMobile">
+      <div class="mobileHeader is-hidden-desktop">
         <div class="logo"></div>
         <div class="hamburger">
           <div v-if="!visibility" class="hamburgerMenuIcon" v-on:click="visibility=true">
@@ -100,7 +88,7 @@
         </div>
       </div>
     </header>
-    <div class="headerPadder"></div>
+    <div class="headerPadder" v-if="$device.isMobile"></div>
     <nuxt/>
   </div>
 </template>
