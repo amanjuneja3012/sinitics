@@ -36,12 +36,14 @@
         components:{
             Button
         },
-        data: () => ({
+         data: function () {
+            return {
                 name: '',
                 company: '',
                 email: '',
                 isButtonDisabled: true
-              }),
+            }
+        },
         methods: {
             activateButton:function(){
               console.log(this.name)

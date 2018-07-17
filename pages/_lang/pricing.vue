@@ -4,7 +4,7 @@
             <p class="page-title top-title">{{$t('pricing.title')}}</p>
             <div class="toggle">
                 <p class="monthly" v-bind:class="{ 'active-type' : selectedMonthly  }" >{{$t('pricing.checkBoxDetails.leftStr')}}</p>
-                <label class="switch" onClick='changeSelctedType' >
+                <label class="switch" >
                     <input type="checkbox" checked v-on:click="changeSelctedType" >
                     <span class="slider round"></span>
                 </label>

@@ -67,9 +67,11 @@
     export default {
         components: {
         },
-        data: () => ({
-            email: ''
-        }),
+        data: function () {
+            return {
+                email: ''
+            }
+        },
         method: {
             onSend: function (){
                 const instance = axios.create({ baseURL: 'https://api.prosperworks.com/developer_api/v1/leads' })
