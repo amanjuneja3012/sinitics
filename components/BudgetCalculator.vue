@@ -8,7 +8,7 @@
                         <div class="dropdown is-hoverable">
                             <div class="dropdown-trigger">
                                 <button class="button dropdown-content-selected" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span >{{selectedCurrency.key}}</span>
+                                <span class='selected-text' >{{selectedCurrency.key}}</span>
                                 <span class='drop-down-icon'></span>
                                 
                                 </button>
@@ -116,13 +116,21 @@
     .colorWhite-text .red{
         font-weight: 700;
     }
+    .dropdown-trigger{
+        position: relative;
+    }
     .drop-down-icon{
         width: 6.5px;
         height: 3.9px;
+        right: 4px;
+        position: absolute;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-image: url(/images/triangle.svg)
+        background-image: url('/triangle.svg');
+    }
+    .selected-text{
+        margin-right: 6px;
     }
     .budgetCalculator{
         display:flex;
@@ -135,9 +143,6 @@
         align-items: center;
         justify-content: center;
         box-shadow: -2px 47px 212px -56px rgba(0,0,0,0.18);
-        .text{
-            font-size:12px;
-        }
     }
     .mobileContentCard .budgetCalculator{
         display:flex;
