@@ -3,12 +3,12 @@
         <div class="pricing-container">
             <p class="page-title top-title">{{$t('pricing.title')}}</p>
             <div class="toggle">
-                <p class="monthly">{{$t('pricing.checkBoxDetails.leftStr')}}</p>
-                <label class="switch">
-                    <input type="checkbox" checked>
+                <p class="monthly" v-bind:class="{ 'active-type' : selectedMonthly  }" >{{$t('pricing.checkBoxDetails.leftStr')}}</p>
+                <label class="switch" onClick='changeSelctedType' >
+                    <input type="checkbox" checked v-on:click="changeSelctedType" >
                     <span class="slider round"></span>
                 </label>
-                <p class="yearly">{{$t('pricing.checkBoxDetails.rightStr')}}</p>
+                <p class="yearly" v-bind:class="{ 'active-type' : selectedYearly }"  >{{$t('pricing.checkBoxDetails.rightStr')}}</p>
                 <p class="tagss" v-if=$device.isDesktop >{{$t('pricing.checkBoxDetails.tag')}}</p>
             </div>
             <div class="currencyChange">
@@ -183,6 +183,8 @@
         }),
         data: () => ({
             showModal: false,
+            selectedYearly: true,
+            selectedMonthly: false,
             buttons: {
                 block1: [
                     {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
@@ -248,6 +250,10 @@
                 }).catch((err) => {
                     console.log(err)
                 })
+            },
+            changeSelctedType: function (){
+                this.selectedYearly= !this.selectedYearly
+                this.selectedMonthly= !this.selectedMonthly
             }
         }
 }
@@ -256,6 +262,9 @@
 <style>
     #pricing{
         position: relative;
+    }
+    .active-type{
+        color: #ff003c;
     }
     .page-title{
         font-size: 48px;
