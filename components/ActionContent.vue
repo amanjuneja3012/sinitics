@@ -145,7 +145,7 @@
         height: auto;
         text-align: center;
         padding: 5%;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
         box-sizing: border-box;
     }
     .mobileContentCard.content-container h1,.mobileContentCard.content-container h3{

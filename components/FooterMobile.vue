@@ -3,7 +3,7 @@
         <div class="social-container inlineFlex">
             <p class="newsletter-title">Subscribe to our Newsletter</p>
             <div class="email-container">
-                <input class="input" placeholder="Enter your Email Address" v-model="email" v-on:click="onSend" >
+                <input class="input" placeholder="Enter your Email Address" v-model="email" >
                 <img src="images/english/send.png" class="send-icon" v-on:click="onSend"  />
             </div>
         </div>
