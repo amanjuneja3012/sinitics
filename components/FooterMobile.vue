@@ -37,7 +37,6 @@
                 <ul>
                     <li>iGaming</li>
                     <li>Regtech</li>
-
                 </ul>
             </div>
             <div class="menu-container">
