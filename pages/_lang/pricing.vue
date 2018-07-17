@@ -667,6 +667,10 @@
     .pricing-mobile thead{
         width: 100%;
     }
+    .pricing-mobile .tooltip{
+        top: 46px;
+        right: 0;
+    }
     .pricing-mobile .no-feature{
         text-align: center;
         margin: 0 auto;
