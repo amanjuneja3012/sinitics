@@ -65,7 +65,9 @@
         </div>
       </div>
       <div class="mobileHeader is-hidden-desktop">
-        <div class="logo"></div>
+        <nuxt-link class="Header__Logo Header__Link navbar-item" :to="($i18n.locale=='en')?'/':('/'+$i18n.locale+'/')">
+          <div ></div>
+        </nuxt-link>
         <div class="hamburger">
           <div v-if="!visibility" class="hamburgerMenuIcon" v-on:click="visibility=true">
           </div>
