@@ -16,9 +16,12 @@
             <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
               Pricing
             </nuxt-link>
-            <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
+            <!-- <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
               Partners
-            </nuxt-link>
+            </nuxt-link> -->
+            <a class="Header__Link navbar-item" href='/#partners' >
+              Partners
+            </a>
             <!-- <nuxt-link class="Header__Link navbar-item" :to="'/#partners'">
               Partners
             </nuxt-link> -->
