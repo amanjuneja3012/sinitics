@@ -6,16 +6,22 @@ const currencies = [
         conversionRatio:1
     },
     {
-        key:'INR',
-        symbol:'₹',
-        name:'Rupee',
-        conversionRatio:64.8
+        key:'EUR',
+        symbol:'€',
+        name:'EURO',
+        conversionRatio:0.86
     },
     {
-        key:'GBP',
-        symbol:'£',
-        name:'Pound',
-        conversionRatio:0.76
+        key:'CNY',
+        symbol:'¥',
+        name:'YEN',
+        conversionRatio:112.83
+    },
+    {
+        key:'NTD',
+        symbol:'元',
+        name:'NTD',
+        conversionRatio:30.55
     }
 ]
 

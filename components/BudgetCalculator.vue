@@ -8,19 +8,22 @@
                         <div class="dropdown is-hoverable">
                             <div class="dropdown-trigger">
                                 <button class="button dropdown-content-selected" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span >{{selectedCurrency.symbol}}</span>
+                                <span >{{selectedCurrency.key}}</span>
                                 </button>
                             </div>
                             <div class="dropdown-menu" id="dropdown-menu" role="menu">
                                 <div class="dropdown-content">
                                 <div href="#" class="dropdown-item" v-on:click="selectedCurrency=currenciesArr[0]" >
-                                    {{currenciesArr[0].symbol}}
+                                    {{currenciesArr[0].key}}
                                 </div>
                                 <div class="dropdown-item" v-on:click="selectedCurrency=currenciesArr[1]" >
-                                    {{currenciesArr[1].symbol}}
+                                    {{currenciesArr[1].key}}
                                 </div>
                                 <div href="#" class="dropdown-item is-active" v-on:click="selectedCurrency=currenciesArr[2]" >
-                                    {{currenciesArr[2].symbol}}
+                                    {{currenciesArr[2].key}}
+                                </div>
+                                <div href="#" class="dropdown-item is-active" v-on:click="selectedCurrency=currenciesArr[3]" >
+                                    {{currenciesArr[3].key}}
                                 </div>
                                 </div>
                             </div>
@@ -204,6 +207,7 @@
     .dropdown-item{
         height: 33px;
         width: 59px;
+        padding: 0;
         text-align: center;
     }
     .dropdown-item:hover{
