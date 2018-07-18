@@ -46,7 +46,14 @@
 		    	.VueCarousel-dot-button{
 		    		background:#ff003c !important;
 		    	}
-		    }
+			}
+			.newsCarouselWidget.is-mobile .VueCarousel-navigation-button.VueCarousel-navigation-prev{
+				left: 6% !important;
+			  }
+			  .newsCarouselWidget.is-mobile .VueCarousel-navigation-button.VueCarousel-navigation-next{
+				right: 20% !important;
+			  }
+			}
 	    }
     }
     .content-container{

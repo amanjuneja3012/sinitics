@@ -220,11 +220,11 @@
   .VueCarousel-inner{
     flex-basis: 270px !important;
   }
-  .newsCarousel.is-mobile .VueCarousel-navigation-button.VueCarousel-navigation-prev{
-    left: 6% !important;
+  .newsCarouselWidget.is-mobile .VueCarousel-navigation-button.VueCarousel-navigation-prev{
+    left: 6%;
   }
-  .newsCarousel.is-mobile .VueCarousel-navigation-button.VueCarousel-navigation-next{
-    right: 20% !important;
+  .newsCarouselWidget. .VueCarousel-navigation-button.VueCarousel-navigation-next{
+    right: 20%;
   }
 }
 .VueCarousel-slide{
