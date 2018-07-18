@@ -19,7 +19,7 @@
             <!-- <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
               Partners
             </nuxt-link> -->
-            <a class="Header__Link navbar-item" href='/#partners' >
+            <a class="Header__Link navbar-item" :href="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
               Partners
             </a>
             <!-- <nuxt-link class="Header__Link navbar-item" :to="'/#partners'">
@@ -81,9 +81,12 @@
           <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
                 Pricing
           </nuxt-link>
-          <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')">
+          <!-- <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')">
             Partners
-          </nuxt-link>
+          </nuxt-link> -->
+          <a class="item w100" v-on:click.native="visibility=false" :href="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
+              Partners
+            </a>
           <div class="item">
             <div class="Header__Button">Login Now</div>
           </div>

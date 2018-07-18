@@ -321,7 +321,8 @@
     }
     .mobile-tabs .tab-content-container{
         display: block;
-        overflow: scroll;
+        overflow-x: scroll;
+        overflow-y: hidden;
         padding: 20px 20px 0;
         white-space: nowrap;
     }
