@@ -64,6 +64,7 @@
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
         components: {
         },
@@ -72,7 +73,7 @@
                 email: ''
             }
         },
-        method: {
+        methods: {
             onSend: function (){
                 const instance = axios.create({ baseURL: 'https://api.prosperworks.com/developer_api/v1/leads' })
                 instance.defaults.headers.common['Content-Type'] = 'application/json'

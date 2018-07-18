@@ -54,6 +54,7 @@
     import AppsWidget from '~/components/AppsWidget'
     import InputBox from '~/components/InputBox'
     import ListTypes from '~/components/ListTypes'
+    import axios from 'axios';
     export default {
         props: ['title', 'header', 'subtitle', 'buttons', 'width', 'height', 'padding', 'externalComponent', 'inputBox', 'listTypes', 'sendText', 'placeHolder' ],
         components: {
@@ -68,7 +69,7 @@
             // inputBox:'inputBox'
             }
         },
-        method: {
+        methods: {
             onSend: function (name, company, email){
                 const instance = axios.create({ baseURL: 'https://api.prosperworks.com/developer_api/v1/leads' })
                 instance.defaults.headers.common['Content-Type'] = 'application/json'
