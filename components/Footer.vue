@@ -4,7 +4,7 @@
             <p class="newsletter-title">Subscribe to our Newsletter</p>
             <div class="email-container">
                 <input class="input" placeholder="Enter your Email Address" v-model="email" >
-                <img src="images/english/send.png" class="send-icon" v-on:click='onSend' />
+                <img src="images/english/send.png" class="send-icon" v-on:click='onSend()' />
             </div>
             <div class="icon-container">
                 <img src="images/english/google.svg" class="social-icon"/>
