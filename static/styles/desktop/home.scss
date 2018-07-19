@@ -246,6 +246,13 @@
   .VueCarousel-navigation-button.VueCarousel-navigation-next{
     left: 46%;
   }
+  .is-mobile .VueCarousel-navigation-button.VueCarousel-navigation-prev{
+    left: 6%;
+  }
+  .is-mobile .VueCarousel-navigation-button.VueCarousel-navigation-next{
+    right: 16%;
+    left: auto;
+  }
   .VueCarousel-inner{
     flex-basis: 270px !important;
   }
