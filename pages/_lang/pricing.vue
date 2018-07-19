@@ -46,7 +46,7 @@
                 <div class="packages">
                     <div class="package">
                         <p class="name">{{$t('pricing.tableData.tableHeader.leftColumn.name')}}</p>
-                        <p class="price">{{selectedCurrency['symbol']+usersCount*15*selectedCurrency['conversionRatio']}}</p>
+                        <p class="price">{{selectedCurrency['symbol']+usersCount*pricingObj[0][usersCount]*selectedCurrency['conversionRatio']}}</p>
                         <p class="period">{{$t('pricing.tableData.tableHeader.leftColumn.period')}}</p>
                         <Button
                             :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
@@ -58,7 +58,7 @@
                     </div>
                     <div class="package">
                         <p class="name">{{$t('pricing.tableData.tableHeader.rightColumn.name')}}</p>
-                        <p class="price">{{selectedCurrency['symbol']+usersCount*30*selectedCurrency['conversionRatio']}}</p>
+                        <p class="price">{{selectedCurrency['symbol']+usersCount*pricingObj[0][usersCount]*selectedCurrency['conversionRatio']}}</p>
                         <p class="period">{{$t('pricing.tableData.tableHeader.rightColumn.period')}}</p>
                     <Button
                             :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
@@ -166,6 +166,7 @@
     import NoSSR from 'vue-no-ssr';
     import axios from 'axios';
     import currencies from '~/components/currency/data.js';
+    import pricing from '~/components/currency/cost.js';
     var components = {};
     components['no-ssr'] = NoSSR;
     if (process.browser) {
@@ -216,6 +217,7 @@
             usersCount: 0,
             currenciesArr: currencies,
             selectedCurrency: currencies[0],
+            pricingObj: pricing,
             isActiveFirst: true,
             isActiveSecond: false
         }),
