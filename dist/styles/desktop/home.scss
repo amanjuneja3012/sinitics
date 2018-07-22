@@ -28,25 +28,30 @@
   align-items: center;
   margin-top: 100px;
 }
+.bot-features-container.mobile{
+  .features-container{
+    flex-direction: column;
+    .feature-container{
+      margin-left:0px;
+      margin-bottom:20px;
+      box-shadow: -2px 47px 212px -56px rgba(0,0,0,0.18);
+    }
+  }
+}
 .automation-section{
   position: relative;
 }
+.mobileContentCard.automation-section{
+  position: relative;
+  .image{
+    display:none;
+  }
+}
 .partner-down{
   left: 9.4%;
-  bottom: 160px;
+  bottom: 120px;
   position: absolute;
   
-}
-.mobileContentCard{
-  .partner-down{
-    left: 0;
-    bottom: -20px;
-    position: absolute;
-    right: 0;
-    margin: auto;
-    width: 50%;
-    min-width: 100px;
-  }
 }
 .partner-text{
   font-size: 20px;
@@ -74,6 +79,31 @@
   left: 0%;
   padding: 5%;
   box-sizing: border-box;
+}
+.infoBlock.mobile{
+  box-shadow: -2px 47px 212px -56px rgba(0,0,0,0.18);
+  .leftImage{
+    height:200px;
+  }
+  .column{
+    text-align:center;
+  }
+}
+.enterpriseInfo.mobile{
+  padding:20px;
+  .head-text{
+    margin-bottom:20px;
+    font-size:1.6em;
+  }
+  .tabs{
+    .tab{
+      font-size:1.2em;
+    }
+  }
+  .widgetHeader{
+    padding: 1% 0% 20% 0%;
+    text-align: center;
+  }
 }
 .enterpriseInfo{
   height: 700px;
@@ -173,7 +203,6 @@
   }
   .newsCarousel{
     width: 100%;
-    display: inline-flex;
   }
   .image{
     width: 100%;
@@ -211,22 +240,28 @@
     background-color: white !important;
     box-shadow: 0 3px 9px 0 #e6e6e6;
   }
-  // .VueCarousel-navigation-button.VueCarousel-navigation-prev{
-  //   left: 1%;
-  // }
-  // .VueCarousel-navigation-button.VueCarousel-navigation-next{
-  //   left: 46%;
-  // }
-  .VueCarousel-inner{
-    flex-basis: 270px !important;
+  .VueCarousel-navigation-button.VueCarousel-navigation-prev{
+    left: 1%;
   }
-  .newsCarouselWidget.is-mobile .VueCarousel-navigation-button.VueCarousel-navigation-prev{
+  .VueCarousel-navigation-button.VueCarousel-navigation-next{
+    left: 89%;
+  }
+  .is-mobile .VueCarousel-navigation-button.VueCarousel-navigation-prev{
     left: 6%;
   }
-  .newsCarouselWidget. .VueCarousel-navigation-button.VueCarousel-navigation-next{
-    right: 20%;
+  .is-mobile .VueCarousel-navigation-button.VueCarousel-navigation-next{
+    right: 16%;
+    left: auto;
+  }
+  .VueCarousel-inner{
+    flex-basis: 270px !important;
   }
 }
 .VueCarousel-slide{
   width: 300px !important;
+}
+.mobileNewsCarousel{
+  .VueCarousel-navigation{
+    display:none !important;
+  }
 }

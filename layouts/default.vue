@@ -119,6 +119,7 @@
 </template>
 
 <script>
+import styles from '../static/styles/common/baseStyles.scss';
 export default {
   data: () => ({
     languageOptions: [
@@ -136,6 +137,11 @@ export default {
         'language':'繁體中文',
         'languageKey':'ta',
         'flagUrl':'/images/english/taiwan@3x.png'
+      },
+      {
+        'language':'Tiếng Việt',
+        'languageKey':'fl',
+        'flagUrl':'/images/english/philipines2@3x.png'
       },
       {
         'language':'Filipino',

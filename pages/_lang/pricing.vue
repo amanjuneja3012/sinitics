@@ -46,7 +46,7 @@
                 <div class="packages">
                     <div class="package">
                         <p class="name">{{$t('pricing.tableData.tableHeader.leftColumn.name')}}</p>
-                        <p class="price">{{selectedCurrency['symbol']+usersCount*pricingObj[0][usersCount]*selectedCurrency['conversionRatio']}}</p>
+                        <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj[0][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?1.2:1))}}</p>
                         <p class="period">{{$t('pricing.tableData.tableHeader.leftColumn.period')}}</p>
                         <Button
                             :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
@@ -58,7 +58,7 @@
                     </div>
                     <div class="package">
                         <p class="name">{{$t('pricing.tableData.tableHeader.rightColumn.name')}}</p>
-                        <p class="price">{{selectedCurrency['symbol']+usersCount*pricingObj[0][usersCount]*selectedCurrency['conversionRatio']}}</p>
+                        <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj[0][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?1.2:1))}}</p>
                         <p class="period">{{$t('pricing.tableData.tableHeader.rightColumn.period')}}</p>
                     <Button
                             :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
@@ -376,7 +376,7 @@
         margin-top: 100px;
     }
     .sector-cards.active{
-        display: block;
+        display: flex;
     }
     .feature-container .detail{
         min-height: 170px;
