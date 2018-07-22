@@ -43,10 +43,11 @@
         transition: height 0.2s ease-in-out;
     }
     .mobileContentCard .icon{
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         cursor: pointer;
-        margin-right: 10px;
+        margin-right: 30px;
+        margin-bottom: 10px;
     }
     .icon{
         fill: #ff0033 !important;
@@ -75,5 +76,8 @@
     .tooltip-header{
         font-size: 10px;
         font-weight: 400;
+    }
+    .mobileContentCard .apps-widget{
+        padding-left: 16%;
     }
 </style>

@@ -29,7 +29,7 @@
                 <div class='tab-content-container tab-content-container-2'>
                     <div class='tab-content-text tab-content-text-left'>
                         <div class='tab-content-text-head'>Problem</div>
-                        <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                        <div class='tab-content-text-content'>1 Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
                     </div>
                     <div class='tab-content-text'>
                         <div class='tab-content-text-head'>Solution</div>
@@ -49,7 +49,7 @@
                 <div class='tab-content-container tab-content-container-2'>
                     <div class='tab-content-text tab-content-text-left'>
                         <div class='tab-content-text-head'>Problem</div>
-                        <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                        <div class='tab-content-text-content'>2 Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
                     </div>
                     <div class='tab-content-text'>
                         <div class='tab-content-text-head'>Solution</div>
@@ -69,7 +69,7 @@
                 <div class='tab-content-container tab-content-container-2'>
                     <div class='tab-content-text tab-content-text-left'>
                         <div class='tab-content-text-head'>Problem</div>
-                        <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                        <div class='tab-content-text-content'>3 Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
                     </div>
                     <div class='tab-content-text'>
                         <div class='tab-content-text-head'>Solution</div>
@@ -83,7 +83,7 @@
                 <span class="icon icon-1 is-small"></span>
                 <span>Multilingual</span>
             </li>
-            <div class='content active-content'>
+            <div class='content active-content horizontalScrolling'>
                 <div class='tab-content-container tab-contents'>
                     <div class='tab-image tab-image-1'>
                         <div class='prob-sol problem-image-1'></div>
@@ -95,7 +95,7 @@
                 <div class='tab-content-container tab-content-container-2'>
                     <div class='tab-content-text tab-content-text-left'>
                         <div class='tab-content-text-head'>Problem</div>
-                        <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                        <div class='tab-content-text-content'>1 Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
                     </div>
                     <div class='tab-content-text'>
                         <div class='tab-content-text-head'>Solution</div>
@@ -107,7 +107,7 @@
                 <span class="icon icon-2 is-small"></span>
                 <span>Multitask</span>
             </li>
-            <div class='content active-content'>
+            <div class='content active-content horizontalScrolling'>
                 <div class='tab-content-container tab-contents'>
                     <div class='tab-image tab-image-1'>
                         <div class='prob-sol problem-image-2'></div>
@@ -119,7 +119,7 @@
                 <div class='tab-content-container tab-content-container-2'>
                     <div class='tab-content-text tab-content-text-left'>
                         <div class='tab-content-text-head'>Problem</div>
-                        <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                        <div class='tab-content-text-content'>2 Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
                     </div>
                     <div class='tab-content-text'>
                         <div class='tab-content-text-head'>Solution</div>
@@ -131,7 +131,7 @@
                 <span class="icon icon-3 is-small"></span>
                 <span>Multiturn</span>
             </li>
-            <div class='content active-content'>
+            <div class='content active-content horizontalScrolling'>
                 <div class='tab-content-container tab-contents'>
                     <div class='tab-image tab-image-1'>
                         <div class='prob-sol problem-image-3'></div>
@@ -143,7 +143,7 @@
                 <div class='tab-content-container tab-content-container-2'>
                     <div class='tab-content-text tab-content-text-left'>
                         <div class='tab-content-text-head'>Problem</div>
-                        <div class='tab-content-text-content'>Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+                        <div class='tab-content-text-content'>3 Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
                     </div>
                     <div class='tab-content-text'>
                         <div class='tab-content-text-head'>Solution</div>
@@ -321,21 +321,25 @@
     }
     .mobile-tabs .tab-content-container{
         display: block;
-        overflow: scroll;
-        padding: 20px 20px 0;
-        white-space: nowrap;
+        padding: 20px 30px 0 0px;
     }
     .mobile-tabs .tab-image{
-        width: 264px;
+        width: 350px;
         height: 310px;
     }
     .mobile-tabs .prob-sol{
-        left: 12px;
+        left: 55px;
         width: 240px;
         height: 240px;
     }
     .mobile-tabs .tab-content-text{
         white-space: normal;
         display: inline-block;
+        margin-right: 20%;
+        margin-left: 10%;
+    }
+    .mobile-tabs .horizontalScrolling{
+        overflow: scroll;
+        white-space: nowrap;
     }
 </style>

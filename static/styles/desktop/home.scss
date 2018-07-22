@@ -242,7 +242,7 @@
     left: 1%;
   }
   .VueCarousel-navigation-button.VueCarousel-navigation-next{
-    left: 46%;
+    left: 89%;
   }
   .VueCarousel-inner{
     flex-basis: 270px !important;
@@ -250,4 +250,9 @@
 }
 .VueCarousel-slide{
   width: 300px !important;
+}
+.mobileNewsCarousel{
+  .VueCarousel-navigation{
+    display:none !important;
+  }
 }

@@ -87,6 +87,23 @@
           </div>
         </div>
       </div>
+      <div class="languageChangeDd rel">
+        <div class="languageChangeDdWidget" v-on:click="languageOverlayVisibility=!languageOverlayVisibility">
+          <div :style="{
+            'background-image':'url('+selectedLanguage.flagUrl+')'
+          }" class="flagImage"></div>
+          <div class="flagText">{{selectedLanguage.language}}</div>
+          <div class="arrow-icon"></div>
+        </div>
+        <div class="flagOverlay" v-if="languageOverlayVisibility">
+          <nuxt-link v-for="(language,index) in languageOptions" :to="'/'+language.languageKey" exact v-on:click="selectedLanguage = language" class="languageChangeOption" :key="index">
+            <div class="flagImage" :style="{
+            'background-image':'url('+language.flagUrl+')'
+          }"></div>
+            <div class="flagText">{{language.language}}</div>
+          </nuxt-link>
+        </div>
+      </div>
     </header>
     <div class="headerPadder" v-if="$device.isMobile"></div>
     <nuxt/>

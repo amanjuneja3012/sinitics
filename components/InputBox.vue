@@ -58,7 +58,7 @@
         display: flex;
         margin-top: 75px;
     }
-    .is-hidden-desktop .submit{
+    .is-hidden-tablet .submit{
         font-size: 13px;
     }
 </style>

@@ -177,7 +177,7 @@
                 </carousel>
             </no-ssr>
         </div>
-        <div class="newsCarousel is-hidden-desktop">
+        <div class="newsCarousel is-hidden-desktop mobileNewsCarousel">
             <no-ssr placeholder="Loading...">
                 <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :paginationEnabled=false :perPage=1 :navigationEnabled="true">
                     <slide v-for="(slideObj,index) in $t('home.newsCarouselWidget.slides')" :key="index">
@@ -261,3 +261,8 @@
         }
     }
 </script>
+<style>
+.mobileNewsCarousel .VueCarousel-navigation{
+    display:none !important;
+}
+</style>

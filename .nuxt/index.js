@@ -12,7 +12,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 import { createStore } from './store.js'
 
 /* Plugins */
-import nuxt_plugin_nuxtdevicedetectplugin12cbd054_3745bc3d from 'nuxt_plugin_nuxtdevicedetectplugin12cbd054_3745bc3d' // Source: ./nuxt-device-detect.plugin.12cbd054.js
+import nuxt_plugin_nuxtdevicedetectplugin104fc0a0_0619c805 from 'nuxt_plugin_nuxtdevicedetectplugin104fc0a0_0619c805' // Source: ./nuxt-device-detect.plugin.104fc0a0.js
 import nuxt_plugin_i18n_1fba523a from 'nuxt_plugin_i18n_1fba523a' // Source: ../plugins/i18n.js
 import nuxt_plugin_commonPlugins_19abab7f from 'nuxt_plugin_commonPlugins_19abab7f' // Source: ../plugins/commonPlugins
 
@@ -153,7 +153,7 @@ async function createApp (ssrContext) {
 
   // Plugin execution
   
-  if (typeof nuxt_plugin_nuxtdevicedetectplugin12cbd054_3745bc3d === 'function') await nuxt_plugin_nuxtdevicedetectplugin12cbd054_3745bc3d(app.context, inject)
+  if (typeof nuxt_plugin_nuxtdevicedetectplugin104fc0a0_0619c805 === 'function') await nuxt_plugin_nuxtdevicedetectplugin104fc0a0_0619c805(app.context, inject)
   if (typeof nuxt_plugin_i18n_1fba523a === 'function') await nuxt_plugin_i18n_1fba523a(app.context, inject)
   if (typeof nuxt_plugin_commonPlugins_19abab7f === 'function') await nuxt_plugin_commonPlugins_19abab7f(app.context, inject)
   
