@@ -163,7 +163,7 @@
     <div class="newsCarouselWidget">
         <h3 class="news-heading">Don’t miss the latest <span class="red">Botic News</span></h3>
         <div class="leftAbs"></div>
-        <div class="rightAbs"></div>
+        <div class="rightAbs is-hidden-touch"></div>
         <div class="newsCarousel is-hidden-touch">
             <no-ssr placeholder="Loading...">
                 <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :paginationEnabled=false :perPage=5 :navigationEnabled="true">

@@ -80,6 +80,6 @@
         font-weight: 400;
     }
     .mobileContentCard .apps-widget{
-        padding-left: 16%;
+        padding-left: 14%;
     }
 </style>

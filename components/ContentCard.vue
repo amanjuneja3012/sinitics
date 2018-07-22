@@ -104,6 +104,7 @@
         width: 100%;
         justify-content: center;
         align-content: center;
+        margin-bottom: 50px;
     }
     .mobileContentCard.card-container{
         margin-bottom:50px;
@@ -111,7 +112,7 @@
     .image{
         width: 50%;
         background-size: contain;
-        background-position: center;
+        background-position: top center;
         background-repeat: no-repeat;
     }
     .content-container{

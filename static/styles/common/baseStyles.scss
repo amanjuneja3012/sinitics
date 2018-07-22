@@ -469,13 +469,13 @@ $variable-columns: false;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 414px) {
   .is-hidden-touch {
     display: none !important;
   }
 }
 
-@media screen and (min-width: 601px) {
+@media screen and (min-width: 415px) {
   .is-hidden-desktop {
     display: none !important;
   }
@@ -512,4 +512,28 @@ $variable-columns: false;
 }
 .nuxt-link-active{
 	color: #ff003c;
+}
+
+.mobile{
+	h1{
+		font-size:2em !important;
+	}
+	h3{
+		font-size:1.6em !important;	
+		line-height: 1.16em;
+	}
+}
+
+body{
+	-webkit-overflow-scrolling: touch;
+}
+.pricing-mobile{
+	.sectors{
+		white-space: nowrap;
+		width: 100%;
+		overflow: auto;
+	}
+	.feature-container{
+		white-space: normal;
+	}
 }

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="($device.isDesktop)?'desktop':'mobile'">
     <header class="Header is-flex-desktop-only">
       <div class="w100 h100 vCenter is-hidden-touch">
         <nav class="inlineFlex w50 lf navbar h70" role="navigation" aria-label="main navigation">
@@ -417,8 +417,8 @@ a.navbar-item:hover {
 }
 .mobileHeader .hamburger .hamburgerMenuIcon{
   background-image:url('/static/images/english/hamburgerIcon@3x.png');
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   background-size: contain;
   background-repeat: no-repeat;
   cursor:pointer;

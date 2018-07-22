@@ -46,7 +46,7 @@
                 <div class="packages">
                     <div class="package">
                         <p class="name">{{$t('pricing.tableData.tableHeader.leftColumn.name')}}</p>
-                        <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj[0][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?0.8:1))}}</p>
+                        <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj['basic'][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?0.8:1))}}</p>
                         <p class="period">{{$t('pricing.tableData.tableHeader.leftColumn.period')}}</p>
                         <Button
                             :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
@@ -58,7 +58,7 @@
                     </div>
                     <div class="package">
                         <p class="name">{{$t('pricing.tableData.tableHeader.rightColumn.name')}}</p>
-                        <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj[0][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?0.8:1))}}</p>
+                        <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj['enterprise'][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?0.8:1))}}</p>
                         <p class="period">{{$t('pricing.tableData.tableHeader.rightColumn.period')}}</p>
                     <Button
                             :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
