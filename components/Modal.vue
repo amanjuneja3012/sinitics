@@ -1,8 +1,8 @@
 <template>
-  <div class='modal' v-bind:class="{ 'is-active' : showModal}"  >
+  <div class='modal' v-bind:class="{ 'is-active' : showModal}" >
       <div class="modal-background"></div>
       <div class="modal-content">
-          <div class="box">
+          <div class="box" v-bind:class="{ 'is-mobile' : $device.isMobile}">
               <div class="modal-head" >Book a Free Demo</div>
               <div class="modal-sub-head" >Help us with your information and our executive will get back to you soon</div>
               <div>
@@ -25,7 +25,7 @@
               <button class="modal-button" v-bind:class="{ active: !isButtonDisabled }" v-bind:disabled="isButtonDisabled" v-on:click='sendData' >Submit Details</button>
           </div>
       </div>
-      <button class="modal-close is-large" aria-label="close" v-on:click='close'  ></button>
+      <button class="modal-close is-large" v-bind:class="{ 'is-mobile-close' : $device.isMobile}" aria-label="close" v-on:click='close' ></button>
   </div>
 </template>
 
@@ -36,12 +36,14 @@
         components:{
             Button
         },
-        data: () => ({
+         data: function () {
+            return {
                 name: '',
                 company: '',
                 email: '',
                 isButtonDisabled: true
-              }),
+            }
+        },
         methods: {
             activateButton:function(){
               console.log(this.name)
@@ -59,6 +61,9 @@
 </script>
 
 <style scoped>
+    .modal {
+      z-index: 100;
+    }
     .modal .box{
         padding: 38px;
         max-width: 430px;
@@ -67,6 +72,12 @@
         text-align: center;
         margin: 0 auto;
         background-color: #ffffff;
+    }
+    .box.is-mobile{
+        padding: 18px;
+    }
+    .is-mobile .modal-button{
+        width: 100%;
     }
     .modal-head{
         font-size: 24px;
@@ -102,7 +113,14 @@
       background-color: #ff003c;
     }
     .modal-close {
+      z-index: 101;
       position: absolute;
       top: 70px;
+    }
+    .is-mobile-close.modal-close {
+      z-index: 125;
+      position: absolute;
+      top: 40px;
+      right: 6px;
     }
 </style>

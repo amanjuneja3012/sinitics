@@ -1,11 +1,11 @@
 <template>
     <div class="apps-widget">
-        <span v-for="item in items" class="icon-container">
+        <div v-for="item in items" class="icon-container">
             <div class='tooltip'>
                 <div class='tooltip-header'>{{ item.name }}</div>
             </div>
             <img v-bind:key=item.icon :src=item.icon class="icon" />
-        </span>
+        </div>
     </div>
 </template>
 
@@ -32,6 +32,8 @@
         height: 100px;
     }
     .icon-container{
+        display: inline-block;
+        vertical-align: top;
         position: relative;
     }
     .icon{
@@ -62,7 +64,7 @@
     .tooltip{
         width: 70px;
         left: -5px;
-        top: -70px;
+        top: -22px;
         z-index: 1;
         color: #fff;
         padding: 4px;

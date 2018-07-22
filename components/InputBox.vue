@@ -35,7 +35,11 @@
         background-color: rgba(255, 255, 255, 0.9);
     }
     .mobileContentCard .input{
-        width: 200px;
+        width: 250px;
+
+    }
+    .mobileContentCard .submit{
+        padding: 0px 10px;
     }
     input::-webkit-input-placeholder {
         color: #1e1e1e;

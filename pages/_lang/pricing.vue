@@ -3,12 +3,12 @@
         <div class="pricing-container">
             <p class="page-title top-title">{{$t('pricing.title')}}</p>
             <div class="toggle">
-                <p class="monthly">{{$t('pricing.checkBoxDetails.leftStr')}}</p>
-                <label class="switch">
-                    <input type="checkbox" checked>
+                <p class="monthly" v-bind:class="{ 'active-type' : selectedMonthly  }" >{{$t('pricing.checkBoxDetails.leftStr')}}</p>
+                <label class="switch" >
+                    <input type="checkbox" checked v-on:click="changeSelctedType" >
                     <span class="slider round"></span>
                 </label>
-                <p class="yearly">{{$t('pricing.checkBoxDetails.rightStr')}}</p>
+                <p class="yearly" v-bind:class="{ 'active-type' : selectedYearly }"  >{{$t('pricing.checkBoxDetails.rightStr')}}</p>
                 <p class="tagss" v-if=$device.isDesktop >{{$t('pricing.checkBoxDetails.tag')}}</p>
             </div>
             <div class="currencyChange">
@@ -46,7 +46,7 @@
                 <div class="packages">
                     <div class="package">
                         <p class="name">{{$t('pricing.tableData.tableHeader.leftColumn.name')}}</p>
-                        <p class="price">{{selectedCurrency['symbol']+usersCount*15*selectedCurrency['conversionRatio']}}</p>
+                        <p class="price">{{selectedCurrency['symbol']+usersCount*pricingObj[0][usersCount]*selectedCurrency['conversionRatio']}}</p>
                         <p class="period">{{$t('pricing.tableData.tableHeader.leftColumn.period')}}</p>
                         <Button
                             :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
@@ -58,7 +58,7 @@
                     </div>
                     <div class="package">
                         <p class="name">{{$t('pricing.tableData.tableHeader.rightColumn.name')}}</p>
-                        <p class="price">{{selectedCurrency['symbol']+usersCount*30*selectedCurrency['conversionRatio']}}</p>
+                        <p class="price">{{selectedCurrency['symbol']+usersCount*pricingObj[0][usersCount]*selectedCurrency['conversionRatio']}}</p>
                         <p class="period">{{$t('pricing.tableData.tableHeader.rightColumn.period')}}</p>
                     <Button
                             :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
@@ -104,27 +104,6 @@
             <div>
               <Modal :showModal='showModal' :onSend= 'onSend' :close='toggleModal' />
             </div>
-            <div class="price-actions">
-                <p class="price-action">Action</p>
-                <div class="price-action">
-                    <Button
-                        :text="$t('pricing.tableData.buttons.primary')"
-                        backgroundColor="#ff003c"
-                        color="white"
-                        :onClick='toggleModal'
-                    >
-                    </Button>
-                </div>
-                <div class="price-action">
-                    <Button
-                        :text="$t('pricing.tableData.buttons.secondary')"
-                        backgroundColor="white"
-                        color="1e1e1e" 
-                        :onClick='toggleModal' 
-                    >
-                    </Button>
-                </div>
-            </div>
             <div class="sectors" id='sectors'>
                 <p class="page-title sector-title">{{$t('pricing.tableData.sectorsWidget.title')}}</p>
                 <div class="tabs">
@@ -138,6 +117,7 @@
                             :subtitle="obj.subtitle"
                             :detail="obj.detail"
                             :iconUrl="obj.iconUrl"
+                            :hoverImage="obj.imageUrl"
                             width="270px"
                         />
                     </div>
@@ -149,6 +129,7 @@
                             :subtitle="obj.subtitle"
                             :detail="obj.detail"
                             :iconUrl="obj.iconUrl"
+                            :hoverImage="obj.imageUrl"
                             width="270px"
                         />
                     </div>
@@ -185,6 +166,7 @@
     import NoSSR from 'vue-no-ssr';
     import axios from 'axios';
     import currencies from '~/components/currency/data.js';
+    import pricing from '~/components/currency/cost.js';
     var components = {};
     components['no-ssr'] = NoSSR;
     if (process.browser) {
@@ -202,6 +184,8 @@
         }),
         data: () => ({
             showModal: false,
+            selectedYearly: true,
+            selectedMonthly: false,
             buttons: {
                 block1: [
                     {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
@@ -233,6 +217,7 @@
             usersCount: 0,
             currenciesArr: currencies,
             selectedCurrency: currencies[0],
+            pricingObj: pricing,
             isActiveFirst: true,
             isActiveSecond: false
         }),
@@ -267,6 +252,10 @@
                 }).catch((err) => {
                     console.log(err)
                 })
+            },
+            changeSelctedType: function (){
+                this.selectedYearly= !this.selectedYearly
+                this.selectedMonthly= !this.selectedMonthly
             }
         }
 }
@@ -275,6 +264,9 @@
 <style>
     #pricing{
         position: relative;
+    }
+    .active-type{
+        color: #ff003c;
     }
     .page-title{
         font-size: 48px;
@@ -633,6 +625,7 @@
     }
     .pricing-mobile .pricing-container{
         width: 84%;
+        margin-top: 0px;
     }
     .pricing-mobile .top-title{
         font-size: 1.8em;
@@ -675,6 +668,10 @@
     }
     .pricing-mobile thead{
         width: 100%;
+    }
+    .pricing-mobile .tooltip{
+        top: 46px;
+        right: 0;
     }
     .pricing-mobile .no-feature{
         text-align: center;

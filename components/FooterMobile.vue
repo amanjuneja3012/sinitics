@@ -3,11 +3,8 @@
         <div class="social-container inlineFlex">
             <p class="newsletter-title">Subscribe to our Newsletter</p>
             <div class="email-container">
-                <input
-                        class="input"
-                        placeholder="Enter your Email Address"
-                >
-                <img src="images/english/send.png" class="send-icon" />
+                <input class="input" placeholder="Enter your Email Address" v-model="email" >
+                <img src="images/english/send.png" class="send-icon" v-on:click="onSend()"  />
             </div>
         </div>
         <div class="inlineFlex p20">
@@ -15,14 +12,14 @@
                 <p class="menu-title">Botic AI</p>
                 <ul>
                     <li>
-                        <nuxt-link class="links" :to="'/botic'">
+                        <a class="links" :to="'/botic'">
                             Botic
-                        </nuxt-link>
+                        </a>
                     </li>
                     <li>
-                        <nuxt-link class="links" :to="'/pricing'">
+                        <a class="links" :to="'/pricing'">
                             Pricing
-                        </nuxt-link>
+                        </a>
                     </li>
                     <li>
                         <a class="links" href='/#partners'>
@@ -37,7 +34,6 @@
                 <ul>
                     <li>iGaming</li>
                     <li>Regtech</li>
-
                 </ul>
             </div>
             <div class="menu-container">
@@ -48,8 +44,6 @@
                             Careers
                         </a>
                     </li>
-                    <li>System Status</li>
-                    <li>Press Kit</li>
                     <li>Terms & Conditions</li>
                     <li>Privacy Policy</li>
                 </ul>
@@ -70,8 +64,34 @@
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
         components: {
+        },
+        data: function () {
+            return {
+                email: ''
+            }
+        },
+        methods: {
+            onSend: function (){
+                const instance = axios.create({ baseURL: 'https://api.prosperworks.com/developer_api/v1/leads' })
+                instance.defaults.headers.common['Content-Type'] = 'application/json'
+                instance.defaults.headers.common['X-PW-AccessToken'] = '5e952377dd5291aa014db0158a3fa0c1'
+                instance.defaults.headers.common['X-PW-Application'] = 'developer_api'
+                instance.defaults.headers.common['X-PW-UserEmail'] = 'curtis@sinitic.ai'
+                instance.defaults.headers.common['crossDomain'] = 'true' 
+                instance.post('/leads', JSON.stringify({
+                    "email": {
+                        "email": this.email,
+                        "category": this.sendText
+                    },
+                })).then(function (response) {
+                    this.sendText = submitted
+                }).catch((err) => {
+                    console.log(err)
+                })
+            }
         }
     }
 
@@ -157,6 +177,7 @@
         opacity: 0.3;
     }
     .send-icon{
+        cursor: pointer;
         width: 50px;
         height: 50px;
         padding: 17px;

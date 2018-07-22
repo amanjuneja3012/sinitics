@@ -8,12 +8,13 @@
         <p v-html="title" class="title"></p>
         <p v-html="subtitle" class="subtitle"></p>
         <p v-html="detail" class="detail"></p>
+        <div class="bot-image" :style="{ backgroundImage: `url('${hoverImage}')` }"></div>
     </div>
 </template>
 
 <script>
     export default {
-        props: ['title', 'subtitle', 'iconUrl', 'detail', 'width']
+        props: ['title', 'subtitle', 'iconUrl', 'detail', 'width', 'hoverImage']
     }
 
 </script>
@@ -25,12 +26,16 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+        position: relative;
         margin-left: 30px;
         border-radius: 3px;
         border: 1px solid #dee0e6;
-        position: relative;
+        
     }
-
+    .feature-container:hover .bot-image{
+        opacity: 1;
+    }
     .icon{
         padding: 15px;
         width: 65px;
@@ -62,5 +67,13 @@
         font-size: 18px;
         color: #1e1e1e;
         text-align: center;
+    }
+    .bot-image{
+        top: 0;
+        opacity: 0;
+        width: 268px;
+        height: 305px;
+        position: absolute;
+        transition: 0.3s opacity ease-in-out;
     }
 </style>

@@ -248,7 +248,7 @@
     }
     .tab-image{
       width: 358px;
-      height: 350px;
+      height: 420px;
       position: relative;
       display: inline-block;
       background-size: contain;
@@ -288,9 +288,9 @@
     }
     .prob-sol{
       bottom: 0;
-      left: 44px;
-      width: 270px;
-      height: 270px;
+      left: 20px;
+      width: 320px;
+      height: 326px;
       position: absolute;
       background-size: contain;
       background-position: center;
@@ -322,6 +322,9 @@
     .mobile-tabs .tab-content-container{
         display: block;
         padding: 20px 30px 0 0px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
     }
     .mobile-tabs .tab-image{
         width: 350px;

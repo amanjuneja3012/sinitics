@@ -3,11 +3,8 @@
         <div class="social-container">
             <p class="newsletter-title">Subscribe to our Newsletter</p>
             <div class="email-container">
-                <input
-                        class="input"
-                        placeholder="Enter your Email Address"
-                >
-                <img src="images/english/send.png" class="send-icon" />
+                <input class="input" placeholder="Enter your Email Address" v-model="email" >
+                <img src="images/english/send.png" class="send-icon" v-on:click='onSend()' />
             </div>
             <div class="icon-container">
                 <img src="images/english/google.svg" class="social-icon"/>
@@ -56,8 +53,6 @@
                         Careers
                     </a>
                 </li>
-                <li>System Status</li>
-                <li>Press Kit</li>
                 <li>Terms & Conditions</li>
                 <li>Privacy Policy</li>
             </ul>
@@ -66,8 +61,34 @@
 </template>
 
 <script>
+    import axios from 'axios';
     export default {
         components: {
+        },
+        data: function () {
+            return {
+                email: ''
+            }
+        },
+        methods: {
+            onSend: function (){
+                const instance = axios.create({ baseURL: 'https://api.prosperworks.com/developer_api/v1/leads' })
+                instance.defaults.headers.common['Content-Type'] = 'application/json'
+                instance.defaults.headers.common['X-PW-AccessToken'] = '5e952377dd5291aa014db0158a3fa0c1'
+                instance.defaults.headers.common['X-PW-Application'] = 'developer_api'
+                instance.defaults.headers.common['X-PW-UserEmail'] = 'curtis@sinitic.ai'
+                instance.defaults.headers.common['crossDomain'] = 'true' 
+                instance.post('/leads', JSON.stringify({
+                    "email": {
+                        "email": this.email,
+                        "category": 'newsletter'
+                    },
+                })).then(function (response) {
+                    this.sendText = submitted
+                }).catch((err) => {
+                    console.log(err)
+                })
+            }
         }
     }
 
@@ -145,6 +166,7 @@
         opacity: 0.3;
     }
     .send-icon{
+        cursor: pointer;
         width: 50px;
         height: 50px;
         padding: 17px;

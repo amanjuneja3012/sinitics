@@ -211,14 +211,20 @@
     background-color: white !important;
     box-shadow: 0 3px 9px 0 #e6e6e6;
   }
-  .VueCarousel-navigation-button.VueCarousel-navigation-prev{
-    left: 1%;
-  }
-  .VueCarousel-navigation-button.VueCarousel-navigation-next{
-    left: 46%;
-  }
+  // .VueCarousel-navigation-button.VueCarousel-navigation-prev{
+  //   left: 1%;
+  // }
+  // .VueCarousel-navigation-button.VueCarousel-navigation-next{
+  //   left: 46%;
+  // }
   .VueCarousel-inner{
     flex-basis: 270px !important;
+  }
+  .newsCarouselWidget.is-mobile .VueCarousel-navigation-button.VueCarousel-navigation-prev{
+    left: 6%;
+  }
+  .newsCarouselWidget. .VueCarousel-navigation-button.VueCarousel-navigation-next{
+    right: 20%;
   }
 }
 .VueCarousel-slide{

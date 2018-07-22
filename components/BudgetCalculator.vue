@@ -1,5 +1,5 @@
 <template>
-    <div :class="($device.isDesktop)?'rel w50':'w100'" style="{'position':'relative'}">
+    <div :class="($device.isDesktop)?'rel w50':'w100 is-mobile'" style="{'position':'relative'}">
         <div :class="($device.isDesktop)?'budgetCalculator column':'budgetCalculator column relImp w100'">
             <div class="column w100 black roundedTop center">
                 <div class="w50 inline-flex vTop colorWhite colorWhite-text f13"><span>Per month Savings <br> with <span class='red'>50%</span> Automation</span></div>
@@ -8,19 +8,24 @@
                         <div class="dropdown is-hoverable">
                             <div class="dropdown-trigger">
                                 <button class="button dropdown-content-selected" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span >{{selectedCurrency.symbol}}</span>
+                                <span class='selected-text' >{{selectedCurrency.key}}</span>
+                                <span class='drop-down-icon'></span>
+                                
                                 </button>
                             </div>
                             <div class="dropdown-menu" id="dropdown-menu" role="menu">
                                 <div class="dropdown-content">
                                 <div href="#" class="dropdown-item" v-on:click="selectedCurrency=currenciesArr[0]" >
-                                    {{currenciesArr[0].symbol}}
+                                    {{currenciesArr[0].key}}
                                 </div>
                                 <div class="dropdown-item" v-on:click="selectedCurrency=currenciesArr[1]" >
-                                    {{currenciesArr[1].symbol}}
+                                    {{currenciesArr[1].key}}
                                 </div>
                                 <div href="#" class="dropdown-item is-active" v-on:click="selectedCurrency=currenciesArr[2]" >
-                                    {{currenciesArr[2].symbol}}
+                                    {{currenciesArr[2].key}}
+                                </div>
+                                <div href="#" class="dropdown-item is-active" v-on:click="selectedCurrency=currenciesArr[3]" >
+                                    {{currenciesArr[3].key}}
                                 </div>
                                 </div>
                             </div>
@@ -111,6 +116,34 @@
     .colorWhite-text .red{
         font-weight: 700;
     }
+    .dropdown-trigger{
+        position: relative;
+    }
+    .is-mobile .roundedTop{
+        padding: 0.8em;
+    }
+    .is-mobile .vTop.alignRight{
+        flex-direction: column;
+    }
+    .is-mobile .vTop.alignRight{
+        flex-direction: column;
+    }
+    .is-mobile .vTop.currency{
+        margin-top: 20px;
+    }
+    .drop-down-icon{
+        width: 6.5px;
+        height: 3.9px;
+        right: 4px;
+        position: absolute;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/triangle.svg');
+    }
+    .selected-text{
+        margin-right: 6px;
+    }
     .budgetCalculator{
         display:flex;
         width: 64%;
@@ -122,9 +155,6 @@
         align-items: center;
         justify-content: center;
         box-shadow: -2px 47px 212px -56px rgba(0,0,0,0.18);
-        .text{
-            font-size:12px;
-        }
     }
     .mobileContentCard .budgetCalculator{
         display:flex;
@@ -204,6 +234,7 @@
     .dropdown-item{
         height: 33px;
         width: 59px;
+        padding: 0;
         text-align: center;
     }
     .dropdown-item:hover{
