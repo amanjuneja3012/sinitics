@@ -473,18 +473,15 @@ $variable-columns: false;
   .is-hidden-touch {
     display: none !important;
   }
+  #__layout{
+    min-width:0;
+  }
 }
 
 @media screen and (min-width: 415px) {
   .is-hidden-desktop {
     display: none !important;
   }
-}
-
-@media screen and (max-width: 414px) {
-	#__layout{
-		min-width:0;
-	}
 }
 
 @media screen and (min-width: 1088px) and (max-width: 1279px) {
