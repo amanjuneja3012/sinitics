@@ -1,5 +1,5 @@
 <template>
-  <div class ='botic botic-mobile'>
+  <div class='botic botic-mobile'>
     <ContentCard
       :header="$t('botic.contentCards.card1.header')"
       :subtitle="$t('botic.contentCards.card1.subtitle')"
@@ -21,11 +21,11 @@
     </ContentCard>
     <div :class="($device.isDesktop)?'bots-features-container':'bots-features-container is-flex-mobile'"  >
       <p class="feature-heading head-workbox" v-html="$t('botic.processDetailsWidget.heading')"></p>
-      <div class='workbox-desktop' v-if="$device.isDesktop">
+      <div class='workbox-desktop is-hidden-touch'>
         <WorkBoxSection 
           :leftCard="$t('botic.processDetailsWidget.step1.leftCard')"
           :rightCard="$t('botic.processDetailsWidget.step1.rightCard')"
-          :rightCardHighlight=true
+          :rightCardHighlight="true"
         />
         <WorkBoxSection 
           :leftCard="$t('botic.processDetailsWidget.step2.leftCard')"
@@ -34,11 +34,11 @@
         <WorkBoxSection 
           :leftCard="$t('botic.processDetailsWidget.step3.leftCard')"
           :rightCard="$t('botic.processDetailsWidget.step3.rightCard')"
-          :rightCardHighlight=true
+          :rightCardHighlight="true"
         />
       </div>
-      <div class='workbox-mobile' v-else-if="$device.isMobile">
-        <WorkBoxSection 
+      <div class='workbox-mobile is-hidden-desktop'>
+        <WorkBoxSectionMobile
           :card1="$t('botic.processDetailsWidget.step1.leftCard')"
           :card2="$t('botic.processDetailsWidget.step1.rightCard')"
           :card3="$t('botic.processDetailsWidget.step2.leftCard')"
@@ -92,8 +92,6 @@
     <Footer class="is-hidden-touch"> </Footer>
     <FooterMobile class="is-hidden-desktop"> </FooterMobile>
   </div>
-
-
 </template>
 <script>
     import Index from '~/pages/_lang/index'
@@ -102,6 +100,7 @@
     import Footer from '~/components/Footer'
     import FooterMobile from '~/components/FooterMobile'
     import WorkBoxSection from '~/components/workBoxSection'
+    import WorkBoxSectionMobile from '~/components/workBoxSectionMobile'
     import Tabs from '~/components/Tabs'
 
     export default {
@@ -111,6 +110,7 @@
             Button,
             Footer,
             WorkBoxSection,
+            WorkBoxSectionMobile,
             Tabs,
             FooterMobile
         },
