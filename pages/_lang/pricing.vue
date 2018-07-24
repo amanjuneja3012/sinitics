@@ -1,307 +1,311 @@
 <template>
-    <div id='pricingDesktop' class='pricing-desktop'>
-        <div class="pricing-container is-hidden-touch">
-            <p class="page-title top-title">{{$t('pricing.title')}}</p>
-            <div class="toggle">
-                <p class="monthly" v-bind:class="{ 'active-type' : selectedMonthly  }" >{{$t('pricing.checkBoxDetails.leftStr')}}</p>
-                <label class="switch" >
-                    <input type="checkbox" checked v-on:click="changeSelctedType" >
-                    <span class="slider round"></span>
-                </label>
-                <p class="yearly" v-bind:class="{ 'active-type' : selectedYearly }"  >{{$t('pricing.checkBoxDetails.rightStr')}}</p>
-                <p class="tagss" >{{$t('pricing.checkBoxDetails.tag')}}</p>
-            </div>
-            <div class="currencyChange">
-                <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" :class="(selectedCurrency['key']==currency['key'])?'selected':''">
-                    <div>{{currency.symbol}}</div>
+    <div>
+        <div id='pricingDesktop' class='is-hidden-touch pricing-desktop'>
+            <div class="pricing-container">
+                <p class="page-title top-title">{{$t('pricing.title')}}</p>
+                <div class="toggle">
+                    <p class="monthly" v-bind:class="{ 'active-type' : selectedMonthly  }" >{{$t('pricing.checkBoxDetails.leftStr')}}</p>
+                    <label class="switch" >
+                        <input type="checkbox" checked v-on:click="changeSelctedType" >
+                        <span class="slider round"></span>
+                    </label>
+                    <p class="yearly" v-bind:class="{ 'active-type' : selectedYearly }"  >{{$t('pricing.checkBoxDetails.rightStr')}}</p>
+                    <p class="tagss" v-if=$device.isDesktop >{{$t('pricing.checkBoxDetails.tag')}}</p>
                 </div>
-            </div>
-            <no-ssr>
-                <div class="userSlider">
-                    <vue-slider 
-                        v-model = "usersCount"
-                        :height = "8"
-                        :dotSize = "20"
-                        :min = "0"
-                        :max = "50000"
-                        :value= "100"
-                        :data= "[100, 500, 1000, 2000, 3000, 4000, 5000, 10000, 20000, 30000, 40000, 50000]"
-                        :interval = "500"
-                        :disabled = "false"
-                        :show = "true"
-                        :speed = "0.3"
-                        :reverse = "false"
-                        tooltip = "always"
-                        :piecewise = "true"
-                        formatter = "{value} Users"
-                        :tooltipStyle = "{
-                            'backgroundColor': '#1e1e1e',
-                            'borderColor': '#1e1e1e'
-                        }"
-                    >
-                    </vue-slider>
+                <div class="currencyChange">
+                    <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" :class="(selectedCurrency['key']==currency['key'])?'selected':''">
+                        <div>{{currency.symbol}}</div>
+                    </div>
                 </div>
-            </no-ssr>
-            <div class="pricing-table" >
-                <div class="packages">
-                    <div class="package">
-                        <p class="name">{{$t('pricing.tableData.tableHeader.leftColumn.name')}}</p>
-                        <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj['basic'][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?0.8:1))}}</p>
-                        <p class="period">{{$t('pricing.tableData.tableHeader.leftColumn.period')}}</p>
+                <no-ssr>
+                    <div class="userSlider">
+                        <vue-slider 
+                            v-model = "usersCount"
+                            :height = "8"
+                            :dotSize = "20"
+                            :min = "0"
+                            :max = "50000"
+                            :value= "100"
+                            :data= "[100, 500, 1000, 2000, 3000, 4000, 5000, 10000, 20000, 30000, 40000, 50000]"
+                            :interval = "500"
+                            :disabled = "false"
+                            :show = "true"
+                            :speed = "0.3"
+                            :reverse = "false"
+                            tooltip = "always"
+                            :piecewise = "true"
+                            formatter = "{value} Users"
+                            :tooltipStyle = "{
+                                'backgroundColor': '#1e1e1e',
+                                'borderColor': '#1e1e1e'
+                            }"
+                        >
+                        </vue-slider>
+                    </div>
+                </no-ssr>
+                <div class="pricing-table" >
+                    <div class="packages">
+                        <div class="package">
+                            <p class="name">{{$t('pricing.tableData.tableHeader.leftColumn.name')}}</p>
+                            <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj['basic'][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?0.8:1))}}</p>
+                            <p class="period">{{$t('pricing.tableData.tableHeader.leftColumn.period')}}</p>
+                            <Button
+                                :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
+                                backgroundColor="#ff003c"
+                                color="white"
+                                :onClick='toggleModal'
+                            >
+                            </Button>
+                        </div>
+                        <div class="package">
+                            <p class="name">{{$t('pricing.tableData.tableHeader.rightColumn.name')}}</p>
+                            <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj['enterprise'][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?0.8:1))}}</p>
+                            <p class="period">{{$t('pricing.tableData.tableHeader.rightColumn.period')}}</p>
                         <Button
-                            :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
-                            backgroundColor="#ff003c"
-                            color="white"
-                            :onClick='toggleModal'
-                        >
-                        </Button>
+                                :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
+                                backgroundColor="white"
+                                color="#ff003c"
+                                :onClick='toggleModal'
+                            >
+                            </Button>
+                        </div>
                     </div>
-                    <div class="package">
-                        <p class="name">{{$t('pricing.tableData.tableHeader.rightColumn.name')}}</p>
-                        <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj['enterprise'][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?0.8:1))}}</p>
-                        <p class="period">{{$t('pricing.tableData.tableHeader.rightColumn.period')}}</p>
+                    <table id='pricing-feature'>
+                        <thead>
+                            <th>{{$t('pricing.tableData.tableMetadata.headingRow[0]')}}</th>
+                            <th>{{$t('pricing.tableData.tableMetadata.headingRow[1]')}}</th>
+                            <th>{{$t('pricing.tableData.tableMetadata.headingRow[2]')}}</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{$t('pricing.tableData.tableMetadata.subHeading[0]')}}</td>
+                                <td>{{$t('pricing.tableData.tableMetadata.subHeading[1]')}}</td>
+                                <td>{{$t('pricing.tableData.tableMetadata.subHeading[2]')}}</td>
+                            </tr>
+                            <tr v-for="item in $t('pricing.tableData.tableMetadata.items')">
+                                <td class='item-name'>
+                                    {{ item.name }}
+                                    <div class='tooltip'>
+                                        <div class='tooltip-header'>{{ item.name }}</div>
+                                        <div class='tooltip-text'>{{ item.tooltip }}</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <img src="confirm.png" v-if="item.basic == 'confirm'"/>
+                                    <p class="no-feature" v-if="item.basic == 'no'"></p>
+                                </td>
+                                <td>
+                                    <img src="confirm.png" v-if="item.enterprise == 'confirm'"/>
+                                    <p class="no-feature" v-if="item.enterprise == 'no'"></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                  <Modal :showModal='showModal' :onSend= 'onSend' :close='toggleModal' />
+                </div>
+                <div class="sectors" id='sectors'>
+                    <p class="page-title sector-title">{{$t('pricing.tableData.sectorsWidget.title')}}</p>
+                    <div class="tabs">
+                        <div class="tab" v-bind:class="{ active: isActiveFirst }" v-on:click="ActivateFirst">{{$t('pricing.tableData.sectorsWidget.tabs[0]')}}</div>
+                        <div class="tab" v-bind:class="{ active: isActiveSecond }" v-on:click="ActivateSecond">{{$t('pricing.tableData.sectorsWidget.tabs[1]')}}</div>
+                    </div>
+                    <div class="sector-cards" v-bind:class="{ active: isActiveFirst }">
+                        <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
+                            <CardWithIcon
+                                :title="obj.title"
+                                :subtitle="obj.subtitle"
+                                :detail="obj.detail"
+                                :iconUrl="obj.iconUrl"
+                                :hoverImage="obj.imageUrl"
+                                width="270px"
+                            />
+                        </div>
+                    </div>
+                    <div class="sector-cards" v-bind:class="{ active: isActiveSecond }">
+                        <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
+                            <CardWithIcon
+                                :title="obj.title"
+                                :subtitle="obj.subtitle"
+                                :detail="obj.detail"
+                                :iconUrl="obj.iconUrl"
+                                :hoverImage="obj.imageUrl"
+                                width="270px"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="questions">
+                    <p class="page-title question-title">{{$t('pricing.tableData.questionsWidget.title')}}</p>
                     <Button
-                            :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
-                            backgroundColor="white"
-                            color="#ff003c"
-                            :onClick='toggleModal'
-                        >
-                        </Button>
-                    </div>
-                </div>
-                <table id='pricing-feature'>
-                    <thead>
-                        <th>{{$t('pricing.tableData.tableMetadata.headingRow[0]')}}</th>
-                        <th>{{$t('pricing.tableData.tableMetadata.headingRow[1]')}}</th>
-                        <th>{{$t('pricing.tableData.tableMetadata.headingRow[2]')}}</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{{$t('pricing.tableData.tableMetadata.subHeading[0]')}}</td>
-                            <td>{{$t('pricing.tableData.tableMetadata.subHeading[1]')}}</td>
-                            <td>{{$t('pricing.tableData.tableMetadata.subHeading[2]')}}</td>
-                        </tr>
-                        <tr v-for="item in $t('pricing.tableData.tableMetadata.items')">
-                            <td class='item-name'>
-                                {{ item.name }}
-                                <div class='tooltip'>
-                                    <div class='tooltip-header'>{{ item.name }}</div>
-                                    <div class='tooltip-text'>{{ item.tooltip }}</div>
-                                </div>
-                            </td>
-                            <td>
-                                <img src="confirm.png" v-if="item.basic == 'confirm'"/>
-                                <p class="no-feature" v-if="item.basic == 'no'"></p>
-                            </td>
-                            <td>
-                                <img src="confirm.png" v-if="item.enterprise == 'confirm'"/>
-                                <p class="no-feature" v-if="item.enterprise == 'no'"></p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div>
-              <Modal :showModal='showModal' :onSend= 'onSend' :close='toggleModal' />
-            </div>
-            <div class="sectors" id='sectors'>
-                <p class="page-title sector-title">{{$t('pricing.tableData.sectorsWidget.title')}}</p>
-                <div class="tabs">
-                    <div class="tab" v-bind:class="{ active: isActiveFirst }" v-on:click="ActivateFirst">{{$t('pricing.tableData.sectorsWidget.tabs[0]')}}</div>
-                    <div class="tab" v-bind:class="{ active: isActiveSecond }" v-on:click="ActivateSecond">{{$t('pricing.tableData.sectorsWidget.tabs[1]')}}</div>
-                </div>
-                <div class="sector-cards" v-bind:class="{ active: isActiveFirst }">
-                    <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
-                        <CardWithIcon
-                            :title="obj.title"
-                            :subtitle="obj.subtitle"
-                            :detail="obj.detail"
-                            :iconUrl="obj.iconUrl"
-                            :hoverImage="obj.imageUrl"
-                            width="270px"
-                        />
-                    </div>
-                </div>
-                <div class="sector-cards" v-bind:class="{ active: isActiveSecond }">
-                    <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
-                        <CardWithIcon
-                            :title="obj.title"
-                            :subtitle="obj.subtitle"
-                            :detail="obj.detail"
-                            :iconUrl="obj.iconUrl"
-                            :hoverImage="obj.imageUrl"
-                            width="270px"
-                        />
-                    </div>
-                </div>
-            </div>
-            <div class="questions">
-                <p class="page-title question-title">{{$t('pricing.tableData.questionsWidget.title')}}</p>
-                <Button
-                    color="white"
-                    width="230px"
-                    backgroundColor="#ff003c"
-                    :text="$t('pricing.tableData.questionsWidget.buttonText')"
-                    :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
-                    align="space-between"
-                    :onClick="function(){}"
-                >
-                </Button>
-                <div class="side-image hide" ></div>
-            </div>
-        </div>
-        <div class="pricing-container is-hidden-desktop">
-            <p class="page-title top-title">{{$t('pricing.title')}}</p>
-            <div class="toggle">
-                <p class="monthly" v-bind:class="{ 'active-type' : selectedMonthly  }" >{{$t('pricing.checkBoxDetails.leftStr')}}</p>
-                <label class="switch" >
-                    <input type="checkbox" checked v-on:click="changeSelctedType" >
-                    <span class="slider round"></span>
-                </label>
-                <p class="yearly" v-bind:class="{ 'active-type' : selectedYearly }"  >{{$t('pricing.checkBoxDetails.rightStr')}}</p>
-                <p class="tagss" >{{$t('pricing.checkBoxDetails.tag')}}</p>
-            </div>
-            <div class="currencyChange">
-                <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" :class="(selectedCurrency['key']==currency['key'])?'selected':''">
-                    <div>{{currency.symbol}}</div>
-                </div>
-            </div>
-            <no-ssr>
-                <div class="userSlider">
-                    <vue-slider 
-                        v-model = "usersCount"
-                        :height = "8"
-                        :dotSize = "20"
-                        :min = "0"
-                        :max = "50000"
-                        :value= "100"
-                        :data= "[100, 500, 1000, 2000, 3000, 4000, 5000, 10000, 20000, 30000, 40000, 50000]"
-                        :interval = "500"
-                        :disabled = "false"
-                        :show = "true"
-                        :speed = "0.3"
-                        :reverse = "false"
-                        tooltip = "always"
-                        :piecewise = "true"
-                        formatter = "{value} Users"
-                        :tooltipStyle = "{
-                            'backgroundColor': '#1e1e1e',
-                            'borderColor': '#1e1e1e'
-                        }"
+                        color="white"
+                        width="230px"
+                        backgroundColor="#ff003c"
+                        :text="$t('pricing.tableData.questionsWidget.buttonText')"
+                        :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
+                        align="space-between"
+                        :onClick="function(){}"
                     >
-                    </vue-slider>
-                </div>
-            </no-ssr>
-            <div class="pricing-table" >
-                <div class="packages">
-                    <div class="package">
-                        <p class="name">{{$t('pricing.tableData.tableHeader.leftColumn.name')}}</p>
-                        <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj['basic'][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?0.8:1))}}</p>
-                        <p class="period">{{$t('pricing.tableData.tableHeader.leftColumn.period')}}</p>
-                        <Button
-                            :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
-                            backgroundColor="#ff003c"
-                            color="white"
-                            :onClick='toggleModal'
-                        >
-                        </Button>
-                    </div>
-                    <div class="package">
-                        <p class="name">{{$t('pricing.tableData.tableHeader.rightColumn.name')}}</p>
-                        <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj['enterprise'][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?0.8:1))}}</p>
-                        <p class="period">{{$t('pricing.tableData.tableHeader.rightColumn.period')}}</p>
-                    <Button
-                            :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
-                            backgroundColor="white"
-                            color="#ff003c"
-                            :onClick='toggleModal'
-                        >
-                        </Button>
-                    </div>
-                </div>
-                <table id='pricing-feature'>
-                    <thead>
-                        <th>{{$t('pricing.tableData.tableMetadata.headingRow[0]')}}</th>
-                        <th>{{$t('pricing.tableData.tableMetadata.headingRow[1]')}}</th>
-                        <th>{{$t('pricing.tableData.tableMetadata.headingRow[2]')}}</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{{$t('pricing.tableData.tableMetadata.subHeading[0]')}}</td>
-                            <td>{{$t('pricing.tableData.tableMetadata.subHeading[1]')}}</td>
-                            <td>{{$t('pricing.tableData.tableMetadata.subHeading[2]')}}</td>
-                        </tr>
-                        <tr v-for="item in $t('pricing.tableData.tableMetadata.items')">
-                            <td class='item-name'>
-                                {{ item.name }}
-                                <div class='tooltip'>
-                                    <div class='tooltip-header'>{{ item.name }}</div>
-                                    <div class='tooltip-text'>{{ item.tooltip }}</div>
-                                </div>
-                            </td>
-                            <td>
-                                <img src="confirm.png" v-if="item.basic == 'confirm'"/>
-                                <p class="no-feature" v-if="item.basic == 'no'"></p>
-                            </td>
-                            <td>
-                                <img src="confirm.png" v-if="item.enterprise == 'confirm'"/>
-                                <p class="no-feature" v-if="item.enterprise == 'no'"></p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div>
-              <Modal :showModal='showModal' :onSend= 'onSend' :close='toggleModal' />
-            </div>
-            <div class="sectors" id='sectors'>
-                <p class="page-title sector-title">{{$t('pricing.tableData.sectorsWidget.title')}}</p>
-                <div class="tabs">
-                    <div class="tab" v-bind:class="{ active: isActiveFirst }" v-on:click="ActivateFirst">{{$t('pricing.tableData.sectorsWidget.tabs[0]')}}</div>
-                    <div class="tab" v-bind:class="{ active: isActiveSecond }" v-on:click="ActivateSecond">{{$t('pricing.tableData.sectorsWidget.tabs[1]')}}</div>
-                </div>
-                <div class="sector-cards" v-bind:class="{ active: isActiveFirst }">
-                    <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
-                        <CardWithIcon
-                            :title="obj.title"
-                            :subtitle="obj.subtitle"
-                            :detail="obj.detail"
-                            :iconUrl="obj.iconUrl"
-                            :hoverImage="obj.imageUrl"
-                            width="270px"
-                        />
-                    </div>
-                </div>
-                <div class="sector-cards" v-bind:class="{ active: isActiveSecond }">
-                    <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
-                        <CardWithIcon
-                            :title="obj.title"
-                            :subtitle="obj.subtitle"
-                            :detail="obj.detail"
-                            :iconUrl="obj.iconUrl"
-                            :hoverImage="obj.imageUrl"
-                            width="270px"
-                        />
-                    </div>
+                    </Button>
+                    <div class="side-image hide" v-if="$device.isDesktop" ></div>
                 </div>
             </div>
-            <div class="questions">
-                <p class="page-title question-title">{{$t('pricing.tableData.questionsWidget.title')}}</p>
-                <Button
-                    color="white"
-                    width="230px"
-                    backgroundColor="#ff003c"
-                    :text="$t('pricing.tableData.questionsWidget.buttonText')"
-                    :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
-                    align="space-between"
-                    :onClick="function(){}"
-                >
-                </Button>
-                <div class="side-image hide" ></div>
-            </div>
+            <Footer> </Footer>
         </div>
-        <Footer class="is-hidden-touch"> </Footer>
-        <FooterMobile class="is-hidden-desktop"> </FooterMobile>
+        <div id='pricingMobile' class='is-hidden-desktop pricing-mobile'>
+            <div class="pricing-container">
+                <p class="page-title top-title">{{$t('pricing.title')}}</p>
+                <div class="toggle">
+                    <p class="monthly" v-bind:class="{ 'active-type' : selectedMonthly  }" >{{$t('pricing.checkBoxDetails.leftStr')}}</p>
+                    <label class="switch" >
+                        <input type="checkbox" checked v-on:click="changeSelctedType" >
+                        <span class="slider round"></span>
+                    </label>
+                    <p class="yearly" v-bind:class="{ 'active-type' : selectedYearly }"  >{{$t('pricing.checkBoxDetails.rightStr')}}</p>
+                    <p class="tagss" v-if=$device.isDesktop >{{$t('pricing.checkBoxDetails.tag')}}</p>
+                </div>
+                <div class="currencyChange">
+                    <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" :class="(selectedCurrency['key']==currency['key'])?'selected':''">
+                        <div>{{currency.symbol}}</div>
+                    </div>
+                </div>
+                <no-ssr>
+                    <div class="userSlider">
+                        <vue-slider 
+                            v-model = "usersCount"
+                            :height = "8"
+                            :dotSize = "20"
+                            :min = "0"
+                            :max = "50000"
+                            :value= "100"
+                            :data= "[100, 500, 1000, 2000, 3000, 4000, 5000, 10000, 20000, 30000, 40000, 50000]"
+                            :interval = "500"
+                            :disabled = "false"
+                            :show = "true"
+                            :speed = "0.3"
+                            :reverse = "false"
+                            tooltip = "always"
+                            :piecewise = "true"
+                            formatter = "{value} Users"
+                            :tooltipStyle = "{
+                                'backgroundColor': '#1e1e1e',
+                                'borderColor': '#1e1e1e'
+                            }"
+                        >
+                        </vue-slider>
+                    </div>
+                </no-ssr>
+                <div class="pricing-table" >
+                    <div class="packages">
+                        <div class="package">
+                            <p class="name">{{$t('pricing.tableData.tableHeader.leftColumn.name')}}</p>
+                            <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj['basic'][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?0.8:1))}}</p>
+                            <p class="period">{{$t('pricing.tableData.tableHeader.leftColumn.period')}}</p>
+                            <Button
+                                :text="$t('pricing.tableData.tableHeader.leftColumn.buttonText')"
+                                backgroundColor="#ff003c"
+                                color="white"
+                                :onClick='toggleModal'
+                            >
+                            </Button>
+                        </div>
+                        <div class="package">
+                            <p class="name">{{$t('pricing.tableData.tableHeader.rightColumn.name')}}</p>
+                            <p class="price">{{selectedCurrency['symbol']+Math.round(usersCount*pricingObj['enterprise'][usersCount]*selectedCurrency['conversionRatio']*(selectedYearly?0.8:1))}}</p>
+                            <p class="period">{{$t('pricing.tableData.tableHeader.rightColumn.period')}}</p>
+                        <Button
+                                :text="$t('pricing.tableData.tableHeader.rightColumn.buttonText')"
+                                backgroundColor="white"
+                                color="#ff003c"
+                                :onClick='toggleModal'
+                            >
+                            </Button>
+                        </div>
+                    </div>
+                    <table id='pricing-feature'>
+                        <thead>
+                            <th>{{$t('pricing.tableData.tableMetadata.headingRow[0]')}}</th>
+                            <th>{{$t('pricing.tableData.tableMetadata.headingRow[1]')}}</th>
+                            <th>{{$t('pricing.tableData.tableMetadata.headingRow[2]')}}</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{$t('pricing.tableData.tableMetadata.subHeading[0]')}}</td>
+                                <td>{{$t('pricing.tableData.tableMetadata.subHeading[1]')}}</td>
+                                <td>{{$t('pricing.tableData.tableMetadata.subHeading[2]')}}</td>
+                            </tr>
+                            <tr v-for="item in $t('pricing.tableData.tableMetadata.items')">
+                                <td class='item-name'>
+                                    {{ item.name }}
+                                    <div class='tooltip'>
+                                        <div class='tooltip-header'>{{ item.name }}</div>
+                                        <div class='tooltip-text'>{{ item.tooltip }}</div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <img src="confirm.png" v-if="item.basic == 'confirm'"/>
+                                    <p class="no-feature" v-if="item.basic == 'no'"></p>
+                                </td>
+                                <td>
+                                    <img src="confirm.png" v-if="item.enterprise == 'confirm'"/>
+                                    <p class="no-feature" v-if="item.enterprise == 'no'"></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                  <Modal :showModal='showModal' :onSend= 'onSend' :close='toggleModal' />
+                </div>
+                <div class="sectors" id='sectors'>
+                    <p class="page-title sector-title">{{$t('pricing.tableData.sectorsWidget.title')}}</p>
+                    <div class="tabs">
+                        <div class="tab" v-bind:class="{ active: isActiveFirst }" v-on:click="ActivateFirst">{{$t('pricing.tableData.sectorsWidget.tabs[0]')}}</div>
+                        <div class="tab" v-bind:class="{ active: isActiveSecond }" v-on:click="ActivateSecond">{{$t('pricing.tableData.sectorsWidget.tabs[1]')}}</div>
+                    </div>
+                    <div class="sector-cards" v-bind:class="{ active: isActiveFirst }">
+                        <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
+                            <CardWithIcon
+                                :title="obj.title"
+                                :subtitle="obj.subtitle"
+                                :detail="obj.detail"
+                                :iconUrl="obj.iconUrl"
+                                :hoverImage="obj.imageUrl"
+                                width="270px"
+                            />
+                        </div>
+                    </div>
+                    <div class="sector-cards" v-bind:class="{ active: isActiveSecond }">
+                        <div class="inline inlineFlex inline-flex" v-for="(obj,index) in $t('pricing.tableData.sectorsWidget.Basic')">
+                            <CardWithIcon
+                                :title="obj.title"
+                                :subtitle="obj.subtitle"
+                                :detail="obj.detail"
+                                :iconUrl="obj.iconUrl"
+                                :hoverImage="obj.imageUrl"
+                                width="270px"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="questions">
+                    <p class="page-title question-title">{{$t('pricing.tableData.questionsWidget.title')}}</p>
+                    <Button
+                        color="white"
+                        width="230px"
+                        backgroundColor="#ff003c"
+                        :text="$t('pricing.tableData.questionsWidget.buttonText')"
+                        :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
+                        align="space-between"
+                        :onClick="function(){}"
+                    >
+                    </Button>
+                    <div class="side-image hide" v-if="$device.isDesktop" ></div>
+                </div>
+            </div>
+            <FooterMobile> </FooterMobile>
+        </div>
     </div>
 </template>
 <script>
