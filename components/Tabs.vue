@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="$device.isDesktop">
+        <div class="is-hidden-touch">
             <div class="tabs is-centered is-toggle">
                 <ul>
                     <li class='tab-head has-border' v-bind:class="{ 'is-active': isActiveFirst }" v-on:click="ActivateFirst" >
@@ -78,7 +78,7 @@
                 </div>
             </div>
         </div>
-        <div v-else-if="$device.isMobile" class='mobile-tabs' >
+        <div class='mobile-tabs is-hidden-desktop' >
             <li class='tab-head has-border'>
                 <span class="icon icon-1 is-small"></span>
                 <span>Multilingual</span>
