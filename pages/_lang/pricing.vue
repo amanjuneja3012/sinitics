@@ -436,7 +436,7 @@
     .pricing-table{
         border: 1px solid #dee0e6;
     }
-    .pricing-table td{
+    .pricing-table td,.pricing-table th{
         align-items: center;
         justify-content: center;
         text-align:center;
