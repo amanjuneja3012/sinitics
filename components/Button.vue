@@ -1,6 +1,6 @@
 <template>
     <a v-bind:href="to">
-        <div  class="button " v-if="$device.isDesktop" :style="{
+        <div  class="button is-hidden-touch"  :style="{
             'background-color': backgroundColor,
             'width': width?width:'170px',
             'color': color,
@@ -8,7 +8,7 @@
             <img :src="iconUrl" v-if="iconUrl !== undefined" class="icon"/>
             {{text}}
         </div>
-        <div  class="button is-mobile" v-else-if="$device.isMobile" :style="{
+        <div  class="button is-mobile is-hidden-desktop"  :style="{
             'background-color': backgroundColor,
             'width': width?width:'136px',
             'color': color,

@@ -1,6 +1,6 @@
 <template>
-    <div class='rel w50' style="{'position':'relative'}">
-        <div class='budgetCalculator column'>
+    <div class='w100 is-mobile' style="{'position':'relative'}">
+        <div class='budgetCalculator column relImp w100'>
             <div class="column w100 black roundedTop center">
                 <div class="w50 inline-flex vTop colorWhite colorWhite-text f13"><span>Per month Savings <br> with <span class='red'>50%</span> Automation</span></div>
                 <div class="row w50 vTop inline-flex is-paddingless center alignRight">

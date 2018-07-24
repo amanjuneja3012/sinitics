@@ -63,7 +63,7 @@
             <div class="partner-text">Need a partner?</div>
             <div class="partner-icon"></div>
         </div>
-        <BudgetCalculator />
+        <BudgetCalculatorMobile />
     </div>
     <div class='desktop bot-features-container is-hidden-touch'>
       <p class="feature-heading">{{$t('home.contentCards.card6.header')}}</p>
@@ -145,14 +145,14 @@
                 <div class="tab tab-right-button w50 inlineFlex center padding10" v-bind:class="{ active: isActiveSecond }" v-on:click="ActivateSecond" >System Integrator</div>
             </div>
         </div>
-        <InfoBlock 
+        <InfoBlockMobile
             buttonText="Enterprise"
             heading="Agency"
             text="Botic enterprise & small business bots have what it takes to launch products and brands-scheduling, human takeover, analytics, omnichannel & more"
             image="/images/english/agency@3x.png"
             :visibility='isActiveFirst'
         />
-        <InfoBlock
+        <InfoBlockMobile
             buttonText="Book a Demo"
             heading="System Integrator"
             text="Sinitic enterprise bots have the features needs for complex solutions: NLP, human takeover, bot training, local hosting, integrations & more"
@@ -209,7 +209,9 @@
     import stylesMobile from '~/static/styles/mobile/home.scss'
     import AppsWidget from '~/components/AppsWidget'
     import BudgetCalculator from '~/components/BudgetCalculator'
+    import BudgetCalculatorMobile from '~/components/BudgetCalculatorMobile'
     import InfoBlock from '~/components/InfoBlock'
+    import InfoBlockMobile from '~/components/InfoBlockMobile'
     import NewsCard from '~/components/NewsCard'
     export default {
         components: {
@@ -220,8 +222,10 @@
             Footer,
             ContentCardCarousel,
             BudgetCalculator,
+            BudgetCalculatorMobile,
             AppsWidget,
             InfoBlock,
+            InfoBlockMobile,
             NewsCard,
             FooterMobile
         },

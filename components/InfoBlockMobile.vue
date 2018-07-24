@@ -1,12 +1,12 @@
 <template>
-    <div class="infoBlock flex card is-hidden-touch" v-if="visibility">
-        <div class="leftImage inlineFlex w40 center vTop" :style="{
+    <div class="infoBlock card mobile column is-hidden-desktop" v-if="visibility">
+        <div class="leftImage center w100" :style="{
             'background-image':'url('+image+')'
         }"></div>
-        <div class="column inlineFlex w60 vTop">
+        <div class="column">
             <h3 class="bold inline-flex f25">{{heading}}</h3>
-            <p class="text inline-flex f14 mt10">{{text}}</p>
-            <div class="mt10">
+            <p class="text inline-flex f18 mt10">{{text}}</p>
+            <div class="mt10 center">
                 <Button
                     :text="buttonText"
                     backgroundColor="#ff003c"

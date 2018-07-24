@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="card-container carousel-card-container" v-if="$device.isDesktop">
+        <div class="card-container carousel-card-container is-hidden-touch">
             <no-ssr placeholder="Loading...">
                 <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :perPage=1 >
                     <slide v-for="(slideObj, index) in slides" :key="index">
@@ -20,7 +20,7 @@
             <div class="image" :style="{'height': height,'background-size': 'contain', 'background-position': 'center', 'background-repeat': 'no-repeat', 'background-image': 'url('+image+')'}"></div>
             <!-- <img :src="image" class="image" :style="{'height': height}"/> -->
         </div>
-        <div class="card-container carousel-card-container mobileContentCard" v-if="$device.isMobile">
+        <div class="card-container carousel-card-container mobileContentCard is-hidden-desktop" >
             <no-ssr placeholder="Loading...">
                 <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :perPage=1 >
                     <slide v-for="(slideObj, index) in slides" :key="index">
