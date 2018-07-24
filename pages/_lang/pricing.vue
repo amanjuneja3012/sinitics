@@ -147,11 +147,10 @@
                     :onClick="function(){}"
                 >
                 </Button>
-                <div class="side-image" v-if="$device.isDesktop" ></div>
+                <div class="side-image hide" v-if="$device.isDesktop" ></div>
             </div>
         </div>
-        <Footer v-if="$device.isDesktop"> </Footer>
-        <FooterMobile v-if="$device.isMobile"> </FooterMobile>
+        <Footer> </Footer>
     </div>
     <div id='pricingMobile' class='pricing-mobile is-hidden-desktop'>
         <div class="pricing-container">
@@ -301,11 +300,10 @@
                     :onClick="function(){}"
                 >
                 </Button>
-                <div class="side-image" v-if="$device.isDesktop" ></div>
+                <div class="side-image hide" v-if="$device.isDesktop" ></div>
             </div>
         </div>
-        <Footer v-if="$device.isDesktop"> </Footer>
-        <FooterMobile v-if="$device.isMobile"> </FooterMobile>
+        <FooterMobile> </FooterMobile>
     </div>
 </template>
 <script>
