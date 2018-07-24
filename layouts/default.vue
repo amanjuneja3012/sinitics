@@ -290,7 +290,7 @@ a.navbar-item:hover {
 }
 
 .nuxt-link-active {
-  color: #ff003c;
+  color: #ff003c !important;
 }
 .Content {
   padding: 50px 0;
@@ -455,5 +455,9 @@ a.navbar-item:hover {
 .headerPadder{
   height:70px;
   width:100%;
+}
+.align-center{
+  align-items: center;
+  justify-content: center;
 }
 </style>
