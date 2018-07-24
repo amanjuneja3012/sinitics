@@ -1,5 +1,5 @@
 <template>
-    <div id='pricing' class='pricing-desktop is-hidden-touch'>
+    <div id='pricingDesktop' class='pricing-desktop is-hidden-touch'>
         <div class="pricing-container">
             <p class="page-title top-title">{{$t('pricing.title')}}</p>
             <div class="toggle">
@@ -153,7 +153,7 @@
         <Footer v-if="$device.isDesktop"> </Footer>
         <FooterMobile v-if="$device.isMobile"> </FooterMobile>
     </div>
-    <div id='pricing' class='pricing-mobile is-hidden-desktop'>
+    <div id='pricingMobile' class='pricing-mobile is-hidden-desktop'>
         <div class="pricing-container">
             <p class="page-title top-title">{{$t('pricing.title')}}</p>
             <div class="toggle">
@@ -439,7 +439,10 @@
     .pricing-table td{
         align-items: center;
         justify-content: center;
-        display: inline-flex;
+        text-align:center;
+    }
+    .pricing-table td p{
+        display: inline-block;
     }
     .pricing-container{
         margin-top: 70px;
