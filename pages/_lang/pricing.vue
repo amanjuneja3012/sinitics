@@ -1,6 +1,6 @@
 <template>
-    <div id='pricingDesktop' class='pricing-desktop is-hidden-touch'>
-        <div class="pricing-container">
+    <div id='pricingDesktop' class='pricing-desktop'>
+        <div class="pricing-container is-hidden-touch">
             <p class="page-title top-title">{{$t('pricing.title')}}</p>
             <div class="toggle">
                 <p class="monthly" v-bind:class="{ 'active-type' : selectedMonthly  }" >{{$t('pricing.checkBoxDetails.leftStr')}}</p>
@@ -9,7 +9,7 @@
                     <span class="slider round"></span>
                 </label>
                 <p class="yearly" v-bind:class="{ 'active-type' : selectedYearly }"  >{{$t('pricing.checkBoxDetails.rightStr')}}</p>
-                <p class="tagss" v-if=$device.isDesktop >{{$t('pricing.checkBoxDetails.tag')}}</p>
+                <p class="tagss" >{{$t('pricing.checkBoxDetails.tag')}}</p>
             </div>
             <div class="currencyChange">
                 <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" :class="(selectedCurrency['key']==currency['key'])?'selected':''">
@@ -147,13 +147,10 @@
                     :onClick="function(){}"
                 >
                 </Button>
-                <div class="side-image hide" v-if="$device.isDesktop" ></div>
+                <div class="side-image hide" ></div>
             </div>
         </div>
-        <Footer> </Footer>
-    </div>
-    <div id='pricingMobile' class='pricing-mobile is-hidden-desktop'>
-        <div class="pricing-container">
+        <div class="pricing-container is-hidden-desktop">
             <p class="page-title top-title">{{$t('pricing.title')}}</p>
             <div class="toggle">
                 <p class="monthly" v-bind:class="{ 'active-type' : selectedMonthly  }" >{{$t('pricing.checkBoxDetails.leftStr')}}</p>
@@ -162,7 +159,7 @@
                     <span class="slider round"></span>
                 </label>
                 <p class="yearly" v-bind:class="{ 'active-type' : selectedYearly }"  >{{$t('pricing.checkBoxDetails.rightStr')}}</p>
-                <p class="tagss" v-if=$device.isDesktop >{{$t('pricing.checkBoxDetails.tag')}}</p>
+                <p class="tagss" >{{$t('pricing.checkBoxDetails.tag')}}</p>
             </div>
             <div class="currencyChange">
                 <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" :class="(selectedCurrency['key']==currency['key'])?'selected':''">
@@ -300,10 +297,11 @@
                     :onClick="function(){}"
                 >
                 </Button>
-                <div class="side-image hide" v-if="$device.isDesktop" ></div>
+                <div class="side-image hide" ></div>
             </div>
         </div>
-        <FooterMobile> </FooterMobile>
+        <Footer class="is-hidden-touch"> </Footer>
+        <FooterMobile class="is-hidden-desktop"> </FooterMobile>
     </div>
 </template>
 <script>

@@ -89,8 +89,8 @@
         </Button>
         <div class="side-image is-hidden-touch" v-if="$device.isDesktop" ></div>
     </div>
-    <Footer v-if="$device.isDesktop"> </Footer>
-    <FooterMobile v-if="$device.isMobile"> </FooterMobile>
+    <Footer class="is-hidden-touch"> </Footer>
+    <FooterMobile class="is-hidden-desktop"> </FooterMobile>
   </div>
 
 
