@@ -3,18 +3,18 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _5fa96066 = () => import('../pages/pricing.vue' /* webpackChunkName: "pages/pricing" */).then(m => m.default || m)
-const _5fe30f68 = () => import('../pages/botic.vue' /* webpackChunkName: "pages/botic" */).then(m => m.default || m)
-const _dbcc3058 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
-const _9c5c7ace = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
-const _68d352d2 = () => import('../pages/_lang/index.vue' /* webpackChunkName: "pages/_lang/index" */).then(m => m.default || m)
-const _e9ca476a = () => import('../pages/_lang/pricing.vue' /* webpackChunkName: "pages/_lang/pricing" */).then(m => m.default || m)
-const _79a7a366 = () => import('../pages/_lang/botic.vue' /* webpackChunkName: "pages/_lang/botic" */).then(m => m.default || m)
-const _a843085c = () => import('../pages/_lang/about.vue' /* webpackChunkName: "pages/_lang/about" */).then(m => m.default || m)
+const _0e7cac7f = () => import('../pages/pricing.vue' /* webpackChunkName: "pages/pricing" */).then(m => m.default || m)
+const _e8301ecc = () => import('../pages/botic.vue' /* webpackChunkName: "pages/botic" */).then(m => m.default || m)
+const _83c26df4 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
+const _4452b86a = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _d8b3eb6e = () => import('../pages/_lang/index.vue' /* webpackChunkName: "pages/_lang/index" */).then(m => m.default || m)
+const _e3e72906 = () => import('../pages/_lang/pricing.vue' /* webpackChunkName: "pages/_lang/pricing" */).then(m => m.default || m)
+const _41b75718 = () => import('../pages/_lang/botic.vue' /* webpackChunkName: "pages/_lang/botic" */).then(m => m.default || m)
+const _73ee2f84 = () => import('../pages/_lang/about.vue' /* webpackChunkName: "pages/_lang/about" */).then(m => m.default || m)
 
 
 
-const scrollBehavior = function (to, from, savedPosition){
+const scrollBehavior = function(to, from, savedPosition){
       return { x: 0, y: 0 }
     }
 
@@ -29,42 +29,42 @@ export function createRouter () {
     routes: [
 		{
 			path: "/pricing",
-			component: _5fa96066,
+			component: _0e7cac7f,
 			name: "pricing"
 		},
 		{
 			path: "/botic",
-			component: _5fe30f68,
+			component: _e8301ecc,
 			name: "botic"
 		},
 		{
 			path: "/about",
-			component: _dbcc3058,
+			component: _83c26df4,
 			name: "about"
 		},
 		{
 			path: "/",
-			component: _9c5c7ace,
+			component: _4452b86a,
 			name: "index"
 		},
 		{
 			path: "/:lang",
-			component: _68d352d2,
+			component: _d8b3eb6e,
 			name: "lang"
 		},
 		{
 			path: "/:lang/pricing",
-			component: _e9ca476a,
+			component: _e3e72906,
 			name: "lang-pricing"
 		},
 		{
 			path: "/:lang/botic",
-			component: _79a7a366,
+			component: _41b75718,
 			name: "lang-botic"
 		},
 		{
 			path: "/:lang/about",
-			component: _a843085c,
+			component: _73ee2f84,
 			name: "lang-about"
 		}
     ],

@@ -6,7 +6,7 @@
         :buttons="$t('home.contentCards.card1.buttons')"
         :showContentOnLeft="true"
         :imageUrl="$t('home.contentCards.card1.image')"
-        height="730px"
+        height="635px"
     >
     </ContentCard>
     <ContentCard

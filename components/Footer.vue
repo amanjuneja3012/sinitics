@@ -100,6 +100,8 @@
         padding-bottom: 100px;
         display: flex;
         width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
         border-top: 1px solid #f5f5f5;
         /* margin-top: 30px; */
         padding-top: 63px;

@@ -5,7 +5,7 @@
       :subtitle="$t('botic.contentCards.card1.subtitle')"
       inputBox="true"
       :showContentOnLeft="true"
-      imageUrl="group-6@3x.png"
+      imageUrl="group-6@2x.png"
       height="780px"
     >
     </ContentCard>
@@ -14,7 +14,7 @@
       :title="$t('botic.contentCards.card2.header')"
       :subtitle="$t('botic.contentCards.card2.subtitle')"
       :showContentOnLeft="false"
-      imageUrl="group-53@3x.png"
+      imageUrl="group-53@2x.png"
       height= '416px'
       listTypes="true"
     >
