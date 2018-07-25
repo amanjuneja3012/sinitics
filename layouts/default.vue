@@ -121,7 +121,7 @@
 </template>
 
 <script>
-// import styles from '../static/styles/common/baseStyles.scss';
+import styles from '../static/styles/common/baseStyles.scss';
 export default {
   data: () => ({
     languageOptions: [
@@ -232,12 +232,14 @@ body{
   background-color: rgba(255,255,255,0.97);
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   align-items: center;
   z-index:99;
 }
 .Header__Wrapper {
   max-width: 1440px;
+  margin: 0 auto;
 }
 .Header__Logo{
   background-image:url('/static/images/english/logo@2x.png');
