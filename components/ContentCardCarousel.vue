@@ -76,6 +76,10 @@
         width:100%;
         margin-left: 0%;
     }
+    .carousel-card-container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
     .carousel-card-container.mobileContentCard .VueCarousel .VueCarousel-pagination{
         position: absolute;
         top: -10%;

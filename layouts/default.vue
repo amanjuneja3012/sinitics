@@ -209,6 +209,8 @@ html, body {
 }
 body{
   /* overflow-x: hidden; */
+}
+.wrapper {
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -239,6 +241,7 @@ body{
 }
 .Header__Wrapper {
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
 }
 .Header__Logo{

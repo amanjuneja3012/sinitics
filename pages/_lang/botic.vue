@@ -218,7 +218,8 @@
     width: 100%;
   }
   .workbox-section{
-    margin-bottom: 3%;
+    max-width: 1440px;
+    margin: 0 auto 3%;   
     width: 100%;
   }
   .workbox-container{

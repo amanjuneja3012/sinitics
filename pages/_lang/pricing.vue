@@ -449,11 +449,10 @@
         display: inline-block;
     }
     .pricing-container{
-        margin-top: 70px;
         padding-top: 70px;
-        margin-left: auto;
-        margin-right: auto;
         width: 70%;
+        max-width: 1440px;
+        margin: 70px auto 0;          
     }
     .packages{
         display: flex;

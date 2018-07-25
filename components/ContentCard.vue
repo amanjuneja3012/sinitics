@@ -110,10 +110,11 @@
     }
     .card-container{
         display: flex;
-        width: 100%;
+        /* width: 1440px; */
+        max-width: 1440px;
+        margin: 0 auto 50px;
         justify-content: center;
         align-content: center;
-        margin-bottom: 50px;
     }
     .mobileContentCard.card-container{
         margin-bottom:50px;
