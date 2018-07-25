@@ -6,7 +6,7 @@
       inputBox="true"
       :showContentOnLeft="true"
       imageUrl="group-6@2x.png"
-      height="780px"
+      height="678px"
     >
     </ContentCard>
     <ContentCard
