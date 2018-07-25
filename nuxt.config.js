@@ -3,7 +3,7 @@ module.exports = {
   router: {
     middleware: 'i18n',
     mode: 'history',
-    scrollBehavior: (to, from, savedPosition) => {
+    scrollBehavior: function(to, from, savedPosition){
       return { x: 0, y: 0 }
     }
   },

@@ -14,7 +14,7 @@ const _73ee2f84 = () => import('../pages/_lang/about.vue' /* webpackChunkName: "
 
 
 
-const scrollBehavior = (to, from, savedPosition) => {
+const scrollBehavior = function(to, from, savedPosition){
       return { x: 0, y: 0 }
     }
 
