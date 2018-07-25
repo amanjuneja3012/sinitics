@@ -2,12 +2,9 @@ module.exports = {
   loading: { color: 'cyan' },
   router: {
     middleware: 'i18n',
-    scrollBehavior: function(to, from, savedPosition) {
-      if (to.hash) {
-          return {selector: to.hash}
-      } else {
-          return { x: 0, y: 0 }
-      }
+    mode: 'history',
+    scrollBehavior: (to, from, savedPosition) => {
+      return { x: 0, y: 0 }
     }
   },
   plugins: ['~/plugins/i18n.js','~/plugins/commonPlugins'],

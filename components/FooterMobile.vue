@@ -11,13 +11,13 @@
             <div class="menu-container">
                 <p class="menu-title">Botic AI</p>
                 <ul>
-                    <li>
-                        <a class="links" :to="'/botic'">
+                     <li>
+                        <a class="links" href='/botic'>
                             Botic
                         </a>
                     </li>
                     <li>
-                        <a class="links" :to="'/pricing'">
+                        <a class="links" href='/pricing'>
                             Pricing
                         </a>
                     </li>

@@ -20,14 +20,14 @@
             <p class="menu-title">Botic AI</p>
             <ul>
                 <li>
-                    <nuxt-link class="links" :to="'/botic'">
+                    <a class="links" href='/botic'>
                         Botic
-                    </nuxt-link>
+                    </a>
                 </li>
                 <li>
-                    <nuxt-link class="links" :to="'/pricing'">
+                    <a class="links" href='/pricing'>
                         Pricing
-                    </nuxt-link>
+                    </a>
                 </li>
                 <li>
                     <a class="links" href='/#partners'>

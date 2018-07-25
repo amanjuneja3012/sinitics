@@ -328,6 +328,7 @@
         components['vue-slider'] = VueSlider
     }
     export default  {
+        scrollToTop: true,
         components: Object.assign(components,{
             Button,
             Footer,
@@ -410,6 +411,9 @@
                 this.selectedYearly= !this.selectedYearly
                 this.selectedMonthly= !this.selectedMonthly
             }
+        },
+        mounted () {
+            window.scrollTo(0, 0)
         }
 }
 
@@ -532,9 +536,11 @@
         margin-left: 40px;
     }
     .sector-cards{
+        overflow: scroll;
+        padding: 30px 0 0 0;
         display: flex;
         display: none;
-        margin-top: 100px;
+        margin-top: 70px;
     }
     .sector-cards.active{
         display: flex;
@@ -549,6 +555,7 @@
         margin-top: 150px;
         margin-top: 190px;
         line-height: 1.1em;
+        white-space: normal;
     }
     .question-title{
         font-size: 2em;
@@ -566,7 +573,8 @@
         margin-bottom: 12%;
     }
     .tabs{
-        width: 320px;
+        width: 100%;
+        max-width: 320px;
         display: flex;
         margin-left: auto;
         margin-right: auto;

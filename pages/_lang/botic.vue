@@ -105,6 +105,7 @@
     import Tabs from '~/components/Tabs'
 
     export default {
+        scrollToTop: true,
         components: {
             ContentCard,
             Index,
@@ -130,6 +131,9 @@
                 ]
             }
         }),
+        mounted () {
+            window.scrollTo(0, 0)
+        }
     }
 </script>
 <style>
