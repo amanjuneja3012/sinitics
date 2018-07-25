@@ -4,7 +4,7 @@
       :header="$t('botic.contentCards.card1.header')"
       :subtitle="$t('botic.contentCards.card1.subtitle')"
       inputBox="true"
-      showContentOnLeft="true"
+      :showContentOnLeft="true"
       imageUrl="group-6@3x.png"
       height="780px"
     >
@@ -13,7 +13,7 @@
       class="types-container"
       :title="$t('botic.contentCards.card2.header')"
       :subtitle="$t('botic.contentCards.card2.subtitle')"
-      showContentOnLeft="false"
+      :showContentOnLeft="false"
       imageUrl="group-53@3x.png"
       height= '416px'
       listTypes="true"
@@ -56,7 +56,7 @@
       class="types-container"
       :title="$t('botic.contentCards.card3.header')"
       :subtitle="$t('botic.contentCards.card3.subtitle')"
-      showContentOnLeft="false"
+      :showContentOnLeft="false"
       imageUrl="achieving@2x.png"
       width= '545px'
       height= '500px'
@@ -68,7 +68,7 @@
       <ContentCard
         :title="$t('botic.contentCards.card4.header')"
         :subtitle="$t('botic.contentCards.card4.subtitle')"
-        showContentOnLeft="true"
+        :showContentOnLeft="true"
         imageUrl="humans@2x.png"
         height="473px"
       >

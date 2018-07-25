@@ -4,31 +4,31 @@
         :header="$t('home.contentCards.card1.header')"
         :subtitle="$t('home.contentCards.card1.subtitle')"
         :buttons="$t('home.contentCards.card1.buttons')"
-        showContentOnLeft="true"
+        :showContentOnLeft="true"
         :imageUrl="$t('home.contentCards.card1.image')"
         height="730px"
     >
     </ContentCard>
     <ContentCard
-        :title = "$t('home.contentCards.card2.header')"
-        :subtitle = "$t('home.contentCards.card2.subtitle')"
-        :buttons = "$t('home.contentCards.card2.buttons')"
-        showContentOnLeft = "false"
-        :imageUrl = "$t('home.contentCards.card2.image')"
-        height = "680px"
+        :title="$t('home.contentCards.card2.header')"
+        :subtitle="$t('home.contentCards.card2.subtitle')"
+        :buttons="$t('home.contentCards.card2.buttons')"
+        :showContentOnLeft="false"
+        :imageUrl="$t('home.contentCards.card2.image')"
+        height="680px"
     >
     </ContentCard>
     <ContentCardCarousel
-        :image = "$t('home.contentCards.card3.image')"
-        height = "550px"
-        :slides = "$t('home.contentCards.card3.slides')"
+        :image="$t('home.contentCards.card3.image')"
+        height="550px"
+        :slides="$t('home.contentCards.card3.slides')"
     >
     </ContentCardCarousel>
     <ContentCard
         :title="$t('home.contentCards.card4.header')"
-        :subtitle = "$t('home.contentCards.card4.subtitle')"
-        showContentOnLeft="false"
-        imageCenter="true"
+        :subtitle="$t('home.contentCards.card4.subtitle')"
+        :showContentOnLeft="false"
+        :imageCenter="true"
         :imageUrl="$t('home.contentCards.card4.image')"
         height="560px"
         externalComponent=AppsWidget
@@ -36,12 +36,12 @@
     </ContentCard>
     <div class="automation-section is-hidden-touch">
         <ContentCard
-            :title = "$t('home.contentCards.card5.header')"
-            :subtitle = "$t('home.contentCards.card5.subtitle')"
-            :buttons = "$t('home.contentCards.card5.buttons')"
-            showContentOnLeft = "true"
-            :imageUrl = "$t('home.contentCards.card5.image')"
-            height = "620px"
+            :title="$t('home.contentCards.card5.header')"
+            :subtitle="$t('home.contentCards.card5.subtitle')"
+            :buttons="$t('home.contentCards.card5.buttons')"
+            :showContentOnLeft="true"
+            :imageUrl="$t('home.contentCards.card5.image')"
+            height="620px"
             rightComponent="BudgetCalculator"
         >
         </ContentCard>
@@ -52,11 +52,11 @@
     </div>
     <div class="automation-section is-hidden-desktop mobileContentCard">
         <ContentCard
-            :title = "$t('home.contentCards.card5.header')"
-            :subtitle = "$t('home.contentCards.card5.subtitle')"
-            :buttons = "$t('home.contentCards.card5.buttons')"
-            showContentOnLeft = "true"
-            height = "auto"
+            :title="$t('home.contentCards.card5.header')"
+            :subtitle="$t('home.contentCards.card5.subtitle')"
+            :buttons="$t('home.contentCards.card5.buttons')"
+            :showContentOnLeft="true"
+            height="auto"
         >
         </ContentCard>
         <div class="partner-down">
@@ -253,12 +253,12 @@
         }),
         methods: {
             ActivateFirst: function (event){
-                this.isActiveSecond = false
+                this.isActiveSecond=false
                 this.isActiveFirst= true
             },
             ActivateSecond: function (event){
                 this.isActiveFirst= false
-                this.isActiveSecond = true
+                this.isActiveSecond=true
             }
         },
         mounted () {

@@ -1,50 +1,100 @@
 <template>
   <div :class="($device.isDesktop)?'desktop':'mobile'">
     <header class="Header is-flex-desktop-only">
-      <div class="w100 h100 vCenter is-hidden-touch">
-        <nav class="inlineFlex w50 lf navbar h70" role="navigation" aria-label="main navigation">
-          <div class="navbar-brand align-center">
-            <nuxt-link class="Header__Logo Header__Link navbar-item" :to="($i18n.locale=='en')?'/':('/'+$i18n.locale+'/')">
-              <div class="logo"></div>
-            </nuxt-link>
-          </div>
-          <div class="navbar-menu">
-            
-            <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/botic':('/'+$i18n.locale+'/botic')">
-              BoticAI
-            </nuxt-link>
-            <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
-              Pricing
-            </nuxt-link>
-            <!-- <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
-              Partners
-            </nuxt-link> -->
-            <a class="Header__Link navbar-item" :href="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
-              Partners
-            </a>
-            <!-- <nuxt-link class="Header__Link navbar-item" :to="'/#partners'">
-              Partners
-            </nuxt-link> -->
-            <!-- <span class="Header__Link navbar-item" v-on:click="scrollTo" >
-              Partners
-            </span> -->
-          </div>
-        </nav>
-        <div class="inlineFlex w50 rf">  
-          <nav class="Header__Menu">
-            <!-- <div class=" is-small is-rounded mr20 blackOpaque">
-              Login Now
+      <div class="Header__Wrapper">
+        <div class="w100 h100 vCenter is-hidden-touch">
+          <nav class="inlineFlex w50 lf navbar h70" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand align-center">
+              <nuxt-link class="Header__Logo Header__Link navbar-item" :to="($i18n.locale=='en')?'/':('/'+$i18n.locale+'/')">
+                <div class="logo"></div>
+              </nuxt-link>
             </div>
-            <div class=" is-small is-rounded">
-              Try it Free
-            </div> -->
-            <div class=" Header__Button">
-              Login Now
-            </div>
-            <div class=" Header__Button Header__Button_2">
-              Try it Free
+            <div class="navbar-menu">
+              
+              <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/botic':('/'+$i18n.locale+'/botic')">
+                BoticAI
+              </nuxt-link>
+              <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
+                Pricing
+              </nuxt-link>
+              <!-- <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
+                Partners
+              </nuxt-link> -->
+              <a class="Header__Link navbar-item" :href="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
+                Partners
+              </a>
+              <!-- <nuxt-link class="Header__Link navbar-item" :to="'/#partners'">
+                Partners
+              </nuxt-link> -->
+              <!-- <span class="Header__Link navbar-item" v-on:click="scrollTo" >
+                Partners
+              </span> -->
             </div>
           </nav>
+          <div class="inlineFlex w50 rf">  
+            <nav class="Header__Menu">
+              <!-- <div class=" is-small is-rounded mr20 blackOpaque">
+                Login Now
+              </div>
+              <div class=" is-small is-rounded">
+                Try it Free
+              </div> -->
+              <div class=" Header__Button">
+                Login Now
+              </div>
+              <div class=" Header__Button Header__Button_2">
+                Try it Free
+              </div>
+            </nav>
+          </div>
+          <div class="languageChangeDd rel">
+            <div class="languageChangeDdWidget" v-on:click="languageOverlayVisibility=!languageOverlayVisibility">
+              <div :style="{
+                'background-image':'url('+selectedLanguage.flagUrl+')'
+              }" class="flagImage"></div>
+              <div class="flagText">{{selectedLanguage.language}}</div>
+              <div class="arrow-icon"></div>
+            </div>
+            <div class="flagOverlay" v-if="languageOverlayVisibility">
+              <nuxt-link v-for="(language,index) in languageOptions" :to="'/'+language.languageKey" exact v-on:click="selectedLanguage = language" class="languageChangeOption" :key="index">
+                <div class="flagImage" :style="{
+                'background-image':'url('+language.flagUrl+')'
+              }"></div>
+                <div class="flagText">{{language.language}}</div>
+              </nuxt-link>
+            </div>
+          </div>
+        </div>
+        <div class="mobileHeader is-hidden-desktop">
+          <nuxt-link class="Header__Logo Header__Link navbar-item" :to="($i18n.locale=='en')?'/':('/'+$i18n.locale+'/')">
+            <div ></div>
+          </nuxt-link>
+          <div class="hamburger">
+            <div v-if="!visibility" class="hamburgerMenuIcon" v-on:click="visibility=true">
+            </div>
+            <div v-if="visibility" class="hamburgerMenuCloseIcon" v-on:click="visibility=false">X
+            </div>
+          </div>
+          <div class="fullscreenDropdown row" v-if="visibility">
+            <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/botic':('/'+$i18n.locale+'/botic')">
+              BoticAI
+            </nuxt-link>
+            <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
+                  Pricing
+            </nuxt-link>
+            <!-- <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')">
+              Partners
+            </nuxt-link> -->
+            <a class="item w100" v-on:click.native="visibility=false" :href="($i18n.locale=='en')?'/#partner':('/'+$i18n.locale+'/#partner')" >
+                Partners
+              </a>
+            <div class="item">
+              <div class="Header__Button">Login Now</div>
+            </div>
+            <div class="item">
+              <div class="Header__Button Header__Button_2">Try it Free</div>
+            </div>
+          </div>
         </div>
         <div class="languageChangeDd rel">
           <div class="languageChangeDdWidget" v-on:click="languageOverlayVisibility=!languageOverlayVisibility">
@@ -62,54 +112,6 @@
               <div class="flagText">{{language.language}}</div>
             </nuxt-link>
           </div>
-        </div>
-      </div>
-      <div class="mobileHeader is-hidden-desktop">
-        <nuxt-link class="Header__Logo Header__Link navbar-item" :to="($i18n.locale=='en')?'/':('/'+$i18n.locale+'/')">
-          <div ></div>
-        </nuxt-link>
-        <div class="hamburger">
-          <div v-if="!visibility" class="hamburgerMenuIcon" v-on:click="visibility=true">
-          </div>
-          <div v-if="visibility" class="hamburgerMenuCloseIcon" v-on:click="visibility=false">X
-          </div>
-        </div>
-        <div class="fullscreenDropdown row" v-if="visibility">
-          <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/botic':('/'+$i18n.locale+'/botic')">
-            BoticAI
-          </nuxt-link>
-          <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
-                Pricing
-          </nuxt-link>
-          <!-- <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')">
-            Partners
-          </nuxt-link> -->
-          <a class="item w100" v-on:click.native="visibility=false" :href="($i18n.locale=='en')?'/#partner':('/'+$i18n.locale+'/#partner')" >
-              Partners
-            </a>
-          <div class="item">
-            <div class="Header__Button">Login Now</div>
-          </div>
-          <div class="item">
-            <div class="Header__Button Header__Button_2">Try it Free</div>
-          </div>
-        </div>
-      </div>
-      <div class="languageChangeDd rel">
-        <div class="languageChangeDdWidget" v-on:click="languageOverlayVisibility=!languageOverlayVisibility">
-          <div :style="{
-            'background-image':'url('+selectedLanguage.flagUrl+')'
-          }" class="flagImage"></div>
-          <div class="flagText">{{selectedLanguage.language}}</div>
-          <div class="arrow-icon"></div>
-        </div>
-        <div class="flagOverlay" v-if="languageOverlayVisibility">
-          <nuxt-link v-for="(language,index) in languageOptions" :to="'/'+language.languageKey" exact v-on:click="selectedLanguage = language" class="languageChangeOption" :key="index">
-            <div class="flagImage" :style="{
-            'background-image':'url('+language.flagUrl+')'
-          }"></div>
-            <div class="flagText">{{language.language}}</div>
-          </nuxt-link>
         </div>
       </div>
     </header>
@@ -206,7 +208,7 @@ html, body {
   background-repeat: no-repeat; */
 }
 body{
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -233,6 +235,8 @@ body{
   width: 100%;
   align-items: center;
   z-index:99;
+}
+.Header__Wrapper {
   max-width: 1440px;
 }
 .Header__Logo{
