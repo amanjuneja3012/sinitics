@@ -22,7 +22,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="links" href='/#partners'>
+                        <a class="links" href='/#partner'>
                             Partners
                         </a>
                     </li>

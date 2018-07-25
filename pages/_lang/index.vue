@@ -137,7 +137,7 @@
             />
         </div>
     </div>
-    <div class="enterpriseInfo rel flex center column hAuto mobile is-hidden-desktop" id="partners">
+    <div class="enterpriseInfo rel flex center column hAuto mobile is-hidden-desktop" id="partner">
         <div class="column widgetHeader w100">
             <h3 class="text head-text bold">Have a <span class="ml5 red"> Client</span>?</h3>
             <div class="tabs f13">

@@ -84,7 +84,7 @@
           <!-- <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')">
             Partners
           </nuxt-link> -->
-          <a class="item w100" v-on:click.native="visibility=false" :href="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
+          <a class="item w100" v-on:click.native="visibility=false" :href="($i18n.locale=='en')?'/#partner':('/'+$i18n.locale+'/#partner')" >
               Partners
             </a>
           <div class="item">
