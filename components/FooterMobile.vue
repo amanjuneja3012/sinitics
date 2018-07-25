@@ -18,7 +18,7 @@
                     </li>
                     <li>
                         <a class="links" href='/pricing'>
-                            Pricing
+                            Pricin
                         </a>
                     </li>
                     <li>
