@@ -121,7 +121,7 @@
 </template>
 
 <script>
-import styles from '../static/styles/common/baseStyles.scss';
+// import styles from '../static/styles/common/baseStyles.scss';
 export default {
   data: () => ({
     languageOptions: [

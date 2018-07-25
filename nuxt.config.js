@@ -7,13 +7,14 @@ module.exports = {
       return { x: 0, y: 0 }
     }
   },
+  extractCSS: true,
   plugins: ['~/plugins/i18n.js','~/plugins/commonPlugins'],
   generate: {
     routes: ['/', '/about', '/fr', '/fr/about']
   },
   modules: [
 	  // provide path to the file with resources
-	  ['nuxt-sass-resources-loader', './static/styles/desktop/home.scss'],
+	  // ['nuxt-sass-resources-loader', './static/styles/desktop/home.scss'],
     ['nuxt-device-detect']
 	],
 	head: {
