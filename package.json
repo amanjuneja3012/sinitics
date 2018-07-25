@@ -18,7 +18,8 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "start": "nuxt start",
+    "start-nuxt": "nuxt start",
+    "start": "node server.js",
     "generate": "nuxt generate",
     "heroku-postbuild": "npm run build"
   },
