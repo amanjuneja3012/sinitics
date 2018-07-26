@@ -66,7 +66,7 @@
         <BudgetCalculatorMobile />
     </div>
     <div class='desktop bot-features-container is-hidden-touch'>
-      <p class="feature-heading">{{$t('home.contentCards.card6.header')}}</p>
+      <p class="feature-heading" v-html="$t('home.contentCards.card6.header')"></p>
       <div class="features-container">
         <BotFeatureCard
                 width="323px"
