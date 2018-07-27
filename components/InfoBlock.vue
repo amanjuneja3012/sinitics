@@ -3,7 +3,7 @@
         <div class="leftImage inlineFlex w40 center vTop" :style="{
             'background-image':'url('+image+')'
         }"></div>
-        <div class="column inlineFlex w60 vTop">
+        <div class="column evenFlex inlineFlex w60 vTop">
             <h3 class="bold inline-flex f25">{{heading}}</h3>
             <p class="text inline-flex f14 mt10">{{text}}</p>
             <div class="mt10">
@@ -28,6 +28,11 @@
     }
 </script>
 <style scoped>
+    .evenFlex {
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-evenly;      
+    }
     .infoBlock{
         box-sizing:border-box;
         padding:5%;

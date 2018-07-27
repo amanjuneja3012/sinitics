@@ -1,5 +1,5 @@
 module.exports = {
-  loading: { color: 'cyan' },
+  loading: { color: '#ff003c' },
   router: {
     middleware: 'i18n',
     mode: 'history',

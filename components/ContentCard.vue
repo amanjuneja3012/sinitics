@@ -11,6 +11,7 @@
                 :title="title"
                 :subtitle="subtitle"
                 :buttons="buttons"
+                :clickHandlers="clickHandlers"
                 :externalComponent="externalComponent"
                 :inputBox='inputBox'
                 :listTypes='listTypes'
@@ -72,7 +73,7 @@
                     :listTypes='listTypes'
             >
             </ActionContent>
-            <div v-if="!rightComponent" class="image" :style="{'height': '340px','background-size': 'contain', 'background-position': (imageCenter === true)?'center':((showContentOnLeft === true)?'right':'left'), 'background-repeat': 'no-repeat', 'background-image': 'url('+imageUrl+')'}"></div>
+            <div v-if="!rightComponent" class="image" :style="{'height': '340px','background-size': 'contain', 'background-position': (imageCenter === true)?'center':((showContentOnLeft === true)?'top right':'top left'), 'background-repeat': 'no-repeat', 'background-image': 'url('+imageUrl+')'}"></div>
             <BudgetCalculator v-if="rightComponent" />
         </div>
     </div>
@@ -82,7 +83,7 @@
     import ActionContent from '~/components/ActionContent';
     import BudgetCalculator from '~/components/BudgetCalculator'
     export default {
-        props: ['padding', 'title', 'header', 'subtitle', 'buttons', 'showContentOnLeft', 'imageUrl', 'imageOffset', 'height', 'externalComponent', 'rightComponent', 'inputBox', 'listTypes', 'imageCenter'],
+        props: ['padding', 'title', 'header', 'subtitle', 'buttons', 'clickHandlers', 'showContentOnLeft', 'imageUrl', 'imageOffset', 'height', 'externalComponent', 'rightComponent', 'inputBox', 'listTypes', 'imageCenter'],
         components: {
             ActionContent,
             BudgetCalculator

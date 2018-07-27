@@ -16,7 +16,7 @@
                         :to="button.to"
                         :backgroundColor="button.backgroundColor"
                         :color="button.color"
-                        :onClick="function(){}"
+                        :onClick="clickHandlers && clickHandlers[index] || function(){}"
                         >
                     </Button>
                 </div>
@@ -56,7 +56,7 @@
     import ListTypes from '~/components/ListTypes'
     import axios from 'axios';
     export default {
-        props: ['title', 'header', 'subtitle', 'buttons', 'width', 'height', 'padding', 'externalComponent', 'inputBox', 'listTypes', 'sendText', 'placeHolder' ],
+        props: ['title', 'header', 'subtitle', 'buttons', 'clickHandlers', 'width', 'height', 'padding', 'externalComponent', 'inputBox', 'listTypes', 'sendText', 'placeHolder' ],
         components: {
             Button,
             AppsWidget,

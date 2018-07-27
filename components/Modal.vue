@@ -115,7 +115,7 @@
     .modal-close {
       z-index: 101;
       position: absolute;
-      top: 70px;
+      top: 30px;
     }
     .is-mobile-close.modal-close {
       z-index: 125;

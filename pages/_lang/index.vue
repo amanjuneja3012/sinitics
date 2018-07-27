@@ -1,9 +1,16 @@
 <template>
   <div id="homepage">
+    <div>
+        <Modal :showModal='showModal' :onSend= 'onSend' :close='toggleModal' />
+    </div>      
     <ContentCard
         :header="$t('home.contentCards.card1.header')"
         :subtitle="$t('home.contentCards.card1.subtitle')"
         :buttons="$t('home.contentCards.card1.buttons')"
+        :clickHandlers="[
+            () => {},
+            toggleModal
+        ]"
         :showContentOnLeft="true"
         :imageUrl="$t('home.contentCards.card1.image')"
         height="635px"
@@ -45,10 +52,10 @@
             rightComponent="BudgetCalculator"
         >
         </ContentCard>
-        <div class="partner-down">
+        <!-- <div class="partner-down">
             <div class="partner-text">Need a partner?</div>
             <div class="partner-icon"></div>
-        </div>
+        </div> -->
     </div>
     <div class="automation-section is-hidden-desktop mobileContentCard">
         <ContentCard
@@ -59,10 +66,10 @@
             height="auto"
         >
         </ContentCard>
-        <div class="partner-down">
+        <!-- <div class="partner-down">
             <div class="partner-text">Need a partner?</div>
             <div class="partner-icon"></div>
-        </div>
+        </div> -->
         <BudgetCalculatorMobile />
     </div>
     <div class='desktop bot-features-container is-hidden-touch'>
@@ -89,7 +96,7 @@
         </Button>
     </div>
     <div class='mobile bot-features-container is-hidden-desktop'>
-      <p class="feature-heading">{{$t('home.contentCards.card6.header')}}</p>
+      <p class="feature-heading" v-html="$t('home.contentCards.card6.header')"></p>
       <div class="features-container">
         <BotFeatureCard
                 width="323px"
@@ -205,6 +212,7 @@
     import BotFeatureCard from '~/components/BotFeatureCard'
     import Footer from '~/components/Footer'
     import FooterMobile from '~/components/FooterMobile'
+    import Modal from '~/components/Modal';
     import stylesDesktop from '~/static/styles/desktop/home.scss'
     import stylesMobile from '~/static/styles/mobile/home.scss'
     import AppsWidget from '~/components/AppsWidget'
@@ -220,6 +228,7 @@
             BotFeatureCard,
             Button,
             Footer,
+            Modal,
             ContentCardCarousel,
             BudgetCalculator,
             BudgetCalculatorMobile,
@@ -230,6 +239,7 @@
             FooterMobile
         },
         data: () => ({
+            showModal: false,
             buttons: {
                 block1: [
                     {text: 'Enterprise', backgroundColor: '#ff003c', color: '#ffffff'},
@@ -252,6 +262,9 @@
             isActiveSecond: false
         }),
         methods: {
+            toggleModal:function(){
+                this.showModal = !this.showModal
+            },            
             ActivateFirst: function (event){
                 this.isActiveSecond=false
                 this.isActiveFirst= true
@@ -259,7 +272,27 @@
             ActivateSecond: function (event){
                 this.isActiveFirst= false
                 this.isActiveSecond=true
-            }
+            },
+            onSend: function (name, company, email){
+                const instance = axios.create({ baseURL: 'https://api.prosperworks.com/developer_api/v1/leads' })
+                instance.defaults.headers.common['Content-Type'] = 'application/json'
+                instance.defaults.headers.common['X-PW-AccessToken'] = '5e952377dd5291aa014db0158a3fa0c1'
+                instance.defaults.headers.common['X-PW-Application'] = 'developer_api'
+                instance.defaults.headers.common['X-PW-UserEmail'] = 'curtis@sinitic.ai'
+                instance.defaults.headers.common['crossDomain'] = 'true' 
+                instance.post('/leads', JSON.stringify({
+                    "name": name,
+                    "email": {
+                        "email": email,
+                        "category":"work"
+                    },
+                    "company_name": company
+                })).then(function (response) {
+                    this.toggleModal()
+                }).catch((err) => {
+                    console.log(err)
+                })
+            }            
         },
         mounted () {
             window.scrollTo(0, 0)
