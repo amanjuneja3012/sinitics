@@ -9,8 +9,8 @@
 
 <script>
 export default {
-  head() {
-    return { title: this.$t('about.title') }
+  head () {
+    return { title: this.$t('about.title') };
   }
-}
+};
 </script>

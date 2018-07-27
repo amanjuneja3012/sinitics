@@ -1,4 +1,4 @@
 <script>
-import botic from '~/pages/_lang/botic'
-export default botic
+import botic from '~/pages/_lang/botic';
+export default botic;
 </script>

@@ -1,29 +1,41 @@
 <template>
-    <a v-bind:href="to">
-        <div  class="button is-hidden-touch"  :style="{
-            'background-color': backgroundColor,
-            'width': width?width:'170px',
-            'color': color,
-            'justify-content': align?align:'center'}" v-on:click.prevent='onClick' >
-            <img :src="iconUrl" v-if="iconUrl !== undefined" class="icon"/>
-            {{text}}
-        </div>
-        <div  class="button is-mobile is-hidden-desktop"  :style="{
-            'background-color': backgroundColor,
-            'width': width?width:'136px',
-            'color': color,
-            'display': 'inline-flex',
-            'justify-content': align?align:'center'}" v-on:click.prevent='onClick' >
-            <img :src="iconUrl" v-if="iconUrl !== undefined" class="icon"/>
-            {{text}}
-        </div>
-    </a>
+  <a :href="to">
+    <div 
+      :style="{
+        'background-color': backgroundColor,
+        'width': width?width:'170px',
+        'color': color,
+        'justify-content': align?align:'center'}" 
+      class="button is-hidden-touch" 
+      @click.prevent="onClick" >
+      <img 
+        v-if="iconUrl !== undefined" 
+        :src="iconUrl" 
+        class="icon">
+      {{ text }}
+    </div>
+    <div 
+      :style="{
+        'background-color': backgroundColor,
+        'width': width?width:'136px',
+        'color': color,
+        'display': 'inline-flex',
+        'justify-content': align?align:'center'}" 
+      class="button is-mobile is-hidden-desktop" 
+      @click.prevent="onClick" >
+      <img 
+        v-if="iconUrl !== undefined" 
+        :src="iconUrl" 
+        class="icon">
+      {{ text }}
+    </div>
+  </a>
 </template>
 
 <script>
     export default {
         props: ['text', 'backgroundColor', 'color', 'width', 'iconUrl', 'showIcon', 'align', 'to', 'onClick']
-    }
+    };
 </script>
 
 <style scoped>

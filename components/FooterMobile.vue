@@ -1,66 +1,93 @@
 <template>
-    <div class="footer-container">
-        <div class="social-container inlineFlex">
-            <p class="newsletter-title">Subscribe to our Newsletter</p>
-            <div class="email-container">
-                <input class="input" placeholder="Enter your Email Address" v-model="email" >
-                <img src="images/english/send.png" class="send-icon" v-on:click="onSend()"  />
-            </div>
-        </div>
-        <div class="inlineFlex p20">
-            <div class="menu-container">
-                <p class="menu-title">Botic AI</p>
-                <ul>
-                     <li>
-                        <a class="links" href='/botic'>
-                            Botic
-                        </a>
-                    </li>
-                    <li>
-                        <a class="links" href='/pricing'>
-                            Pricing
-                        </a>
-                    </li>
-                    <li>
-                        <a class="links" href='/#partner'>
-                            Partners
-                        </a>
-                    </li>
-                    <li class="opacity-3">Sectors</li>
-                </ul>
-            </div>
-            <div class="menu-container">
-                <p class="menu-title">Case Study</p>
-                <ul>
-                    <li>iGaming</li>
-                    <li>Regtech</li>
-                </ul>
-            </div>
-            <div class="menu-container">
-                <p class="menu-title">More Stuff</p>
-                <ul>
-                    <li>
-                        <a class="links" target="_blank" href='https://sinitic.bamboohr.com/jobs'>
-                            Careers
-                        </a>
-                    </li>
-                    <li>Terms & Conditions</li>
-                    <li>Privacy Policy</li>
-                </ul>
-            </div>
-        </div>
-        <div class="inlineFlex iconWrap">
-            <div class="icon-container">
-                <img src="images/english/google.svg" class="social-icon"/>
-                <img src="images/english/facebook.svg" class="social-icon"/>
-                <img src="images/english/linkedin.svg" class="social-icon"/>
-                <img src="images/english/twitter.svg" class="social-icon"/>
-                <img src="images/english/insta.svg" class="social-icon"/>
-                <img src="images/english/medium.svg" class="social-icon"/>
-            </div>
-            <p class="copyright-text">© 2018 Sinitic Limited. All Rights Reserved.</p>
-        </div>
+  <div class="footer-container">
+    <div class="social-container inlineFlex">
+      <p class="newsletter-title">Subscribe to our Newsletter</p>
+      <div class="email-container">
+        <input 
+          v-model="email" 
+          class="input" 
+          placeholder="Enter your Email Address" >
+        <img 
+          src="images/english/send.png" 
+          class="send-icon" 
+          @click="onSend()" >
+      </div>
     </div>
+    <div class="inlineFlex p20">
+      <div class="menu-container">
+        <p class="menu-title">Botic AI</p>
+        <ul>
+          <li>
+            <a 
+              class="links" 
+              href="/botic">
+              Botic
+            </a>
+          </li>
+          <li>
+            <a 
+              class="links" 
+              href="/pricing">
+              Pricing
+            </a>
+          </li>
+          <li>
+            <a 
+              class="links" 
+              href="/#partner">
+              Partners
+            </a>
+          </li>
+          <li class="opacity-3">Sectors</li>
+        </ul>
+      </div>
+      <div class="menu-container">
+        <p class="menu-title">Case Study</p>
+        <ul>
+          <li>iGaming</li>
+          <li>Regtech</li>
+        </ul>
+      </div>
+      <div class="menu-container">
+        <p class="menu-title">More Stuff</p>
+        <ul>
+          <li>
+            <a 
+              class="links" 
+              target="_blank" 
+              href="https://sinitic.bamboohr.com/jobs">
+              Careers
+            </a>
+          </li>
+          <li>Terms & Conditions</li>
+          <li>Privacy Policy</li>
+        </ul>
+      </div>
+    </div>
+    <div class="inlineFlex iconWrap">
+      <div class="icon-container">
+        <img 
+          src="images/english/google.svg" 
+          class="social-icon">
+        <img 
+          src="images/english/facebook.svg" 
+          class="social-icon">
+        <img 
+          src="images/english/linkedin.svg" 
+          class="social-icon">
+        <img 
+          src="images/english/twitter.svg" 
+          class="social-icon">
+        <img 
+          src="images/english/insta.svg" 
+          class="social-icon">
+        <img 
+          src="images/english/medium.svg" 
+          class="social-icon">
+      </div>
+      <p class="copyright-text">© 2018 Sinitic Limited. All Rights Reserved.</p>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -71,29 +98,29 @@
         data: function () {
             return {
                 email: ''
-            }
+            };
         },
         methods: {
             onSend: function (){
-                const instance = axios.create({ baseURL: 'https://api.prosperworks.com/developer_api/v1/leads' })
-                instance.defaults.headers.common['Content-Type'] = 'application/json'
-                instance.defaults.headers.common['X-PW-AccessToken'] = '5e952377dd5291aa014db0158a3fa0c1'
-                instance.defaults.headers.common['X-PW-Application'] = 'developer_api'
-                instance.defaults.headers.common['X-PW-UserEmail'] = 'curtis@sinitic.ai'
-                instance.defaults.headers.common['crossDomain'] = 'true' 
+                const instance = axios.create({ baseURL: 'https://api.prosperworks.com/developer_api/v1/leads' });
+                instance.defaults.headers.common['Content-Type'] = 'application/json';
+                instance.defaults.headers.common['X-PW-AccessToken'] = '5e952377dd5291aa014db0158a3fa0c1';
+                instance.defaults.headers.common['X-PW-Application'] = 'developer_api';
+                instance.defaults.headers.common['X-PW-UserEmail'] = 'curtis@sinitic.ai';
+                instance.defaults.headers.common['crossDomain'] = 'true'; 
                 instance.post('/leads', JSON.stringify({
                     "email": {
                         "email": this.email,
                         "category": this.sendText
                     },
                 })).then(function (response) {
-                    this.sendText = submitted
+                    this.sendText = submitted;
                 }).catch((err) => {
-                    console.log(err)
-                })
+                    console.log(err);
+                });
             }
         }
-    }
+    };
 
 </script>
 
