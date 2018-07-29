@@ -44,6 +44,8 @@
   }
 }
 .automation-section{
+  max-width: 1440px;
+  margin: 0 auto;    
   position: relative;
 }
 .mobileContentCard.automation-section{
@@ -75,7 +77,7 @@
 .infoBack{
   width: 600px;
   height: 600px;
-  background-image: url('/static/images/english/infoBack@3x.png');
+  background-image: url('/static/images/english/infoBack@2x.png');
   background-size: 100% 100%;
   position: absolute;
   background-repeat: no-repeat;
@@ -102,7 +104,7 @@
   }
   .tabs{
     .tab{
-      font-size:1.2em;
+      font-size:0.9em;
     }
   }
   .widgetHeader{
@@ -114,8 +116,8 @@
   height: 700px;
   display: flex;
   align-items: center;
-  margin-top: 60px;
-  margin-bottom: 140px;
+  max-width: 1440px;
+  margin: 60px auto 140px;
   .head-text{
     font-size: 2.12em;
     color: #1e1e1e;
@@ -175,6 +177,8 @@
   }
 }
 .newsCarouselWidget{
+  max-width: 1440px;
+  margin: 0 auto;
   width: 100%;
   padding-left: 9.4%;
   margin-bottom: 100px;
@@ -189,7 +193,7 @@
   .leftAbs{
     position: absolute;
     left: 0;
-    background-image: url('/static/images/english/leftAbs@3x.png');
+    background-image: url('/static/images/english/leftAbs@2x.png');
     height: 250px;
     width: 150px;
     background-size: contain;
@@ -199,7 +203,7 @@
   .rightAbs{
     position: absolute;
     right: 0;
-    background-image: url('/static/images/english/rightAbs@3x.png');
+    background-image: url('/static/images/english/rightAbs@2x.png');
     height: 500px;
     width: 500px;
     top: -24%;

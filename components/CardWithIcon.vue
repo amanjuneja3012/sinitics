@@ -1,21 +1,33 @@
 <template>
-    <div class="feature-container" :style="{
-    'width': width
-  }">
-        <div class="icon-div">
-            <img :src="iconUrl" class="icon"/>
-        </div>
-        <p v-html="title" class="title"></p>
-        <p v-html="subtitle" class="subtitle"></p>
-        <p v-html="detail" class="detail"></p>
-        <div class="bot-image" :style="{ backgroundImage: `url('${hoverImage}')` }"></div>
+  <div 
+    :style="{
+      'width': width
+    }" 
+    class="feature-container">
+    <div class="icon-div">
+      <img 
+        :src="iconUrl" 
+        class="icon">
     </div>
+    <p 
+      class="title" 
+      v-html="title"/>
+    <p 
+      class="subtitle" 
+      v-html="subtitle"/>
+    <p 
+      class="detail" 
+      v-html="detail"/>
+    <div 
+      :style="{ backgroundImage: `url('${hoverImage}')` }" 
+      class="bot-image"/>
+  </div>
 </template>
 
 <script>
     export default {
         props: ['title', 'subtitle', 'iconUrl', 'detail', 'width', 'hoverImage']
-    }
+    };
 
 </script>
 

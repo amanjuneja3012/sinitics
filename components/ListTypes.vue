@@ -1,11 +1,17 @@
 
 <template>
-    <div class="types">
-      <div v-for="item in items" v-bind:key=item.name v-bind:class="{ disable: item.disable }" class="items">
-          <img :src=item.icon class="icon" />
-          <p class="title">{{ item.name }}</p>
-      </div>
+  <div class="types">
+    <div 
+      v-for="item in items" 
+      :key="item.name" 
+      :class="{ disable: item.disable }" 
+      class="items">
+      <img 
+        :src="item.icon" 
+        class="icon" >
+      <p class="title">{{ item.name }}</p>
     </div>
+  </div>
 </template>
 
 <script>
@@ -18,9 +24,9 @@
               {name: 'Outsourcing', icon: 'outsourcing@2x.png', disable: true}
               // {name: 'Government', icon: 'government@2x.png', disable: true}
             ]
-          }
+          };
         }
-    }
+    };
 </script>
 
 <style scoped>

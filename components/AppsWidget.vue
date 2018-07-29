@@ -1,12 +1,17 @@
 <template>
-    <div class="apps-widget">
-        <div v-for="item in items" class="icon-container">
-            <div class='tooltip'>
-                <div class='tooltip-header'>{{ item.name }}</div>
-            </div>
-            <img v-bind:key=item.icon :src=item.icon class="icon" />
-        </div>
+  <div class="apps-widget">
+    <div 
+      v-for="item in items" 
+      class="icon-container">
+      <div class="tooltip">
+        <div class="tooltip-header">{{ item.name }}</div>
+      </div>
+      <img 
+        :key="item.icon" 
+        :src="item.icon" 
+        class="icon" >
     </div>
+  </div>
 </template>
 
 <script>
@@ -21,9 +26,9 @@
               {icon: '/images/english/sms.svg', name: 'sms'},
               {icon: '/images/english/messenger.svg', name: 'messenger'}
             ]
-          }
+          };
         }
-    }
+    };
 </script>
 
 <style scoped>

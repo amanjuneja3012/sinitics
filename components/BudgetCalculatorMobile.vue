@@ -1,81 +1,101 @@
 <template>
-    <div class='w100 is-mobile' style="{'position':'relative'}">
-        <div class='budgetCalculator column relImp w100'>
-            <div class="column w100 black roundedTop center">
-                <div class="w50 inline-flex vTop colorWhite colorWhite-text f13"><span>Per month Savings <br> with <span class='red'>50%</span> Automation</span></div>
-                <div class="row w50 vTop inline-flex is-paddingless center alignRight">
-                    <div class="currencyChange">
-                        <div class="dropdown is-hoverable">
-                            <div class="dropdown-trigger">
-                                <button class="button dropdown-content-selected" aria-haspopup="true" aria-controls="dropdown-menu">
-                                <span class='selected-text' >{{selectedCurrency.key}}</span>
-                                <span class='drop-down-icon'></span>
+  <div 
+    class="w100 is-mobile" 
+    style="{'position':'relative'}">
+    <div class="budgetCalculator column relImp w100">
+      <div class="column w100 black roundedTop center">
+        <div class="w50 inline-flex vTop colorWhite colorWhite-text f13"><span>Per month Savings <br> with <span class="red">50%</span> Automation</span></div>
+        <div class="row w50 vTop inline-flex is-paddingless center alignRight">
+          <div class="currencyChange">
+            <div class="dropdown is-hoverable">
+              <div class="dropdown-trigger">
+                <button 
+                  class="button dropdown-content-selected" 
+                  aria-haspopup="true" 
+                  aria-controls="dropdown-menu">
+                  <span class="selected-text" >{{ selectedCurrency.key }}</span>
+                  <span class="drop-down-icon"/>
                                 
-                                </button>
-                            </div>
-                            <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                                <div class="dropdown-content">
-                                <div href="#" class="dropdown-item" v-on:click="selectedCurrency=currenciesArr[0]" >
-                                    {{currenciesArr[0].key}}
-                                </div>
-                                <div class="dropdown-item" v-on:click="selectedCurrency=currenciesArr[1]" >
-                                    {{currenciesArr[1].key}}
-                                </div>
-                                <div href="#" class="dropdown-item is-active" v-on:click="selectedCurrency=currenciesArr[2]" >
-                                    {{currenciesArr[2].key}}
-                                </div>
-                                <div href="#" class="dropdown-item is-active" v-on:click="selectedCurrency=currenciesArr[3]" >
-                                    {{currenciesArr[3].key}}
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                        <!-- <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" >
+                </button>
+              </div>
+              <div 
+                id="dropdown-menu" 
+                class="dropdown-menu" 
+                role="menu">
+                <div class="dropdown-content">
+                  <div 
+                    href="#" 
+                    class="dropdown-item" 
+                    @click="selectedCurrency=currenciesArr[0]" >
+                    {{ currenciesArr[0].key }}
+                  </div>
+                  <div 
+                    class="dropdown-item" 
+                    @click="selectedCurrency=currenciesArr[1]" >
+                    {{ currenciesArr[1].key }}
+                  </div>
+                  <div 
+                    href="#" 
+                    class="dropdown-item is-active" 
+                    @click="selectedCurrency=currenciesArr[2]" >
+                    {{ currenciesArr[2].key }}
+                  </div>
+                  <div 
+                    href="#" 
+                    class="dropdown-item is-active" 
+                    @click="selectedCurrency=currenciesArr[3]" >
+                    {{ currenciesArr[3].key }}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="icon" v-for="currency in currenciesArr" v-on:click="selectedCurrency=currency" >
                             <div>{{currency.symbol}}</div>
                         </div> -->
-                    </div>
-                    <!-- <div class="text colorWhite inline-flex vTop f14 mr10">USD</div> -->
-                    <div class="text inline-flex vTop f18 colorWhite bold currency">{{userValue*budgetValue*selectedCurrency['conversionRatio']+selectedCurrency['symbol']}}</div>
-                </div>
-            </div>
-                <div class='row w100 white'>
-                    <div class='column'>
-                        <div class='w50 item-container'>
-                            <div class='budget-item-icon'></div>
-                            <div class='text colorDarkBlack inline-flex alignLeft f13 bold pr5'>Budget</div>
-                        </div>
-                        <div class='text colorDarkBlack inline-flex alignRight w50 f13 bold pr5'>{{selectedCurrency['symbol']+budgetValue*selectedCurrency['conversionRatio']}}</div>
-                        <no-ssr>
-                            <div>
-                                <vue-slider 
-                                    ref='slider'
-                                    v-model="budgetValue"
-                                    :min = "0"
-                                    :max = "1000"
-                                    :interval = "100"
-                                >
-                                </vue-slider>
-                            </div>
-                        </no-ssr>
-                    </div>
-                </div>
-                <div class="row w100 white">
-                    <div class="column">
-                        <div class='w50 item-container'>
-                            <div class='user-item-icon'></div>
-                            <div class="text colorDarkBlack inline-flex alignLeft f13 bold pr5">Users</div>
-                        </div>
-                        <div class="text colorDarkBlack inline-flex w50 alignRight f13 bold pr5">{{userValue}}</div>
-                        <no-ssr>
-                            <div>
-                                <vue-slider ref="slider" v-model="userValue"></vue-slider>
-                            </div>
-                        </no-ssr>
-                    </div>
-                </div>
+          </div>
+          <!-- <div class="text colorWhite inline-flex vTop f14 mr10">USD</div> -->
+          <div class="text inline-flex vTop f18 colorWhite bold currency">{{ userValue*budgetValue*selectedCurrency['conversionRatio']+selectedCurrency['symbol'] }}</div>
         </div>
-        <div class="calcBack"></div>
+      </div>
+      <div class="row w100 white">
+        <div class="column">
+          <div class="w50 item-container">
+            <div class="budget-item-icon"/>
+            <div class="text colorDarkBlack inline-flex alignLeft f13 bold pr5">Budget</div>
+          </div>
+          <div class="text colorDarkBlack inline-flex alignRight w50 f13 bold pr5">{{ selectedCurrency['symbol']+budgetValue*selectedCurrency['conversionRatio'] }}</div>
+          <no-ssr>
+            <div>
+              <vue-slider 
+                ref="slider"
+                v-model="budgetValue"
+                :min = "0"
+                :max = "1000"
+                :interval = "100"
+              />
+            </div>
+          </no-ssr>
+        </div>
+      </div>
+      <div class="row w100 white">
+        <div class="column">
+          <div class="w50 item-container">
+            <div class="user-item-icon"/>
+            <div class="text colorDarkBlack inline-flex alignLeft f13 bold pr5">Users</div>
+          </div>
+          <div class="text colorDarkBlack inline-flex w50 alignRight f13 bold pr5">{{ userValue }}</div>
+          <no-ssr>
+            <div>
+              <vue-slider 
+                ref="slider" 
+                v-model="userValue"/>
+            </div>
+          </no-ssr>
+        </div>
+      </div>
     </div>
+    <div class="calcBack"/>
+  </div>
 </template>
 
 <script>
@@ -85,21 +105,21 @@
     components['no-ssr'] = NoSSR;
     if (process.browser) {
         // in older versions of nuxt, it's process.BROWSER_BUILD
-        let VueSlider = require('vue-slider-component')
-        components['vue-slider'] = VueSlider
+        let VueSlider = require('vue-slider-component');
+        components['vue-slider'] = VueSlider;
     }
     export default {
+        // methods: 
+        components: components,
         data: function () {
             return {
                 budgetValue: 0,
                 userValue: 0,
                 currenciesArr: currencies,
                 selectedCurrency: currencies[0]
-            }
+            };
         },
-        // methods: 
-        components: components
-    }
+    };
 </script>
 
 

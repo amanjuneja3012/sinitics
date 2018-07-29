@@ -2,7 +2,12 @@
   "name": "example-i18n",
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-eslint": "^8.2.6",
     "bulma": "^0.7.1",
+    "eslint": "^5.2.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "express": "^4.16.3",
     "lodash": "^4.17.10",
     "nuxt": "latest",
     "nuxt-device-detect": "^1.1.1",
@@ -19,7 +24,8 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "lint": "eslint components/** pages/**.vue --fix"
   },
   "devDependencies": {
     "node-sass": "^4.9.0",

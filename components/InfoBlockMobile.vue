@@ -1,31 +1,34 @@
 <template>
-    <div class="infoBlock card mobile column is-hidden-desktop" v-if="visibility">
-        <div class="leftImage center w100" :style="{
-            'background-image':'url('+image+')'
-        }"></div>
-        <div class="column">
-            <h3 class="bold inline-flex f25">{{heading}}</h3>
-            <p class="text inline-flex f18 mt10">{{text}}</p>
-            <div class="mt10 center">
-                <Button
-                    :text="buttonText"
-                    backgroundColor="#ff003c"
-                    :onClick="function(){}"
-                    color="white">
-                </Button>
-            </div>
-        </div>
+  <div 
+    v-if="visibility" 
+    class="infoBlock card mobile column is-hidden-desktop">
+    <div 
+      :style="{
+        'background-image':'url('+image+')'
+      }" 
+      class="leftImage center w100"/>
+    <div class="column">
+      <h3 class="bold inline-flex f25">{{ heading }}</h3>
+      <p class="text inline-flex f18 mt10">{{ text }}</p>
+      <div class="mt10 center">
+        <Button
+          :text="buttonText"
+          :onClick="function(){}"
+          backgroundColor="#ff003c"
+          color="white"/>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
-    import Button from "~/components/Button"
+    import Button from "~/components/Button";
     export default {
-        props: ["buttonText","heading","text","image","visibility"],
         components:{
             Button
-        }
-    }
+        },
+        props: ["buttonText","heading","text","image","visibility"],
+    };
 </script>
 <style scoped>
     .infoBlock{

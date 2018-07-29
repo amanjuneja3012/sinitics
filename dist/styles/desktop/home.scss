@@ -11,6 +11,11 @@
   line-height: 1.36em;
   text-align: center;
 }
+.mobile{
+  .feature-heading{
+    font-size: 1.6em;
+  }
+}
 .feature-container:hover{
   box-shadow: -2px 47px 212px -56px rgba(0,0,0,0.18);
 }
@@ -97,7 +102,7 @@
   }
   .tabs{
     .tab{
-      font-size:1.2em;
+      font-size:0.9em;
     }
   }
   .widgetHeader{

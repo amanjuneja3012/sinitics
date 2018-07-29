@@ -30,6 +30,6 @@ const pricing = {
         '40000': '0.21',
         '50000': '0.10'
     }
-}
+};
 
 module.exports = pricing;

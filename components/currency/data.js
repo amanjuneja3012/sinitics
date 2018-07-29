@@ -23,6 +23,6 @@ const currencies = [
         name:'NTD',
         conversionRatio:30.55
     }
-]
+];
 
 module.exports = currencies;

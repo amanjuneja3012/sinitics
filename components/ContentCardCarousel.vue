@@ -1,59 +1,77 @@
 <template>
-    <div>
-        <div class="card-container carousel-card-container is-hidden-touch">
-            <no-ssr placeholder="Loading...">
-                <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :perPage=1 >
-                    <slide v-for="(slideObj, index) in slides" :key="index">
-                        <ActionContent
-                            width="50%"
-                            :height="height"
-                            padding="5%"
-                            :title="slideObj.title"
-                            inputBox="true"
-                            sendText="Get Case Study"
-                            placeHolder="Enter email Address"
-                        >
-                        </ActionContent>
-                    </slide>
-                </carousel>
-            </no-ssr>
-            <div class="image" :style="{'height': height,'background-size': 'contain', 'background-position': 'center', 'background-repeat': 'no-repeat', 'background-image': 'url('+image+')'}"></div>
-            <!-- <img :src="image" class="image" :style="{'height': height}"/> -->
-        </div>
-        <div class="card-container carousel-card-container mobileContentCard is-hidden-desktop" >
-            <no-ssr placeholder="Loading...">
-                <carousel paginationActiveColor="#42b983" paginationColor="#b2ebd1" :paginationSize=5 easing="linear" :speed=300 :perPage=1 >
-                    <slide v-for="(slideObj, index) in slides" :key="index">
-                        <ActionContent
-                            width="100%"
-                            :height="height"
-                            padding="5%"
-                            :title="slideObj.title"
-                            inputBox="true"
-                            sendText="Get Case Study"
-                            placeHolder="Enter email Address"
-                        >
-                        </ActionContent>
-                    </slide>
-                </carousel>
-            </no-ssr>
-            <div class="image" :style="{'height': '300px','background-size': 'contain', 'background-position': 'center', 'background-repeat': 'no-repeat', 'background-image': 'url('+image+')'}"></div>
-            <!-- <img :src="image" class="image" :style="{'height': height}"/> -->
-        </div>
+  <div>
+    <div class="card-container carousel-card-container is-hidden-touch">
+      <no-ssr placeholder="Loading...">
+        <carousel 
+          :pagination-size="5" 
+          :speed="300" 
+          :per-page="1" 
+          pagination-active-color="#42b983" 
+          pagination-color="#b2ebd1" 
+          easing="linear" >
+          <slide 
+            v-for="(slideObj, index) in slides" 
+            :key="index">
+            <ActionContent
+              :height="height"
+              :title="slideObj.title"
+              width="50%"
+              padding="5%"
+              input-box="true"
+              send-text="Get Case Study"
+              place-holder="Enter email Address"
+            />
+          </slide>
+        </carousel>
+      </no-ssr>
+      <div 
+        :style="{'height': height,'background-size': 'contain', 'background-position': 'center', 'background-repeat': 'no-repeat', 'background-image': 'url('+image+')'}" 
+        class="image"/>
+        <!-- <img :src="image" class="image" :style="{'height': height}"/> -->
     </div>
+    <div class="card-container carousel-card-container mobileContentCard is-hidden-desktop" >
+      <no-ssr placeholder="Loading...">
+        <carousel 
+          :pagination-size="5" 
+          :speed="300" 
+          :per-page="1" 
+          pagination-active-color="#42b983" 
+          pagination-color="#b2ebd1" 
+          easing="linear" >
+          <slide 
+            v-for="(slideObj, index) in slides" 
+            :key="index">
+            <ActionContent
+              :height="height"
+              :title="slideObj.title"
+              width="100%"
+              padding="5%"
+              input-box="true"
+              send-text="Get Case Study"
+              place-holder="Enter email Address"
+            />
+          </slide>
+        </carousel>
+      </no-ssr>
+      <div 
+        :style="{'height': '300px','background-size': 'contain', 'background-position': 'center', 'background-repeat': 'no-repeat', 'background-image': 'url('+image+')'}" 
+        class="image"/>
+        <!-- <img :src="image" class="image" :style="{'height': height}"/> -->
+    </div>
+  </div>
 </template>
 
 <script>
     import ActionContent from '~/components/ActionContent';
     import { Carousel, Slide } from 'vue-carousel';
     export default {
-        props: ['image','slides','height'],
         components: {
             ActionContent,
             Carousel,
             Slide
-        }
-    }
+        },
+        props: ['image','slides','height'],
+    };
 
 </script>
 
@@ -75,6 +93,10 @@
     .mobileContentCard .VueCarousel{
         width:100%;
         margin-left: 0%;
+    }
+    .carousel-card-container {
+        max-width: 1440px;
+        margin: 0 auto;
     }
     .carousel-card-container.mobileContentCard .VueCarousel .VueCarousel-pagination{
         position: absolute;
