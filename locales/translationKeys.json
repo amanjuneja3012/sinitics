@@ -15,6 +15,12 @@
     {
       "title":"header:link4_title",
       "link":"header:link4_link"
+    },
+    {
+      "loginText":"header:loginText"
+    },
+    {
+      "tryText":"header:tryText"
     }
   ],
   "home": {
@@ -186,6 +192,14 @@
           "content":"home:newsCarouselWidget_slide8_content"
         }
       ]
+    },
+    "budgetCalculator":{
+      "heading":{
+        "text1":"home:budgetCalculator:heading:text1",
+        "text2":"home:budgetCalculator:heading:text2",
+        "text3":"home:budgetCalculator:heading:text3",
+        "text4":"home:budgetCalculator:heading:text4"
+      }
     }
   },
   "botic": {
@@ -209,6 +223,45 @@
         "header":"botic:contentCards_card4_header",
         "subtitle":"botic:contentCards_card4_subtitle",
         "image":"botic:contentCards_card4_image"
+      }
+    },
+    "tabsWidget": {
+      "heading":{
+        "text1":"botic:tabs:heading:text1",
+        "text2":"botic:tabs:heading:text2"
+      },
+      "tab1":{
+        "tabName":"botic:tabs:heading:tab1:heading",
+        "leftCard":{
+          "tabHeading":"botic:tabs:heading:tab1:leftCard:tabHeading",
+          "tabDetail":"botic:tabs:heading:tab1:leftCard:tabDetail"
+        },
+        "rightCard":{
+          "tabHeading":"botic:tabs:heading:tab1:rightCard:tabHeading",
+          "tabDetail":"botic:tabs:heading:tab1:rightCard:tabDetail"
+        }
+      },
+      "tab2":{
+        "tabName":"botic:tabs:heading:tab2:heading",
+        "leftCard":{
+          "tabHeading":"botic:tabs:heading:tab2:leftCard:tabHeading",
+          "tabDetail":"botic:tabs:heading:tab2:leftCard:tabDetail"
+        },
+        "rightCard":{
+          "tabHeading":"botic:tabs:heading:tab2:rightCard:tabHeading",
+          "tabDetail":"botic:tabs:heading:tab2:rightCard:tabDetail"
+        }
+      },
+      "tab3":{
+        "tabName":"botic:tabs:heading:tab3:heading",
+        "leftCard":{
+          "tabHeading":"botic:tabs:heading:tab3:leftCard:tabHeading",
+          "tabDetail":"botic:tabs:heading:tab3:leftCard:tabDetail"
+        },
+        "rightCard":{
+          "tabHeading":"botic:tabs:heading:tab3:rightCard:tabHeading",
+          "tabDetail":"botic:tabs:heading:tab3:rightCard:tabDetail"
+        }
       }
     },
     "processDetailsWidget" : {

@@ -11,38 +11,23 @@
           <div class="navbar-menu">
             
             <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/botic':('/'+$i18n.locale+'/botic')">
-              BoticAI
+              {{$t('links[1].title')}}
             </nuxt-link>
             <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
-              Pricing
+              {{$t('links[2].title')}}
             </nuxt-link>
-            <!-- <nuxt-link class="Header__Link navbar-item" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
-              Partners
-            </nuxt-link> -->
             <a class="Header__Link navbar-item" :href="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
-              Partners
+              {{$t('links[3].title')}}
             </a>
-            <!-- <nuxt-link class="Header__Link navbar-item" :to="'/#partners'">
-              Partners
-            </nuxt-link> -->
-            <!-- <span class="Header__Link navbar-item" v-on:click="scrollTo" >
-              Partners
-            </span> -->
           </div>
         </nav>
         <div class="inlineFlex w50 rf">  
           <nav class="Header__Menu">
-            <!-- <div class=" is-small is-rounded mr20 blackOpaque">
-              Login Now
-            </div>
-            <div class=" is-small is-rounded">
-              Try it Free
-            </div> -->
             <div class=" Header__Button">
-              Login Now
+              {{$t('links[4].loginText')}}
             </div>
             <div class=" Header__Button Header__Button_2">
-              Try it Free
+              {{$t('links[5].tryText')}}
             </div>
           </nav>
         </div>
@@ -76,22 +61,19 @@
         </div>
         <div class="fullscreenDropdown row" v-if="visibility">
           <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/botic':('/'+$i18n.locale+'/botic')">
-            BoticAI
+            {{$t('links[1].title')}}
           </nuxt-link>
           <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
-                Pricing
+                {{$t('links[2].title')}}
           </nuxt-link>
-          <!-- <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')">
-            Partners
-          </nuxt-link> -->
           <a class="item w100" v-on:click.native="visibility=false" :href="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
-              Partners
+              {{$t('links[3].title')}}
             </a>
           <div class="item">
-            <div class="Header__Button">Login Now</div>
+            <div class="Header__Button">{{$t('links[4].loginText')}}</div>
           </div>
           <div class="item">
-            <div class="Header__Button Header__Button_2">Try it Free</div>
+            <div class="Header__Button Header__Button_2">{{$t('links[5].tryText')}}</div>
           </div>
         </div>
       </div>

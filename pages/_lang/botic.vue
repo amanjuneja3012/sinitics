@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="tabs-container">
-      <h3 class='tabs-header' >Pushing the limits of <br> <span class=red>Natural Language Processing</span></h3>
+      <h3 class='tabs-header' >{{$t('botic.tabsWidget.heading.text1')}}<br> <span class=red>{{$t('botic.tabsWidget.heading.text2')}}</span></h3>
       <Tabs />
     </div>
     <ContentCard
