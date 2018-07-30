@@ -113,10 +113,10 @@
                 <td>
                   <img 
                     v-if="item.enterprise == 'confirm'" 
-                    src="confirm.png">
+                    src="confirm.png" />
                   <p 
                     v-if="item.enterprise == 'no'" 
-                    class="no-feature"/>
+                    class="no-feature" />
                 </td>
               </tr>
             </tbody>

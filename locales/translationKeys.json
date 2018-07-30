@@ -353,17 +353,17 @@
         }
       },
       "tableMetadata":{
-      "headingRow":[
-        "pricing:tableData_tableMetadata_headingRow_1",
-        "pricing:tableData_tableMetadata_headingRow_2",
-        "pricing:tableData_tableMetadata_headingRow_3"
-      ],
-      "subHeading":[
-        "pricing:tableData_tableMetadata_subHeading_1",
-        "pricing:tableData_tableMetadata_subHeading_2",
-        "pricing:tableData_tableMetadata_subHeading_3"
-      ],
-      "items":[
+        "headingRow":[
+          "pricing:tableData_tableMetadata_headingRow_1",
+          "pricing:tableData_tableMetadata_headingRow_2",
+          "pricing:tableData_tableMetadata_headingRow_3"
+        ],
+        "subHeading":[
+          "pricing:tableData_tableMetadata_subHeading_1",
+          "pricing:tableData_tableMetadata_subHeading_2",
+          "pricing:tableData_tableMetadata_subHeading_3"
+        ],
+        "items":[
           {
             "name":"pricing:tableData_tableMetadata_items_1_name",
             "basic":"pricing:tableData_tableMetadata_items_1_basic",
