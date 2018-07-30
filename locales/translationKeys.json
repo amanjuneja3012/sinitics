@@ -27,9 +27,9 @@
     "header":"modal:header",
     "subHeader":"modal:subHeader",
     "buttonText":"modal:buttonText",
-    "placeholder1":"Full Name",
-    "placeholder2":"Company Name",
-    "placeholder3":"Email Address"
+    "placeholder1":"modal:placeholder1",
+    "placeholder2":"modal:placeholder2",
+    "placeholder3":"modal:placeholder3"
   },
   "inputBox":{
     "placeholder":"inputBox:placeholder"
@@ -48,7 +48,7 @@
     "menuRow3Item1":"footer:menuRow3Item1",
     "menuRow3Item2":"footer:menuRow3Item2",
     "menuRow3Item3":"footer:menuRow3Item3",
-    "placeholder":"Enter your Email Address"
+    "placeholder":"footer:placeholder"
   },
   "home": {
     "contentCards":{

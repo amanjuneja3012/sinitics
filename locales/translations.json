@@ -276,7 +276,14 @@
 		"footer:menuTitleRow3":"More Stuff",
 		"footer:menuRow3Item1":"Careers",
 		"footer:menuRow3Item2":"Terms & Conditions",
-		"footer:menuRow3Item3":"Privacy Policy"
+		"footer:menuRow3Item3":"Privacy Policy",
+		"home:contentCardCarousel:sendText":"Get Case Study",
+        "home:contentCardCarousel:placeholder":"Enter email Address",
+        "inputBox:placeholder":"Suggest our next Language",
+        "footer:placeholder":"Enter your Email Address",
+		"modal:placeholder1":"Full Name",
+		"modal:placeholder2":"Company Name",
+		"modal:placeholder3":"Email Address"
 	},
 	"fr":{
 		"header:link1_title":"Sectors",
