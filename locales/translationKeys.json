@@ -26,7 +26,13 @@
   "modal": {
     "header":"modal:header",
     "subHeader":"modal:subHeader",
-    "buttonText":"modal:buttonText"
+    "buttonText":"modal:buttonText",
+    "placeholder1":"Full Name",
+    "placeholder2":"Company Name",
+    "placeholder3":"Email Address"
+  },
+  "inputBox":{
+    "placeholder":"inputBox:placeholder"
   },
   "footer":{
     "title":"footer:title",
@@ -41,7 +47,8 @@
     "menuTitleRow3":"footer:menuTitleRow3",
     "menuRow3Item1":"footer:menuRow3Item1",
     "menuRow3Item2":"footer:menuRow3Item2",
-    "menuRow3Item3":"footer:menuRow3Item3"
+    "menuRow3Item3":"footer:menuRow3Item3",
+    "placeholder":"Enter your Email Address"
   },
   "home": {
     "contentCards":{
@@ -175,6 +182,10 @@
         ],
         "buttonText":"home:card6_buttonText"
       }
+    },
+    "contentCardCarousel":{
+      "sendText":"home:contentCardCarousel:sendText",
+      "placeholder":"home:contentCardCarousel:placeholder"
     },
     "newsCarouselWidget":{
       "header":"home:newsCarouselWidget_header",

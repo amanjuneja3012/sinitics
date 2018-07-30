@@ -6,7 +6,7 @@
         <input 
           v-model="email" 
           class="input" 
-          placeholder="Enter your Email Address" >
+          placeholder="$t('footer.placeholder')" >
         <img 
           src="images/english/send.png" 
           class="send-icon" 
