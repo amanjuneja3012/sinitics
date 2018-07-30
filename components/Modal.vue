@@ -26,7 +26,7 @@
                 v-model="company" 
                 class="input is-small" 
                 type="text" 
-                :placeholder="$t('modal.placeholder1')" 
+                :placeholder="$t('modal.placeholder2')" 
                 @input="activateButton" >
             </div>
           </div>
@@ -36,7 +36,7 @@
                 v-model="email" 
                 class="input is-small" 
                 type="email" 
-                :placeholder="$t('modal.placeholder1')"
+                :placeholder="$t('modal.placeholder3')"
                 @input="activateButton" >
             </div>
           </div>
