@@ -23,6 +23,26 @@
       "tryText":"header:tryText"
     }
   ],
+  "modal": {
+    "header":"modal:header",
+    "subHeader":"modal:subHeader",
+    "buttonText":"modal:buttonText"
+  },
+  "footer":{
+    "title":"footer:title",
+    "copyrightText":"footer:copyrightText",
+    "menuTitle":"footer:menuTitle",
+    "boticLinkText":"footer:boticLinkText",
+    "partnerLinkText":"footer:partnerLinkText",
+    "pricingLinkText":"footer:pricingLinkText",
+    "menuTitleRow2":"footer:menuTitleRow2",
+    "menuRow2Item1":"footer:menuRow2Item1",
+    "menuRow2Item2":"footer:menuRow2Item2",
+    "menuTitleRow3":"footer:menuTitleRow3",
+    "menuRow3Item1":"footer:menuRow3Item1",
+    "menuRow3Item2":"footer:menuRow3Item2",
+    "menuRow3Item3":"footer:menuRow3Item3",
+  },
   "home": {
     "contentCards":{
       "card1":{

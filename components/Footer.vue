@@ -1,7 +1,7 @@
 <template>
   <div class="footer-container">
     <div class="social-container">
-      <p class="newsletter-title">Subscribe to our Newsletter</p>
+      <p class="newsletter-title">{{ $t('footer.title') }}</p>
       <div class="email-container">
         <input 
           v-model="email" 
@@ -32,56 +32,55 @@
           src="images/english/medium.svg" 
           class="social-icon">
       </div>
-      <p class="copyright-text">© 2018 Sinitic Limited. All Rights Reserved.</p>
+      <p class="copyright-text">{{ $t('footer.copyrightText') }}</p>
     </div>
     <div class="menu-container">
-      <p class="menu-title">Botic AI</p>
+      <p class="menu-title">{{ $t('footer.menuTitle') }}</p>
       <ul>
         <li>
           <a 
             class="links" 
             href="/botic">
-            Botic
+            {{ $t('footer.boticLinkText') }}
           </a>
         </li>
         <li>
           <a 
             class="links" 
             href="/pricing">
-            Pricing
+            {{ $t('footer.pricingLinkText') }}
           </a>
         </li>
         <li>
           <a 
             class="links" 
             href="/#partners">
-            Partners
+            {{ $t('footer.partnerLinkText') }}
           </a>
         </li>
-        <li class="opacity-3">Sectors</li>
       </ul>
     </div>
     <div class="menu-container">
-      <p class="menu-title">Case Study</p>
+      <p class="menu-title">{{ $t('footer.menuTitleRow2') }}</p>
       <ul>
-        <li>iGaming</li>
-        <li>Regtech</li>
+        <li>{{ $t('footer.menuRow2Item1') }}</li>
+        <li>{{ $t('footer.menuRow2Item2') }}</li>
 
       </ul>
     </div>
     <div class="menu-container">
-      <p class="menu-title">More Stuff</p>
+      <p class="menu-title">{{ $t('footer.menuTitleRow3') }}</p>
       <ul>
         <li>
           <a 
             class="links" 
             target="_blank" 
             href="https://sinitic.bamboohr.com/jobs">
-            Careers
+            {{ $t('footer.menuRow3Item1') }}
           </a>
         </li>
-        <li>Terms & Conditions</li>
-        <li>Privacy Policy</li>
+        <li>{{ $t('footer.menuRow3Item2') }}</li>
+        <li>{{ $t('footer.menuRow3Item3') }}</li>
       </ul>
     </div>
   </div>

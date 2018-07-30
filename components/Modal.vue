@@ -7,8 +7,8 @@
       <div 
         :class="{ 'is-mobile' : $device.isMobile}" 
         class="box">
-        <div class="modal-head" >Book a Free Demo</div>
-        <div class="modal-sub-head" >Help us with your information and our executive will get back to you soon</div>
+        <div class="modal-head" >{{ $t('modal.header') }}</div>
+        <div class="modal-sub-head" >{{ $t('modal.subHeader') }}</div>
         <div>
           <div class="field">
             <div class="control">
@@ -45,7 +45,7 @@
           :class="{ active: !isButtonDisabled }" 
           :disabled="isButtonDisabled" 
           class="modal-button" 
-          @click="sendData" >Submit Details</button>
+          @click="sendData" >{{ $t('modal.buttonText') }}</button>
       </div>
     </div>
     <button 
