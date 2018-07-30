@@ -39,12 +39,12 @@
         </div>
         <div class="tab-content-container tab-content-container-2">
           <div class="tab-content-text tab-content-text-left">
-            <div class="tab-content-text-head">Problem</div>
-            <div class="tab-content-text-content">1 Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab1.leftCard.tabHeading") }}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab1.leftCard.tabDetail") }}</div>
           </div>
           <div class="tab-content-text">
-            <div class="tab-content-text-head">Solution</div>
-            <div class="tab-content-text-content">SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab1.rightCard.tabHeading") }}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab1.rightCard.tabDetail") }}</div>
           </div>
         </div>
       </div>
@@ -61,12 +61,12 @@
         </div>
         <div class="tab-content-container tab-content-container-2">
           <div class="tab-content-text tab-content-text-left">
-            <div class="tab-content-text-head">Problem</div>
-            <div class="tab-content-text-content">2 Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab2.leftCard.tabHeading") }}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab2.leftCard.tabDetail") }}</div>
           </div>
           <div class="tab-content-text">
-            <div class="tab-content-text-head">Solution</div>
-            <div class="tab-content-text-content">SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab2.rightCard.tabHeading")}}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab2.rightCard.tabDetail")}}</div>
           </div>
         </div>
       </div>
@@ -83,12 +83,12 @@
         </div>
         <div class="tab-content-container tab-content-container-2">
           <div class="tab-content-text tab-content-text-left">
-            <div class="tab-content-text-head">Problem</div>
-            <div class="tab-content-text-content">3 Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab3.leftCard.tabHeading") }}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab3.leftCard.tabDetail") }}</div>
           </div>
           <div class="tab-content-text">
-            <div class="tab-content-text-head">Solution</div>
-            <div class="tab-content-text-content">SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab3.rightCard.tabHeading")}}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab3.rightCard.tabDetail")}}</div>
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@
     <div class="mobile-tabs is-hidden-desktop" >
       <li class="tab-head has-border">
         <span class="icon icon-1 is-small"/>
-        <span>Multilingual</span>
+        <span>{{$t('botic.tabsWidget.tab1.tabName')}}</span>
       </li>
       <div class="content active-content horizontalScrolling">
         <div class="tab-content-container tab-contents">
@@ -109,18 +109,18 @@
         </div>
         <div class="tab-content-container tab-content-container-2">
           <div class="tab-content-text tab-content-text-left">
-            <div class="tab-content-text-head">Problem</div>
-            <div class="tab-content-text-content">1 Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab1.leftCard.tabHeading") }}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab1.leftCard.tabDetail") }}</div>
           </div>
           <div class="tab-content-text">
-            <div class="tab-content-text-head">Solution</div>
-            <div class="tab-content-text-content">SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab1.rightCard.tabHeading") }}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab1.rightCard.tabDetail") }}</div>
           </div>
         </div>
       </div>
       <li class="tab-head has-border">
         <span class="icon icon-2 is-small"/>
-        <span>Multitask</span>
+        <span>{{$t('botic.tabsWidget.tab2.tabName')}}</span>
       </li>
       <div class="content active-content horizontalScrolling">
         <div class="tab-content-container tab-contents">
@@ -133,18 +133,18 @@
         </div>
         <div class="tab-content-container tab-content-container-2">
           <div class="tab-content-text tab-content-text-left">
-            <div class="tab-content-text-head">Problem</div>
-            <div class="tab-content-text-content">2 Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab2.leftCard.tabHeading") }}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab2.leftCard.tabDetail") }}</div>
           </div>
           <div class="tab-content-text">
-            <div class="tab-content-text-head">Solution</div>
-            <div class="tab-content-text-content">SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab2.rightCard.tabHeading") }}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab2.rightCard.tabDetail") }}</div>
           </div>
         </div>
       </div>
       <li class="tab-head" >
         <span class="icon icon-3 is-small"/>
-        <span>Multiturn</span>
+        <span>{{$t('botic.tabsWidget.tab3.tabName')}}</span>
       </li>
       <div class="content active-content horizontalScrolling">
         <div class="tab-content-container tab-contents">
@@ -157,12 +157,12 @@
         </div>
         <div class="tab-content-container tab-content-container-2">
           <div class="tab-content-text tab-content-text-left">
-            <div class="tab-content-text-head">Problem</div>
-            <div class="tab-content-text-content">3 Natural language processing engines excel at English, but they fail to deliver high accuracy for other major languages.</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab3.leftCard.tabHeading") }}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab3.leftCard.tabDetail") }}</div>
           </div>
           <div class="tab-content-text">
-            <div class="tab-content-text-head">Solution</div>
-            <div class="tab-content-text-content">SiniticAI™ natively supports multiple languages, and understands mixed language text using deep learning techniques adapted from image-matching technology.</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab3.rightCard.tabHeading") }}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab3.rightCard.tabDetail") }}</div>
           </div>
         </div>
       </div>

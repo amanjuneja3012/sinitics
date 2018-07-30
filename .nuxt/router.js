@@ -3,14 +3,14 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _5fa96066 = () => import('../pages/pricing.vue' /* webpackChunkName: "pages/pricing" */).then(m => m.default || m)
-const _5fe30f68 = () => import('../pages/botic.vue' /* webpackChunkName: "pages/botic" */).then(m => m.default || m)
-const _dbcc3058 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
-const _9c5c7ace = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
-const _68d352d2 = () => import('../pages/_lang/index.vue' /* webpackChunkName: "pages/_lang/index" */).then(m => m.default || m)
-const _e9ca476a = () => import('../pages/_lang/pricing.vue' /* webpackChunkName: "pages/_lang/pricing" */).then(m => m.default || m)
-const _79a7a366 = () => import('../pages/_lang/botic.vue' /* webpackChunkName: "pages/_lang/botic" */).then(m => m.default || m)
-const _a843085c = () => import('../pages/_lang/about.vue' /* webpackChunkName: "pages/_lang/about" */).then(m => m.default || m)
+const _da30d96e = () => import('../pages/pricing.vue' /* webpackChunkName: "pages/pricing" */).then(m => m.default || m)
+const _129201e4 = () => import('../pages/botic.vue' /* webpackChunkName: "pages/botic" */).then(m => m.default || m)
+const _44c8da50 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
+const _6480b515 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _f16707da = () => import('../pages/_lang/index.vue' /* webpackChunkName: "pages/_lang/index" */).then(m => m.default || m)
+const _31dd92c7 = () => import('../pages/_lang/pricing.vue' /* webpackChunkName: "pages/_lang/pricing" */).then(m => m.default || m)
+const _355dc8e2 = () => import('../pages/_lang/botic.vue' /* webpackChunkName: "pages/_lang/botic" */).then(m => m.default || m)
+const _6794a14e = () => import('../pages/_lang/about.vue' /* webpackChunkName: "pages/_lang/about" */).then(m => m.default || m)
 
 
 
@@ -29,42 +29,42 @@ export function createRouter () {
     routes: [
 		{
 			path: "/pricing",
-			component: _5fa96066,
+			component: _da30d96e,
 			name: "pricing"
 		},
 		{
 			path: "/botic",
-			component: _5fe30f68,
+			component: _129201e4,
 			name: "botic"
 		},
 		{
 			path: "/about",
-			component: _dbcc3058,
+			component: _44c8da50,
 			name: "about"
 		},
 		{
 			path: "/",
-			component: _9c5c7ace,
+			component: _6480b515,
 			name: "index"
 		},
 		{
 			path: "/:lang",
-			component: _68d352d2,
+			component: _f16707da,
 			name: "lang"
 		},
 		{
 			path: "/:lang/pricing",
-			component: _e9ca476a,
+			component: _31dd92c7,
 			name: "lang-pricing"
 		},
 		{
 			path: "/:lang/botic",
-			component: _79a7a366,
+			component: _355dc8e2,
 			name: "lang-botic"
 		},
 		{
 			path: "/:lang/about",
-			component: _a843085c,
+			component: _6794a14e,
 			name: "lang-about"
 		}
     ],

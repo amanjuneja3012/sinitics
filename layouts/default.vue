@@ -171,34 +171,6 @@
           </div>
         </div>
       </div>
-      <div class="mobileHeader is-hidden-desktop">
-        <nuxt-link class="Header__Logo Header__Link navbar-item" :to="($i18n.locale=='en')?'/':('/'+$i18n.locale+'/')">
-          <div ></div>
-        </nuxt-link>
-        <div class="hamburger">
-          <div v-if="!visibility" class="hamburgerMenuIcon" v-on:click="visibility=true">
-          </div>
-          <div v-if="visibility" class="hamburgerMenuCloseIcon" v-on:click="visibility=false">X
-          </div>
-        </div>
-        <div class="fullscreenDropdown row" v-if="visibility">
-          <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/botic':('/'+$i18n.locale+'/botic')">
-            {{$t('links[1].title')}}
-          </nuxt-link>
-          <nuxt-link class="item w100" v-on:click.native="visibility=false" :to="($i18n.locale=='en')?'/pricing':('/'+$i18n.locale+'/pricing')">
-                {{$t('links[2].title')}}
-          </nuxt-link>
-          <a class="item w100" v-on:click.native="visibility=false" :href="($i18n.locale=='en')?'/#partners':('/'+$i18n.locale+'/#partners')" >
-              {{$t('links[3].title')}}
-            </a>
-          <div class="item">
-            <div class="Header__Button">{{$t('links[4].loginText')}}</div>
-          </div>
-          <div class="item">
-            <div class="Header__Button Header__Button_2">{{$t('links[5].tryText')}}</div>
-          </div>
-        </div>
-      </div>
       <div class="languageChangeDd rel">
         <div class="languageChangeDdWidget" v-on:click="languageOverlayVisibility=!languageOverlayVisibility">
           <div :style="{
