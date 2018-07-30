@@ -4,7 +4,7 @@
     style="{'position':'relative'}">
     <div class="budgetCalculator column">
       <div class="column w100 black roundedTop center">
-        <div class="w50 inline-flex vTop colorWhite colorWhite-text f13"><span>{{$t('home.budgetCalculator.heading.text1')}}<br>{{$t('home.budgetCalculator.heading.text2')}}<span class="red">{{$t('home.budgetCalculator.heading.text3')}}</span>{{$t('home.budgetCalculator.heading.text4')}}</span></div>
+        <div class="w50 inline-flex vTop colorWhite colorWhite-text f13"><span>{{ $t('home.budgetCalculator.heading.text1') }}<br>{{ $t('home.budgetCalculator.heading.text2') }}<span class="red">{{ $t('home.budgetCalculator.heading.text3') }}</span>{{ $t('home.budgetCalculator.heading.text4') }}</span></div>
         <div class="row w50 vTop inline-flex is-paddingless center alignRight">
           <div class="currencyChange">
             <div class="dropdown is-hoverable">
@@ -61,7 +61,7 @@
         <div class="column">
           <div class="w50 item-container">
             <div class="budget-item-icon"/>
-            <div class="text colorDarkBlack inline-flex alignLeft f13 bold pr5">{{$t('home.budgetCalculator.param1')}}</div>
+            <div class="text colorDarkBlack inline-flex alignLeft f13 bold pr5">{{ $t('home.budgetCalculator.param1') }}</div>
           </div>
           <div class="text colorDarkBlack inline-flex alignRight w50 f13 bold pr5">{{ selectedCurrency['symbol']+budgetValue*selectedCurrency['conversionRatio'] }}</div>
           <no-ssr>
@@ -81,7 +81,7 @@
         <div class="column">
           <div class="w50 item-container">
             <div class="user-item-icon"/>
-            <div class="text colorDarkBlack inline-flex alignLeft f13 bold pr5">{{$t('home.budgetCalculator.param2')}}</div>
+            <div class="text colorDarkBlack inline-flex alignLeft f13 bold pr5">{{ $t('home.budgetCalculator.param2') }}</div>
           </div>
           <div class="text colorDarkBlack inline-flex w50 alignRight f13 bold pr5">{{ userValue }}</div>
           <no-ssr>

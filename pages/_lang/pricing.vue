@@ -113,7 +113,7 @@
                 <td>
                   <img 
                     v-if="item.enterprise == 'confirm'" 
-                    src="confirm.png" />
+                    src="confirm.png" >
                   <p 
                     v-if="item.enterprise == 'no'" 
                     class="no-feature" />
@@ -287,7 +287,9 @@
                 <td>{{ $t('pricing.tableData.tableMetadata.subHeading[1]') }}</td>
                 <td>{{ $t('pricing.tableData.tableMetadata.subHeading[2]') }}</td>
               </tr>
-              <tr v-for="item in $t('pricing.tableData.tableMetadata.items')">
+              <tr 
+                v-for="(item, key) in $t('pricing.tableData.tableMetadata.items')" 
+                :key="key">
                 <td class="item-name">
                   {{ item.name }}
                   <div class="tooltip">
@@ -464,10 +466,10 @@
             },
             ActivateFirst: function (event){
                 this.isActiveSecond = false;
-                this.isActiveFirst= true;
+                this.isActiveFirst = true;
             },
             ActivateSecond: function (event){
-                this.isActiveFirst= false;
+                this.isActiveFirst = false;
                 this.isActiveSecond = true;
             },
             onSend: function (name, company, email){
@@ -491,8 +493,8 @@
                 });
             },
             changeSelctedType: function (){
-                this.selectedYearly= !this.selectedYearly;
-                this.selectedMonthly= !this.selectedMonthly;
+                this.selectedYearly = !this.selectedYearly;
+                this.selectedMonthly = !this.selectedMonthly;
             }
         },
 };

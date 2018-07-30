@@ -1,63 +1,61 @@
 {
-  "links": [
-    {
-      "title":"header:link1_title",
-      "link":"header:link1_link"
+  "links": [{
+      "title": "header:link1_title",
+      "link": "header:link1_link"
     },
     {
-      "title":"header:link2_title",
-      "link":"header:link2_link"
+      "title": "header:link2_title",
+      "link": "header:link2_link"
     },
     {
-      "title":"header:link3_title",
-      "link":"header:link3_link"
+      "title": "header:link3_title",
+      "link": "header:link3_link"
     },
     {
-      "title":"header:link4_title",
-      "link":"header:link4_link"
+      "title": "header:link4_title",
+      "link": "header:link4_link"
     },
     {
-      "loginText":"header:loginText"
+      "loginText": "header:loginText"
     },
     {
-      "tryText":"header:tryText"
+      "tryText": "header:tryText"
     }
   ],
   "modal": {
-    "header":"modal:header",
-    "subHeader":"modal:subHeader",
-    "buttonText":"modal:buttonText",
-    "placeholder1":"modal:placeholder1",
-    "placeholder2":"modal:placeholder2",
-    "placeholder3":"modal:placeholder3"
+    "header": "modal:header",
+    "subHeader": "modal:subHeader",
+    "buttonText": "modal:buttonText",
+    "placeholder1": "modal:placeholder1",
+    "placeholder2": "modal:placeholder2",
+    "placeholder3": "modal:placeholder3"
   },
-  "inputBox":{
-    "placeholder":"inputBox:placeholder",
-    "onSubmitText":"inputBox:onSubmitText"
+  "inputBox": {
+    "placeholder": "inputBox:placeholder",
+    "onSubmitText": "inputBox:onSubmitText"
   },
-  "footer":{
-    "title":"footer:title",
-    "copyrightText":"footer:copyrightText",
-    "menuTitle":"footer:menuTitle",
-    "boticLinkText":"footer:boticLinkText",
-    "partnerLinkText":"footer:partnerLinkText",
-    "pricingLinkText":"footer:pricingLinkText",
-    "menuTitleRow2":"footer:menuTitleRow2",
-    "menuRow2Item1":"footer:menuRow2Item1",
-    "menuRow2Item2":"footer:menuRow2Item2",
-    "menuTitleRow3":"footer:menuTitleRow3",
-    "menuRow3Item1":"footer:menuRow3Item1",
-    "menuRow3Item2":"footer:menuRow3Item2",
-    "menuRow3Item3":"footer:menuRow3Item3",
-    "placeholder":"footer:placeholder"
+  "footer": {
+    "title": "footer:title",
+    "copyrightText": "footer:copyrightText",
+    "menuTitle": "footer:menuTitle",
+    "boticLinkText": "footer:boticLinkText",
+    "partnerLinkText": "footer:partnerLinkText",
+    "pricingLinkText": "footer:pricingLinkText",
+    "menuTitleRow2": "footer:menuTitleRow2",
+    "menuRow2Item1": "footer:menuRow2Item1",
+    "menuRow2Item2": "footer:menuRow2Item2",
+    "menuTitleRow3": "footer:menuTitleRow3",
+    "menuRow3Item1": "footer:menuRow3Item1",
+    "menuRow3Item2": "footer:menuRow3Item2",
+    "menuRow3Item3": "footer:menuRow3Item3",
+    "placeholder": "footer:placeholder"
   },
   "home": {
-    "contentCards":{
-      "card1":{
-        "header":"home:card1_header",
-        "subtitle":"home:card1_subtitle",
-        "buttons":[
-          {
+    "contentCards": {
+      "card1": {
+        "header": "home:card1_header",
+        "subtitle": "home:card1_subtitle",
+        "buttons": [{
             "text": "home:card1_button1_text",
             "backgroundColor": "home:card1_button1_backgroundColor",
             "color": "home:card1_button1_color",
@@ -70,13 +68,12 @@
             "to": "home:card1_button2_to"
           }
         ],
-        "image":"home:card1_image"
+        "image": "home:card1_image"
       },
-      "card2":{
-        "header":"home:card2_header",
-        "subtitle":"home:card2_subtitle",
-        "buttons":[
-          {
+      "card2": {
+        "header": "home:card2_header",
+        "subtitle": "home:card2_subtitle",
+        "buttons": [{
             "text": "home:card2_button1_text",
             "backgroundColor": "home:card2_button1_backgroundColor",
             "color": "home:card2_button1_color",
@@ -89,16 +86,14 @@
             "to": "home:card2_button2_to"
           }
         ],
-        "image":"home:card2_image"
+        "image": "home:card2_image"
       },
-      "card3":{
-        "image":"home:card3_image",
-        "slides":[
-          {
-            "title":"home:card3_slide1_title",
-            "subtitle":"home:card3_slide1_subtitle",
-            "buttons":[
-              {
+      "card3": {
+        "image": "home:card3_image",
+        "slides": [{
+            "title": "home:card3_slide1_title",
+            "subtitle": "home:card3_slide1_subtitle",
+            "buttons": [{
                 "text": "home:card3_slide1_button1_text",
                 "backgroundColor": "home:card3_slide1_button1_backgroundColor",
                 "color": "home:card3_slide1_button1_color"
@@ -111,10 +106,9 @@
             ]
           },
           {
-            "title":"home:card3_slide2_title",
-            "subtitle":"home:card3_slide2_subtitle",
-            "buttons":[
-              {
+            "title": "home:card3_slide2_title",
+            "subtitle": "home:card3_slide2_subtitle",
+            "buttons": [{
                 "text": "home:card3_slide2_button1_text",
                 "backgroundColor": "home:card3_slide2_button1_backgroundColor",
                 "color": "home:card3_slide2_button1_color"
@@ -128,11 +122,10 @@
           }
         ]
       },
-      "card4":{
-        "header":"home:card4_header",
-        "subtitle":"home:card4_subtitle",
-        "buttons":[
-          {
+      "card4": {
+        "header": "home:card4_header",
+        "subtitle": "home:card4_subtitle",
+        "buttons": [{
             "text": "home:card4_button1_text",
             "backgroundColor": "home:card4_button1_backgroundColor",
             "color": "home:card4_button1_color"
@@ -143,13 +136,12 @@
             "color": "home:card4_button2_color"
           }
         ],
-        "image":"home:card4_image"
+        "image": "home:card4_image"
       },
-      "card5":{
-        "header":"home:card5_header",
-        "subtitle":"home:card5_subtitle",
-        "buttons":[
-          {
+      "card5": {
+        "header": "home:card5_header",
+        "subtitle": "home:card5_subtitle",
+        "buttons": [{
             "text": "home:card5_button1_text",
             "backgroundColor": "home:card5_button1_backgroundColor",
             "color": "home:card5_button1_color"
@@ -160,390 +152,386 @@
             "color": "home:card5_button2_color"
           }
         ],
-        "image":"home:card5_image"
+        "image": "home:card5_image"
       },
-      "card6":{
-        "header":"home:card6_header",
-        "cardsArr":[
-          {
-            "iconUrl" : "home:card6_subcard1_iconUrl",
-            "title" : "home:card6_subcard1_title",
-            "subtitle" : "home:card6_subcard1_subtitle"
+      "card6": {
+        "header": "home:card6_header",
+        "cardsArr": [{
+            "iconUrl": "home:card6_subcard1_iconUrl",
+            "title": "home:card6_subcard1_title",
+            "subtitle": "home:card6_subcard1_subtitle"
           },
           {
-            "iconUrl" : "home:card6_subcard2_iconUrl",
-            "title" : "home:card6_subcard2_title",
-            "subtitle" : "home:card6_subcard2_subtitle"
+            "iconUrl": "home:card6_subcard2_iconUrl",
+            "title": "home:card6_subcard2_title",
+            "subtitle": "home:card6_subcard2_subtitle"
           },
           {
-            "iconUrl" : "home:card6_subcard3_iconUrl",
-            "title" : "home:card6_subcard3_title",
-            "subtitle" : "home:card6_subcard3_subtitle"
+            "iconUrl": "home:card6_subcard3_iconUrl",
+            "title": "home:card6_subcard3_title",
+            "subtitle": "home:card6_subcard3_subtitle"
           }
         ],
-        "buttonText":"home:card6_buttonText"
+        "buttonText": "home:card6_buttonText"
       }
     },
-    "contentCardCarousel":{
-      "sendText":"home:contentCardCarousel:sendText",
-      "placeholder":"home:contentCardCarousel:placeholder"
+    "contentCardCarousel": {
+      "sendText": "home:contentCardCarousel:sendText",
+      "placeholder": "home:contentCardCarousel:placeholder"
     },
-    "newsCarouselWidget":{
-      "header":"home:newsCarouselWidget_header",
-      "slides":[
-        {
-          "image":"home:newsCarouselWidget_slide1_image",
-          "content":"home:newsCarouselWidget_slide1_content"
+    "newsCarouselWidget": {
+      "header": "home:newsCarouselWidget_header",
+      "slides": [{
+          "image": "home:newsCarouselWidget_slide1_image",
+          "content": "home:newsCarouselWidget_slide1_content"
         },
         {
-          "image":"home:newsCarouselWidget_slide2_image",
-          "content":"home:newsCarouselWidget_slide2_content"
+          "image": "home:newsCarouselWidget_slide2_image",
+          "content": "home:newsCarouselWidget_slide2_content"
         },
         {
-          "image":"home:newsCarouselWidget_slide3_image",
-          "content":"home:newsCarouselWidget_slide3_content"
+          "image": "home:newsCarouselWidget_slide3_image",
+          "content": "home:newsCarouselWidget_slide3_content"
         },
         {
-          "image":"home:newsCarouselWidget_slide4_image",
-          "content":"home:newsCarouselWidget_slide4_content"
+          "image": "home:newsCarouselWidget_slide4_image",
+          "content": "home:newsCarouselWidget_slide4_content"
         },
         {
-          "image":"home:newsCarouselWidget_slide5_image",
-          "content":"home:newsCarouselWidget_slide5_content"
+          "image": "home:newsCarouselWidget_slide5_image",
+          "content": "home:newsCarouselWidget_slide5_content"
         },
         {
-          "image":"home:newsCarouselWidget_slide6_image",
-          "content":"home:newsCarouselWidget_slide6_content"
+          "image": "home:newsCarouselWidget_slide6_image",
+          "content": "home:newsCarouselWidget_slide6_content"
         },
         {
-          "image":"home:newsCarouselWidget_slide7_image",
-          "content":"home:newsCarouselWidget_slide7_content"
+          "image": "home:newsCarouselWidget_slide7_image",
+          "content": "home:newsCarouselWidget_slide7_content"
         },
         {
-          "image":"home:newsCarouselWidget_slide8_image",
-          "content":"home:newsCarouselWidget_slide8_content"
+          "image": "home:newsCarouselWidget_slide8_image",
+          "content": "home:newsCarouselWidget_slide8_content"
         }
       ]
     },
-    "budgetCalculator":{
-      "heading":{
-        "text1":"home:budgetCalculator:heading:text1",
-        "text2":"home:budgetCalculator:heading:text2",
-        "text3":"home:budgetCalculator:heading:text3",
-        "text4":"home:budgetCalculator:heading:text4"
+    "budgetCalculator": {
+      "heading": {
+        "text1": "home:budgetCalculator:heading:text1",
+        "text2": "home:budgetCalculator:heading:text2",
+        "text3": "home:budgetCalculator:heading:text3",
+        "text4": "home:budgetCalculator:heading:text4"
       },
-      "param1":"home:budgetCalculator:param1",
-      "param2":"home:budgetCalculator:param2"
+      "param1": "home:budgetCalculator:param1",
+      "param2": "home:budgetCalculator:param2"
     }
   },
   "botic": {
-    "contentCards":{
-      "card1" : {
-        "header":"botic:contentCards_card1_header",
-        "subtitle":"botic:contentCards_card1_subtitle",
-        "image":"botic:contentCards_card1_image"
+    "contentCards": {
+      "card1": {
+        "header": "botic:contentCards_card1_header",
+        "subtitle": "botic:contentCards_card1_subtitle",
+        "image": "botic:contentCards_card1_image"
       },
-      "card2" : {
-        "header":"botic:contentCards_card2_header",
-        "subtitle":"botic:contentCards_card2_subtitle",
-        "image":"botic:contentCards_card2_image"
+      "card2": {
+        "header": "botic:contentCards_card2_header",
+        "subtitle": "botic:contentCards_card2_subtitle",
+        "image": "botic:contentCards_card2_image"
       },
-      "card3" : {
-        "header":"botic:contentCards_card3_header",
-        "subtitle":"botic:contentCards_card3_subtitle",
-        "image":"botic:contentCards_card3_image"
+      "card3": {
+        "header": "botic:contentCards_card3_header",
+        "subtitle": "botic:contentCards_card3_subtitle",
+        "image": "botic:contentCards_card3_image"
       },
-      "card4" : {
-        "header":"botic:contentCards_card4_header",
-        "subtitle":"botic:contentCards_card4_subtitle",
-        "image":"botic:contentCards_card4_image"
+      "card4": {
+        "header": "botic:contentCards_card4_header",
+        "subtitle": "botic:contentCards_card4_subtitle",
+        "image": "botic:contentCards_card4_image"
       }
     },
     "tabsWidget": {
-      "heading":{
-        "text1":"botic:tabs:heading:text1",
-        "text2":"botic:tabs:heading:text2"
+      "heading": {
+        "text1": "botic:tabs:heading:text1",
+        "text2": "botic:tabs:heading:text2"
       },
-      "tab1":{
-        "tabName":"botic:tabs:heading:tab1:heading",
-        "leftCard":{
-          "tabHeading":"botic:tabs:heading:tab1:leftCard:tabHeading",
-          "tabDetail":"botic:tabs:heading:tab1:leftCard:tabDetail"
+      "tab1": {
+        "tabName": "botic:tabs:heading:tab1:heading",
+        "leftCard": {
+          "tabHeading": "botic:tabs:heading:tab1:leftCard:tabHeading",
+          "tabDetail": "botic:tabs:heading:tab1:leftCard:tabDetail"
         },
-        "rightCard":{
-          "tabHeading":"botic:tabs:heading:tab1:rightCard:tabHeading",
-          "tabDetail":"botic:tabs:heading:tab1:rightCard:tabDetail"
+        "rightCard": {
+          "tabHeading": "botic:tabs:heading:tab1:rightCard:tabHeading",
+          "tabDetail": "botic:tabs:heading:tab1:rightCard:tabDetail"
         }
       },
-      "tab2":{
-        "tabName":"botic:tabs:heading:tab2:heading",
-        "leftCard":{
-          "tabHeading":"botic:tabs:heading:tab2:leftCard:tabHeading",
-          "tabDetail":"botic:tabs:heading:tab2:leftCard:tabDetail"
+      "tab2": {
+        "tabName": "botic:tabs:heading:tab2:heading",
+        "leftCard": {
+          "tabHeading": "botic:tabs:heading:tab2:leftCard:tabHeading",
+          "tabDetail": "botic:tabs:heading:tab2:leftCard:tabDetail"
         },
-        "rightCard":{
-          "tabHeading":"botic:tabs:heading:tab2:rightCard:tabHeading",
-          "tabDetail":"botic:tabs:heading:tab2:rightCard:tabDetail"
+        "rightCard": {
+          "tabHeading": "botic:tabs:heading:tab2:rightCard:tabHeading",
+          "tabDetail": "botic:tabs:heading:tab2:rightCard:tabDetail"
         }
       },
-      "tab3":{
-        "tabName":"botic:tabs:heading:tab3:heading",
-        "leftCard":{
-          "tabHeading":"botic:tabs:heading:tab3:leftCard:tabHeading",
-          "tabDetail":"botic:tabs:heading:tab3:leftCard:tabDetail"
+      "tab3": {
+        "tabName": "botic:tabs:heading:tab3:heading",
+        "leftCard": {
+          "tabHeading": "botic:tabs:heading:tab3:leftCard:tabHeading",
+          "tabDetail": "botic:tabs:heading:tab3:leftCard:tabDetail"
         },
-        "rightCard":{
-          "tabHeading":"botic:tabs:heading:tab3:rightCard:tabHeading",
-          "tabDetail":"botic:tabs:heading:tab3:rightCard:tabDetail"
+        "rightCard": {
+          "tabHeading": "botic:tabs:heading:tab3:rightCard:tabHeading",
+          "tabDetail": "botic:tabs:heading:tab3:rightCard:tabDetail"
         }
       }
     },
-    "processDetailsWidget" : {
-      "heading":"botic:processDetailsWidget_heading",
-      "step1":{
-        "leftCard":{
-          "index":"botic:processDetailsWidget_step1_leftCard_index",
-          "heading":"botic:processDetailsWidget_step1_leftCard_heading",
-          "content":"botic:processDetailsWidget_step1_leftCard_content",
-          "image":"botic:processDetailsWidget_step1_leftCard_image"
+    "processDetailsWidget": {
+      "heading": "botic:processDetailsWidget_heading",
+      "step1": {
+        "leftCard": {
+          "index": "botic:processDetailsWidget_step1_leftCard_index",
+          "heading": "botic:processDetailsWidget_step1_leftCard_heading",
+          "content": "botic:processDetailsWidget_step1_leftCard_content",
+          "image": "botic:processDetailsWidget_step1_leftCard_image"
         },
-        "rightCard":{
-          "index":"botic:processDetailsWidget_step1_rightCard_index",
-          "heading":"botic:processDetailsWidget_step1_rightCard_heading",
-          "content":"botic:processDetailsWidget_step1_rightCard_content",
-          "image":"botic:processDetailsWidget_step1_rightCard_image"
+        "rightCard": {
+          "index": "botic:processDetailsWidget_step1_rightCard_index",
+          "heading": "botic:processDetailsWidget_step1_rightCard_heading",
+          "content": "botic:processDetailsWidget_step1_rightCard_content",
+          "image": "botic:processDetailsWidget_step1_rightCard_image"
         }
       },
-      "step2":{
-        "leftCard":{
-          "index":"botic:processDetailsWidget_step2_leftCard_index",
-          "heading":"botic:processDetailsWidget_step2_leftCard_heading",
-          "content":"botic:processDetailsWidget_step2_leftCard_content",
-          "image":"botic:processDetailsWidget_step2_leftCard_image"
+      "step2": {
+        "leftCard": {
+          "index": "botic:processDetailsWidget_step2_leftCard_index",
+          "heading": "botic:processDetailsWidget_step2_leftCard_heading",
+          "content": "botic:processDetailsWidget_step2_leftCard_content",
+          "image": "botic:processDetailsWidget_step2_leftCard_image"
         },
-        "rightCard":{
-          "index":"botic:processDetailsWidget_step2_rightCard_index",
-          "heading":"botic:processDetailsWidget_step2_rightCard_heading",
-          "content":"botic:processDetailsWidget_step2_rightCard_content",
-          "image":"botic:processDetailsWidget_step2_rightCard_image"
+        "rightCard": {
+          "index": "botic:processDetailsWidget_step2_rightCard_index",
+          "heading": "botic:processDetailsWidget_step2_rightCard_heading",
+          "content": "botic:processDetailsWidget_step2_rightCard_content",
+          "image": "botic:processDetailsWidget_step2_rightCard_image"
         }
       },
-      "step3":{
-        "leftCard":{
-          "index":"botic:processDetailsWidget_step3_leftCard_index",
-          "heading":"botic:processDetailsWidget_step3_leftCard_heading",
-          "content":"botic:processDetailsWidget_step3_leftCard_content",
-          "image":"botic:processDetailsWidget_step3_leftCard_image"
+      "step3": {
+        "leftCard": {
+          "index": "botic:processDetailsWidget_step3_leftCard_index",
+          "heading": "botic:processDetailsWidget_step3_leftCard_heading",
+          "content": "botic:processDetailsWidget_step3_leftCard_content",
+          "image": "botic:processDetailsWidget_step3_leftCard_image"
         },
-        "rightCard":{
-          "index":"botic:processDetailsWidget_step3_rightCard_index",
-          "heading":"botic:processDetailsWidget_step3_rightCard_heading",
-          "content":"botic:processDetailsWidget_step3_rightCard_content",
-          "image":"botic:processDetailsWidget_step3_rightCard_image"
+        "rightCard": {
+          "index": "botic:processDetailsWidget_step3_rightCard_index",
+          "heading": "botic:processDetailsWidget_step3_rightCard_heading",
+          "content": "botic:processDetailsWidget_step3_rightCard_content",
+          "image": "botic:processDetailsWidget_step3_rightCard_image"
         }
       }
     }
   },
-  "pricing":{
-    "title":"pricing:title",
-    "checkBoxDetails":{
-      "leftStr":"pricing:checkBoxDetails_leftStr",
-      "rightStr":"pricing:checkBoxDetails_rightStr",
-      "tag":"pricing:checkBoxDetails_tag"
+  "pricing": {
+    "title": "pricing:title",
+    "checkBoxDetails": {
+      "leftStr": "pricing:checkBoxDetails_leftStr",
+      "rightStr": "pricing:checkBoxDetails_rightStr",
+      "tag": "pricing:checkBoxDetails_tag"
     },
-    "tableData":{
-      "tableHeader":{
-        "leftColumn":{
-          "name":"pricing:tableData_tableHeader_leftColumn_name",
-          "price":"pricing:tableData_tableHeader_leftColumn_price",
-          "period":"pricing:tableData_tableHeader_leftColumn_period",
-          "buttonText":"pricing:tableData_tableHeader_leftColumn_buttonText"
+    "tableData": {
+      "tableHeader": {
+        "leftColumn": {
+          "name": "pricing:tableData_tableHeader_leftColumn_name",
+          "price": "pricing:tableData_tableHeader_leftColumn_price",
+          "period": "pricing:tableData_tableHeader_leftColumn_period",
+          "buttonText": "pricing:tableData_tableHeader_leftColumn_buttonText"
         },
-        "rightColumn":{
-          "name":"pricing:tableData_tableHeader_rightColumn_name",
-          "price":"pricing:tableData_tableHeader_rightColumn_price",
-          "period":"pricing:tableData_tableHeader_rightColumn_period",
-          "buttonText":"pricing:tableData_tableHeader_rightColumn_buttonText"
+        "rightColumn": {
+          "name": "pricing:tableData_tableHeader_rightColumn_name",
+          "price": "pricing:tableData_tableHeader_rightColumn_price",
+          "period": "pricing:tableData_tableHeader_rightColumn_period",
+          "buttonText": "pricing:tableData_tableHeader_rightColumn_buttonText"
         }
       },
-      "tableMetadata":{
-        "headingRow":[
+      "tableMetadata": {
+        "headingRow": [
           "pricing:tableData_tableMetadata_headingRow_1",
           "pricing:tableData_tableMetadata_headingRow_2",
           "pricing:tableData_tableMetadata_headingRow_3"
         ],
-        "subHeading":[
+        "subHeading": [
           "pricing:tableData_tableMetadata_subHeading_1",
           "pricing:tableData_tableMetadata_subHeading_2",
           "pricing:tableData_tableMetadata_subHeading_3"
         ],
-        "items":[
-          {
-            "name":"pricing:tableData_tableMetadata_items_1_name",
-            "basic":"pricing:tableData_tableMetadata_items_1_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_1_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_1_tooltip"
+        "items": [{
+            "name": "pricing:tableData_tableMetadata_items_1_name",
+            "basic": "pricing:tableData_tableMetadata_items_1_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_1_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_1_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_2_name",
-            "basic":"pricing:tableData_tableMetadata_items_2_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_2_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_2_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_2_name",
+            "basic": "pricing:tableData_tableMetadata_items_2_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_2_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_2_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_3_name",
-            "basic":"pricing:tableData_tableMetadata_items_3_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_3_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_3_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_3_name",
+            "basic": "pricing:tableData_tableMetadata_items_3_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_3_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_3_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_4_name",
-            "basic":"pricing:tableData_tableMetadata_items_4_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_4_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_4_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_4_name",
+            "basic": "pricing:tableData_tableMetadata_items_4_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_4_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_4_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_5_name",
-            "basic":"pricing:tableData_tableMetadata_items_5_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_5_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_5_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_5_name",
+            "basic": "pricing:tableData_tableMetadata_items_5_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_5_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_5_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_6_name",
-            "basic":"pricing:tableData_tableMetadata_items_6_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_6_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_6_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_6_name",
+            "basic": "pricing:tableData_tableMetadata_items_6_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_6_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_6_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_7_name",
-            "basic":"pricing:tableData_tableMetadata_items_7_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_7_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_7_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_7_name",
+            "basic": "pricing:tableData_tableMetadata_items_7_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_7_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_7_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_8_name",
-            "basic":"pricing:tableData_tableMetadata_items_8_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_8_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_8_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_8_name",
+            "basic": "pricing:tableData_tableMetadata_items_8_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_8_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_8_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_9_name",
-            "basic":"pricing:tableData_tableMetadata_items_9_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_9_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_9_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_9_name",
+            "basic": "pricing:tableData_tableMetadata_items_9_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_9_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_9_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_10_name",
-            "basic":"pricing:tableData_tableMetadata_items_10_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_10_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_10_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_10_name",
+            "basic": "pricing:tableData_tableMetadata_items_10_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_10_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_10_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_11_name",
-            "basic":"pricing:tableData_tableMetadata_items_11_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_11_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_11_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_11_name",
+            "basic": "pricing:tableData_tableMetadata_items_11_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_11_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_11_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_12_name",
-            "basic":"pricing:tableData_tableMetadata_items_12_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_12_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_12_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_12_name",
+            "basic": "pricing:tableData_tableMetadata_items_12_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_12_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_12_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_13_name",
-            "basic":"pricing:tableData_tableMetadata_items_13_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_13_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_13_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_13_name",
+            "basic": "pricing:tableData_tableMetadata_items_13_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_13_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_13_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_14_name",
-            "basic":"pricing:tableData_tableMetadata_items_14_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_14_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_14_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_14_name",
+            "basic": "pricing:tableData_tableMetadata_items_14_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_14_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_14_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_15_name",
-            "basic":"pricing:tableData_tableMetadata_items_15_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_15_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_15_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_15_name",
+            "basic": "pricing:tableData_tableMetadata_items_15_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_15_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_15_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_16_name",
-            "basic":"pricing:tableData_tableMetadata_items_16_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_16_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_16_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_16_name",
+            "basic": "pricing:tableData_tableMetadata_items_16_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_16_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_16_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_17_name",
-            "basic":"pricing:tableData_tableMetadata_items_17_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_17_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_17_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_17_name",
+            "basic": "pricing:tableData_tableMetadata_items_17_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_17_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_17_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_18_name",
-            "basic":"pricing:tableData_tableMetadata_items_18_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_18_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_18_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_18_name",
+            "basic": "pricing:tableData_tableMetadata_items_18_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_18_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_18_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_19_name",
-            "basic":"pricing:tableData_tableMetadata_items_19_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_19_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_19_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_19_name",
+            "basic": "pricing:tableData_tableMetadata_items_19_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_19_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_19_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_20_name",
-            "basic":"pricing:tableData_tableMetadata_items_20_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_20_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_20_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_20_name",
+            "basic": "pricing:tableData_tableMetadata_items_20_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_20_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_20_tooltip"
           },
           {
-            "name":"pricing:tableData_tableMetadata_items_21_name",
-            "basic":"pricing:tableData_tableMetadata_items_21_basic",
-            "enterprise":"pricing:tableData_tableMetadata_items_21_enterprise",
-            "tooltip":"pricing:tableData_tableMetadata_items_21_tooltip"
+            "name": "pricing:tableData_tableMetadata_items_21_name",
+            "basic": "pricing:tableData_tableMetadata_items_21_basic",
+            "enterprise": "pricing:tableData_tableMetadata_items_21_enterprise",
+            "tooltip": "pricing:tableData_tableMetadata_items_21_tooltip"
           }
         ]
       },
-      "buttons":{
-        "primary":"pricing:tableData_buttons_primary",
-        "secondary":"pricing:tableData_buttons_secondary"
+      "buttons": {
+        "primary": "pricing:tableData_buttons_primary",
+        "secondary": "pricing:tableData_buttons_secondary"
       },
-      "sectorsWidget":{
-        "title":"pricing:tableData_sectorsWidget_title",
-        "tabs":[
+      "sectorsWidget": {
+        "title": "pricing:tableData_sectorsWidget_title",
+        "tabs": [
           "pricing:tableData_sectorsWidget_tabs_1",
           "pricing:tableData_sectorsWidget_tabs_2"
         ],
-        "Basic":[
-            {
-              "title":"pricing:tableData_sectorsWidget_basic_1_title",
-              "subtitle":"pricing:tableData_sectorsWidget_basic_1_subtitle",
-              "detail":"pricing:tableData_sectorsWidget_basic_1_detail",
-              "iconUrl":"pricing:tableData_sectorsWidget_basic_1_iconUrl",
-              "imageUrl":"pricing:tableData_sectorsWidget_basic_1_imageUrl"
-            },
-            {
-              "title":"pricing:tableData_sectorsWidget_basic_2_title",
-              "subtitle":"pricing:tableData_sectorsWidget_basic_2_subtitle",
-              "detail":"pricing:tableData_sectorsWidget_basic_2_detail",
-              "iconUrl":"pricing:tableData_sectorsWidget_basic_2_iconUrl",
-              "imageUrl":"pricing:tableData_sectorsWidget_basic_2_imageUrl"
-            },
-            {
-              "title":"pricing:tableData_sectorsWidget_basic_3_title",
-              "subtitle":"pricing:tableData_sectorsWidget_basic_3_title",
-              "detail":"pricing:tableData_sectorsWidget_basic_3_detail",
-              "iconUrl":"pricing:tableData_sectorsWidget_basic_3_iconUrl",
-              "imageUrl":"pricing:tableData_sectorsWidget_basic_3_imageUrl"
-            }
-          ]
-        },
-      "questionsWidget":{
-        "title":"pricing:tableData_questionsWidget_title",
-        "buttonText":"pricing:tableData_questionsWidget_buttonText",
-        "buttonIcon":"pricing:tableData_questionsWidget_buttonIcon"
+        "Basic": [{
+            "title": "pricing:tableData_sectorsWidget_basic_1_title",
+            "subtitle": "pricing:tableData_sectorsWidget_basic_1_subtitle",
+            "detail": "pricing:tableData_sectorsWidget_basic_1_detail",
+            "iconUrl": "pricing:tableData_sectorsWidget_basic_1_iconUrl",
+            "imageUrl": "pricing:tableData_sectorsWidget_basic_1_imageUrl"
+          },
+          {
+            "title": "pricing:tableData_sectorsWidget_basic_2_title",
+            "subtitle": "pricing:tableData_sectorsWidget_basic_2_subtitle",
+            "detail": "pricing:tableData_sectorsWidget_basic_2_detail",
+            "iconUrl": "pricing:tableData_sectorsWidget_basic_2_iconUrl",
+            "imageUrl": "pricing:tableData_sectorsWidget_basic_2_imageUrl"
+          },
+          {
+            "title": "pricing:tableData_sectorsWidget_basic_3_title",
+            "subtitle": "pricing:tableData_sectorsWidget_basic_3_title",
+            "detail": "pricing:tableData_sectorsWidget_basic_3_detail",
+            "iconUrl": "pricing:tableData_sectorsWidget_basic_3_iconUrl",
+            "imageUrl": "pricing:tableData_sectorsWidget_basic_3_imageUrl"
+          }
+        ]
+      },
+      "questionsWidget": {
+        "title": "pricing:tableData_questionsWidget_title",
+        "buttonText": "pricing:tableData_questionsWidget_buttonText",
+        "buttonIcon": "pricing:tableData_questionsWidget_buttonIcon"
       }
     }
   }

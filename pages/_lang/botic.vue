@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="tabs-container">
-      <h3 class='tabs-header' >{{$t('botic.tabsWidget.heading.text1')}}<br> <span class=red>{{$t('botic.tabsWidget.heading.text2')}}</span></h3>
+      <h3 class="tabs-header" >{{ $t('botic.tabsWidget.heading.text1') }}<br> <span class="red">{{ $t('botic.tabsWidget.heading.text2') }}</span></h3>
       <Tabs />
     </div>
     <ContentCard
@@ -79,15 +79,15 @@
       <Button
         :text="$t('pricing.tableData.questionsWidget.buttonText')"
         :iconUrl="$t('pricing.tableData.questionsWidget.buttonIcon')"
-        color="white"
         :onClick="function(){}"
+        color="white"
         width="230px"
         align="space-between"
         backgroundColor="#ff003c"
       />
       <div 
-v-if="$device.isDesktop" 
-           class="side-image is-hidden-touch" />
+        v-if="$device.isDesktop" 
+        class="side-image is-hidden-touch" />
     </div>
     <Footer class="is-hidden-touch"/>
     <FooterMobile class="is-hidden-desktop"/>

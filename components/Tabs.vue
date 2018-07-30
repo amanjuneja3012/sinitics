@@ -8,21 +8,21 @@
             class="tab-head has-border" 
             @click="ActivateFirst" >
             <span class="icon icon-1 is-small"/>
-            <span>{{$t('botic.tabsWidget.tab1.tabName')}}</span>
+            <span>{{ $t('botic.tabsWidget.tab1.tabName') }}</span>
           </li>
           <li 
             :class="{ 'is-active': isActiveSecond }" 
             class="tab-head has-border" 
             @click="ActivateSecond" >
             <span class="icon icon-2 is-small"/>
-            <span>{{$t('botic.tabsWidget.tab2.tabName')}}</span>
+            <span>{{ $t('botic.tabsWidget.tab2.tabName') }}</span>
           </li>
           <li 
             :class="{ 'is-active': isActiveThird }" 
             class="tab-head" 
             @click="ActivateThird" >
             <span class="icon icon-3 is-small"/>
-            <span>{{$t('botic.tabsWidget.tab3.tabName')}}</span>
+            <span>{{ $t('botic.tabsWidget.tab3.tabName') }}</span>
           </li>
         </ul>
       </div>
@@ -65,8 +65,8 @@
             <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab2.leftCard.tabDetail") }}</div>
           </div>
           <div class="tab-content-text">
-            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab2.rightCard.tabHeading")}}</div>
-            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab2.rightCard.tabDetail")}}</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab2.rightCard.tabHeading") }}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab2.rightCard.tabDetail") }}</div>
           </div>
         </div>
       </div>
@@ -87,8 +87,8 @@
             <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab3.leftCard.tabDetail") }}</div>
           </div>
           <div class="tab-content-text">
-            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab3.rightCard.tabHeading")}}</div>
-            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab3.rightCard.tabDetail")}}</div>
+            <div class="tab-content-text-head">{{ $t("botic.tabsWidget.tab3.rightCard.tabHeading") }}</div>
+            <div class="tab-content-text-content">{{ $t("botic.tabsWidget.tab3.rightCard.tabDetail") }}</div>
           </div>
         </div>
       </div>
@@ -96,7 +96,7 @@
     <div class="mobile-tabs is-hidden-desktop" >
       <li class="tab-head has-border">
         <span class="icon icon-1 is-small"/>
-        <span>{{$t('botic.tabsWidget.tab1.tabName')}}</span>
+        <span>{{ $t('botic.tabsWidget.tab1.tabName') }}</span>
       </li>
       <div class="content active-content horizontalScrolling">
         <div class="tab-content-container tab-contents">
@@ -120,7 +120,7 @@
       </div>
       <li class="tab-head has-border">
         <span class="icon icon-2 is-small"/>
-        <span>{{$t('botic.tabsWidget.tab2.tabName')}}</span>
+        <span>{{ $t('botic.tabsWidget.tab2.tabName') }}</span>
       </li>
       <div class="content active-content horizontalScrolling">
         <div class="tab-content-container tab-contents">
@@ -144,7 +144,7 @@
       </div>
       <li class="tab-head" >
         <span class="icon icon-3 is-small"/>
-        <span>{{$t('botic.tabsWidget.tab3.tabName')}}</span>
+        <span>{{ $t('botic.tabsWidget.tab3.tabName') }}</span>
       </li>
       <div class="content active-content horizontalScrolling">
         <div class="tab-content-container tab-contents">
