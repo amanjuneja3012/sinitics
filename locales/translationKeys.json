@@ -32,7 +32,8 @@
     "placeholder3":"modal:placeholder3"
   },
   "inputBox":{
-    "placeholder":"inputBox:placeholder"
+    "placeholder":"inputBox:placeholder",
+    "onSubmitText":"inputBox:onSubmitText"
   },
   "footer":{
     "title":"footer:title",
@@ -230,7 +231,9 @@
         "text2":"home:budgetCalculator:heading:text2",
         "text3":"home:budgetCalculator:heading:text3",
         "text4":"home:budgetCalculator:heading:text4"
-      }
+      },
+      "param1":"home:budgetCalculator:param1",
+      "param2":"home:budgetCalculator:param2"
     }
   },
   "botic": {

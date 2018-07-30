@@ -6,7 +6,7 @@
         <input 
           v-model="email" 
           class="input" 
-          placeholder="$t('footer.placeholder')" >
+          :placeholder="$t('footer.placeholder')" >
         <img 
           src="images/english/send.png" 
           class="send-icon" 

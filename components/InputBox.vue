@@ -11,7 +11,7 @@
         :placeholder="$t('inputBox.placeholder')">
       <div 
         :click="onSubmit" 
-        class="submit">{{ sendText ? sendText : 'Suggest' }}</div>
+        class="submit">{{ sendText ? sendText : "$t('inputBox.onSubmitText')" }}</div>
     </div>
     <div class="email-container is-hidden-desktop mobileContentCard" >
       <input 
@@ -24,7 +24,7 @@
         :placeholder="$t('inputBox.placeholder')">
       <div 
         class="submit" 
-        @click="onSubmit">{{ sendText ? sendText : 'Suggest' }}</div>
+        @click="onSubmit">{{ sendText ? sendText : "$t('inputBox.onSubmitText')" }}</div>
     </div>
   </div>
 </template>

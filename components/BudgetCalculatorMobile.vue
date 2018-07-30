@@ -61,7 +61,7 @@
         <div class="column">
           <div class="w50 item-container">
             <div class="budget-item-icon"/>
-            <div class="text colorDarkBlack inline-flex alignLeft f13 bold pr5">Budget</div>
+            <div class="text colorDarkBlack inline-flex alignLeft f13 bold pr5">{{$t('home.budgetCalculator.param1')}}</div>
           </div>
           <div class="text colorDarkBlack inline-flex alignRight w50 f13 bold pr5">{{ selectedCurrency['symbol']+budgetValue*selectedCurrency['conversionRatio'] }}</div>
           <no-ssr>
@@ -81,7 +81,7 @@
         <div class="column">
           <div class="w50 item-container">
             <div class="user-item-icon"/>
-            <div class="text colorDarkBlack inline-flex alignLeft f13 bold pr5">Users</div>
+            <div class="text colorDarkBlack inline-flex alignLeft f13 bold pr5">{{$t('home.budgetCalculator.param2')}}</div>
           </div>
           <div class="text colorDarkBlack inline-flex w50 alignRight f13 bold pr5">{{ userValue }}</div>
           <no-ssr>
