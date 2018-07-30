@@ -8,7 +8,7 @@
       <input 
         v-else 
         class="input" 
-        placeholder="$t('inputBox.placeholder')">
+        :placeholder="$t('inputBox.placeholder')">
       <div 
         :click="onSubmit" 
         class="submit">{{ sendText ? sendText : 'Suggest' }}</div>
@@ -21,7 +21,7 @@
       <input 
         v-else 
         class="input" 
-        placeholder="$t('inputBox.placeholder')">
+        :placeholder="$t('inputBox.placeholder')">
       <div 
         class="submit" 
         @click="onSubmit">{{ sendText ? sendText : 'Suggest' }}</div>

@@ -18,8 +18,8 @@
               width="50%"
               padding="5%"
               input-box="true"
-              send-text="$t('home.contentCardCarousel.sendText')"
-              place-holder="$t('home.contentCardCarousel.placeholder')"
+              :send-text="$t('home.contentCardCarousel.sendText')"
+              :place-holder="$t('home.contentCardCarousel.placeholder')"
             />
           </slide>
         </carousel>
@@ -47,8 +47,8 @@
               width="100%"
               padding="5%"
               input-box="true"
-              send-text="$t('home.contentCardCarousel.sendText')"
-              place-holder="$t('home.contentCardCarousel.placeholder')"
+              :send-text="$t('home.contentCardCarousel.sendText')"
+              :place-holder="$t('home.contentCardCarousel.placeholder')"
             />
           </slide>
         </carousel>
